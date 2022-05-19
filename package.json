@@ -19,7 +19,7 @@
     "browser-sync-webpack-plugin": "^2.3.0",
     "cliui": "^6.0.0",
     "css-loader": "^6.4.0",
-    "mini-css-extract-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "^6.0.1",
     "sass-graph": "^2.2.5",
     "sass-loader": "^12.1.0",
@@ -28,7 +28,7 @@
     "strip-ansi": "^3.0.1",
     "trim-newlines": "^3.0.1",
     "webpack": "^5.61.0",
-    "webpack-cli": "^4.9.1",
+    "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.3.1",
     "wrap-ansi": "^6.2.0",
     "yargs": "^15.4.1"

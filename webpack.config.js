@@ -90,7 +90,7 @@ module.exports = {
       server: { baseDir: ['./build'] }
     }),
     new MiniCssExtractPlugin({
-      filename: "/css/[name].css"
+      filename: "css/[name].css"
     }),
     new HandlebarsPlugin({
       entry: path.join(process.cwd(), "assets", "templates", "*.hbs"),
