@@ -445,7 +445,6 @@ button {
   position: relative;
   background-color: #f8f8f8;
   height: 48px;
-  padding: 0 15px;
   display: flex;
   align-items: center;
   border-radius: 10px; }
@@ -1448,6 +1447,46 @@ select::-ms-expand {
     @media (max-width: 992px) {
       .questions button {
         padding: 15px 50px; } }
+
+.loginSlider {
+  position: relative; }
+  .loginSlider__item {
+    position: relative;
+    border-radius: 40px 0 0 40px; }
+  .loginSlider__info {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    width: 84%; }
+  .loginSlider__title {
+    font-family: "Telegraf", sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 59.36px;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 10px; }
+  .loginSlider .owl-dots {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    bottom: 40px;
+    left: 60px; }
+    .loginSlider .owl-dots button {
+      width: 32px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 16px;
+      transition: .3s; }
+    .loginSlider .owl-dots button.active {
+      width: 48px;
+      height: 5px;
+      transition: .3s; }
+
+.login__right {
+  background-color: #FAFAFA;
+  border-radius: 0 40px 40px 0; }
 
 .footer {
   padding: 60px 0; }

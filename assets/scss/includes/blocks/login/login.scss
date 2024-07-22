@@ -1,0 +1,50 @@
+.loginSlider {
+    position: relative;
+    &__item {
+        position: relative;
+        border-radius: 40px 0 0 40px;
+    }
+    &__info {
+        position: absolute;
+        bottom: 60px;
+        left: 60px;
+        width: 84%;
+    }
+    &__title {
+        font-family: "Telegraf", sans-serif;
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 59.36px;
+        text-align: left;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    &__desc {
+    }
+    & .owl-dots {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: absolute;
+        bottom: 40px;
+        left: 60px;
+        & button {
+            width: 32px;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 16px;
+            transition: .3s;
+        }
+        & button.active {
+            width: 48px;
+            height: 5px;
+            transition: .3s;
+        }
+    }
+}
+.login {
+    &__right {
+        background-color: #FAFAFA;
+        border-radius: 0 40px 40px 0;
+    }
+}

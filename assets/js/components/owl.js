@@ -1,26 +1,16 @@
 $(document).ready(function() {
-// $('.blogSlider').owlCarousel({
-//     loop:true,
-//     nav:true,
-//     mouseDrag:true,
-//     touchDrag: true,
-//     pullDrag:false,
-//     freeDrag:false,
-//     URLhashListener:false,
-//     dots:true,
-//     autoplay:false,
-//     responsive:{
-//         0:{
-//             items:3
-//         },
-//         576:{
-//             items:5
-//         },
-//         1400:{
-//             items:5
-//         }
-//     }
-// });
+$('.loginSlider').owlCarousel({
+    loop:true,
+    nav:true,
+    items:1,
+    mouseDrag:true,
+    touchDrag: true,
+    pullDrag:false,
+    freeDrag:false,
+    URLhashListener:false,
+    dots:true,
+    autoplay:false,
+});
 
 
 
