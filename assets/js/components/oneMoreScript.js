@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+    $(".burger").click(function() {
+        $(".header__mobile").toggleClass("open")
+    })
     
     $(".toggle-option").click(function() {
         $(".toggle-option").removeClass("active");

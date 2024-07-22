@@ -3,4 +3,22 @@
     @include max-lg {
         display: block;
     }
+    &__menu {
+        display: flex !important;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+        margin-bottom: 40px;
+        & .menu__link{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24.26px;
+            color: #000;
+            &.active, &:hover {
+                background: linear-gradient(90.81deg, #832fbd 9.1%, #d06852 55.89%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
 }

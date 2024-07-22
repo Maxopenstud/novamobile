@@ -148,6 +148,14 @@ button {
 .mobile {
 	display: none;
 }
+@include max-lg {
+	.desktop-lg {
+		display: none;
+	}
+	.mobile-lg {
+		display: block !important;
+	}
+}
 @include max-md {
 	.mobile {
 		display: block;
@@ -156,11 +164,7 @@ button {
 		display: none;
 	}
 }
-@include max-lg {
-	.desktop-lg {
-		display: none;
-	}
-}
+
 
 .form-control {
 	padding: 0;
