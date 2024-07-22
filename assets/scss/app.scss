@@ -7,50 +7,44 @@
 
 //header
 @import './includes/blocks/header/header.scss';
+@import './includes/blocks/header/burger.scss';
+@import './includes/blocks/header/menu.scss';
 
-// //main
-// @import './includes/blocks/main/main.scss';
+//main
+@import './includes/blocks/main/main.scss';
 
-// //service
-// @import './includes/blocks/service/service.scss';
+//tabs
+@import './includes/blocks/tabs/tabs.scss';
 
-// //popular
-// @import './includes/blocks/popular/popular.scss';
+//card
+@import './includes/blocks/card/card.scss';
 
-// //product
-// @import './includes/blocks/product/product.scss';
+//howItWorks
+@import './includes/blocks/howItWorks/howitworks.scss';
 
-// //catalog
-// @import './includes/blocks/catalog/catalog.scss';
+//whyChooseUs
+@import './includes/blocks/whyChooseUs/whyChooseUs.scss';
 
-// //benefits
-// @import './includes/blocks/benefits/benefits.scss';
+//banner
+@import './includes/blocks/banner/banner.scss';
 
-// //news
-// @import './includes/blocks/news/news.scss';
+//faq
+@import './includes/blocks/faq/faq.scss';
 
-// //reviews
-// @import './includes/blocks/reviews/reviews.scss';
+//social
+@import './includes/blocks/social/social.scss';
 
-// //category
-// @import './includes/blocks/category/categorySlider.scss';
-// @import './includes/blocks/category/categoryFilter.scss';
+//blogSlider
+@import './includes/blocks/blogSlider/blogSlider.scss';
 
-// //productPage
-// @import './includes/blocks/productPage/productPage.scss';
-// @import './includes/blocks/productPage/productTabs.scss';
+//contactUs
+@import './includes/blocks/information/information.scss';
 
-// //recommended
-// @import './includes/blocks/recommended/recommended.scss';
+//breadcrumbs
+@import './includes/blocks/breadcrumbs/breadcrumbs.scss';
 
-// //about
-// @import './includes/blocks/about/about.scss';
-
-// //popup
-// @import './includes/blocks/popup/popup.scss';
-
-// //footer
-// @import './includes/blocks/footer/footer.scss';
+//footer
+@import './includes/blocks/footer/footer.scss';
 
 
 

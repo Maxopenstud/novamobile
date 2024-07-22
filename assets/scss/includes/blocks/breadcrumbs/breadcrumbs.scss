@@ -1,0 +1,25 @@
+.breadcrumbs {
+    display: flex;
+    margin: 30px 0 47px;
+    &__item {
+        display: flex;
+        &:not(:first-child)::before {
+            content: "";
+            width: 1px;
+            height: 20px;
+            background-color: #00000080;
+            margin: 0 10px;
+            display: block;
+        }
+    }
+    &__link {
+        font-family: "Telegraf", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23.4px;
+        color: #00000080;
+        &.active, &:hover {
+            color: #000;
+        }
+    }
+}

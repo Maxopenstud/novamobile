@@ -1,0 +1,127 @@
+.tabs {
+    padding: 60px 0;
+    @include max-lg {
+        padding: 40px 0 20px;
+    }
+
+    & .text {
+        font-family: "Gilroy";
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 31.54px;
+        text-align: center;
+        color: #d1d1d1;
+        padding-bottom: 20px;
+        border-bottom: 4px solid #f3f3f3;
+        cursor: pointer;
+        width: 100%;
+        @include max-lg {
+            font-size: 20px;
+            line-height: 24px;
+            padding-bottom: 15px;
+        }
+
+        &.active {
+            background: linear-gradient(172.1deg, #832fbd -21.78%, #d06852 92.11%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+                border-radius: 40px;
+            }
+        }
+    }
+}
+.toggle-button {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-image-slice: 1;
+    border-radius: 25px;
+    margin: 40px auto 0;
+    padding: 4px;
+    background-color: #fff;
+    z-index: 6;
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+    border-radius: 25px;
+    display: block;
+    z-index: 5;
+    @include max-lg {
+        margin: 30px auto 0;
+    }
+    &::after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        display: block;
+        z-index: 5;
+    }
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.toggle-option {
+    flex: 1;
+    text-align: center;
+    line-height: 46px;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: bold;
+    font-family: "Gilroy";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.2px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.toggle-option.active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff;
+}
+.toggle-option[data-option="explore"].active {
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+    border-radius: 25px;
+    transition: left 0.3s;
+}
+
+.toggle-option[data-option="explore-plus"].active {
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+    border-radius: 25px;
+    transition: left 0.3s;
+}
+.tab-label-text {
+    font-family: "Telegraf", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+}

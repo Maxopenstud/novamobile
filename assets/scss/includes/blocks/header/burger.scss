@@ -1,0 +1,6 @@
+.burger {
+    display: none;
+    @include max-lg {
+        display: block;
+    }
+}

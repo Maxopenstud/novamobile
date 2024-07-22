@@ -1,0 +1,18 @@
+.social {
+    margin-top: 35px;
+    display: flex;
+    gap: 35px;
+    @include max-xl{
+        margin-top: 25px;
+        gap: 20px;
+    }
+    @include max-lg{
+        justify-content: center;
+        gap: 35px;
+    }
+    
+    &__item {
+    }
+    &__link {
+    }
+}

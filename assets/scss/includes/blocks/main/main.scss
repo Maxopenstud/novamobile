@@ -1,0 +1,92 @@
+.main {
+    background-image: url(../images/main_bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    padding-top: 50px;
+    @include max-xl {
+        padding-top: 30px;
+    }
+    & h1 {
+        font-family: "Telegraf", sans-serif;
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 59.36px;
+        color: #fff;
+        @include max-md {
+            font-size: 36px;
+            line-height: 38px;
+            text-align: center;
+        }
+
+        & span {
+            background: linear-gradient(90.81deg, #832fbd 9.1%, #d06852 55.89%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    & .hero {
+        margin-top: 150px;
+        @include max-md {
+            margin-top: 164px;
+        }
+    }
+    & .hero__description {
+        font-family: "Telegraf", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: #fff;
+        @include max-md {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+    & .search {
+        position: relative;
+    }
+    & .search button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 50px;
+    }
+    & .search input {
+        background-color: #ececec66;
+        padding: 20px 50px 20px 20px;
+        color: #fff;
+        border-radius: 15px;
+        border: none;
+        font-family: "Telegraf", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16.96px;
+        @include max-md {
+            font-size: 14px;
+            line-height: 15px;
+            padding: 15px 50px 15px 15px;
+        }
+        
+        &::placeholder {
+            color: #fff;
+        }
+    }
+}
+.apps-for-download {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    @include max-lg{
+        margin: 50px auto 0;
+    }
+    
+    @include max-md{
+        margin: 30px auto 0;
+        gap: 20px;
+    }
+    
+}

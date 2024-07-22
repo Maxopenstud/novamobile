@@ -86,6 +86,14 @@ module.exports = {
           to: './css/slick/[name].css'
       },
         {
+          from: './assets/libs/swiper/*.css',
+          to: './css/swiper/[name].css'
+      },
+        {
+          from: './assets/libs/swiper/*.js',
+          to: './css/swiper/[name].js'
+      },
+        {
           from: './assets/libs/slick/*.gif',
           to: './css/slick/[name].gif'
       },
@@ -113,13 +121,29 @@ module.exports = {
           from: './assets/data/manifest.json',
           to: "manifest.json"
         },
+        { 
+          from: './assets/fonts/gilroy/*.css',
+          to: "./fonts/gilroy/[name].css"
+        },
+        { 
+          from: './assets/fonts/gilroy/*.woff2',
+          to: "./fonts/gilroy/[name].woff2"
+        },
+        { 
+          from: './assets/fonts/telegraf/*.css',
+          to: "./fonts/telegraf/[name].css"
+        },
+        { 
+          from: './assets/fonts/telegraf/*.otf',
+          to: "./fonts/telegraf/[name].otf"
+        },
       ],   
     }),
     new BrowserSyncPlugin({
       files: ["build/css/app.css", "build/[name].html", "build/js/app.js" ],
       host: 'localhost',
       port: 3000,
-      server: { baseDir: ['./build'], index: "index.html" }
+      server: { baseDir: ['./build'], index: "contacts.html" }
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name].css"

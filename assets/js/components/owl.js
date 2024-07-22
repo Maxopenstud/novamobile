@@ -1,270 +1,119 @@
-$('.header-bottom__category').owlCarousel({
-    loop:true,
-    nav:true,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:3
-        },
-        576:{
-            items:5
-        },
-        1400:{
-            items:7
-        }
-    }
-});
-$(".header-bottom__category-button").on("click", ()=> {
-    $(".header-bottom__category .owl-next").click();
-});
-
-
-$('.banners__slider').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:false,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-});
-
-$('.products').owlCarousel({
-    loop:true,
-    margin:15,
-    nav:false,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        450:{
-            items:2
-        },
-        576:{
-            items:3
-        }
-    }
-});
-
-$('.popular__tab-item').owlCarousel({
-    loop:true,
-    margin:15,
-    nav:false,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        450:{
-            items:2
-        },
-        576:{
-            items:3
-        }
-    }
-});
-// $('.popular__tab-item').slick({
-//     infinite: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 3,
-//     variableWidth: true,
-//     responsive: [
-//     {
-//       breakpoint: 450,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         infinite: true,
-//         dots: true
-//       }
+$(document).ready(function() {
+// $('.blogSlider').owlCarousel({
+//     loop:true,
+//     nav:true,
+//     mouseDrag:true,
+//     touchDrag: true,
+//     pullDrag:false,
+//     freeDrag:false,
+//     URLhashListener:false,
+//     dots:true,
+//     autoplay:false,
+//     responsive:{
+//         0:{
+//             items:3
+//         },
+//         576:{
+//             items:5
+//         },
+//         1400:{
+//             items:5
+//         }
 //     }
-//   ]
-//   });
-$('.recommended__slider').owlCarousel({
-    loop:true,
-    margin:30,
-    nav:false,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        450:{
-            items:2
-        },
-        670:{
-            items:3
-        },
-        992:{
-            items:4
-        }
-    }
-});
+// });
 
-$('.news__content').owlCarousel({
-    loop:true,
-    margin:15,
-    nav:true,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:false,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        450:{
-            items:1
-        },
-        768:{
-            items:1
-        }
-    }
-});
-$('.news__list_mobile').owlCarousel({
-    loop:true,
-    margin:15,
-    nav:true,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        450:{
-            items:1
-        },
-        768:{
-            items:1
-        }
-    }
-});
-$('.reviews__list').owlCarousel({
-    loop:true,
-    margin:15,
-    items:3,
-    nav:true,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        768:{
-            items:2,
-            margin:30
-        },
-        992:{
-            items:3
-        }
-    }
-});
 
-$('.slider-category').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    infinite: true,
-    fade: false,
-    asNavFor: '.slider-category-nav'
-  });
-  $('.slider-category-nav').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    asNavFor: '.slider-category',
+
+$('.blogSlider').slick({
+    centerMode: true,
+    centerPadding: '100px',
+    slidesToShow: 3,
     dots: true,
-    centerMode: true,
-    infinite: true,
-    centerPadding: '0',
-    focusOnSelect: true,
+    adaptiveHeight: true,
     responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
     ]
   });
-  
-$('.productPage__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    infinite: false,
-    fade: false,
-    asNavFor: '.productPage__slider-nav'
-  });
-  $('.productPage__slider-nav').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    asNavFor: '.productPage__slider',
-    dots: false,
-    centerMode: true,
-    centerPadding: '30',
-    focusOnSelect: true,
-    responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          }
-        },
-    ]
-  });
+  $(".slick-arrow").text("");
+});
+
+// window.addEventListener('load', function() {
+//     carouselRUN();
+// }, false);
+
+// function carouselRUN() {
+//     var carousel = document.getElementById("carousel");
+//     var scene = document.getElementById("scene");
+//     var carousel_items_Arrey = document.getElementsByClassName("carousel_item");
+//     var carousel_btn = document.getElementById("carousel_btn");
+//     var n = carousel_items_Arrey.length;
+//     var curr_carousel_items_Arrey = 0;
+//     var theta = Math.PI * 2 / n;
+//     var interval = null;
+//     var autoCarousel = carousel.dataset.auto;
+
+//     setupCarousel(n, parseFloat(getComputedStyle(carousel_items_Arrey[0]).width));
+//     window.addEventListener('resize', function() {
+//         clearInterval(interval);
+//         setupCarousel(n, parseFloat(getComputedStyle(carousel_items_Arrey[0]).width));
+//     }, false);
+//     setupNavigation();
+
+
+//     function setupCarousel(n, width) {
+//         var apothem = width / (2 * Math.tan(Math.PI / n));
+//         scene.style.transformOrigin = `50% 50% ${- apothem}px`;
+
+//         for (i = 1; i < n; i++) {
+//             carousel_items_Arrey[i].style.transformOrigin = `50% 50% ${- apothem}px`;
+//             carousel_items_Arrey[i].style.transform = `rotateY(${i * theta}rad)`;
+//         }
+
+//         if (autoCarousel === "true") {
+//             setCarouselInterval();
+//         }
+//     }
+
+//     function setCarouselInterval() {
+//         interval = setInterval(function() {
+//             curr_carousel_items_Arrey++;
+//             scene.style.transform = `rotateY(${(curr_carousel_items_Arrey) * -theta}rad)`;
+//         }, 8000000);
+//     }
+
+//     function setupNavigation() {
+//         carousel_btn.addEventListener('click', function(e) {
+//             e.stopPropagation();
+//             var target = e.target;
+
+//             if (target.classList.contains('next')) {
+//                 curr_carousel_items_Arrey++;
+//             } else if (target.classList.contains('prev')) {
+//                 curr_carousel_items_Arrey--;
+//             }
+//             clearInterval(interval);
+//             scene.style.transform = `rotateY(${curr_carousel_items_Arrey * -theta}rad)`;
+
+//             if (autoCarousel === "true") {
+//                 setTimeout(setCarouselInterval(), 3000);
+//             }
+//         }, true);
+//     }
+// }
