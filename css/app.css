@@ -355,7 +355,8 @@ select::-ms-expand {
   font-family: "Gilroy";
   font-size: 18px;
   font-weight: 500;
-  line-height: 18px; }
+  line-height: 18px;
+  padding: 11px; }
 
 .btn-secondary {
   background-color: #ededed;
