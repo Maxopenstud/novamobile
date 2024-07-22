@@ -1,0 +1,33 @@
+.questions {
+    padding: 60px 0;
+    @include max-lg{
+        padding: 40px 0;
+    }
+    
+    &__content {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include max-lg{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    & input {
+        max-width: 350px;
+        width: 100%;
+        @include max-xxl{
+            max-width: 100%;
+        }
+    }
+    & button {
+        width: max-content !important;
+        margin: auto;
+        padding: 20px 85px;
+        @include max-lg{
+            padding: 15px 50px;
+        }
+    }
+}

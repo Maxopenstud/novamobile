@@ -127,12 +127,32 @@ table {
 img {
 	width: 100%;
 }
+textarea {
+	border: none;
+	outline: none;
+	background-color: #f4f4f4;
+	border-radius: 20px;
+	resize: none;
+	padding: 15px;
+	width: 100%;
+}
 a {
 	text-decoration: none;
 	text-transform: initial;
 	color: unset;
 	&:focus {
 		color: inherit;
+	}
+}
+input {
+	font-family: "Telegraf", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 16px;
+	text-align: left;
+	color: #3b3b3b;
+	&::placeholder {
+		color: #c3c3c3;
 	}
 }
 input,
@@ -164,7 +184,6 @@ button {
 		display: none;
 	}
 }
-
 
 .form-control {
 	padding: 0;
@@ -255,7 +274,7 @@ button {
 	width: 18px;
 	height: 18px;
 	border-radius: 50%;
-	background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+	background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
 }
 .custom-button {
 	background: initial;
@@ -302,13 +321,7 @@ button {
 	bottom: 0;
 	margin: auto;
 }
-select {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-}
-select::-ms-expand {
-	display: none;
-}
+
 // gaps
 .gap-10 {
 	gap: 10px;
@@ -322,10 +335,13 @@ select::-ms-expand {
 .gap-35 {
 	gap: 35px;
 }
+.gap-40 {
+	gap: 40px;
+}
 .row-gap-30 {
 	row-gap: 30px;
 }
-@include max-md{
+@include max-md {
 	.gap-max-md-0 {
 		gap: 0;
 	}
@@ -340,35 +356,54 @@ select::-ms-expand {
 	}
 }
 // margins
-	.mt-10 {
-		margin-top: 10px;
+.mt-10 {
+	margin-top: 10px;
+}
+.mt-15 {
+	margin-top: 15px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.mt-50 {
+	margin-top: 50px;
+}
+.mr-40 {
+	margin-right: 40px;
+}
+.mr-60 {
+	margin-right: 60px;
+}
+.mr-10 {
+	margin-right: 10px;
+}
+// paddings
+.p-20 {
+	padding: 20px;
+}
+.pr-60 {
+	padding-right: 60px;
+}
+@include max-md {
+	.mt-max-md-30 {
+		margin-top: 30px;
 	}
-	.mt-15 {
-		margin-top: 15px;
+	.mt-max-md-8 {
+		margin-top: 8px;
 	}
-	.mt-20 {
-		margin-top: 20px;
+	.mt-max-md-14 {
+		margin-top: 14px;
 	}
-	.mt-50 {
-		margin-top: 50px;
+}
+@include max-lg {
+	.mt-max-lg-30 {
+		margin-top: 30px;
 	}
-	@include max-md{
-		.mt-max-md-30 {
-			margin-top: 30px;
-		}
-		.mt-max-md-8 {
-			margin-top: 8px;
-		}
-		.mt-max-md-14 {
-			margin-top: 14px;
-		}
+	.pr-max-lg-0 {
+		padding-right: 0;
 	}
-	@include max-lg{
-		.mt-max-lg-30 {
-			margin-top: 30px;
-		}
-	}
-	
+}
+
 .btn {
 	border-radius: 10px;
 	font-family: "Gilroy";
@@ -397,7 +432,7 @@ select::-ms-expand {
 	line-height: 27px;
 	color: #3b3b3b;
 }
-@include max-md{
+@include max-md {
 	.manual-text {
 		font-size: 16px;
 		line-height: 24px;
@@ -411,7 +446,7 @@ select::-ms-expand {
 	line-height: 33.8px;
 	color: #3b3b3b;
 }
-@include max-md{
+@include max-md {
 	.manual-title {
 		font-size: 18px;
 		line-height: 24px;
@@ -421,6 +456,136 @@ select::-ms-expand {
 	font-size: 20px;
 }
 .header_bg .header {
-    background-color: #fafafa;
-    margin-top: 30px;
+	background-color: #fafafa;
+	margin-top: 30px;
+}
+.select-wrapper {
+	min-width: 140px;
+}
+.form-input,
+.select-wrapper {
+	position: relative;
+	background-color: #f8f8f8;
+	height: 48px;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	&:after {
+		content: "";
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.79708 0.525879L6 4.7288L10.2029 0.525879L11.5 1.82296L6 7.32296L0.5 1.82296L1.79708 0.525879Z' fill='%233B3B3B'/%3E%3C/svg%3E%0A");
+		width: 11px;
+		height: 7px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 20px;
+		margin: auto;
+	}
+}
+.form-input,
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	outline: none;
+	background: #f8f8f8;
+	font-family: "Telegraf", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 16px;
+	text-align: left;
+	color: #3b3b3b;
+	padding: 14px;
+	width: 100%;
+}
+select::-ms-expand {
+	display: none;
+}
+.form-group {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+	width: 100%;
+	& label {
+		font-family: "Telegraf", sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 16px;
+		text-align: left;
+		color: #3b3b3b;
+	}
+}
+.form-input {
+}
+.height-max-content {
+	height: max-content;
+}
+/* для элемента input c type="checkbox" */
+.custom-checkbox > input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox > span {
+	display: block;
+	align-items: center;
+	user-select: none;
+	font-family: "Telegraf", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22.4px;
+	color: #3B3B3B;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox > span::before {
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border: 1px solid #d1d1d1;
+	border-radius: 5px;
+	margin-right: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50% 50%;
+	margin-bottom: -3px;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
+	border-color: #3b3b3b;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox > input:not(:disabled):active + span::before {
+	background-color: #3b3b3b;
+	border-color: #3b3b3b;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox > input:focus + span::before {
+	// box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox > input:focus:not(:checked) + span::before {
+	border-color: #3b3b3b;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox > input:checked + span::before {
+	border-color: #3b3b3b;
+	background-color: #3b3b3b;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox > input:disabled + span::before {
+	background-color: #e9ecef;
 }

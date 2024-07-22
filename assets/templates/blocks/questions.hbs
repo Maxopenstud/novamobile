@@ -2,9 +2,73 @@
     <div class="container">
         <div class="sectionTitle">Have any questions for us?</div>
         <div class="manual-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tristique lacus. Nam at est non ex pellentesque dapibus. Maecenas dignissim bibendum vehicula. Phasellus lectus nulla, venenatis vel mi at, consequat feugiat augue. Lorem ipsum dolor sit amet</div>
-        <div class="questions__content">
-            <div class="col-7"></div>
-            <div class="col-5"></div>
-        </div>
+        <form class="questions__content">
+            <div class="d-flex flex-column height-max-content gap-30 gap-max-xl-20 pr-60 pr-max-lg-0">
+                <div class=" d-flex flex-column flex-xxl-row justify-content-between  gap-40 gap-max-xl-20">
+                    <div class="form-group">
+                        <label>Topic</label>
+                        <div class="select-wrapper w-100">
+                            <select name="" id="" class="w-100">
+                                <option value="">How can I get support?</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Full name</label>
+                        <input type="text" class="form-input" placeholder="Jane Snow">
+                    </div>
+                </div>
+
+
+                <div class=" d-flex flex-column flex-xxl-row justify-content-between gap-40 gap-max-xl-20">
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="text" class="form-input" placeholder="example@email.com">
+                    </div>
+                    <div class="d-flex align-items-end w-100">
+                        <div class="form-group me-3">
+                            <label>Phone number</label>
+                            <div class="select-wrapper">
+                                <select name="" id="">
+                                    <option value="">Country</option>
+                                    <option value="">Country 1</option>
+                                    <option value="">Country 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label></label>
+                            <input type="text" class="form-input" placeholder="000 00 00">
+                        </div>
+                    </div>
+                </div>
+                <div class=" d-flex flex-column flex-xxl-row justify-content-between gap-40 gap-max-xl-20">
+                    <div class="form-group">
+                        <label>Device model</label>
+                        <input type="text" class="form-input" placeholder="Device model">
+                    </div>
+                    <div class="form-group">
+                        <label>eSim ICCID</label>
+                        <input type="text" class="form-input" placeholder="eSim ICCID">
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-20">
+                    <div class="form-group">
+                        <label>Your message</label>
+                        <textarea name="" id="" rows="10"></textarea>
+                    </div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" value="value-1">
+                        <span>I consent to the processing of personal data and agree to the <a href="#" class="ms-1"> Privacy Policy</a></span>
+                    </label>
+                </div>
+                <button type="button" class="btn btn-dark w-auto p-20">Send</button>
+            </div>
+            <div class="">
+                <img src="images/questions_img.png" alt="">
+            </div>
+        </form>
     </div>
 </div>
