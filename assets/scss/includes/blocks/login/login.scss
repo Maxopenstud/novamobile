@@ -1,14 +1,28 @@
 .loginSlider {
     position: relative;
+    height: 100%;
+    & .owl-stage, & .owl-stage-outer {
+        height: 100%;
+    }
     &__item {
         position: relative;
         border-radius: 40px 0 0 40px;
+        height: 100%;
+        & img {
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &__info {
         position: absolute;
         bottom: 60px;
         left: 60px;
         width: 84%;
+        @include max-lg{
+            left: 20px;
+            bottom: 70px;
+        }
+        
     }
     &__title {
         font-family: "Telegraf", sans-serif;
@@ -18,6 +32,11 @@
         text-align: left;
         color: #fff;
         margin-bottom: 10px;
+        @include max-lg{
+            font-size: 36px;
+            line-height: 38px;
+        }
+        
     }
     &__desc {
     }
@@ -28,23 +47,119 @@
         position: absolute;
         bottom: 40px;
         left: 60px;
+        @include max-lg{
+            left: 20px;
+        }
+        
         & button {
             width: 32px;
             height: 2px;
             background-color: #fff;
             border-radius: 16px;
-            transition: .3s;
+            transition: 0.3s;
+            @include max-lg{
+                width: 25px;
+            }
+            
         }
         & button.active {
             width: 48px;
             height: 5px;
-            transition: .3s;
+            transition: 0.3s;
+            @include max-lg{
+                width: 38px;
+            }
+            
         }
     }
 }
 .login {
     &__right {
-        background-color: #FAFAFA;
+        background-color: #fafafa;
         border-radius: 0 40px 40px 0;
+        padding: 20px 130px;
+        @include max-xxxl{
+            padding: 20px 50px;
+        }
+        @include max-lg{
+            padding: 10px 20px 40px;
+        }
+        
+    }
+    &__title {
+        font-family: "Telegraf", sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 40px;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: #3b3b3b;
+        margin: 40px auto 10px;
+        @include max-lg{
+            font-size: 30px;
+
+        }
+        
+    }
+    &__desc {
+        margin-bottom: 30px;
+    }
+    & .entry-btns button {
+        @include max-lg{
+            font-size: 16px;
+        }
+        
+    }
+    &__divider {
+        margin-top: 44px;
+        font-family: "Telegraf", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        @include max-lg{
+            margin-top: 40px;
+        }
+        
+        & span {
+            background-color: #fafafa;
+            padding: 0 16px;
+            position: relative;
+            z-index: 5;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 1000%;
+            height: 1px;
+            background-color: #D1D1D1;
+        }
+    }
+    & .password {
+        position: relative;
+    }
+    & .password svg {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+    }
+    & .btn-dark {
+        margin: 40px auto 0;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        max-width: 350px;
     }
 }

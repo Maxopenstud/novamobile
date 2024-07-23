@@ -3,7 +3,11 @@
     @include max-lg {
         padding: 40px 0 20px;
     }
-
+    &__buttons {
+        // transform: scaleY(0);
+        // transition: 1s;
+        // background-color: #fff;
+    }
     & .text {
         font-family: "Gilroy";
         font-size: 26px;

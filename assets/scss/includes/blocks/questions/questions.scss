@@ -26,6 +26,8 @@
         width: max-content !important;
         margin: auto;
         padding: 20px 85px;
+        display: flex;
+        align-items: center;
         @include max-lg{
             padding: 15px 50px;
         }

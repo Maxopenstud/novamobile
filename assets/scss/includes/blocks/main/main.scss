@@ -2,11 +2,21 @@
     background-image: url(../images/main_bg.png);
     background-size: cover;
     background-position: center;
-    height: 900px;
+    // height: 1107px;
+    height: 100vh;
     padding-top: 50px;
+    position: relative;
     @include max-xl {
         padding-top: 30px;
     }
+    & .cloud {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include max-xl{
+        }
+    }
+    
     & h1 {
         font-family: "Telegraf", sans-serif;
         font-size: 56px;
@@ -27,6 +37,7 @@
     }
     & .hero {
         margin-top: 150px;
+        transform: translateX(-200%);
         @include max-md {
             margin-top: 164px;
         }

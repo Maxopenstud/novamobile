@@ -106,8 +106,16 @@ section {
   display: block;
   position: relative; }
 
-body {
+.content {
+  position: relative;
+  transition: 1s;
   background-color: #fff; }
+
+html {
+  scroll-behavior: auto; }
+
+.front-page {
+  overflow: hidden; }
 
 ol,
 ul {
@@ -130,6 +138,9 @@ table {
 
 img {
   width: 100%; }
+
+.fw-600 {
+  font-weight: 600 !important; }
 
 textarea {
   border: none;
@@ -165,7 +176,8 @@ button {
   background: none; }
 
 .btn {
-  width: 100%; }
+  width: 100%;
+  height: 40px; }
 
 .mobile {
   display: none; }
@@ -430,12 +442,14 @@ button {
     font-size: 18px;
     line-height: 24px; } }
 
+.bg-f1 {
+  background-color: #F1F1F1 !important; }
+
+.bg-f4 {
+  background-color: #F4F4F4; }
+
 .fs-20 {
   font-size: 20px; }
-
-.header_bg .header {
-  background-color: #fafafa;
-  margin-top: 30px; }
 
 .select-wrapper {
   min-width: 140px; }
@@ -558,7 +572,12 @@ select::-ms-expand {
   border-radius: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  opacity: 0; }
+  .header_bg .header {
+    background-color: #fafafa;
+    margin-top: 30px;
+    opacity: 1; }
   @media (max-width: 1200px) {
     .header {
       padding: 15px 20px; } }
@@ -667,11 +686,16 @@ select::-ms-expand {
   background-image: url(../701bea242491aafdc90a.png);
   background-size: cover;
   background-position: center;
-  height: 900px;
-  padding-top: 50px; }
+  height: 100vh;
+  padding-top: 50px;
+  position: relative; }
   @media (max-width: 1200px) {
     .main {
       padding-top: 30px; } }
+  .main .cloud {
+    position: absolute;
+    left: 0;
+    top: 0; }
   .main h1 {
     font-family: "Telegraf", sans-serif;
     font-size: 56px;
@@ -688,7 +712,8 @@ select::-ms-expand {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
   .main .hero {
-    margin-top: 150px; }
+    margin-top: 150px;
+    transform: translateX(-200%); }
     @media (max-width: 768px) {
       .main .hero {
         margin-top: 164px; } }
@@ -977,6 +1002,24 @@ select::-ms-expand {
       .steps::after {
         width: 4px;
         height: 35%; } }
+  .steps.centered::after {
+    height: 63%;
+    transition: .5s; }
+    @media (max-width: 1440px) {
+      .steps.centered::after {
+        height: 60%; } }
+    @media (max-width: 992px) {
+      .steps.centered::after {
+        height: 65%; } }
+  .steps.bottom::after {
+    height: 100%;
+    transition: .5s; }
+    @media (max-width: 1440px) {
+      .steps.bottom::after {
+        height: 100%; } }
+    @media (max-width: 992px) {
+      .steps.bottom::after {
+        height: 100%; } }
   .steps__item:first-child:before {
     content: "1";
     background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
@@ -1049,7 +1092,7 @@ select::-ms-expand {
 .howItWorks__img {
   position: sticky;
   height: max-content;
-  top: 50px; }
+  top: 150px; }
 
 .whyChooseUs__item {
   position: relative;
@@ -1108,7 +1151,8 @@ select::-ms-expand {
   .banner .btn {
     margin: 34px auto 0;
     width: max-content;
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 20px 25px;
     border-radius: 15px; }
     @media (max-width: 992px) {
@@ -1443,21 +1487,34 @@ select::-ms-expand {
   .questions button {
     width: max-content !important;
     margin: auto;
-    padding: 20px 85px; }
+    padding: 20px 85px;
+    display: flex;
+    align-items: center; }
     @media (max-width: 992px) {
       .questions button {
         padding: 15px 50px; } }
 
 .loginSlider {
-  position: relative; }
+  position: relative;
+  height: 100%; }
+  .loginSlider .owl-stage, .loginSlider .owl-stage-outer {
+    height: 100%; }
   .loginSlider__item {
     position: relative;
-    border-radius: 40px 0 0 40px; }
+    border-radius: 40px 0 0 40px;
+    height: 100%; }
+    .loginSlider__item img {
+      height: 100%;
+      object-fit: cover; }
   .loginSlider__info {
     position: absolute;
     bottom: 60px;
     left: 60px;
     width: 84%; }
+    @media (max-width: 992px) {
+      .loginSlider__info {
+        left: 20px;
+        bottom: 70px; } }
   .loginSlider__title {
     font-family: "Telegraf", sans-serif;
     font-size: 56px;
@@ -1466,6 +1523,10 @@ select::-ms-expand {
     text-align: left;
     color: #fff;
     margin-bottom: 10px; }
+    @media (max-width: 992px) {
+      .loginSlider__title {
+        font-size: 36px;
+        line-height: 38px; } }
   .loginSlider .owl-dots {
     display: flex;
     align-items: center;
@@ -1473,20 +1534,105 @@ select::-ms-expand {
     position: absolute;
     bottom: 40px;
     left: 60px; }
+    @media (max-width: 992px) {
+      .loginSlider .owl-dots {
+        left: 20px; } }
     .loginSlider .owl-dots button {
       width: 32px;
       height: 2px;
       background-color: #fff;
       border-radius: 16px;
-      transition: .3s; }
+      transition: 0.3s; }
+      @media (max-width: 992px) {
+        .loginSlider .owl-dots button {
+          width: 25px; } }
     .loginSlider .owl-dots button.active {
       width: 48px;
       height: 5px;
-      transition: .3s; }
+      transition: 0.3s; }
+      @media (max-width: 992px) {
+        .loginSlider .owl-dots button.active {
+          width: 38px; } }
 
 .login__right {
-  background-color: #FAFAFA;
-  border-radius: 0 40px 40px 0; }
+  background-color: #fafafa;
+  border-radius: 0 40px 40px 0;
+  padding: 20px 130px; }
+  @media (max-width: 1570px) {
+    .login__right {
+      padding: 20px 50px; } }
+  @media (max-width: 992px) {
+    .login__right {
+      padding: 10px 20px 40px; } }
+
+.login__title {
+  font-family: "Telegraf", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #3b3b3b;
+  margin: 40px auto 10px; }
+  @media (max-width: 992px) {
+    .login__title {
+      font-size: 30px; } }
+
+.login__desc {
+  margin-bottom: 30px; }
+
+@media (max-width: 992px) {
+  .login .entry-btns button {
+    font-size: 16px; } }
+
+.login__divider {
+  margin-top: 44px;
+  font-family: "Telegraf", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  position: relative;
+  overflow: hidden; }
+  @media (max-width: 992px) {
+    .login__divider {
+      margin-top: 40px; } }
+  .login__divider span {
+    background-color: #fafafa;
+    padding: 0 16px;
+    position: relative;
+    z-index: 5; }
+  .login__divider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 1000%;
+    height: 1px;
+    background-color: #D1D1D1; }
+
+.login .password {
+  position: relative; }
+
+.login .password svg {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto; }
+
+.login .btn-dark {
+  margin: 40px auto 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  max-width: 350px; }
 
 .footer {
   padding: 60px 0; }
@@ -1582,4 +1728,10 @@ select::-ms-expand {
           font-size: 16px;
           line-height: 30px;
           text-align: center; } }
+
+.front-page .footer {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: 2s; }
 
