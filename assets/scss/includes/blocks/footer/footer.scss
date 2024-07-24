@@ -1,5 +1,5 @@
 .footer {
-    padding: 60px 0;
+    padding: 0 0 60px;
     
     @include max-lg{
         padding: 40px 0;
@@ -115,8 +115,8 @@
     }
 }
 .front-page .footer {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    transition: 2s;
+    // opacity: 0;
+    // visibility: hidden;
+    // height: 0;
+    // transition: 2s;
 }

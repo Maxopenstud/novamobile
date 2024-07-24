@@ -44,66 +44,115 @@ $('.blogSlider').slick({
   $(".slick-arrow").text("");
 });
 
-// window.addEventListener('load', function() {
-//     carouselRUN();
-// }, false);
-
-// function carouselRUN() {
-//     var carousel = document.getElementById("carousel");
-//     var scene = document.getElementById("scene");
-//     var carousel_items_Arrey = document.getElementsByClassName("carousel_item");
-//     var carousel_btn = document.getElementById("carousel_btn");
-//     var n = carousel_items_Arrey.length;
-//     var curr_carousel_items_Arrey = 0;
-//     var theta = Math.PI * 2 / n;
-//     var interval = null;
-//     var autoCarousel = carousel.dataset.auto;
-
-//     setupCarousel(n, parseFloat(getComputedStyle(carousel_items_Arrey[0]).width));
-//     window.addEventListener('resize', function() {
-//         clearInterval(interval);
-//         setupCarousel(n, parseFloat(getComputedStyle(carousel_items_Arrey[0]).width));
-//     }, false);
-//     setupNavigation();
 
 
-//     function setupCarousel(n, width) {
-//         var apothem = width / (2 * Math.tan(Math.PI / n));
-//         scene.style.transformOrigin = `50% 50% ${- apothem}px`;
+(function($) {
+  $.fn.cascadeSlider = function(opt) {
+    var $this = this,
+      itemClass = opt.itemClass || 'cascade-slider_item',
+      arrowClass = opt.arrowClass || 'cascade-slider_arrow',
+      $item = $this.find('.' + itemClass),
+      $arrow = $this.find('.' + arrowClass),
+      $dots = $('.cascade-slider_nav .cascade-slider_dot'), // Вибір точок відповідного контейнера
+      itemCount = $item.length;
 
-//         for (i = 1; i < n; i++) {
-//             carousel_items_Arrey[i].style.transformOrigin = `50% 50% ${- apothem}px`;
-//             carousel_items_Arrey[i].style.transform = `rotateY(${i * theta}rad)`;
-//         }
+    var defaultIndex = 0;
 
-//         if (autoCarousel === "true") {
-//             setCarouselInterval();
-//         }
-//     }
+    changeIndex(defaultIndex);
 
-//     function setCarouselInterval() {
-//         interval = setInterval(function() {
-//             curr_carousel_items_Arrey++;
-//             scene.style.transform = `rotateY(${(curr_carousel_items_Arrey) * -theta}rad)`;
-//         }, 8000000);
-//     }
+    // dots
+    $('.cascade-slider_dot').bind('click', function(){
+      // add class to current dot on click
+      $('.cascade-slider_dot').removeClass('cur');
+      $(this).addClass('cur');
 
-//     function setupNavigation() {
-//         carousel_btn.addEventListener('click', function(e) {
-//             e.stopPropagation();
-//             var target = e.target;
+      var index = $(this).index();
+      console.log(index);
 
-//             if (target.classList.contains('next')) {
-//                 curr_carousel_items_Arrey++;
-//             } else if (target.classList.contains('prev')) {
-//                 curr_carousel_items_Arrey--;
-//             }
-//             clearInterval(interval);
-//             scene.style.transform = `rotateY(${curr_carousel_items_Arrey * -theta}rad)`;
+      $('.cascade-slider_item').removeClass('now prev next');
+      var slide = $('.cascade-slider_slides').find('[data-slide-number=' + index + ']');
+      slide.prev().addClass('prev');
+      slide.addClass('now');
+      slide.next().addClass('next');
 
-//             if (autoCarousel === "true") {
-//                 setTimeout(setCarouselInterval(), 3000);
-//             }
-//         }, true);
-//     }
-// }
+      if(slide.next().length == 0) {
+        $('.cascade-slider_item:first-child').addClass('next');
+      }
+
+      if(slide.prev().length == 0) {
+        $('.cascade-slider_item:last-child').addClass('prev');
+      }
+    });
+
+    $arrow.on('click', function() {
+      var action = $(this).data('action'),
+        nowIndex = $item.index($this.find('.now'));
+        console.log(nowIndex);
+
+
+      if(action == 'next') {
+        if(nowIndex == itemCount - 1) {
+
+          changeIndex(0);
+        } else {
+          changeIndex(nowIndex + 1);
+        }
+      } else if (action == 'prev') {
+        if(nowIndex == 0) {
+          changeIndex(itemCount - 1);
+
+        } else {
+          changeIndex(nowIndex - 1);
+        }
+      }
+
+
+    });
+
+    // add data attributes
+    for (var i = 0; i < itemCount; i++) {
+      $('.cascade-slider_item').each(function(i) {
+        $(this).attr('data-slide-number', [i]);
+      });
+    }
+
+
+
+    function changeIndex(nowIndex) {
+      // clern all class
+      $this.find('.now').removeClass('now');
+      $this.find('.next').removeClass('next');
+      $this.find('.prev').removeClass('prev');
+      if(nowIndex == itemCount -1){
+        $item.eq(0).addClass('next');
+      }
+      if(nowIndex == 0) {
+        $item.eq(itemCount -1).addClass('prev');
+      }
+
+      $item.each(function(index) {
+        if(index == nowIndex) {
+          $item.eq(index).addClass('now');
+        }
+        if(index == nowIndex + 1 ) {
+          $item.eq(index).addClass('next');
+        }
+        if(index == nowIndex - 1 ) {
+          $item.eq(index).addClass('prev');
+        }
+      });
+
+      // Видаляємо клас cur у всіх точках
+      $dots.removeClass('cur');
+      // Додаємо клас cur відповідній точці
+      console.log($dots.eq(nowIndex));
+      $dots.eq(nowIndex).addClass('cur');
+
+    }
+  };
+})(jQuery);
+
+$('#cascade-slider').cascadeSlider({
+  itemClass: 'cascade-slider_item',
+  arrowClass: 'cascade-slider_arrow'
+});
