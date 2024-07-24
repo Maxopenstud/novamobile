@@ -392,6 +392,9 @@ button {
 .mt-30 {
   margin-top: 30px; }
 
+.mt-40 {
+  margin-top: 40px; }
+
 .mt-50 {
   margin-top: 50px; }
 
@@ -425,6 +428,8 @@ button {
     margin-top: 20px; }
   .mt-max-lg-30 {
     margin-top: 30px; }
+  .mt-max-lg-40 {
+    margin-top: 40px; }
   .pr-max-lg-0 {
     padding-right: 0; } }
 
