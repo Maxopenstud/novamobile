@@ -1,0 +1,80 @@
+.advantages {
+    &__title {
+        font-family: "Telegraf", sans-serif;
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 59.36px;
+        text-align: left;
+        @include max-lg{
+            font-size: 36px;
+            line-height: 38px;
+            text-align: center;
+        }
+        
+    }
+    & .btn-dark {
+        margin-top: 50px;
+        width: max-content;
+        justify-content: center;
+        width: 100%;
+        max-width: 200px;
+        height: 60px;
+        @include max-lg{
+            height: 48px;
+            margin-top: 30px;
+        }
+        
+    }
+    & .manual-text {
+        @include max-lg{
+            text-align: center;
+        }
+        
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__item {
+        padding: 65px 58px;
+        box-shadow: 0px 4px 25px 0px #00000014;
+        border-radius: 60px;
+        background-color: #FAFAFA;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include max-lg{
+            border-radius: 30px;
+            padding: 30px 18px;
+        }
+        
+        &-title {
+            background: linear-gradient(86.62deg, #832FBD 8.67%, #D06852 93.48%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: "Telegraf", sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 59.36px;
+            text-align: center;
+            @include max-lg{
+                font-size: 28px;
+                line-height: 30px;
+            }
+            
+        }
+        &-text {
+            font-family: "Telegraf", sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 34.8px;
+            text-align: center;
+            @include max-lg{
+                font-size: 12px;
+                line-height: 21px;
+            }
+            
+        }
+    }
+}

@@ -363,21 +363,36 @@ button {
 .gap-40 {
 	gap: 40px;
 }
+.gap-60 {
+	gap: 60px;
+}
 .row-gap-30 {
 	row-gap: 30px;
 }
-@include max-md {
-	.gap-max-md-0 {
-		gap: 0;
-	}
-}
+
 
 @include max-xl {
+	.gap-max-xl-40 {
+		gap: 20px;
+	}
 	.gap-max-xl-20 {
 		gap: 20px;
 	}
 	.gap-max-xl-10 {
 		gap: 10px;
+	}
+}
+@include max-lg{
+	.gap-max-lg-30 {
+		gap: 30px;
+	}
+	.gap-max-lg-14 {
+		gap: 14px
+	}
+}
+@include max-md {
+	.gap-max-md-0 {
+		gap: 0;
 	}
 }
 // margins
@@ -458,6 +473,10 @@ button {
 }
 .section {
 	padding: 60px 0;
+	@include max-md{
+		padding: 30px 0;
+	}
+	
 }
 .manual-text {
 	font-family: "Telegraf", sans-serif;

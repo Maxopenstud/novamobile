@@ -356,18 +356,29 @@ button {
 .gap-40 {
   gap: 40px; }
 
+.gap-60 {
+  gap: 60px; }
+
 .row-gap-30 {
   row-gap: 30px; }
 
-@media (max-width: 768px) {
-  .gap-max-md-0 {
-    gap: 0; } }
-
 @media (max-width: 1200px) {
+  .gap-max-xl-40 {
+    gap: 20px; }
   .gap-max-xl-20 {
     gap: 20px; }
   .gap-max-xl-10 {
     gap: 10px; } }
+
+@media (max-width: 992px) {
+  .gap-max-lg-30 {
+    gap: 30px; }
+  .gap-max-lg-14 {
+    gap: 14px; } }
+
+@media (max-width: 768px) {
+  .gap-max-md-0 {
+    gap: 0; } }
 
 .mt-10 {
   margin-top: 10px; }
@@ -437,6 +448,9 @@ button {
 
 .section {
   padding: 60px 0; }
+  @media (max-width: 768px) {
+    .section {
+      padding: 30px 0; } }
 
 .manual-text {
   font-family: "Telegraf", sans-serif;
@@ -2039,6 +2053,8 @@ select::-ms-expand {
       padding-bottom: 40px;
       grid-template-columns: 1fr;
       gap: 30px; } }
+  .information__about {
+    padding-bottom: 0; }
   .information__about .information__text {
     line-height: 27px; }
   .information__item {
@@ -2279,6 +2295,127 @@ select::-ms-expand {
   max-width: 60px; }
   .hand-slider .slick-slide {
     padding: 5px 0 10px; }
+
+.team__item {
+  background-color: #FAFAFA;
+  border-radius: 25px;
+  padding: 40px 0; }
+  .team__item-info {
+    position: relative;
+    padding: 0 50px; }
+    @media (max-width: 992px) {
+      .team__item-info {
+        padding: 0 24px; } }
+    .team__item-info::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+      border-radius: 30px; }
+
+.team__title {
+  background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Telegraf", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 39px;
+  text-align: left; }
+  @media (max-width: 992px) {
+    .team__title {
+      font-size: 20px;
+      line-height: 26px; } }
+
+.team__name {
+  font-family: "Telegraf", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: #858585; }
+  @media (max-width: 992px) {
+    .team__name {
+      font-size: 18px;
+      line-height: 23px; } }
+
+.team .avatar {
+  max-width: 106px; }
+  @media (max-width: 992px) {
+    .team .avatar {
+      max-width: 86px; } }
+
+.advantages__title {
+  font-family: "Telegraf", sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 59.36px;
+  text-align: left; }
+  @media (max-width: 992px) {
+    .advantages__title {
+      font-size: 36px;
+      line-height: 38px;
+      text-align: center; } }
+
+.advantages .btn-dark {
+  margin-top: 50px;
+  width: max-content;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
+  height: 60px; }
+  @media (max-width: 992px) {
+    .advantages .btn-dark {
+      height: 48px;
+      margin-top: 30px; } }
+
+@media (max-width: 992px) {
+  .advantages .manual-text {
+    text-align: center; } }
+
+.advantages__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.advantages__item {
+  padding: 65px 58px;
+  box-shadow: 0px 4px 25px 0px #00000014;
+  border-radius: 60px;
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 992px) {
+    .advantages__item {
+      border-radius: 30px;
+      padding: 30px 18px; } }
+  .advantages__item-title {
+    background: linear-gradient(86.62deg, #832FBD 8.67%, #D06852 93.48%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Telegraf", sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 59.36px;
+    text-align: center; }
+    @media (max-width: 992px) {
+      .advantages__item-title {
+        font-size: 28px;
+        line-height: 30px; } }
+  .advantages__item-text {
+    font-family: "Telegraf", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34.8px;
+    text-align: center; }
+    @media (max-width: 992px) {
+      .advantages__item-text {
+        font-size: 12px;
+        line-height: 21px; } }
 
 .footer {
   padding: 60px 0; }

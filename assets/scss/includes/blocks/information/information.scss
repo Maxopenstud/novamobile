@@ -8,6 +8,9 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
+    &__about  {
+        padding-bottom: 0;
+    }
     &__about .information__text {
         line-height: 27px;
     }

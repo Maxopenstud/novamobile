@@ -1,0 +1,60 @@
+.team {
+    &__item {
+        background-color: #FAFAFA;
+        border-radius: 25px;
+        padding: 40px 0;
+        &-info {
+            position: relative;
+            padding: 0 50px;
+            @include max-lg{
+                padding: 0 24px;
+            }
+            
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+                border-radius: 30px;
+            }
+        }
+    }
+    &__title {
+        background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Telegraf", sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 39px;
+        text-align: left;
+        @include max-lg{
+            font-size: 20px;
+            line-height: 26px;
+        }
+        
+    }
+    &__name {
+        font-family: "Telegraf", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        color: #858585;
+        @include max-lg{
+            font-size: 18px;
+            line-height: 23px;
+        }
+        
+    }
+    & .avatar {
+        max-width: 106px;
+        @include max-lg{
+            max-width: 86px;
+        }
+        
+    }
+}
