@@ -138,6 +138,18 @@ img {
 .fw-600 {
 	font-weight: 600 !important;
 }
+h1 {
+	font-family: "Telegraf", sans-serif;
+	font-size: 56px;
+	font-weight: 800;
+	line-height: 59.36px;
+	color: #3B3B3B;
+	@include max-md {
+		font-size: 36px;
+		line-height: 38px;
+		text-align: center;
+	}
+}
 textarea {
 	border: none;
 	outline: none;
@@ -146,6 +158,7 @@ textarea {
 	resize: none;
 	padding: 15px;
 	width: 100%;
+	font-family: 'Telegraf', sans-serif;
 }
 a {
 	text-decoration: none;
@@ -377,6 +390,9 @@ button {
 .mt-20 {
 	margin-top: 20px;
 }
+.mt-30 {
+	margin-top: 30px;
+}
 .mt-50 {
 	margin-top: 50px;
 }
@@ -397,6 +413,9 @@ button {
 	padding-right: 60px;
 }
 @include max-md {
+	.mt-max-md-20 {
+		margin-top: 20px;
+	}
 	.mt-max-md-30 {
 		margin-top: 30px;
 	}
@@ -408,6 +427,9 @@ button {
 	}
 }
 @include max-lg {
+	.mt-max-lg-20 {
+		margin-top: 20px;
+	}
 	.mt-max-lg-30 {
 		margin-top: 30px;
 	}
@@ -601,4 +623,33 @@ select::-ms-expand {
 /* стили для чекбокса, находящегося в состоянии disabled */
 .custom-checkbox > input:disabled + span::before {
 	background-color: #e9ecef;
+}
+.hidden,
+.hidden *{
+	opacity: 0 !important;
+	visibility: hidden !important;
+	pointer-events: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+[data-tab-target] {
+	opacity: 1 !important;
+	visibility: visible !important;
+	pointer-events: all !important;
+	transition: .5s;
+}
+[data-tab-target].hidden {
+	opacity: 0 !important;
+	visibility: hidden !important;
+	pointer-events: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 0;
+}
+
+.form-input {
+	border: 1px solid #ccc;
+}
+.form-input.error {
+	border-color: red;
 }

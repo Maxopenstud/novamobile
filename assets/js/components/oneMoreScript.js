@@ -6,17 +6,44 @@ $(document).ready(function() {
     })
     
     $(".toggle-option").click(function() {
-        $(".toggle-option").removeClass("active");
-        $(this).addClass("active");
+        
+        
+    });
+    $(".toggle-option").click(function() {
+        if($(this).hasClass("active")) {
+            return
+        } else {
+            $(".toggle-switch").toggleClass("right");
+            $(".toggle-option").removeClass("active");
+            $(this).addClass("active");
+        }
+        
     });
 
     $("[data-tab]").click(function() {
         let data_tab = $(this).attr("data-tab");
-        $("[data-tab-target]").addClass("hide")
-        $("[data-tab-target='" + data_tab + "']").removeClass("hide")
+        $("[data-tab-target]").addClass("hidden")
+        $("[data-tab-target='" + data_tab + "']").removeClass("hidden")
         $(this).parent().find("[data-tab]").removeClass("active")
         $(this).addClass("active")
     });
+
+    $("[data-tab='local']").click(function() {
+        $(".tabs__border").removeClass("center right")
+        $(".tabs__border").addClass("left")
+    })
+    $("[data-tab='regional']").click(function() {
+        $(".tabs__border").removeClass("left right")
+        $(".tabs__border").addClass("center")
+    })
+    $("[data-tab='global']").click(function() {
+        $(".tabs__border").removeClass("left center")
+        $(".tabs__border").addClass("right")
+    })
+    
+
+    
+
 
     $(".password svg").click(function() {
         var $input = $(this).parent().find('input');
@@ -57,74 +84,133 @@ $(document).ready(function() {
     setTimeout(setOverflow, 3000);
     
     $(window).on('scroll', function() {
-        var $element = $('.steps__item2');
-        var $element2 = $('.steps__item3');
-        var elementTop = $element.offset().top;
-        var elementTop2 = $element2.offset().top;
-        var elementHeight = $element.outerHeight();
-        var elementHeight2 = $element2.outerHeight();
-        var windowHeight = $(window).height();
-        var scrollTop = $(window).scrollTop();
-
-        // Определяем центр экрана
-        var windowCenter = scrollTop + (windowHeight / 2);
-
-        // Проверяем, находится ли элемент в середине экрана
-        if (elementTop < windowCenter && (elementTop + elementHeight) > windowCenter) {
-            $(".steps").addClass('centered');
-        } else {
-            // $element.removeClass('centered');
-        }
-        if (elementTop2 < windowCenter && (elementTop2 + elementHeight2) > windowCenter) {
-            $(".steps").addClass('bottom');
-        } else {
-            // $element.removeClass('centered');
+        var $element = $('.front-page .steps__item2');
+        var $element2 = $('.front-page .steps__item3');
+    
+        if ($element.length && $element2.length) {
+            var elementTop = $element.offset().top;
+            var elementTop2 = $element2.offset().top;
+            var elementHeight = $element.outerHeight();
+            var elementHeight2 = $element2.outerHeight();
+            var windowHeight = $(window).height();
+            var scrollTop = $(window).scrollTop();
+    
+            // Определяем центр экрана
+            var windowCenter = scrollTop + (windowHeight / 2);
+    
+            // Проверяем, находится ли элемент в середине экрана
+            if (elementTop < windowCenter && (elementTop + elementHeight) > windowCenter) {
+                $(".steps").addClass('centered');
+            } else {
+                $(".steps").removeClass('centered');
+            }
+            if (elementTop2 < windowCenter && (elementTop2 + elementHeight2) > windowCenter) {
+                $(".steps").addClass('bottom');
+            } else {
+                $(".steps").removeClass('bottom');
+            }
         }
     });
+    
       
     
+    $(".email").inputmask("email");
 
+    $("button[type='submit']").click(function(e) {
+        e.preventDefault();
+        var isValid = true;
 
+        // Проверяем каждое поле ввода
+        $('.form-input').each(function() {
+            var $this = $(this);
+            if (!$this.val()) {
+                $this.addClass('error');
+                isValid = false;
+            } else {
+                $this.removeClass('error');
+            }
+        });
 
+        // Проверяем поле выбора
+        $('select').each(function() {
+            var $this = $(this);
+            if (!$this.val()) {
+                $this.addClass('error');
+                isValid = false;
+            } else {
+                $this.removeClass('error');
+            }
+        });
 
-    var sliderSelector = '.swiper-container',
-options = {
-    init: false,
-    loop: true,
-    speed: 800,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    centeredSlides : true,
-    effect: 'coverflow',
-    coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 60,
-        modifier: 1,
-        slideShadows : true,
-    },
-    grabCursor: true,
-    parallax: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        1000: {
-            slidesPerView: 2,
-            spaceBetween: 0
-        },
-        767: {
-            slidesPerView: 2,
-            spaceBetween: -80
-        }        
+        // Проверяем текстовое поле
+        $('textarea').each(function() {
+            var $this = $(this);
+            if (!$this.val()) {
+                $this.addClass('error');
+                isValid = false;
+            } else {
+                $this.removeClass('error');
+            }
+        });
+
+        // Проверка чекбокса согласия
+        if (!$('input[name="consent"]').is(':checked')) {
+            isValid = false;
         }
-};
-var mySwiper = new Swiper(sliderSelector, options);
-mySwiper.init();
+
+        // Если все поля заполнены, отправляем форму
+        if (isValid) {
+            $('.questions__content').submit();
+        }
+    });
+
+
+
+    var sliderSelector = '.swiper-container';
+var $sliderElement = $(sliderSelector);
+
+if ($sliderElement.length) {
+    var options = {
+        init: false,
+        loop: true,
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: true,
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 60,
+            modifier: 1,
+            slideShadows: true,
+        },
+        grabCursor: true,
+        parallax: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1000: {
+                slidesPerView: 2,
+                spaceBetween: 0
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: -80
+            }
+        }
+    };
+
+    var mySwiper = new Swiper(sliderSelector, options);
+    mySwiper.init();
+}
+
+
 });
 

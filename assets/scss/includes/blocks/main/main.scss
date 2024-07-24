@@ -18,16 +18,7 @@
     }
     
     & h1 {
-        font-family: "Telegraf", sans-serif;
-        font-size: 56px;
-        font-weight: 800;
-        line-height: 59.36px;
         color: #fff;
-        @include max-md {
-            font-size: 36px;
-            line-height: 38px;
-            text-align: center;
-        }
 
         & span {
             background: linear-gradient(90.81deg, #832fbd 9.1%, #d06852 55.89%);

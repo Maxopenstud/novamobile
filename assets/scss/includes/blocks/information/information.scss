@@ -8,7 +8,9 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+    &__about .information__text {
+        line-height: 27px;
+    }
     &__item {
         background: linear-gradient(84.67deg, #832fbd -70.44%, #d06852 110.87%);
         border-radius: 60px;

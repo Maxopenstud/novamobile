@@ -1,16 +1,22 @@
 $(document).ready(function() {
-$('.loginSlider').owlCarousel({
-    loop:true,
-    nav:true,
-    items:1,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-});
+  $('.hand-slider').slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    speed: 300,
+    fade: true,
+    cssEase: 'linear'
+  });
+  $('.loginSlider').slick({
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    speed: 300,
+    fade: true,
+    cssEase: 'linear'
+  });
 
 
 

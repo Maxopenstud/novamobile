@@ -3,6 +3,18 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-top: 40px;
+    transition: 0.5s;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    height: auto;
+    transition: 0.5s;
+    // &.hidden {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     pointer-events: none;
+    //     height: 0;
+    // }
     @include max-xxl {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -14,6 +26,13 @@
         gap: 30px;
         margin-top: 30px;
     }
+    // &.visible {
+    //     opacity: 1;
+    //     visibility: visible;
+    //     pointer-events: all;
+    //     height: auto;
+    //     transition: 0.5s;
+    // }
 }
 .card {
     padding: 34px 30px 40px;
@@ -21,14 +40,14 @@
     max-width: 350px;
     border: none;
     border-radius: 30px;
-    @include max-lg{
+    @include max-lg {
         max-width: 100%;
     }
-    
-    @include max-md{
+
+    @include max-md {
         padding: 34px 30px 40px;
     }
-    
+
     &__title {
         font-family: "Telegraf", sans-serif;
         font-size: 20px;
@@ -75,9 +94,8 @@
     }
     &-label {
         padding: 25px;
-        @include max-md{
+        @include max-md {
             padding: 15px;
         }
-        
     }
 }
