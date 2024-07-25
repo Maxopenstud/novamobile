@@ -2242,6 +2242,8 @@ select::-ms-expand {
 .loginSlider {
   position: relative;
   height: 100%; }
+  .loginSlider .slick-arrow {
+    display: none !important; }
   .loginSlider .owl-stage, .loginSlider .owl-stage-outer, .loginSlider .slick-list, .loginSlider .slick-track {
     height: 100%; }
   .loginSlider__item {
@@ -2393,6 +2395,8 @@ select::-ms-expand {
   max-width: 60px; }
   .hand-slider .slick-slide {
     padding: 5px 0 10px; }
+  .hand-slider .slick-arrow {
+    display: none !important; }
 
 .team__item {
   background-color: #FAFAFA;
@@ -2775,4 +2779,10 @@ select::-ms-expand {
 
 .front-page .footer {
   padding: 0; }
+
+.main-page .footer {
+  padding: 0 0 60px; }
+  @media (max-width: 992px) {
+    .main-page .footer {
+      padding: 0 0 40px; } }
 

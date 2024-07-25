@@ -1,7 +1,9 @@
 .loginSlider {
     position: relative;
     height: 100%;
-
+    & .slick-arrow {
+        display: none !important;
+    }
     & .owl-stage, & .owl-stage-outer, & .slick-list, & .slick-track {
         height: 100%;
     }
@@ -188,5 +190,8 @@
     max-width: 60px;
     & .slick-slide {
         padding: 5px 0 10px;
+    }
+    & .slick-arrow {
+        display: none !important;
     }
 }

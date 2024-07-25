@@ -115,9 +115,12 @@
     }
 }
 .front-page .footer {
-    padding: 0;
-    // opacity: 0;
-    // visibility: hidden;
-    // height: 0;
-    // transition: 2s;
+    padding: 0
+}
+.main-page .footer {
+    padding: 0 0 60px;
+    @include max-lg{
+        padding: 0 0 40px;
+    }
+    
 }
