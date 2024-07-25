@@ -38,6 +38,7 @@
         top: 0;
         left: 0;
         z-index: 5;
+        transition: .5s;
         @include max-xxl{
             height: 30%;
         }
@@ -74,28 +75,14 @@
         background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
         color: #fff;
     }
+    &.centered .steps__item2::before, &.bottom .steps__item3::before {
+        background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+        color: #fff;
+        transition: 1.5s;
+    }
     &__item:nth-child(2):before {
         content: "2";
     }
-    // &__item2.centered:after {
-    //     content: "";
-    //     width: 12px;
-    //     height: 63%;
-    //     background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
-    //     border-radius: 30px;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     z-index: 5;
-    //     transition: 1s;
-    //     @include max-xxl{
-    //         height: 30%;
-    //     }
-    //     @include max-lg{
-    //         width: 4px;
-    //         height: 35%;
-    //     }
-    // }
    
     &__item:nth-child(3):before {
         content: "3";

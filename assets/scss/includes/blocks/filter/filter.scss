@@ -1,0 +1,11 @@
+.filter {
+    background-color: #fafafa;
+    border-radius: 30px;
+    padding: 40px 30px;
+    height: 100%;
+    width: 100%;
+    font-family: "Gilroy";
+    & * {
+        font-family: "Gilroy";
+    }
+}

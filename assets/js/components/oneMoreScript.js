@@ -84,37 +84,36 @@ $(document).ready(function() {
     setTimeout(setOverflow, 3000);
     
     $(window).on('scroll', function() {
-        var $element = $('.front-page .steps__item2');
-        var $element2 = $('.front-page .steps__item3');
+        var $stepsItems = $('.steps__item');
+        var windowHeight = $(window).height();
+        var scrollTop = $(window).scrollTop();
+        var windowCenter = scrollTop + (windowHeight / 2);
     
-        if ($element.length && $element2.length) {
-            var elementTop = $element.offset().top;
-            var elementTop2 = $element2.offset().top;
-            var elementHeight = $element.outerHeight();
-            var elementHeight2 = $element2.outerHeight();
-            var windowHeight = $(window).height();
-            var scrollTop = $(window).scrollTop();
+        if ($stepsItems.length) {
+            $stepsItems.each(function() {
+                var $element = $(this);
+                var elementTop = $element.offset().top;
+                var elementHeight = $element.outerHeight();
     
-            // Определяем центр экрана
-            var windowCenter = scrollTop + (windowHeight / 2);
-    
-            // Проверяем, находится ли элемент в середине экрана
-            if (elementTop < windowCenter && (elementTop + elementHeight) > windowCenter) {
-                $(".steps").addClass('centered');
-            } else {
-                $(".steps").removeClass('centered');
-            }
-            if (elementTop2 < windowCenter && (elementTop2 + elementHeight2) > windowCenter) {
-                $(".steps").addClass('bottom');
-            } else {
-                $(".steps").removeClass('bottom');
-            }
+                if (elementTop < windowCenter && (elementTop + elementHeight) > windowCenter) {
+                    if ($element.hasClass('steps__item1')) {
+                        $(".steps").removeClass('centered bottom');
+                    }
+                    if ($element.hasClass('steps__item2')) {
+                        $(".steps").addClass('centered').removeClass('bottom');
+                    }
+                    if ($element.hasClass('steps__item3')) {
+                        $(".steps").addClass('bottom');
+                    }
+                }
+            });
         }
     });
     
       
-    
-    $(".email").inputmask("email");
+    if ($(".email").length) {
+        $(".email").inputmask("email");
+    }
 
     $("button[type='submit']").click(function(e) {
         e.preventDefault();
@@ -166,50 +165,50 @@ $(document).ready(function() {
 
 
 
-    var sliderSelector = '.swiper-container';
-var $sliderElement = $(sliderSelector);
+//     var sliderSelector = '.swiper-container';
+// var $sliderElement = $(sliderSelector);
 
-if ($sliderElement.length) {
-    var options = {
-        init: false,
-        loop: true,
-        speed: 800,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        centeredSlides: true,
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 60,
-            modifier: 1,
-            slideShadows: true,
-        },
-        grabCursor: true,
-        parallax: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            1000: {
-                slidesPerView: 2,
-                spaceBetween: 0
-            },
-            767: {
-                slidesPerView: 2,
-                spaceBetween: -80
-            }
-        }
-    };
+// if ($sliderElement.length) {
+//     var options = {
+//         init: false,
+//         loop: true,
+//         speed: 800,
+//         slidesPerView: 1,
+//         spaceBetween: 0,
+//         centeredSlides: true,
+//         effect: 'coverflow',
+//         coverflowEffect: {
+//             rotate: 50,
+//             stretch: 0,
+//             depth: 60,
+//             modifier: 1,
+//             slideShadows: true,
+//         },
+//         grabCursor: true,
+//         parallax: true,
+//         pagination: {
+//             el: '.swiper-pagination',
+//             clickable: true,
+//         },
+//         navigation: {
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//         },
+//         breakpoints: {
+//             1000: {
+//                 slidesPerView: 2,
+//                 spaceBetween: 0
+//             },
+//             767: {
+//                 slidesPerView: 2,
+//                 spaceBetween: -80
+//             }
+//         }
+//     };
 
-    var mySwiper = new Swiper(sliderSelector, options);
-    mySwiper.init();
-}
+//     var mySwiper = new Swiper(sliderSelector, options);
+//     mySwiper.init();
+// }
 
 
 });

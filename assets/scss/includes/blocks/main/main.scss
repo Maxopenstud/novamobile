@@ -16,7 +16,9 @@
         @include max-xl{
         }
     }
-    
+    &.storeMain {
+        background-image: url(../images/store_bg.png);
+    }
     & h1 {
         color: #fff;
 

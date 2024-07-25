@@ -1,0 +1,61 @@
+.related-articles {
+    background-color: #fafafa;
+    padding: 50px 30px;
+    border-radius: 40px;
+    height: 100%;
+    @include max-xl{
+        padding: 40px 20px;
+    }
+    
+    &-title {
+        font-family: "Telegraf", sans-serif;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 24px;
+        color: #3b3b3b;
+        margin-bottom: 30px;
+        @include max-xl{
+            font-size: 20px;
+            line-height: 22px;
+        }
+        @include max-lg{
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        
+    }
+    &-list {
+        display: grid;
+        gap: 20px;
+    }
+    &-item {
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px 0px #00000026;
+        & a {
+            padding: 17px 20px;
+            font-family: "Telegraf", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 36px;
+            text-align: left;
+            background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            &::before {
+                content: "";
+                width: 2px;
+                height: 50%;
+                background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+                border-radius: 10px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+}

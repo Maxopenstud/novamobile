@@ -1,6 +1,10 @@
 .breadcrumbs {
     display: flex;
-    margin: 30px 0 47px;
+    padding: 30px 0 47px;
+    @include max-lg{
+        padding: 30px 0 40px;
+    }
+    
     &__item {
         display: flex;
         &:not(:first-child)::before {

@@ -108,7 +108,7 @@ section {
 	background-color: #fff;
 }
 html {
-    scroll-behavior: auto;
+	scroll-behavior: auto;
 }
 .front-page {
 	overflow: hidden;
@@ -143,7 +143,7 @@ h1 {
 	font-size: 56px;
 	font-weight: 800;
 	line-height: 59.36px;
-	color: #3B3B3B;
+	color: #3b3b3b;
 	@include max-md {
 		font-size: 36px;
 		line-height: 38px;
@@ -158,7 +158,7 @@ textarea {
 	resize: none;
 	padding: 15px;
 	width: 100%;
-	font-family: 'Telegraf', sans-serif;
+	font-family: "Telegraf", sans-serif;
 }
 a {
 	text-decoration: none;
@@ -370,7 +370,6 @@ button {
 	row-gap: 30px;
 }
 
-
 @include max-xl {
 	.gap-max-xl-40 {
 		gap: 20px;
@@ -382,12 +381,12 @@ button {
 		gap: 10px;
 	}
 }
-@include max-lg{
+@include max-lg {
 	.gap-max-lg-30 {
 		gap: 30px;
 	}
 	.gap-max-lg-14 {
-		gap: 14px
+		gap: 14px;
 	}
 }
 @include max-md {
@@ -430,6 +429,9 @@ button {
 .pr-60 {
 	padding-right: 60px;
 }
+.pb-60 {
+	padding-bottom: 60px;
+}
 @include max-md {
 	.mt-max-md-20 {
 		margin-top: 20px;
@@ -457,6 +459,9 @@ button {
 	.pr-max-lg-0 {
 		padding-right: 0;
 	}
+	.pb-max-lg-40 {
+		padding-bottom: 40px;
+	}
 }
 
 .btn {
@@ -479,10 +484,9 @@ button {
 }
 .section {
 	padding: 60px 0;
-	@include max-md{
+	@include max-md {
 		padding: 30px 0;
 	}
-	
 }
 .manual-text {
 	font-family: "Telegraf", sans-serif;
@@ -512,10 +516,10 @@ button {
 	}
 }
 .bg-f1 {
-	background-color: #F1F1F1 !important;
+	background-color: #f1f1f1 !important;
 }
 .bg-f4 {
-	background-color: #F4F4F4;
+	background-color: #f4f4f4;
 }
 .fs-20 {
 	font-size: 20px;
@@ -597,7 +601,7 @@ select::-ms-expand {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 22.4px;
-	color: #3B3B3B;
+	color: #3b3b3b;
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
@@ -650,7 +654,7 @@ select::-ms-expand {
 	background-color: #e9ecef;
 }
 .hidden,
-.hidden *{
+.hidden * {
 	opacity: 0 !important;
 	visibility: hidden !important;
 	pointer-events: none !important;
@@ -661,7 +665,7 @@ select::-ms-expand {
 	opacity: 1 !important;
 	visibility: visible !important;
 	pointer-events: all !important;
-	transition: .5s;
+	transition: 0.5s;
 }
 [data-tab-target].hidden {
 	opacity: 0 !important;
@@ -677,4 +681,78 @@ select::-ms-expand {
 }
 .form-input.error {
 	border-color: red;
+}
+#column-left {
+	height: 100%;
+	min-width: 300px;
+	@include max-xl {
+		max-width: 250px;
+		min-width: 250px;
+	}
+	@include max-md {
+		min-height: 100%;
+		max-width: 100%;
+	}
+}
+.pageOfCountry__Title {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-family: "Telegraf", sans-serif;
+	font-size: 46px;
+	font-weight: 800;
+	line-height: 48.76px;
+	text-align: center;
+	color: #000000;
+	justify-content: center;
+	padding-bottom: 30px;
+	@include max-lg {
+		font-size: 34px;
+		line-height: 36px;
+		gap: 14px;
+		padding-bottom: 0;
+	}
+}
+.manual-list {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	@include max-lg{
+		margin-top: 20px;
+	}
+	
+}
+.manual-list li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: #3b3b3b;
+	font-family: "Telegraf", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 23px;
+
+	&:before {
+		content: "";
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9999 0C5.38321 0 0 5.38309 0 11.9999C0 18.6168 5.38321 24 11.9999 24C18.6167 24 23.9999 18.6168 23.9999 11.9999C23.9999 5.38309 18.6168 0 11.9999 0ZM18.8905 9.97305L11.3516 17.512C11.031 17.8326 10.6049 18.009 10.1516 18.009C9.69832 18.009 9.27221 17.8326 8.95165 17.512L5.10936 13.6697C4.78881 13.3492 4.61225 12.923 4.61225 12.4698C4.61225 12.0163 4.78881 11.5902 5.10936 11.2697C5.42979 10.9491 5.85591 10.7726 6.30932 10.7726C6.7626 10.7726 7.18884 10.9491 7.50927 11.2698L10.1515 13.9119L16.4904 7.57301C16.8109 7.25245 17.237 7.07602 17.6903 7.07602C18.1436 7.07602 18.5697 7.25245 18.8903 7.57301C19.5522 8.23491 19.5522 9.3114 18.8905 9.97305Z' fill='url(%23paint0_linear_600_6572)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_600_6572' x1='8.44996' y1='-7.125' x2='15.2279' y2='22.4586' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23832FBD'/%3E%3Cstop offset='1' stop-color='%23D06852'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+		width: 24px;
+		height: 24px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+.manual-title {
+	font-family: 'Telegraf', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 45px;
+	color: #3b3b3b;
+	margin-top: 40px;
+	@include max-lg{
+		font-size: 24px;
+		line-height: 26px;
+		margin-top: 30px;
+	}
+	
 }
