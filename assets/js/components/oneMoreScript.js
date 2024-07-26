@@ -125,7 +125,6 @@ $(document).ready(function() {
 
     const isMacBook = navigator.userAgent.includes('Macintosh');
     if (isMacBook) {
-        alert("Пользователь зашел с MacBook.");
 
         $(".cascade-slider_arrow, .cascade-slider_nav, .blog-slider .sectionTitle").addClass('mac');
     } else {

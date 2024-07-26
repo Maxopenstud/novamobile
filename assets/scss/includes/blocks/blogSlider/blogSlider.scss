@@ -483,7 +483,9 @@
   z-index: 5;
 }
 @media(min-width: 576px) {
-  .cascade-slider_arrow.mac,
+  .cascade-slider_arrow.mac {
+    bottom: -100px;
+  }
   .cascade-slider_nav.mac {
     bottom: -50px;
   }
