@@ -127,9 +127,9 @@
     }
     &__title {
         font-family: "Telegraf", sans-serif;
-        font-size: 44px;
+        font-size: 40px;
         font-weight: 800;
-        line-height: 46.64px;
+        line-height: 42px;
         color: #3b3b3b;
         @include max-xxl{
             font-size: 36px;
@@ -160,4 +160,41 @@
     position: sticky;
     height: max-content;
     top: 150px;
+    border-radius: 40px;
+    background-color: #FAFAFA;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.device {
+    max-width: 288px;
+    max-height: 590px;
+    position: relative;
+    overflow: hidden;
+    z-index: 6;
+    border-radius: 50px;
+    &__screens {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: 1.5s;
+        padding: 0 10px;
+        &.centered {
+            transform: translateY(-559px);
+            transition: 1.5s;
+        }
+        &.bottom {
+            transform: translateY(-1140px);
+            transition: 1.5s;
+        }
+    }
+    // &__screen {
+    //     width: 100%;
+    //     display: none; /* Скрываем все экраны по умолчанию */
+    // }
+    // .device__screen.active {
+    //     display: block; /* Показываем активный экран */
+    // }
 }

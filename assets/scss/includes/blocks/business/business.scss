@@ -1,0 +1,107 @@
+.business {
+    background-color: #121212;
+    & .cloud,
+    .menu,
+    .icon_login,
+    .btn-dropdown,
+    .burger {
+        display: none;
+    }
+    & .btn-dark {
+        background-color: #f5785e;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+    }
+    & .main {
+        background-image: none;
+        background-color: inherit;
+    }
+    & section,
+    .content {
+        background-color: inherit;
+    }
+    & .header {
+        background-color: inherit;
+        padding: 5px 0;
+        & .btn-dark {
+            @include max-lg{
+                display: flex;
+            }
+            @include max-md{
+                max-width: 80px;
+            }
+            
+        }
+    }
+    .logo__default {
+        display: none;
+    }
+    .logo__business {
+        display: block;
+    }
+    & .btn-transparent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #f5785e;
+        color: #f5785e;
+        font-family: 'Gilroy';
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.2px;
+        margin-right: 10px;
+        border-radius: 10px;
+        padding: 0 58px;
+        @include max-xl{
+            padding: 0 38px;
+        }
+        
+        @include max-lg{
+            margin-right: 0;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        @include max-md{
+            margin-right: 10px;
+            padding: 0 18px;
+        }
+        &:hover {
+            background-color: #f5785e;
+            color: #fff;
+        }
+    }
+    & .breadcrumbs {
+        padding: 60px 0 0;
+        @include max-lg{
+            // padding: 30px 0 40px;
+        }
+        
+        &__item {
+            &:not(:first-child)::before {
+                background-color: #fff;
+            }
+        }
+        &__link {
+            color: #fff;
+            &.active, &:hover {
+                color: #f5785e;
+            }
+        }
+    }
+    & .main h1 {
+        color: #fff;
+        & span {
+            background: #F5785E;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    & .apps-for-download {
+        max-width: 178px;
+        margin-top: 40px;
+        & .btn {
+            height: 48px;
+        }
+    }
+}

@@ -12,4 +12,18 @@
         }
         
     }
+    & .manual-title {
+        font-family: 'Telegraf', sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 45px;
+        color: #3b3b3b;
+        margin-top: 40px;
+        @include max-lg{
+            font-size: 24px;
+            line-height: 26px;
+            margin-top: 30px;
+        }
+        
+    }
 }

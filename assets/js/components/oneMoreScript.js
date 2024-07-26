@@ -42,7 +42,17 @@ $(document).ready(function() {
     })
     
 
-    
+    // window.addEventListener('scroll', () => {
+    //     const screens = document.querySelectorAll('.device__screen');
+    //     const scrollPosition = window.scrollY;
+    //     const screenCount = screens.length;
+    //     const scrollStep = 200; // Высота прокрутки для смены изображения
+    //     const activeIndex = Math.floor(scrollPosition / scrollStep) % screenCount;
+
+    //     screens.forEach((screen, index) => {
+    //         screen.classList.toggle('active', index === activeIndex);
+    //     });
+    // });
 
 
     $(".password svg").click(function() {
@@ -70,7 +80,9 @@ $(document).ready(function() {
         $(".hero").css("transform", "translateY(0)");
     };
     function showContent() {
-        $(".content").css("transform", "translateY(-100px)")
+        // let mainHeight = $(window).height() - 200;
+        $(".content").css("transform", "translateY(-50px)")
+        // $(".main").css("height", mainHeight)
         $(".footer").css("opacity", "1")
         $(".footer").css("visibility", "visible")
         $(".footer").css("height", "auto")
@@ -97,18 +109,28 @@ $(document).ready(function() {
     
                 if (elementTop < windowCenter && (elementTop + elementHeight) > windowCenter) {
                     if ($element.hasClass('steps__item1')) {
-                        $(".steps").removeClass('centered bottom');
+                        $(".steps, .device__screens").removeClass('centered bottom');
                     }
                     if ($element.hasClass('steps__item2')) {
-                        $(".steps").addClass('centered').removeClass('bottom');
+                        $(".steps, .device__screens").addClass('centered').removeClass('bottom');
                     }
                     if ($element.hasClass('steps__item3')) {
-                        $(".steps").addClass('bottom');
+                        $(".steps, .device__screens").addClass('bottom')
                     }
                 }
             });
         }
     });
+
+
+    const isMacBook = navigator.userAgent.includes('Macintosh');
+    if (isMacBook) {
+        alert("Пользователь зашел с MacBook.");
+
+        $(".cascade-slider_arrow, .cascade-slider_nav, .blog-slider .sectionTitle").addClass('mac');
+    } else {
+        console.log("Пользователь зашел не с MacBook.");
+    }
     
       
     if ($(".email").length) {

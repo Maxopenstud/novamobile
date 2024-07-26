@@ -84,4 +84,12 @@
             
         }
     }
+    & .btn-transparent {
+        display: none;
+    }
+}
+.logo {
+    &__business {
+        display: none;
+    }
 }
