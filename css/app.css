@@ -1769,7 +1769,7 @@ select::-ms-expand {
 
 @media (min-width: 576px) {
   .cascade-slider_arrow.mac {
-    bottom: -100px; }
+    transform: translate(0, 0); }
   .cascade-slider_nav.mac {
     bottom: -50px; } }
 
