@@ -44,11 +44,12 @@
                                     </svg>
                                 </button>
                                 <a href="#" class="logo header__logo">
-                                    <img src="images/logo.svg" alt="logo"> 
+                                    <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                                    <img src="images/logo_business.svg" alt="logo" class="logo__business"> 
                                 </a>
                             </div>
                             <div class="d-flex align-items-center gap-20 gap-max-xl-10">
-                                <a href="login.html" class="">
+                                <a href="login.html" class="icon_login">
                                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1040_563)">
                                         <path d="M15 5C12.2375 5 10 7.2375 10 10C10 12.7562 12.2375 15 15 15C17.7625 15 20 12.7562 20 10C20 7.2375 17.7625 5 15 5ZM15 17.5C11.6687 17.5 5 19.1687 5 22.5V25H25V22.5C25 19.1687 18.3313 17.5 15 17.5Z" fill="black"></path>
@@ -61,7 +62,7 @@
                                     </svg>
                                 </a>
                                 <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         EN ($)
                                     </button>
                                     <ul class="dropdown-menu">
@@ -93,7 +94,8 @@
                         </div>
                         <div class="d-flex flex-column align-items-center gap-20">
                             <a href="#" class="logo header__logo">
-                                <img src="images/logo.svg" alt="logo"> 
+                                <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                                <img src="images/logo_business.svg" alt="logo" class="logo__business">  
                             </a>
                             <ul class="social">
                                 <li class="social__item">
@@ -137,7 +139,8 @@
                         </div>
                     </div>
                     <a href="#" class="logo header__logo">
-                        <img src="images/logo.svg" alt="logo"> 
+                        <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                        <img src="images/logo_business.svg" alt="logo" class="logo__business">  
                     </a>
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
@@ -159,7 +162,7 @@
                         </li>
                     </ul>
                     <div class="d-flex align-items-center gap-20 gap-max-xl-10 w-100">
-                        <a href="login.html" class="">
+                        <a href="login.html" class="icon_login">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1040_563)">
                                 <path d="M15 5C12.2375 5 10 7.2375 10 10C10 12.7562 12.2375 15 15 15C17.7625 15 20 12.7562 20 10C20 7.2375 17.7625 5 15 5ZM15 17.5C11.6687 17.5 5 19.1687 5 22.5V25H25V22.5C25 19.1687 18.3313 17.5 15 17.5Z" fill="black"></path>
@@ -172,13 +175,14 @@
                             </svg>
                         </a>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 EN ($)
                             </button>
                             <ul class="dropdown-menu" style="">
                                 <li><a class="dropdown-item" href="#">УКР (UAH)</a></li>
                             </ul>
                         </div>
+                        <a href="login.html" class="btn btn-transparent">Sign in</a>
                         <button type="button" class="btn btn-dark">Try now</button>
                     </div>
                 </div>
@@ -627,26 +631,30 @@
                 <div class="sectionTitle">How it works</div>
                 <div class="section__content d-flex justify-content-between">
                     <div class="col-5 desktop-lg howItWorks__img">
-                        <img src="images/phone.png" alt="phone">
+                        <div class="device">
+                            <img src="images/device_contur.png" alt="phone" class="device_contur">
+                            <div class="device__screens">
+                                <img src="images/device_screen_a.png" alt="phone" class="device__screen">
+                                <img src="images/device_screen_b.png" alt="phone" class="device__screen">
+                                <img src="images/device_screen_c.png" alt="phone" class="device__screen">
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="steps">
                             <div class="steps__item steps__item1">
-                                <div class="steps__title">Download the app</div>
-                                <div class="steps__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tristique lacus. Nam at est non ex pellentesque dapibus. Maecenas dignissim bibendum vehicula.<br><br>
-                                    Phasellus lectus nulla, venenatis vel mi at, consequat feugiat augue. Lorem ipsum dolor sit amet
+                                <div class="steps__title">Verify that your device is eSIM compatible and purchase your plan</div>
+                                <div class="steps__desc">Verification is complete, purchase a data plan and receive your QR code either on the screen or via email.
                                 </div>
                             </div>
                             <div class="steps__item steps__item2">
-                                <div class="steps__title">Choose your destination and package</div>
-                                <div class="steps__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tristique lacus. Nam at est non ex pellentesque dapibus. Maecenas dignissim bibendum vehicula.<br><br>
-                                    Phasellus lectus nulla, venenatis vel mi at, consequat feugiat augue. Lorem ipsum dolor sit amet
+                                <div class="steps__title">Check your email and follow our instructions</div>
+                                <div class="steps__desc">Would have been sent your email, for you to begin the installation and activation process.
                                 </div>
                             </div>
                             <div class="steps__item steps__item3">
-                                <div class="steps__title">Install your eSIM</div>
-                                <div class="steps__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tristique lacus. Nam at est non ex pellentesque dapibus. Maecenas dignissim bibendum vehicula.<br><br>
-                                    Phasellus lectus nulla, venenatis vel mi at, consequat feugiat augue. Lorem ipsum dolor sit amet
+                                <div class="steps__title">Once you’ve landed, you are ready to stay connected and avoid those hefty roaming charges</div>
+                                <div class="steps__desc">Stay seamlessly connected on your travels as your phone automatically links to the strongest carrier in your region. Enjoy every moment to the fullest!
                                 </div>
                             </div>
                         </div>
@@ -669,7 +677,8 @@
                     <div class="col-xl-4">
                         <div class="d-flex flex-column">
                             <a href="#" class="logo footer__logo">
-                                <img src="images/logo.svg" alt="logo"> 
+                                <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                                <img src="images/logo_business.svg" alt="logo" class="logo__business">  
                             </a>
                             <div class="footer__text mt-4">Need help? <br> Call us: +44 00 0000 0000</div>
                             <ul class="social">
