@@ -4,9 +4,6 @@
         padding: 40px 0 20px;
     }
     &__buttons {
-        // transform: scaleY(0);
-        // transition: 1s;
-        // background-color: #fff;
     }
     & .text {
         font-family: "Gilroy";
@@ -15,60 +12,46 @@
         line-height: 31.54px;
         text-align: center;
         color: #d1d1d1;
-        padding-bottom: 20px;
-        border-bottom: 4px solid #f3f3f3;
+        padding-bottom: 24px;
+        // border-bottom: 4px solid #f3f3f3;
         cursor: pointer;
         width: 100%;
         @include max-lg {
             font-size: 20px;
             line-height: 24px;
-            padding-bottom: 15px;
+            padding-bottom: 19px;
         }
-
+        
         &.active {
             background: linear-gradient(172.1deg, #832fbd -21.78%, #d06852 92.11%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 700;
             position: relative;
-            &::before {
-                // content: "";
-                // position: absolute;
-                // bottom: -4px;
-                // left: 0;
-                // width: 100%;
-                // height: 4px;
-                // background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
-                // border-radius: 40px;
-            }
         }
     }
     &__border {
         position: relative;
-         
         &::before {
             content: "";
-            position: absolute;
-            z-index: 6;
-            bottom: 0;
-            width: 33%;
+            width: 100%;
             height: 4px;
-            background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
-            border-radius: 40px;
-            transition: .5s;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #f3f3f3;
+            border-radius: 16px;
         }
-        &.left::before {
-            content: "";
-            transform: translateX(0);
-        }
-        &.center::before {
-            content: "";
-            transform: translateX(100%);
-        }
-        &.right::before {
-            content: "";
-            transform: translateX(203%);
-        }
+    }
+    & .tabs__active-border {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+        left: 0;
+        height: 4px;
+        z-index: 6;
+        border-radius: 16px;
+        transition: .5s;
     }
 }
 .toggle-button {

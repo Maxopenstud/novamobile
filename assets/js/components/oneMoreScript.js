@@ -28,19 +28,15 @@ $(document).ready(function() {
         $(this).addClass("active")
     });
 
-    $("[data-tab='local']").click(function() {
-        $(".tabs__border").removeClass("center right")
-        $(".tabs__border").addClass("left")
-    })
-    $("[data-tab='regional']").click(function() {
-        $(".tabs__border").removeClass("left right")
-        $(".tabs__border").addClass("center")
-    })
-    $("[data-tab='global']").click(function() {
-        $(".tabs__border").removeClass("left center")
-        $(".tabs__border").addClass("right")
-    })
     
+    $("[data-tab]").click(function() {
+        let index = $(this).index();
+        let translateValue = index * 100;
+        $(".tabs__active-border").css('transform', `translateX(${translateValue}%)`);
+    });
+    var tabsCount = $(".tabs__border [data-tab]");
+    var borderWidth = 100 / tabsCount.length;
+    $(".tabs__active-border").width(borderWidth + '%');
 
     // window.addEventListener('scroll', () => {
     //     const screens = document.querySelectorAll('.device__screen');
@@ -127,9 +123,7 @@ $(document).ready(function() {
     if (isMacBook) {
 
         $(".cascade-slider_arrow, .cascade-slider_nav, .blog-slider .sectionTitle").addClass('mac');
-    } else {
-        console.log("Пользователь зашел не с MacBook.");
-    }
+    } 
     
       
     if ($(".email").length) {

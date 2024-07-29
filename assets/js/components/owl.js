@@ -73,7 +73,6 @@ $(document).ready(function() {
       $(this).addClass('cur');
 
       var index = $(this).index();
-      console.log(index);
 
       $('.cascade-slider_item').removeClass('now prev next');
       var slide = $('.cascade-slider_slides').find('[data-slide-number=' + index + ']');
@@ -94,7 +93,6 @@ $(document).ready(function() {
     $arrow.on('click', function() {
       var action = $(this).data('action'),
         nowIndex = $item.index($this.find('.now'));
-        console.log(nowIndex);
 
 
       if(action == 'next') {
@@ -152,7 +150,6 @@ $(document).ready(function() {
       // Видаляємо клас cur у всіх точках
       $dots.removeClass('cur');
       // Додаємо клас cur відповідній точці
-      console.log($dots.eq(nowIndex));
       $dots.eq(nowIndex).addClass('cur');
 
     }

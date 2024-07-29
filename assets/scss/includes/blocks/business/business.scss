@@ -11,7 +11,7 @@
     & .btn-dark {
         background-color: #f5785e;
         display: flex;
-        justify-content: center;    
+        justify-content: center;
         align-items: center;
     }
     & .main {
@@ -20,16 +20,39 @@
         height: auto;
         & h1 {
             color: #fff;
+            @include max-lg{
+                text-align: left;
+            }
+            
             & span {
-                background: #F5785E;
+                background: #f5785e;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                @include max-lg{
+                    display: block
+                }
+                
             }
         }
         & .hero {
             margin-top: 100px;
             transform: translateX(0) !important;
-         }
+            @include max-lg{
+                margin: 40px 0;
+            }
+            & .apps-for-download {
+                @include max-lg{
+                    margin: 30px 0 0;
+                }
+                
+            }
+        }
+    }
+    & .hero__description {
+        @include max-lg{
+            text-align: left;
+        }
+        
     }
     & .content {
         transform: translateY(0) !important;
@@ -43,13 +66,12 @@
         padding: 5px 0;
         opacity: 1;
         & .btn-dark {
-            @include max-lg{
+            @include max-lg {
                 display: flex;
             }
-            @include max-md{
+            @include max-md {
                 max-width: 80px;
             }
-            
         }
     }
     .logo__default {
@@ -64,23 +86,23 @@
         align-items: center;
         border: 1px solid #f5785e;
         color: #f5785e;
-        font-family: 'Gilroy';
+        font-family: "Gilroy";
         font-size: 14px;
         font-weight: 500;
         line-height: 18.2px;
         margin-right: 10px;
         border-radius: 10px;
         padding: 0 58px;
-        @include max-xl{
+        @include max-xl {
             padding: 0 38px;
         }
-        
-        @include max-lg{
+
+        @include max-lg {
             margin-right: 0;
             font-size: 12px;
             line-height: 16px;
         }
-        @include max-md{
+        @include max-md {
             margin-right: 10px;
             padding: 0 18px;
         }
@@ -90,11 +112,11 @@
         }
     }
     & .breadcrumbs {
-        padding: 60px 0 0;
-        @include max-lg{
-            // padding: 30px 0 40px;
+        padding: 60px 0 50px;
+        @include max-lg {
+            padding: 30px 0 40px;
         }
-        
+
         &__item {
             &:not(:first-child)::before {
                 background-color: #fff;
@@ -102,9 +124,10 @@
         }
         &__link {
             color: #fff;
-            &.active, &:hover {
+            &.active,
+            &:hover {
                 color: #f5785e;
-            } 
+            }
         }
     }
     & .apps-for-download {
@@ -118,9 +141,17 @@
         max-width: 700px;
         object-fit: cover;
         margin-top: -50px;
+        @include max-lg{
+            margin-top: 0;
+        }
+        
     }
     & .whyChooseUs {
         padding-top: 0;
+        @include max-lg{
+            padding-top: 40px;
+        }
+        
         &__item {
             background: linear-gradient(116.62deg, rgba(255, 255, 255, 0.24) 1.54%, rgba(255, 255, 255, 0.06) 70.68%);
             display: flex;
@@ -132,19 +163,303 @@
                 inset: 0;
                 padding: 1px;
                 background: linear-gradient(115deg, rgba(50, 174, 132, 1) 0%, rgba(37, 137, 131, 0) 100%);
-                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                -webkit-mask:
+                    linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
                 -webkit-mask-composite: xor;
                 mask-composite: exclude;
-                background: linear-gradient(111.5deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 0.01%, rgba(245, 235, 235, 0) 41.48%, rgba(208, 104, 82, 0.5) 60.8%, rgba(255, 255, 255, 0.5) 100%);
+                background: linear-gradient(
+                    111.5deg,
+                    rgba(255, 255, 255, 0.25) 0%,
+                    rgba(255, 255, 255, 0.25) 0.01%,
+                    rgba(245, 235, 235, 0) 41.48%,
+                    rgba(208, 104, 82, 0.5) 60.8%,
+                    rgba(255, 255, 255, 0.5) 100%
+                );
                 width: 100%;
                 height: 100%;
             }
+            &::after {
+                @include max-lg{
+                    content: "";
+                    width: 70%;
+                    height: 3px;
+                    background-color: #f5785e;
+                    border-radius: 16px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    z-index: 6;
+                }
+            }
             & svg path {
-                fill: #F5785E;
+                fill: #f5785e;
             }
         }
+        
     }
-    & .sectionTitle, .manual-text, .manual-title  {
+    & .sectionTitle,
+    .manual-text,
+    .manual-title {
         color: #fff;
+    }
+    & .manual-title {
+        @include max-lg{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+    }
+    & .tabs {
+        & .sectionTitle, .sectionTitle + .manual-text {
+            display: none;
+        }
+        &__buttons {
+            @include max-lg{
+                margin-top: 0 !important;
+            }
+            @include max-lg{
+                width: calc(100vw);
+                left: 50%;
+                margin-left: -50vw;
+                position: relative;
+                padding-left: 20px;
+                overflow: auto;
+            }
+            
+            
+        }
+        &__border {
+            @include max-lg{
+                min-width: 135vw;
+                width: 100%;
+            }
+            @include max-md{
+                min-width: 200vw;
+            }
+            
+            
+        }
+    }
+    & .tabs .text {
+        @include max-lg{
+            padding-bottom: 15px;
+        }
+        
+    }
+    & .tabs .text.active {
+        background: #f5785e;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    & .tabs__active-border {
+        background: #f5785e;
+    }
+    & .tab__title {
+        font-family: "Telegraf", sans-serif;
+        font-size: 38px;
+        font-weight: 800;
+        line-height: 40.28px;
+        color: #fff;
+        margin-top: 90px;
+        margin-bottom: 10px;
+        @include max-xl{
+            margin-top: 50px;
+        }
+        
+        @include max-lg{
+            font-size: 28px;
+            line-height: 30px;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        
+    }
+    & .tab__subtitle {
+        font-family: "Telegraf", sans-serif;
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 49.03px;
+        color: #fff;
+        margin-top: 24px;
+        @include max-lg{
+            font-size: 22px;
+            line-height: 24px;
+            margin-top: 30px;
+        }
+        
+    }
+    & .form-group label {
+        color: #fff;
+    }
+    & .form-group label {
+        color: #fff;
+    }
+    & .btn[type=submit] {
+        height: 60px;
+        @include max-lg{
+            height: 48px;
+        }
+        
+    }
+    & .form-input, textarea, .select-wrapper {
+        background: #F8F8F840 !important;
+        border: none;
+        color: #fff;
+    }
+    & select {
+        background: none;
+        color: #fff;
+        & option {
+            color: #000;
+        }
+    }
+    & .select-wrapper::after{
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.79708 0.525879L6 4.7288L10.2029 0.525879L11.5 1.82296L6 7.32296L0.5 1.82296L1.79708 0.525879Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
+    & .form-group svg path {
+        // fill: #fff;
+    }
+    & .footer {
+        margin-top: 60px;
+        @include max-lg{
+            margin-top: 40px;
+        }
+        
+    }
+    & .footer__title {
+        background: #F5785E;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    & .footer__bottom {
+        background: #F5785E;
+        border-radius: 0 0 60px 60px;
+        @include max-lg{
+            border-radius: 0 0 30px 30px; 
+        }
+        
+    }
+    & .login__divider span {
+        background: #292929;;
+        color: #fff;
+    }
+    &  .login__right  {
+        background: linear-gradient(116.62deg, rgba(255, 255, 255, 0.24) 1.54%, rgba(255, 255, 255, 0.06) 70.68%);
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 60px 60px 0;
+        @include max-lg{
+            border-radius: 0 30px 30px 0;
+        }
+        
+        &::before {
+            content: "";
+            border-radius: 0 60px 60px 0;
+            @include max-lg{
+                border-radius: 0 30px 30px 0;
+            }
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            background: linear-gradient(115deg, rgba(50, 174, 132, 1) 0%, rgba(37, 137, 131, 0) 100%);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            background: linear-gradient(
+                111.5deg,
+                rgba(255, 255, 255, 0.25) 0%,
+                rgba(255, 255, 255, 0.25) 0.01%,
+                rgba(245, 235, 235, 0) 41.48%,
+                rgba(208, 104, 82, 0.5) 60.8%,
+                rgba(255, 255, 255, 0.5) 100%
+            );
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    }
+    & .login__title {
+        color: #fff;
+    }
+    & .toggle-button {
+        padding: 2px;
+        background: transparent;
+        border: 1px solid #F1765C;
+        &::after {
+            background: transparent;
+        }
+    }
+    & .toggle-option {
+        color: #F1765C;
+    }
+    & .toggle-switch::before {
+        background: #F1765C;
+    }
+    & .custom-checkbox span {
+        color: #fff;
+        & a {
+            color: #F1765C;
+        }
+    }
+    & .custom-checkbox > span::before {
+        background-color: #fff;
+    }
+    & .custom-checkbox > input:checked + span::before {
+        background-color: #fff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+    }
+    // & .login__divider span {
+    //     background-color: #fff;
+    // }
+    & .footer__content{
+        // background-color: #121212;
+        background: linear-gradient(116.62deg, rgba(255, 255, 255, 0.24) 1.54%, rgba(255, 255, 255, 0.06) 70.68%);
+        position: relative;
+        overflow: hidden;
+        border-radius: 60px 60px 0 0;
+        @include max-lg{
+            border-radius: 30px 30px 0 0; 
+        }
+        &::before {
+            content: "";
+            border-radius: 60px 60px 0 0;
+            @include max-lg{
+                border-radius: 30px 30px 0 0;
+            }
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            background: linear-gradient(115deg, rgba(50, 174, 132, 1) 0%, rgba(37, 137, 131, 0) 100%);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            background: linear-gradient(
+                111.5deg,
+                rgba(255, 255, 255, 0.25) 0%,
+                rgba(255, 255, 255, 0.25) 0.01%,
+                rgba(245, 235, 235, 0) 41.48%,
+                rgba(208, 104, 82, 0.5) 60.8%,
+                rgba(255, 255, 255, 0.5) 100%
+            );
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        & .manual-text:hover {
+            color: #F5785E;
+        }
+        & .footer__text {
+            color: #fff;
+        }
+        & .social svg path {
+            fill: #fff;
+        }
     }
 }

@@ -1,261 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Novamobile</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="images/nova.png">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/slick/slick.css">
-    <link rel="stylesheet" href="css/swiper/swiper.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!--font-family: "Poppins", sans-serif; -->
-    <link rel="stylesheet" href="fonts/gilroy/stylesheet.css">
-    <link rel="stylesheet" href="fonts/telegraf/stylesheet.css">
-    <link rel="stylesheet" href="css/app.css">
-</head>
-<body class="front-page">
-        <main class="main">
-            <img class="cloud" src="images/cloud.png" alt="">
-            
-            <div class="container">
-                <div class="header">
-                <div class="d-flex align-items-center gap-20 w-100">
-                    <button class="burger">
-                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M1 8H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M1 15H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
-                        </svg>
-                    </button>
-                    <div class="header__mobile">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center gap-20 w-100">
-                                <button class="burger">
-                                    <svg class="" width="20" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.42773 1L15.287 15" stroke="black" stroke-width="2" stroke-linecap="round"></path>
-                                        <path d="M14.8594 1L1.00008 15" stroke="black" stroke-width="2" stroke-linecap="round"></path>
-                                    </svg>
-                                </button>
-                                <a href="#" class="logo header__logo">
-                                    <img src="images/logo.svg" alt="logo" class="logo__default"> 
-                                    <img src="images/logo_business.svg" alt="logo" class="logo__business"> 
-                                </a>
-                            </div>
-                            <div class="d-flex align-items-center gap-20 gap-max-xl-10">
-                                <a href="login.html" class="icon_login">
-                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_1040_563)">
-                                        <path d="M15 5C12.2375 5 10 7.2375 10 10C10 12.7562 12.2375 15 15 15C17.7625 15 20 12.7562 20 10C20 7.2375 17.7625 5 15 5ZM15 17.5C11.6687 17.5 5 19.1687 5 22.5V25H25V22.5C25 19.1687 18.3313 17.5 15 17.5Z" fill="black"></path>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_1040_563">
-                                        <rect width="30" height="30" fill="white"></rect>
-                                        </clipPath>
-                                        </defs>
-                                    </svg>
-                                </a>
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        EN ($)
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">УКР (UAH)</a></li>
-                                    </ul>
-                                </div>
-                                <button type="button" class="btn btn-dark">Try now</button>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column align-items-center gap-40">
-                            <ul class="menu burger__menu">
-                                <li class="menu__item">
-                                    <a href="index.html" class="menu__link active">Home</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="store.html" class="menu__link">Store</a> 
-                                </li>
-                                <li class="menu__item">
-                                    <a href="aboutUs.html" class="menu__link">About us</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="contacts.html" class="menu__link">Contact us</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="business.html" class="menu__link">Nova for Business</a>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-dark mobile-lg">Try now</button>
-                        </div>
-                        <div class="d-flex flex-column align-items-center gap-20">
-                            <a href="#" class="logo header__logo">
-                                <img src="images/logo.svg" alt="logo" class="logo__default"> 
-                                <img src="images/logo_business.svg" alt="logo" class="logo__business">  
-                            </a>
-                            <ul class="social">
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M21 8.70968H17V5.95161C17 4.93548 17.7143 4.64516 18.1429 4.64516H21V0H17C12.5714 0 11.5714 3.48387 11.5714 5.66129V8.70968H9V13.5H11.5714V27H17V13.5H20.5714L21 8.70968Z" fill="#3B3B3B"></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M28.5 5.84202C27.695 7.07106 26.7289 8.11299 25.6018 8.96779C25.6018 9.05164 25.6117 9.182 25.6315 9.3589C25.6512 9.53579 25.6611 9.66616 25.6611 9.75C25.6611 11.3747 25.4295 13 24.9662 14.6258C24.5029 16.2515 23.7986 17.8037 22.8533 19.2822C21.908 20.7607 20.7859 22.0731 19.487 23.2193C18.188 24.3655 16.6283 25.2822 14.8078 25.9693C12.9874 26.6564 11.0301 27 8.93598 27C5.67531 27 2.69665 26.0936 0 24.2807C0.564024 24.3226 1.0268 24.3436 1.38833 24.3436C4.10572 24.3436 6.53122 23.4893 8.66483 21.7807C7.39652 21.7602 6.26452 21.3594 5.26883 20.5782C4.27315 19.797 3.5738 18.7919 3.17078 17.5629C3.51256 17.6467 3.88495 17.6886 4.28796 17.6886C4.83124 17.6886 5.3444 17.6053 5.82742 17.4386C4.4791 17.1472 3.36192 16.4494 2.47588 15.3451C1.58984 14.2408 1.14682 12.9698 1.14682 11.5322V11.4693C1.91136 11.8865 2.78703 12.1155 3.77382 12.1564C2.98854 11.6145 2.36475 10.9008 1.90247 10.0153C1.44019 9.12986 1.20855 8.17689 1.20756 7.15644C1.20756 6.11452 1.45895 5.09356 1.96174 4.09356C3.43057 5.98926 5.2066 7.48415 7.28984 8.57822C9.37307 9.67229 11.6321 10.2817 14.067 10.4064C13.9258 9.88599 13.8551 9.4274 13.8551 9.03067C13.8551 7.36401 14.4285 5.94223 15.5754 4.76534C16.7222 3.58845 18.1209 3 19.7715 3C20.5765 3 21.3514 3.16667 22.0962 3.5C22.841 3.83333 23.4751 4.30215 23.9987 4.90644C25.3272 4.63548 26.5649 4.14571 27.7117 3.43712C27.289 4.85429 26.4336 5.96881 25.1455 6.78067C26.3733 6.61401 27.4905 6.30164 28.497 5.84356L28.5 5.84202Z" fill="#3B3B3B"></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_503_6280)">
-                                            <path d="M14.994 2.70292C19 2.70292 19.4702 2.72078 21.0536 2.79222C22.5179 2.85771 23.3095 3.10181 23.8393 3.31018C24.5417 3.58404 25.0417 3.90554 25.5655 4.42945C26.0893 4.95336 26.4167 5.45346 26.6845 6.15598C26.8869 6.68585 27.1369 7.47767 27.2024 8.94225C27.2738 10.5259 27.2917 10.9962 27.2917 15.003C27.2917 19.0097 27.2738 19.4801 27.2024 21.0637C27.1369 22.5283 26.8929 23.3201 26.6845 23.85C26.4107 24.5525 26.0893 25.0526 25.5655 25.5765C25.0417 26.1004 24.5417 26.4279 23.8393 26.6958C23.3095 26.8982 22.5179 27.1482 21.0536 27.2137C19.4702 27.2852 19 27.303 14.994 27.303C10.9881 27.303 10.5179 27.2852 8.93452 27.2137C7.47024 27.1482 6.67857 26.9041 6.14881 26.6958C5.44643 26.4219 4.94643 26.1004 4.42262 25.5765C3.89881 25.0526 3.57143 24.5525 3.30357 23.85C3.10119 23.3201 2.85119 22.5283 2.78571 21.0637C2.71429 19.4801 2.69643 19.0097 2.69643 15.003C2.69643 10.9962 2.71429 10.5259 2.78571 8.94225C2.85119 7.47767 3.09524 6.68585 3.30357 6.15598C3.57738 5.45346 3.89881 4.95336 4.42262 4.42945C4.94643 3.90554 5.44643 3.57809 6.14881 3.31018C6.67857 3.10776 7.47024 2.85771 8.93452 2.79222C10.5179 2.71482 10.9881 2.70292 14.994 2.70292ZM14.994 0C10.9226 0 10.4107 0.0178607 8.80952 0.0893034C7.21429 0.160746 6.125 0.416749 5.17262 0.78587C4.18452 1.1669 3.35119 1.68486 2.51786 2.51836C1.68452 3.35186 1.17262 4.19131 0.785714 5.17365C0.416667 6.12622 0.160714 7.21572 0.0892857 8.81723C0.0178571 10.4128 0 10.9248 0 14.997C0 19.0693 0.0178571 19.5813 0.0892857 21.1828C0.160714 22.7783 0.416667 23.8678 0.785714 24.8264C1.16667 25.8146 1.68452 26.6481 2.51786 27.4816C3.35119 28.3151 4.19048 28.8271 5.17262 29.2141C6.125 29.5833 7.21429 29.8393 8.81548 29.9107C10.4167 29.9821 10.9226 30 15 30C19.0774 30 19.5833 29.9821 21.1845 29.9107C22.7798 29.8393 23.869 29.5833 24.8274 29.2141C25.8155 28.8331 26.6488 28.3151 27.4821 27.4816C28.3155 26.6481 28.8274 25.8087 29.2143 24.8264C29.5833 23.8738 29.8393 22.7843 29.9107 21.1828C29.9821 19.5813 30 19.0752 30 14.997C30 10.9188 29.9821 10.4128 29.9107 8.81127C29.8393 7.21572 29.5833 6.12622 29.2143 5.16769C28.8333 4.1794 28.3155 3.3459 27.4821 2.5124C26.6488 1.6789 25.8095 1.1669 24.8274 0.779917C23.875 0.410796 22.7857 0.154793 21.1845 0.0833499C19.5774 0.0178607 19.0655 0 14.994 0Z" fill="#3B3B3B"></path>
-                                            <path d="M15 7.5C10.8617 7.5 7.5 10.8559 7.5 15C7.5 19.1441 10.8617 22.5 15 22.5C19.1383 22.5 22.5 19.1383 22.5 15C22.5 10.8617 19.1383 7.5 15 7.5ZM15 19.8686C12.3107 19.8686 10.1314 17.6893 10.1314 15C10.1314 12.3107 12.3107 10.1314 15 10.1314C17.6893 10.1314 19.8686 12.3107 19.8686 15C19.8686 17.6893 17.6893 19.8686 15 19.8686Z" fill="#3B3B3B"></path>
-                                            <path d="M22.5 9C23.3284 9 24 8.32843 24 7.5C24 6.67157 23.3284 6 22.5 6C21.6716 6 21 6.67157 21 7.5C21 8.32843 21.6716 9 22.5 9Z" fill="#3B3B3B"></path>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_503_6280">
-                                            <rect width="30" height="30" fill="white"></rect>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.77823e-06 22.7812C1.77823e-06 23.9527 0.395636 24.9489 1.1869 25.7699C1.97817 26.5909 2.94144 27.001 4.07669 27H25.9233C27.0586 27 28.0218 26.59 28.8131 25.7699C29.6044 24.9499 30 23.9536 30 22.7812V5.78881C30 4.61732 29.6005 3.60964 28.8014 2.76579C28.0023 1.92193 27.043 1.5 25.9233 1.5H4.07669C2.958 1.5 1.99864 1.92193 1.1986 2.76579C0.39856 3.60964 -0.000972691 4.61732 1.77823e-06 5.78881V22.7812ZM10.9116 19.711V8.85898C10.9116 8.74945 10.9438 8.66373 11.0081 8.60183C11.0558 8.58659 11.0958 8.57897 11.1279 8.57897L11.2478 8.60183L21.7034 14.0393C21.7677 14.1021 21.7998 14.1802 21.7998 14.2736C21.7998 14.3364 21.7677 14.3988 21.7034 14.4607L11.2478 19.8982C11.2157 19.9296 11.1835 19.9453 11.1513 19.9453C11.087 19.9453 11.0393 19.9296 11.0081 19.8982C10.9438 19.8353 10.9116 19.7729 10.9116 19.711Z" fill="#3B3B3B"></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="#" class="logo header__logo">
-                        <img src="images/logo.svg" alt="logo" class="logo__default"> 
-                        <img src="images/logo_business.svg" alt="logo" class="logo__business">  
-                    </a>
-                </div>
-                <div class="d-flex align-items-center justify-content-between">
-                    <ul class="menu header__menu">
-                        <li class="menu__item">
-                            <a href="index.html" class="menu__link active">Home</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="store.html" class="menu__link">Store</a> 
-                        </li>
-                        <li class="menu__item">
-                            <a href="about.html" class="menu__link">About us</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="contacts.html" class="menu__link">Contact us</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="business.html" class="menu__link">Nova for Business</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center gap-20 gap-max-xl-10 w-100">
-                        <a href="login.html" class="icon_login">
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1040_563)">
-                                <path d="M15 5C12.2375 5 10 7.2375 10 10C10 12.7562 12.2375 15 15 15C17.7625 15 20 12.7562 20 10C20 7.2375 17.7625 5 15 5ZM15 17.5C11.6687 17.5 5 19.1687 5 22.5V25H25V22.5C25 19.1687 18.3313 17.5 15 17.5Z" fill="black"></path>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_1040_563">
-                                <rect width="30" height="30" fill="white"></rect>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                EN ($)
-                            </button>
-                            <ul class="dropdown-menu" style="">
-                                <li><a class="dropdown-item" href="#">УКР (UAH)</a></li>
-                            </ul>
-                        </div>
-                        <a href="businessLogin.html" class="btn btn-transparent">Sign in</a>
-                        <button type="button" class="btn btn-dark">Try now</button>
-                    </div>
-                </div>
-            
-                </div>
-            </div>    <div class="container">
-                <div class="hero">
-                    <div class="d-flex flex-column gap-30 gap-max-xl-20">
-                        <h1>We <span>connect</span> the world</h1>
-                        <div class="col-12 col-lg-5 hero__description">
-                            With Nova's eSIM, enjoy internet connection on every adventure and forget about expensive
-                        </div>
-                        <div class="col-12 col-lg-5 col-xl-4 search">
-                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search data plans for 200+ Destinations">
-                            <datalist id="datalistOptions">
-                                <option value="San Francisco">
-                                <option value="New York">
-                                <option value="Seattle">
-                                <option value="Los Angeles">
-                                <option value="Chicago">
-                            </datalist>
-                            <button>
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.8395 15.4605L13.1641 11.7852C14.0489 10.6072 14.5266 9.17331 14.525 7.7C14.525 3.93672 11.4633 0.875 7.7 0.875C3.93672 0.875 0.875 3.93672 0.875 7.7C0.875 11.4633 3.93672 14.525 7.7 14.525C9.17331 14.5266 10.6072 14.0489 11.7852 13.1641L15.4605 16.8395C15.6466 17.0058 15.8893 17.0945 16.1387 17.0876C16.3881 17.0806 16.6255 16.9784 16.8019 16.8019C16.9784 16.6255 17.0806 16.3881 17.0876 16.1387C17.0945 15.8893 17.0058 15.6466 16.8395 15.4605ZM2.825 7.7C2.825 6.73582 3.11091 5.79328 3.64659 4.9916C4.18226 4.18991 4.94363 3.56506 5.83442 3.19609C6.72521 2.82711 7.70541 2.73057 8.65107 2.91867C9.59672 3.10677 10.4654 3.57107 11.1471 4.25285C11.8289 4.93464 12.2932 5.80328 12.4813 6.74893C12.6694 7.69459 12.5729 8.67479 12.2039 9.56558C11.8349 10.4564 11.2101 11.2177 10.4084 11.7534C9.60672 12.2891 8.66418 12.575 7.7 12.575C6.40755 12.5734 5.16847 12.0593 4.25457 11.1454C3.34066 10.2315 2.82655 8.99245 2.825 7.7Z" fill="white"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-5 col-xl-4 apps-for-download">
-                        <a href="#">
-                            <img src="images/appstore.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="images/googleplay.png" alt="">
-                        </a>
-                    </div>
+<div class="section pt-0">
+    <div class="container">
+        <div class="d-flex flex-column-reverse flex-md-row gap-40 gap-max-xl-30">
+            <div class="">
+                <div id="column-left">
+                    {{> blocks / accountTabs}}
                 </div>
             </div>
-        </main>        <div class="container">
-            <ul class="breadcrumbs">
-                <li class="breadcrumbs__item">
-                    <a href="#" class="breadcrumbs__link">Home</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a href="#" class="breadcrumbs__link active">Current page</a>
-                </li>
-            </ul>
-        </div>            <div class="container">
-                <div class="pageOfCountry__Title">
-                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
-                        <defs>
-                        <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
-                        </pattern>
-                        <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
-                        </defs>
-                    </svg>
-                    United Kingdom
-                </div>
-                <div class="cards pb-60 pb-max-lg-40">
+            <div class="w-100">
+                <div class="catalog">
                     <div class="card">
-                        <div class="card__title d-flex align-items-center justify-content-between">Discover 
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
-                                <defs>
-                                <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
-                                </pattern>
-                                <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
-                                </defs>
-                            </svg>
-                        </div>
+                        <div class="card__title">Discover</div>
                         <div class="card__info">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -321,17 +75,7 @@
                         <button type="button" class="btn btn-dark">Buy now</button>
                     </div>
                     <div class="card">
-                        <div class="card__title d-flex align-items-center justify-content-between">Discover 
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
-                                <defs>
-                                <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
-                                </pattern>
-                                <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
-                                </defs>
-                            </svg>
-                        </div>
+                        <div class="card__title">Discover</div>
                         <div class="card__info">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -397,17 +141,7 @@
                         <button type="button" class="btn btn-dark">Buy now</button>
                     </div>
                     <div class="card">
-                        <div class="card__title d-flex align-items-center justify-content-between">Discover 
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
-                                <defs>
-                                <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
-                                </pattern>
-                                <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
-                                </defs>
-                            </svg>
-                        </div>
+                        <div class="card__title">Discover</div>
                         <div class="card__info">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -473,17 +207,7 @@
                         <button type="button" class="btn btn-dark">Buy now</button>
                     </div>
                     <div class="card">
-                        <div class="card__title d-flex align-items-center justify-content-between">Discover 
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
-                                <defs>
-                                <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
-                                </pattern>
-                                <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
-                                </defs>
-                            </svg>
-                        </div>
+                        <div class="card__title">Discover</div>
                         <div class="card__info">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -549,17 +273,7 @@
                         <button type="button" class="btn btn-dark">Buy now</button>
                     </div>
                     <div class="card">
-                        <div class="card__title d-flex align-items-center justify-content-between">Discover 
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
-                                <defs>
-                                <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
-                                </pattern>
-                                <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
-                                </defs>
-                            </svg>
-                        </div>
+                        <div class="card__title">Discover</div>
                         <div class="card__info">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -626,178 +340,6 @@
                     </div>
                 </div>
             </div>
-        <section class="section howItWorks">
-            <div class="container">
-                <div class="sectionTitle">How it works</div>
-                <div class="section__content d-flex justify-content-between">
-                    <div class="col-5 desktop-lg howItWorks__img">
-                        <div class="device">
-                            <img src="images/device_contur.png" alt="phone" class="device_contur">
-                            <div class="device__screens">
-                                <img src="images/device_screen_a.png" alt="phone" class="device__screen">
-                                <img src="images/device_screen_b.png" alt="phone" class="device__screen">
-                                <img src="images/device_screen_c.png" alt="phone" class="device__screen">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="steps">
-                            <div class="steps__item steps__item1">
-                                <div class="steps__title">Verify that your device is eSIM compatible and purchase your plan</div>
-                                <div class="steps__desc">Verification is complete, purchase a data plan and receive your QR code either on the screen or via email.
-                                </div>
-                            </div>
-                            <div class="steps__item steps__item2">
-                                <div class="steps__title">Check your email and follow our instructions</div>
-                                <div class="steps__desc">Would have been sent your email, for you to begin the installation and activation process.
-                                </div>
-                            </div>
-                            <div class="steps__item steps__item3">
-                                <div class="steps__title">Once you’ve landed, you are ready to stay connected and avoid those hefty roaming charges</div>
-                                <div class="steps__desc">Stay seamlessly connected on your travels as your phone automatically links to the strongest carrier in your region. Enjoy every moment to the fullest!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>        <div class="banner">
-            <div class="banner__content">
-                <div class="container">
-                    <div class="banner__title">
-                        Looking for something more custom?
-                    </div>
-                    <div class="col-12 col-lg-9 manual-text text-center mx-auto">If there's another partnership option you're looking for, or if you just need clarity on an existing partnership option, drop us a line at partnerships@novamobile.io and we will be in touch.</div>
-                </div>
-                <div class="btn btn-white">Become a partner</div>
-            </div>
-        </div>        <footer class="footer">
-            <div class="container">
-                <div class="footer__content d-flex flex-column flex-lg-row justify-content-between gap-20">
-                    <div class="col-xl-4">
-                        <div class="d-flex flex-column">
-                            <a href="#" class="logo footer__logo">
-                                <img src="images/logo.svg" alt="logo" class="logo__default"> 
-                                <img src="images/logo_business.svg" alt="logo" class="logo__business">  
-                            </a>
-                            <div class="footer__text mt-4">Need help? <br> Call us: +44 00 0000 0000</div>
-                            <ul class="social">
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M21 8.70968H17V5.95161C17 4.93548 17.7143 4.64516 18.1429 4.64516H21V0H17C12.5714 0 11.5714 3.48387 11.5714 5.66129V8.70968H9V13.5H11.5714V27H17V13.5H20.5714L21 8.70968Z" fill="#3B3B3B"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M28.5 5.84202C27.695 7.07106 26.7289 8.11299 25.6018 8.96779C25.6018 9.05164 25.6117 9.182 25.6315 9.3589C25.6512 9.53579 25.6611 9.66616 25.6611 9.75C25.6611 11.3747 25.4295 13 24.9662 14.6258C24.5029 16.2515 23.7986 17.8037 22.8533 19.2822C21.908 20.7607 20.7859 22.0731 19.487 23.2193C18.188 24.3655 16.6283 25.2822 14.8078 25.9693C12.9874 26.6564 11.0301 27 8.93598 27C5.67531 27 2.69665 26.0936 0 24.2807C0.564024 24.3226 1.0268 24.3436 1.38833 24.3436C4.10572 24.3436 6.53122 23.4893 8.66483 21.7807C7.39652 21.7602 6.26452 21.3594 5.26883 20.5782C4.27315 19.797 3.5738 18.7919 3.17078 17.5629C3.51256 17.6467 3.88495 17.6886 4.28796 17.6886C4.83124 17.6886 5.3444 17.6053 5.82742 17.4386C4.4791 17.1472 3.36192 16.4494 2.47588 15.3451C1.58984 14.2408 1.14682 12.9698 1.14682 11.5322V11.4693C1.91136 11.8865 2.78703 12.1155 3.77382 12.1564C2.98854 11.6145 2.36475 10.9008 1.90247 10.0153C1.44019 9.12986 1.20855 8.17689 1.20756 7.15644C1.20756 6.11452 1.45895 5.09356 1.96174 4.09356C3.43057 5.98926 5.2066 7.48415 7.28984 8.57822C9.37307 9.67229 11.6321 10.2817 14.067 10.4064C13.9258 9.88599 13.8551 9.4274 13.8551 9.03067C13.8551 7.36401 14.4285 5.94223 15.5754 4.76534C16.7222 3.58845 18.1209 3 19.7715 3C20.5765 3 21.3514 3.16667 22.0962 3.5C22.841 3.83333 23.4751 4.30215 23.9987 4.90644C25.3272 4.63548 26.5649 4.14571 27.7117 3.43712C27.289 4.85429 26.4336 5.96881 25.1455 6.78067C26.3733 6.61401 27.4905 6.30164 28.497 5.84356L28.5 5.84202Z" fill="#3B3B3B"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_503_6280)">
-                                            <path d="M14.994 2.70292C19 2.70292 19.4702 2.72078 21.0536 2.79222C22.5179 2.85771 23.3095 3.10181 23.8393 3.31018C24.5417 3.58404 25.0417 3.90554 25.5655 4.42945C26.0893 4.95336 26.4167 5.45346 26.6845 6.15598C26.8869 6.68585 27.1369 7.47767 27.2024 8.94225C27.2738 10.5259 27.2917 10.9962 27.2917 15.003C27.2917 19.0097 27.2738 19.4801 27.2024 21.0637C27.1369 22.5283 26.8929 23.3201 26.6845 23.85C26.4107 24.5525 26.0893 25.0526 25.5655 25.5765C25.0417 26.1004 24.5417 26.4279 23.8393 26.6958C23.3095 26.8982 22.5179 27.1482 21.0536 27.2137C19.4702 27.2852 19 27.303 14.994 27.303C10.9881 27.303 10.5179 27.2852 8.93452 27.2137C7.47024 27.1482 6.67857 26.9041 6.14881 26.6958C5.44643 26.4219 4.94643 26.1004 4.42262 25.5765C3.89881 25.0526 3.57143 24.5525 3.30357 23.85C3.10119 23.3201 2.85119 22.5283 2.78571 21.0637C2.71429 19.4801 2.69643 19.0097 2.69643 15.003C2.69643 10.9962 2.71429 10.5259 2.78571 8.94225C2.85119 7.47767 3.09524 6.68585 3.30357 6.15598C3.57738 5.45346 3.89881 4.95336 4.42262 4.42945C4.94643 3.90554 5.44643 3.57809 6.14881 3.31018C6.67857 3.10776 7.47024 2.85771 8.93452 2.79222C10.5179 2.71482 10.9881 2.70292 14.994 2.70292ZM14.994 0C10.9226 0 10.4107 0.0178607 8.80952 0.0893034C7.21429 0.160746 6.125 0.416749 5.17262 0.78587C4.18452 1.1669 3.35119 1.68486 2.51786 2.51836C1.68452 3.35186 1.17262 4.19131 0.785714 5.17365C0.416667 6.12622 0.160714 7.21572 0.0892857 8.81723C0.0178571 10.4128 0 10.9248 0 14.997C0 19.0693 0.0178571 19.5813 0.0892857 21.1828C0.160714 22.7783 0.416667 23.8678 0.785714 24.8264C1.16667 25.8146 1.68452 26.6481 2.51786 27.4816C3.35119 28.3151 4.19048 28.8271 5.17262 29.2141C6.125 29.5833 7.21429 29.8393 8.81548 29.9107C10.4167 29.9821 10.9226 30 15 30C19.0774 30 19.5833 29.9821 21.1845 29.9107C22.7798 29.8393 23.869 29.5833 24.8274 29.2141C25.8155 28.8331 26.6488 28.3151 27.4821 27.4816C28.3155 26.6481 28.8274 25.8087 29.2143 24.8264C29.5833 23.8738 29.8393 22.7843 29.9107 21.1828C29.9821 19.5813 30 19.0752 30 14.997C30 10.9188 29.9821 10.4128 29.9107 8.81127C29.8393 7.21572 29.5833 6.12622 29.2143 5.16769C28.8333 4.1794 28.3155 3.3459 27.4821 2.5124C26.6488 1.6789 25.8095 1.1669 24.8274 0.779917C23.875 0.410796 22.7857 0.154793 21.1845 0.0833499C19.5774 0.0178607 19.0655 0 14.994 0Z" fill="#3B3B3B"/>
-                                            <path d="M15 7.5C10.8617 7.5 7.5 10.8559 7.5 15C7.5 19.1441 10.8617 22.5 15 22.5C19.1383 22.5 22.5 19.1383 22.5 15C22.5 10.8617 19.1383 7.5 15 7.5ZM15 19.8686C12.3107 19.8686 10.1314 17.6893 10.1314 15C10.1314 12.3107 12.3107 10.1314 15 10.1314C17.6893 10.1314 19.8686 12.3107 19.8686 15C19.8686 17.6893 17.6893 19.8686 15 19.8686Z" fill="#3B3B3B"/>
-                                            <path d="M22.5 9C23.3284 9 24 8.32843 24 7.5C24 6.67157 23.3284 6 22.5 6C21.6716 6 21 6.67157 21 7.5C21 8.32843 21.6716 9 22.5 9Z" fill="#3B3B3B"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_503_6280">
-                                            <rect width="30" height="30" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a href="#" class="social__link">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.77823e-06 22.7812C1.77823e-06 23.9527 0.395636 24.9489 1.1869 25.7699C1.97817 26.5909 2.94144 27.001 4.07669 27H25.9233C27.0586 27 28.0218 26.59 28.8131 25.7699C29.6044 24.9499 30 23.9536 30 22.7812V5.78881C30 4.61732 29.6005 3.60964 28.8014 2.76579C28.0023 1.92193 27.043 1.5 25.9233 1.5H4.07669C2.958 1.5 1.99864 1.92193 1.1986 2.76579C0.39856 3.60964 -0.000972691 4.61732 1.77823e-06 5.78881V22.7812ZM10.9116 19.711V8.85898C10.9116 8.74945 10.9438 8.66373 11.0081 8.60183C11.0558 8.58659 11.0958 8.57897 11.1279 8.57897L11.2478 8.60183L21.7034 14.0393C21.7677 14.1021 21.7998 14.1802 21.7998 14.2736C21.7998 14.3364 21.7677 14.3988 21.7034 14.4607L11.2478 19.8982C11.2157 19.9296 11.1835 19.9453 11.1513 19.9453C11.087 19.9453 11.0393 19.9296 11.0081 19.8982C10.9438 19.8353 10.9116 19.7729 10.9116 19.711Z" fill="#3B3B3B"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 d-flex flex-column flex-lg-row justify-content-between">
-                        <div class="footer__column">
-                            <div class="footer__title">Popular countries</div>
-                            <ul class="footer__menu footer__menu-column-2">
-                                <li class="footer__menu-item"><a href="#" class="manual-text">United States</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Spain</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">United Kingdom</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">China</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Turkey</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Japan</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">France</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Italy</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__column">
-                            <div class="footer__title">About us</div>
-                            <ul class="footer__menu">
-                                <li class="footer__menu-item"><a href="about.html" class="manual-text">About Novamobile</a></li>
-                                <li class="footer__menu-item"><a href="contacts.html" class="manual-text">Contact us</a></li>
-                                <li class="footer__menu-item"><a href="blogs.html" class="manual-text">Blog</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Nova for Business</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__column">
-                            <div class="footer__title">More info</div>
-                            <ul class="footer__menu">
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Privacy policy</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Terms of service</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Manage cookies</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Supported devices</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Modern slavery policy</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__column">
-                            <div class="col-12 footer__title">Nova careers</div>
-                            <ul class="footer__menu">
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Working at Nova</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Nova Careers</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__bottom d-flex flex-column-reverse flex-lg-row justify-content-between">
-                    <div class="col-12 col-sm-8 col-md-7 col-lg-3 d-flex align-items-center justify-content-between mt-3 mt-lg-0 mx-auto mx-lg-0 gap-10 gap-max-md-0">
-                        <a href="#">
-                            <img src="images/apple_pay.png" alt="apple pay">
-                        </a>
-                        <a href="#">
-                            <img src="images/visa.png" alt="visa">
-                        </a>
-                        <a href="#">
-                            <img src="images/discover.png" alt="discover">
-                        </a>
-                        <a href="#">
-                            <img src="images/master_card.png" alt="master card">
-                        </a>
-                        <a href="#">
-                            <img src="images/paypal.png" alt="paypal">
-                        </a>
-                    </div>
-                    <div class="col-12 col-lg-4 manual-text">
-                        © 2024 Novamobile. All rights reserved
-                    </div>
-                </div>
-            </div>
-        </footer>    
-    <script src="js/jquery.min.js"></script>
-	<!--<script src="js/bootstrap/bootstrap.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="js/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/slick/slick.min.js"></script>
-    <script src="js/jquery.maskedinput.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
-    <script src="js/app.js"></script>
-</body>
-</html>
+        </div>
+    </div>
+</div>

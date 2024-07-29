@@ -1,0 +1,28 @@
+.accountTabs {
+    border-radius: 40px;
+    overflow: hidden;
+    &__top {
+        padding: 40px 45px;
+        background: linear-gradient(94.97deg, #832fbd -23.4%, #d06852 103.02%);
+    }
+    &__avatar {
+        width: 60px;
+        position: relative;
+        & button {
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+        }
+    }
+    &__name {
+        margin-bottom: 12px;
+        color: #fff;
+        font-family: 'Telegraf', sans-serif;
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 28.6px;
+    }
+    &__menu {
+        background-color: #FAFAFA;
+    }
+}
