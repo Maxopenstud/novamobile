@@ -19,6 +19,38 @@ $(document).ready(function() {
         }
         
     });
+    var clickCount = 0
+    $("#acc_delete").click(function(e) {
+        
+        e.preventDefault();
+        
+        if($('input[type=radio]:checked').length) {
+            clickCount++
+            $(".modal-title, .modal-desc, .reason-list, .modal-textarea").toggleClass("hide")
+            $("#noDel, .modal-steps-item").toggleClass("active")
+            $("#noDel").addClass("accDelStep2")
+        } else {
+            $(".custom-radio").addClass("error")
+        }
+        if (clickCount == 2) {
+            $("#form_acc_delete").submit();
+            location.reload();
+        }
+        
+    })
+    $('.custom-radio').click(function() {
+        $('.custom-radio').removeClass("error")
+    })  
+
+  $(document).on('click', '.accDelStep2', function() {
+    $(".modal-title, .modal-desc, .reason-list, .modal-textarea").toggleClass("hide");
+    $(".modal-steps-item").toggleClass("active");
+    $("#noDel").removeClass("accDelStep2")
+    clickCount = 0
+  })
+
+    var checkbox_reverse = $(".account-custom-checkbox").width();
+    $(".custom-checkbox-reverse > input").width(checkbox_reverse);
 
     $("[data-tab]").click(function() {
         let data_tab = $(this).attr("data-tab");
@@ -28,6 +60,9 @@ $(document).ready(function() {
         $(this).addClass("active")
     });
 
+    // $(".accountTabs__menu-item").click(function(e) {
+    //     e.preventDefault();
+    // })
     
     $("[data-tab]").click(function() {
         let index = $(this).index();

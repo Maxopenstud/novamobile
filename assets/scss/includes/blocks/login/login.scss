@@ -165,17 +165,8 @@
             background-color: #D1D1D1;
         }
     }
-    & .password {
-        position: relative;
-    }
-    & .password svg {
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 20px;
-        margin: auto;
-    }
+    
+    
     & .btn-dark {
         margin: 40px auto 0;
         padding: 20px;
@@ -193,5 +184,16 @@
     }
     & .slick-arrow {
         display: none !important;
+    }
+}
+.password {
+    position: relative;
+    & svg {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
     }
 }

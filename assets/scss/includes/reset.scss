@@ -247,6 +247,9 @@ button {
 		padding: 0 20px !important;
 	}
 }
+.h-48 {
+	height: 48px;
+}
 .owl-stage-outer {
 	overflow: hidden;
 }
@@ -396,6 +399,9 @@ button {
 	.gap-max-md-0 {
 		gap: 0;
 	}
+	.gap-max-md-40 {
+		gap: 40px;
+	}
 }
 // margins
 .mt-10 {
@@ -429,6 +435,9 @@ button {
 .p-20 {
 	padding: 20px;
 }
+.p-30 {
+	padding: 30px;
+}
 .pr-60 {
 	padding-right: 60px;
 }
@@ -450,6 +459,9 @@ button {
 	}
 }
 @include max-lg {
+	.mt-max-lg-0 {
+		margin-top: 0px;
+	}
 	.mt-max-lg-20 {
 		margin-top: 20px;
 	}
@@ -481,10 +493,10 @@ button {
 }
 .btn-dark {
 	background: #000;
-	transition: .5s;
+	transition: 0.5s;
 	&:hover {
-		background: linear-gradient(89.27deg, #832FBD -12.02%, #D06852 107.4%);
-		transition: .5s;
+		background: linear-gradient(89.27deg, #832fbd -12.02%, #d06852 107.4%);
+		transition: 0.5s;
 	}
 }
 .btn-white {
@@ -501,7 +513,7 @@ button {
 	font-size: 16px;
 	font-family: "Telegraf", sans-serif;
 	line-height: 21px;
-	color: #FFFFFF80;
+	color: #ffffff80;
 }
 .manual-text {
 	font-family: "Telegraf", sans-serif;
@@ -530,11 +542,17 @@ button {
 		line-height: 24px;
 	}
 }
+.radius-30 {
+	border-radius: 30px;
+}
 .bg-f1 {
 	background-color: #f1f1f1 !important;
 }
 .bg-f4 {
 	background-color: #f4f4f4;
+}
+.bg-fa {
+	background-color: #fafafa;
 }
 .fs-20 {
 	font-size: 20px;
@@ -605,6 +623,19 @@ select::-ms-expand {
 }
 .form-input {
 }
+.btn-red {
+	border: 1px solid #ff0000;
+	height: 48px;
+	font-family: 'Gilroy';
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 18.2px;
+	color: #FF0000;
+	max-width: 220px;
+	&:hover {
+		border-color: inherit;
+	}
+}
 .height-max-content {
 	height: max-content;
 }
@@ -613,6 +644,15 @@ select::-ms-expand {
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
+}
+.custom-checkbox-reverse {
+	width: max-content;
+	overflow: hidden;
+	padding: 3px 0;
+}
+.custom-checkbox-reverse > input {
+	z-index: 5;
+	height: 24px;
 }
 
 /* для элемента label, связанного с .custom-checkbox */
@@ -626,7 +666,12 @@ select::-ms-expand {
 	line-height: 22.4px;
 	color: #3b3b3b;
 }
-
+.custom-checkbox-reverse > span {
+	width: max-content;
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+}
 /* создание в label псевдоэлемента before со следующими стилями */
 .custom-checkbox > span::before {
 	content: "";
@@ -637,13 +682,15 @@ select::-ms-expand {
 	flex-grow: 0;
 	border: 1px solid #d1d1d1;
 	border-radius: 5px;
-	margin-right: 10px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 50% 50%;
 	margin-bottom: -3px;
+	margin-right: 10px;
 }
-
+.custom-checkbox-reverse > span::before {
+	margin-left: 20px;
+}
 /* стили при наведении курсора на checkbox */
 .custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
 	border-color: #3b3b3b;
@@ -653,6 +700,10 @@ select::-ms-expand {
 .custom-checkbox > input:not(:disabled):active + span::before {
 	background-color: #3b3b3b;
 	border-color: #3b3b3b;
+}
+.account-custom-checkbox > input:not(:disabled):active + span::before {
+	background-color: #f4f4f4;
+	border-color: transparent;
 }
 
 /* стили для чекбокса, находящегося в фокусе */
@@ -676,6 +727,41 @@ select::-ms-expand {
 .custom-checkbox > input:disabled + span::before {
 	background-color: #e9ecef;
 }
+
+.account-custom-checkbox > span::before {
+	width: 48px;
+	height: 24px;
+	border-radius: 16px;
+	background-color: #f4f4f4;
+	border: none;
+}
+.account-custom-checkbox > span::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: none;
+	display: block;
+	position: absolute;
+	top: 2px;
+	bottom: 0;
+	right: 24px;
+	transform: translateX(-10px);
+	margin: auto;
+	transition: 0.5s;
+}
+.account-custom-checkbox > input:checked + span::before {
+	background-image: none;
+	background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+	transition: 0.5s;
+}
+.account-custom-checkbox > input:checked + span::after {
+	content: "";
+	right: 1px;
+	transform: translateX(-12px);
+	transition: 0.5s;
+}
 .hidden,
 .hidden * {
 	opacity: 0 !important;
@@ -689,6 +775,8 @@ select::-ms-expand {
 	visibility: visible !important;
 	pointer-events: all !important;
 	transition: 0.5s;
+	width: auto !important;
+	height: auto !important;
 }
 [data-tab-target].hidden {
 	opacity: 0 !important;
@@ -696,7 +784,8 @@ select::-ms-expand {
 	pointer-events: none !important;
 	margin: 0 !important;
 	padding: 0 !important;
-	height: 0;
+	height: 0 !important;
+	width: 0 !important;
 }
 
 .form-input {
@@ -707,7 +796,7 @@ select::-ms-expand {
 }
 #column-left {
 	height: 100%;
-	min-width: 300px;
+	min-width: 350px;
 	@include max-xl {
 		max-width: 250px;
 		min-width: 250px;
@@ -741,10 +830,9 @@ select::-ms-expand {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	@include max-lg{
+	@include max-lg {
 		margin-top: 20px;
 	}
-	
 }
 .manual-list li {
 	display: flex;
@@ -765,4 +853,3 @@ select::-ms-expand {
 		background-repeat: no-repeat;
 	}
 }
-

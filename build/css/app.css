@@ -243,6 +243,9 @@ button {
     .container {
       padding: 0 20px !important; } }
 
+.h-48 {
+  height: 48px; }
+
 .owl-stage-outer {
   overflow: hidden; }
 
@@ -380,7 +383,9 @@ button {
 
 @media (max-width: 768px) {
   .gap-max-md-0 {
-    gap: 0; } }
+    gap: 0; }
+  .gap-max-md-40 {
+    gap: 40px; } }
 
 .mt-10 {
   margin-top: 10px; }
@@ -412,6 +417,9 @@ button {
 .p-20 {
   padding: 20px; }
 
+.p-30 {
+  padding: 30px; }
+
 .pr-60 {
   padding-right: 60px; }
 
@@ -429,6 +437,8 @@ button {
     margin-top: 14px; } }
 
 @media (max-width: 992px) {
+  .mt-max-lg-0 {
+    margin-top: 0px; }
   .mt-max-lg-20 {
     margin-top: 20px; }
   .mt-max-lg-30 {
@@ -454,10 +464,10 @@ button {
 
 .btn-dark {
   background: #000;
-  transition: .5s; }
+  transition: 0.5s; }
   .btn-dark:hover {
-    background: linear-gradient(89.27deg, #832FBD -12.02%, #D06852 107.4%);
-    transition: .5s; }
+    background: linear-gradient(89.27deg, #832fbd -12.02%, #d06852 107.4%);
+    transition: 0.5s; }
 
 .btn-white {
   background: #fff;
@@ -473,7 +483,7 @@ button {
   font-size: 16px;
   font-family: "Telegraf", sans-serif;
   line-height: 21px;
-  color: #FFFFFF80; }
+  color: #ffffff80; }
 
 .manual-text {
   font-family: "Telegraf", sans-serif;
@@ -499,11 +509,17 @@ button {
     font-size: 18px;
     line-height: 24px; } }
 
+.radius-30 {
+  border-radius: 30px; }
+
 .bg-f1 {
   background-color: #f1f1f1 !important; }
 
 .bg-f4 {
   background-color: #f4f4f4; }
+
+.bg-fa {
+  background-color: #fafafa; }
 
 .fs-20 {
   font-size: 20px; }
@@ -571,6 +587,18 @@ select::-ms-expand {
     text-align: left;
     color: #3b3b3b; }
 
+.btn-red {
+  border: 1px solid #ff0000;
+  height: 48px;
+  font-family: 'Gilroy';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.2px;
+  color: #FF0000;
+  max-width: 220px; }
+  .btn-red:hover {
+    border-color: inherit; }
+
 .height-max-content {
   height: max-content; }
 
@@ -579,6 +607,15 @@ select::-ms-expand {
   position: absolute;
   z-index: -1;
   opacity: 0; }
+
+.custom-checkbox-reverse {
+  width: max-content;
+  overflow: hidden;
+  padding: 3px 0; }
+
+.custom-checkbox-reverse > input {
+  z-index: 5;
+  height: 24px; }
 
 /* для элемента label, связанного с .custom-checkbox */
 .custom-checkbox > span {
@@ -591,6 +628,12 @@ select::-ms-expand {
   line-height: 22.4px;
   color: #3b3b3b; }
 
+.custom-checkbox-reverse > span {
+  width: max-content;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse; }
+
 /* создание в label псевдоэлемента before со следующими стилями */
 .custom-checkbox > span::before {
   content: "";
@@ -601,11 +644,14 @@ select::-ms-expand {
   flex-grow: 0;
   border: 1px solid #d1d1d1;
   border-radius: 5px;
-  margin-right: 10px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
-  margin-bottom: -3px; }
+  margin-bottom: -3px;
+  margin-right: 10px; }
+
+.custom-checkbox-reverse > span::before {
+  margin-left: 20px; }
 
 /* стили при наведении курсора на checkbox */
 .custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
@@ -615,6 +661,10 @@ select::-ms-expand {
 .custom-checkbox > input:not(:disabled):active + span::before {
   background-color: #3b3b3b;
   border-color: #3b3b3b; }
+
+.account-custom-checkbox > input:not(:disabled):active + span::before {
+  background-color: #f4f4f4;
+  border-color: transparent; }
 
 /* стили для чекбокса, находящегося в фокусе */
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
@@ -631,6 +681,40 @@ select::-ms-expand {
 .custom-checkbox > input:disabled + span::before {
   background-color: #e9ecef; }
 
+.account-custom-checkbox > span::before {
+  width: 48px;
+  height: 24px;
+  border-radius: 16px;
+  background-color: #f4f4f4;
+  border: none; }
+
+.account-custom-checkbox > span::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 2px;
+  bottom: 0;
+  right: 24px;
+  transform: translateX(-10px);
+  margin: auto;
+  transition: 0.5s; }
+
+.account-custom-checkbox > input:checked + span::before {
+  background-image: none;
+  background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+  transition: 0.5s; }
+
+.account-custom-checkbox > input:checked + span::after {
+  content: "";
+  right: 1px;
+  transform: translateX(-12px);
+  transition: 0.5s; }
+
 .hidden,
 .hidden * {
   opacity: 0 !important;
@@ -643,7 +727,9 @@ select::-ms-expand {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: all !important;
-  transition: 0.5s; }
+  transition: 0.5s;
+  width: auto !important;
+  height: auto !important; }
 
 [data-tab-target].hidden {
   opacity: 0 !important;
@@ -651,7 +737,8 @@ select::-ms-expand {
   pointer-events: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  height: 0; }
+  height: 0 !important;
+  width: 0 !important; }
 
 .form-input {
   border: 1px solid #ccc; }
@@ -661,7 +748,7 @@ select::-ms-expand {
 
 #column-left {
   height: 100%;
-  min-width: 300px; }
+  min-width: 350px; }
   @media (max-width: 1200px) {
     #column-left {
       max-width: 250px;
@@ -2439,15 +2526,6 @@ select::-ms-expand {
       width: 1000%;
       height: 1px;
       background-color: #D1D1D1; }
-  .login .password {
-    position: relative; }
-  .login .password svg {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 20px;
-    margin: auto; }
   .login .btn-dark {
     margin: 40px auto 0;
     padding: 20px;
@@ -2463,6 +2541,16 @@ select::-ms-expand {
     padding: 5px 0 10px; }
   .hand-slider .slick-arrow {
     display: none !important; }
+
+.password {
+  position: relative; }
+  .password svg {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto; }
 
 .team__item {
   background-color: #FAFAFA;
@@ -3193,6 +3281,12 @@ select::-ms-expand {
   .accountTabs__top {
     padding: 40px 45px;
     background: linear-gradient(94.97deg, #832fbd -23.4%, #d06852 103.02%); }
+    @media (max-width: 1200px) {
+      .accountTabs__top {
+        padding: 25px; } }
+    @media (max-width: 768px) {
+      .accountTabs__top {
+        padding: 40px 45px; } }
   .accountTabs__avatar {
     width: 60px;
     position: relative; }
@@ -3203,12 +3297,201 @@ select::-ms-expand {
   .accountTabs__name {
     margin-bottom: 12px;
     color: #fff;
-    font-family: 'Telegraf', sans-serif;
+    font-family: "Telegraf", sans-serif;
     font-size: 22px;
     font-weight: 800;
     line-height: 28.6px; }
+  .accountTabs__bottom {
+    background-color: #fafafa;
+    padding: 40px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 1200px) {
+      .accountTabs__bottom {
+        padding: 25px; } }
+    @media (max-width: 768px) {
+      .accountTabs__bottom {
+        padding: 40px 45px;
+        align-items: flex-start; } }
   .accountTabs__menu {
-    background-color: #FAFAFA; }
+    display: flex;
+    flex-direction: column;
+    gap: 35px; }
+    .accountTabs__menu-item {
+      font-family: "Telegraf", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      opacity: 0.5;
+      display: flex;
+      align-items: center;
+      gap: 12px; }
+      .accountTabs__menu-item.active {
+        color: #000;
+        opacity: 1; }
+  .accountTabs .logout {
+    margin-top: 70px;
+    font-family: "Telegraf", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000; }
+    @media (max-width: 768px) {
+      .accountTabs .logout {
+        margin: 70px auto 0; } }
+
+.modal-content {
+  border-radius: 30px;
+  padding: 35px 30px 30px; }
+
+.modal-header, .modal-footer, .modal-body {
+  padding: 0;
+  border: none; }
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-top: 25px; }
+
+.modal-steps {
+  display: flex;
+  align-items: center; }
+  .modal-steps-item {
+    font-family: "Gilroy";
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.5s;
+    position: relative; }
+    .modal-steps-item:not(:last-child)::after {
+      content: "";
+      width: 17px;
+      height: 1px;
+      background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+      margin-left: 8px;
+      position: absolute;
+      right: -24px; }
+    .modal-steps-item:not(:first-child) {
+      margin-left: 33px; }
+    .modal-steps-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; }
+    .modal-steps-item.active {
+      width: 50px;
+      height: 50px;
+      transition: 0.5s;
+      background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+      -webkit-background-clip: none;
+      -webkit-text-fill-color: #fff;
+      border: none; }
+
+.modal-title {
+  margin: 25px 0;
+  font-family: 'Telegraf', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 15px;
+  text-align: center; }
+
+#modalAccDelete .reason-item:not(:first-child) {
+  margin-top: 18px; }
+
+/* для элемента input c type="radio" */
+.custom-radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-family: 'Telegraf', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px; }
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio > span::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%; }
+
+.custom-radio.error > span::before {
+  border: 1px solid red; }
+
+.custom-radio.error > span {
+  color: red; }
+
+/* стили при наведении курсора на радио */
+.custom-radio > input:not(:disabled):not(:checked) + span:hover::before {
+  border-color: #b3d7ff;
+  border-color: #D1D1D1; }
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio > input:not(:disabled):active + span::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+  border-color: transparent; }
+
+/* стили для радиокнопки, находящейся в фокусе */
+.custom-radio > input:focus + span::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: none; }
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.custom-radio > input:focus:not(:checked) + span::before {
+  border-color: #80bdff;
+  border-color: transparent; }
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio > input:checked + span::before {
+  border-color: #0b76ef;
+  border-color: transparent;
+  background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%); }
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio > input:disabled + span::before {
+  background-color: #e9ecef;
+  border-color: transparent; }
+
+.accountCards .slick-track {
+  display: flex; }
+
+.accountCards .slick-list {
+  margin-right: -20px; }
+
+.accountCards .slick-slide {
+  margin-right: 20px; }
 
 .footer {
   padding: 60px 0; }

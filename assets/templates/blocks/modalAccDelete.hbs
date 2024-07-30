@@ -1,0 +1,86 @@
+<!-- Modal -->
+<div class="modal fade" id="modalAccDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-labelledby="accountDeleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex flex-column align-items-center">
+        <div class="modal-steps">
+          <div class="modal-steps-item active">1</div>
+          <div class="modal-steps-item">2</div>
+        </div>
+        <h1 class="modal-title fs-5">Choose a reason</h1>
+        <div class="modal-title fs-5 hide" id="">Delete your account</div>
+      </div>
+      <form action="#" name="" method="get" id="form_acc_delete">
+        <div class="modal-body">
+          <div class="manual-text modal-desc">
+            You can delete your account permanently after choosing a reason and giving more details to tell us why you're deleting your account. (Optional)
+          </div>
+          <div class="manual-text modal-desc hide">
+            Before starting your account deletion process, please make sure that you understand:
+            <br>
+            <br>
+            - Your account deletion request will take 7 days to process  
+            <br>
+            <br>
+            - Logging back into your account will cancel the account deletion process 
+            <br>
+            <br>
+            - Your eSIMs, and any available remaining data on your active packages, will be disabled  
+            <br>
+            <br>
+            - All your personal information will be deleted except the information which must be stored according to our privacy policy  
+            <br>
+            <br>
+            - Once your account deletion request has been processed, your account will no longer be retrievable
+          </div>
+          <ul class="mt-30 reason-list">
+            <li class="reason-item">
+              <label class="custom-radio">
+                <input type="radio" name="color" value="">
+                <span>Incompatible device</span>
+              </label>
+            </li>
+            <li class="reason-item">
+              <label class="custom-radio">
+                <input type="radio" name="color" value="">
+                <span>Digital footprint</span>
+              </label>
+            </li>
+            <li class="reason-item">
+              <label class="custom-radio">
+                <input type="radio" name="color" value="">
+                <span>No longer in need (not traveling anytime soon)</span>
+              </label>
+            </li>
+            <li class="reason-item">
+              <label class="custom-radio">
+                <input type="radio" name="color" value="">
+                <span>Poor customer service</span>
+              </label>
+            </li>
+            <li class="reason-item">
+              <label class="custom-radio">
+                <input type="radio" name="color" value="">
+                <span>Bad user experience</span>
+              </label>
+            </li>
+            <li class="reason-item">
+              <label class="custom-radio">
+                <input type="radio" name="color" value="">
+                <span>Other</span>
+              </label>
+            </li>
+          </ul>
+          <div class="form-group mt-30 modal-textarea">
+              <label>Your message</label>
+              <textarea name="" id="" rows="10" minlength="25"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-red" data-bs-dismiss="modal" id="noDel">Cancel</button>
+          <button type="button" class="btn btn-dark h-48" id="acc_delete">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
