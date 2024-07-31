@@ -1,12 +1,66 @@
 .accountCards {
+    width: calc(100% - 400px);
+        @include max-xl{
+            width: calc(100% - 280px);
+        }
+        @include max-md{
+            width: 100%;
+        }
+        
     & .slick-track {
         display: flex;
     }
     & .slick-list {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 20px 0;
+        margin-top: -20px;
+        @include max-xlmidle{
+            margin: 0;
+        }
+        @include max-lg{
+            height: auto !important;
+        }
         
-margin-right: -20px
     }
     & .slick-slide {
-        margin-right: 20px
+        margin: 0 20px;
+        @include max-xxl{
+            margin: 0 5px;
+        }
+        @include max-xlmidle{
+            margin: 0 20px;
+        }
+        @include max-md{
+            margin: 0;
+        }
+        
+    }
+    & .card {
+        @include max-xlmidle{
+            max-width: 100%;
+            // width: 100%;
+        }
+    }
+    & .slick-dots {
+        bottom: 0;
+        & li.slick-active {
+            background: #000;
+        }
+    }
+    & .slick-arrow {
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='21' viewBox='0 0 22 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.1841 8.75086H21.6726V12.1259H7.1841L12.7409 17.6826L10.3544 20.0691L0.723633 10.4384L10.3544 0.807617L12.7409 3.1941L7.1841 8.75086Z' fill='black'/%3E%3C/svg%3E%0A");
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: 0;
+        &.slick-next {
+            transform: rotate(180deg);
+            left: 200px;
+        }
+        &.slick-prev {
+            right: 200px;
+        }
     }
 }

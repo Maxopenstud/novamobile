@@ -74,11 +74,11 @@
             }
         }
     }
-    .logo__default {
+    & .logo__default {
         display: none;
     }
-    .logo__business {
-        display: block;
+    & .logo__business {
+        display: block !important;
     }
     & .btn-transparent {
         display: flex;

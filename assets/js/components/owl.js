@@ -35,30 +35,35 @@ $(document).ready(function() {
 //       }
 //   }
 // })
-
-$('[data-tab="esims"]').click(function() {
-  $('.accountCards').slick({
-    slidesToShow: 3,
-    dots: true,
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1
+    $(document).on('click', '.accountTabs__menu-item', function(e) {
+      if ($(e.target).attr('data-tab') === 'esims') {
+        $('.accountCards').slick({
+          slidesToShow: 3,
+          dots: true,
+          adaptiveHeight: true,
+          responsive: [
+            {
+              breakpoint: 1301,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 993,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+        $(".slick-arrow").text("");
+      } else {
+        if ($('.accountCards').hasClass('slick-initialized')) {
+          $('.accountCards').slick('unslick');
         }
       }
-    ]
-  });
-  $(".slick-arrow").text("");
-  
-})
+    });
+
 
 });
 

@@ -1,0 +1,108 @@
+.accountReferal {
+    &__banner {
+        background-color: #fcf2ff;
+        border-radius: 20px;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        @include max-lg {
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        @include max-md {
+            padding: 30px 20px;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            @include max-xl {
+                gap: 10px;
+            }
+            @include max-lg {
+                gap: 10px;
+            }
+            @include max-md {
+                gap: 20px;
+            }
+        }
+        &-title {
+            font-family: "Telegraf", sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 39px;
+            text-align: left;
+            color: #3b3b3b;
+            @include max-xxl {
+                font-size: 25px;
+                line-height: 30px;
+            }
+            @include max-xl {
+                font-size: 20px;
+                line-height: 25px;
+            }
+            @include max-lg {
+                font-size: 20px;
+                line-height: 25px;
+            }
+        }
+    }
+    &__item {
+        background-color: #FAFAFA; 
+        border-radius: 20px;
+        padding: 30px; 
+        display: flex;
+        flex-direction: column;  
+        gap: 30px;
+    }
+    &__share {
+        max-width: 360px;
+        
+    }
+    &__howItWorks {
+        padding: 30px 20px; 
+        width: 100%;
+
+    }
+    & .manual-title {
+        font-size: 22px;
+        line-height: 39px;
+        text-align: center;
+        @include max-lg{
+            font-size: 20px;
+            line-height: 25px;
+        }
+        
+    }
+    &__code {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        & label {
+            font-family: "Telegraf", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+            color: #3b3b3b;
+        }
+        & .input-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        & input {
+            height: 48px;
+            border-radius: 10px 0 0 10px;
+            border: 1px solid #8c36b1;
+            padding: 0 20px;
+        }
+        & button {
+            height: 48px;
+            width: 45px;
+            border-radius: 0 10px 10px 0;
+            background: linear-gradient(81.66deg, #832fbd -10.85%, #d06852 107.66%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
