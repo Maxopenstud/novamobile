@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Novamobile</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/nova.png">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="stylesheet" href="css/swiper/swiper.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Подключение jQuery Inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/jquery.inputmask.min.js"></script>
+    <!--font-family: "Poppins", sans-serif; -->
+    <link rel="stylesheet" href="fonts/gilroy/stylesheet.css">
+    <link rel="stylesheet" href="fonts/telegraf/stylesheet.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="header_bg">
+        
+        <div class="container">
+            <div class="header">
+            <div class="d-flex align-items-center gap-20 w-100">
+                <button class="burger">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M1 8H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M1 15H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+                <div class="header__mobile">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-20 w-100">
+                            <button class="burger">
+                                <svg class="" width="20" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.42773 1L15.287 15" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M14.8594 1L1.00008 15" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                            <a href="#" class="logo header__logo">
+                                <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                                <img src="images/logo_business.svg" alt="logo" class="logo__business"> 
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center gap-20 gap-max-xl-10">
+                            <a href="login.html" class="icon_login">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1040_563)">
+                                    <path d="M15 5C12.2375 5 10 7.2375 10 10C10 12.7562 12.2375 15 15 15C17.7625 15 20 12.7562 20 10C20 7.2375 17.7625 5 15 5ZM15 17.5C11.6687 17.5 5 19.1687 5 22.5V25H25V22.5C25 19.1687 18.3313 17.5 15 17.5Z" fill="black"></path>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1040_563">
+                                    <rect width="30" height="30" fill="white"></rect>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    EN ($)
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">УКР (UAH)</a></li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn btn-dark">Try now</button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center gap-40">
+                        <ul class="menu burger__menu">
+                            <li class="menu__item">
+                                <a href="index.html" class="menu__link active">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="store.html" class="menu__link">Store</a> 
+                            </li>
+                            <li class="menu__item">
+                                <a href="aboutUs.html" class="menu__link">About us</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="contacts.html" class="menu__link">Contact us</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="business.html" class="menu__link">Nova for Business</a>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-dark mobile-lg">Try now</button>
+                    </div>
+                    <div class="d-flex flex-column align-items-center gap-20">
+                        <a href="#" class="logo header__logo">
+                            <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                            <img src="images/logo_business.svg" alt="logo" class="logo__business">  
+                        </a>
+                        <ul class="social">
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 8.70968H17V5.95161C17 4.93548 17.7143 4.64516 18.1429 4.64516H21V0H17C12.5714 0 11.5714 3.48387 11.5714 5.66129V8.70968H9V13.5H11.5714V27H17V13.5H20.5714L21 8.70968Z" fill="#3B3B3B"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.5 5.84202C27.695 7.07106 26.7289 8.11299 25.6018 8.96779C25.6018 9.05164 25.6117 9.182 25.6315 9.3589C25.6512 9.53579 25.6611 9.66616 25.6611 9.75C25.6611 11.3747 25.4295 13 24.9662 14.6258C24.5029 16.2515 23.7986 17.8037 22.8533 19.2822C21.908 20.7607 20.7859 22.0731 19.487 23.2193C18.188 24.3655 16.6283 25.2822 14.8078 25.9693C12.9874 26.6564 11.0301 27 8.93598 27C5.67531 27 2.69665 26.0936 0 24.2807C0.564024 24.3226 1.0268 24.3436 1.38833 24.3436C4.10572 24.3436 6.53122 23.4893 8.66483 21.7807C7.39652 21.7602 6.26452 21.3594 5.26883 20.5782C4.27315 19.797 3.5738 18.7919 3.17078 17.5629C3.51256 17.6467 3.88495 17.6886 4.28796 17.6886C4.83124 17.6886 5.3444 17.6053 5.82742 17.4386C4.4791 17.1472 3.36192 16.4494 2.47588 15.3451C1.58984 14.2408 1.14682 12.9698 1.14682 11.5322V11.4693C1.91136 11.8865 2.78703 12.1155 3.77382 12.1564C2.98854 11.6145 2.36475 10.9008 1.90247 10.0153C1.44019 9.12986 1.20855 8.17689 1.20756 7.15644C1.20756 6.11452 1.45895 5.09356 1.96174 4.09356C3.43057 5.98926 5.2066 7.48415 7.28984 8.57822C9.37307 9.67229 11.6321 10.2817 14.067 10.4064C13.9258 9.88599 13.8551 9.4274 13.8551 9.03067C13.8551 7.36401 14.4285 5.94223 15.5754 4.76534C16.7222 3.58845 18.1209 3 19.7715 3C20.5765 3 21.3514 3.16667 22.0962 3.5C22.841 3.83333 23.4751 4.30215 23.9987 4.90644C25.3272 4.63548 26.5649 4.14571 27.7117 3.43712C27.289 4.85429 26.4336 5.96881 25.1455 6.78067C26.3733 6.61401 27.4905 6.30164 28.497 5.84356L28.5 5.84202Z" fill="#3B3B3B"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_503_6280)">
+                                        <path d="M14.994 2.70292C19 2.70292 19.4702 2.72078 21.0536 2.79222C22.5179 2.85771 23.3095 3.10181 23.8393 3.31018C24.5417 3.58404 25.0417 3.90554 25.5655 4.42945C26.0893 4.95336 26.4167 5.45346 26.6845 6.15598C26.8869 6.68585 27.1369 7.47767 27.2024 8.94225C27.2738 10.5259 27.2917 10.9962 27.2917 15.003C27.2917 19.0097 27.2738 19.4801 27.2024 21.0637C27.1369 22.5283 26.8929 23.3201 26.6845 23.85C26.4107 24.5525 26.0893 25.0526 25.5655 25.5765C25.0417 26.1004 24.5417 26.4279 23.8393 26.6958C23.3095 26.8982 22.5179 27.1482 21.0536 27.2137C19.4702 27.2852 19 27.303 14.994 27.303C10.9881 27.303 10.5179 27.2852 8.93452 27.2137C7.47024 27.1482 6.67857 26.9041 6.14881 26.6958C5.44643 26.4219 4.94643 26.1004 4.42262 25.5765C3.89881 25.0526 3.57143 24.5525 3.30357 23.85C3.10119 23.3201 2.85119 22.5283 2.78571 21.0637C2.71429 19.4801 2.69643 19.0097 2.69643 15.003C2.69643 10.9962 2.71429 10.5259 2.78571 8.94225C2.85119 7.47767 3.09524 6.68585 3.30357 6.15598C3.57738 5.45346 3.89881 4.95336 4.42262 4.42945C4.94643 3.90554 5.44643 3.57809 6.14881 3.31018C6.67857 3.10776 7.47024 2.85771 8.93452 2.79222C10.5179 2.71482 10.9881 2.70292 14.994 2.70292ZM14.994 0C10.9226 0 10.4107 0.0178607 8.80952 0.0893034C7.21429 0.160746 6.125 0.416749 5.17262 0.78587C4.18452 1.1669 3.35119 1.68486 2.51786 2.51836C1.68452 3.35186 1.17262 4.19131 0.785714 5.17365C0.416667 6.12622 0.160714 7.21572 0.0892857 8.81723C0.0178571 10.4128 0 10.9248 0 14.997C0 19.0693 0.0178571 19.5813 0.0892857 21.1828C0.160714 22.7783 0.416667 23.8678 0.785714 24.8264C1.16667 25.8146 1.68452 26.6481 2.51786 27.4816C3.35119 28.3151 4.19048 28.8271 5.17262 29.2141C6.125 29.5833 7.21429 29.8393 8.81548 29.9107C10.4167 29.9821 10.9226 30 15 30C19.0774 30 19.5833 29.9821 21.1845 29.9107C22.7798 29.8393 23.869 29.5833 24.8274 29.2141C25.8155 28.8331 26.6488 28.3151 27.4821 27.4816C28.3155 26.6481 28.8274 25.8087 29.2143 24.8264C29.5833 23.8738 29.8393 22.7843 29.9107 21.1828C29.9821 19.5813 30 19.0752 30 14.997C30 10.9188 29.9821 10.4128 29.9107 8.81127C29.8393 7.21572 29.5833 6.12622 29.2143 5.16769C28.8333 4.1794 28.3155 3.3459 27.4821 2.5124C26.6488 1.6789 25.8095 1.1669 24.8274 0.779917C23.875 0.410796 22.7857 0.154793 21.1845 0.0833499C19.5774 0.0178607 19.0655 0 14.994 0Z" fill="#3B3B3B"></path>
+                                        <path d="M15 7.5C10.8617 7.5 7.5 10.8559 7.5 15C7.5 19.1441 10.8617 22.5 15 22.5C19.1383 22.5 22.5 19.1383 22.5 15C22.5 10.8617 19.1383 7.5 15 7.5ZM15 19.8686C12.3107 19.8686 10.1314 17.6893 10.1314 15C10.1314 12.3107 12.3107 10.1314 15 10.1314C17.6893 10.1314 19.8686 12.3107 19.8686 15C19.8686 17.6893 17.6893 19.8686 15 19.8686Z" fill="#3B3B3B"></path>
+                                        <path d="M22.5 9C23.3284 9 24 8.32843 24 7.5C24 6.67157 23.3284 6 22.5 6C21.6716 6 21 6.67157 21 7.5C21 8.32843 21.6716 9 22.5 9Z" fill="#3B3B3B"></path>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_503_6280">
+                                        <rect width="30" height="30" fill="white"></rect>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.77823e-06 22.7812C1.77823e-06 23.9527 0.395636 24.9489 1.1869 25.7699C1.97817 26.5909 2.94144 27.001 4.07669 27H25.9233C27.0586 27 28.0218 26.59 28.8131 25.7699C29.6044 24.9499 30 23.9536 30 22.7812V5.78881C30 4.61732 29.6005 3.60964 28.8014 2.76579C28.0023 1.92193 27.043 1.5 25.9233 1.5H4.07669C2.958 1.5 1.99864 1.92193 1.1986 2.76579C0.39856 3.60964 -0.000972691 4.61732 1.77823e-06 5.78881V22.7812ZM10.9116 19.711V8.85898C10.9116 8.74945 10.9438 8.66373 11.0081 8.60183C11.0558 8.58659 11.0958 8.57897 11.1279 8.57897L11.2478 8.60183L21.7034 14.0393C21.7677 14.1021 21.7998 14.1802 21.7998 14.2736C21.7998 14.3364 21.7677 14.3988 21.7034 14.4607L11.2478 19.8982C11.2157 19.9296 11.1835 19.9453 11.1513 19.9453C11.087 19.9453 11.0393 19.9296 11.0081 19.8982C10.9438 19.8353 10.9116 19.7729 10.9116 19.711Z" fill="#3B3B3B"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="logo header__logo">
+                    <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                    <img src="images/logo_business.svg" alt="logo" class="logo__business">  
+                </a>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <ul class="menu header__menu">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link active">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="store.html" class="menu__link">Store</a> 
+                    </li>
+                    <li class="menu__item">
+                        <a href="about.html" class="menu__link">About us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="contacts.html" class="menu__link">Contact us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="business.html" class="menu__link">Nova for Business</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-20 gap-max-xl-10 w-100">
+                    <a href="login.html" class="icon_login">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1040_563)">
+                            <path d="M15 5C12.2375 5 10 7.2375 10 10C10 12.7562 12.2375 15 15 15C17.7625 15 20 12.7562 20 10C20 7.2375 17.7625 5 15 5ZM15 17.5C11.6687 17.5 5 19.1687 5 22.5V25H25V22.5C25 19.1687 18.3313 17.5 15 17.5Z" fill="black"></path>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_1040_563">
+                            <rect width="30" height="30" fill="white"></rect>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            EN ($)
+                        </button>
+                        <ul class="dropdown-menu" style="">
+                            <li><a class="dropdown-item" href="#">УКР (UAH)</a></li>
+                        </ul>
+                    </div>
+                    <a href="businessLogin.html" class="btn btn-transparent">Sign in</a>
+                    <button type="button" class="btn btn-dark">Try now</button>
+                </div>
+            </div>
+        
+            </div>
+        </div>        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Home</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link active">Current page</a>
+                </li>
+            </ul>
+        </div>        <div class="section pt-0">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row gap-40 gap-max-xl-20 gap-max-md-40">
+                    <div class="">
+                        <div id="column-left">
+                            <div class="accountTabs">
+                                <div class="accountTabs__top">
+                                    <div class="d-flex align-items-center gap-20">
+                                        <div class="pos-r accountTabs__avatar">
+                                            <img src="images/account_avatar.png" alt="" class="rounded-circle">
+                                            <button type="button" class="btn p-0 pos-a w-auto">
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="11" cy="11" r="11" fill="white"/>
+                                                    <path d="M15.2969 15.2969H6.70312C6.4752 15.2969 6.25662 15.2063 6.09546 15.0452C5.93429 14.884 5.84375 14.6654 5.84375 14.4375V8.42188C5.84375 8.19395 5.93429 7.97537 6.09546 7.81421C6.25662 7.65304 6.4752 7.5625 6.70312 7.5625H8.42156L9.28094 6.27344H12.7184L13.5778 7.5625H15.2969C15.5248 7.5625 15.7434 7.65304 15.9045 7.81421C16.0657 7.97537 16.1562 8.19395 16.1562 8.42188V14.4375C16.1562 14.6654 16.0657 14.884 15.9045 15.0452C15.7434 15.2063 15.5248 15.2969 15.2969 15.2969Z" stroke="url(#paint0_linear_1603_7450)" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M11 13.1484C12.0679 13.1484 12.9336 12.2827 12.9336 11.2148C12.9336 10.1469 12.0679 9.28125 11 9.28125C9.93211 9.28125 9.06641 10.1469 9.06641 11.2148C9.06641 12.2827 9.93211 13.1484 11 13.1484Z" stroke="url(#paint1_linear_1603_7450)" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1603_7450" x1="9.47461" y1="3.5946" x2="11.7308" y2="14.8489" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    <linearGradient id="paint1_linear_1603_7450" x1="10.428" y1="8.13318" x2="11.5201" y2="12.9001" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="accountTabs__name">
+                                                Jane Doe
+                                            </div>
+                                            <div class="text">
+                                                Traveler
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accountTabs__bottom">
+                                    <div class="accountTabs__menu">
+                                        <a href="#" class="accountTabs__menu-item active" data-tab="info">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.1932 3.80746C17.1164 -1.26887 8.88492 -1.26944 3.80746 3.80746C-1.26944 8.88435 -1.26887 17.1158 3.80746 22.1932C8.88435 27.269 17.1158 27.2696 22.1932 22.1932C27.2696 17.1158 27.269 8.88492 22.1932 3.80746ZM14.6955 18.6526C14.6955 19.5892 13.9364 20.3483 12.9998 20.3483C12.0632 20.3483 11.3041 19.5892 11.3041 18.6526V11.8699C11.3041 10.9333 12.0632 10.1742 12.9998 10.1742C13.9364 10.1742 14.6955 10.9333 14.6955 11.8699V18.6526ZM12.9698 8.9714C11.9931 8.9714 11.342 8.27955 11.3623 7.42549C11.342 6.53017 11.9931 5.85924 12.9896 5.85924C13.9867 5.85924 14.6175 6.53073 14.6384 7.42549C14.6378 8.27955 13.9872 8.9714 12.9698 8.9714Z" fill="url(#paint0_linear_1635_7441)"/>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_1635_7441" x1="9.15427" y1="-7.71883" x2="16.4971" y2="24.3304" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#832FBD"/>
+                                                <stop offset="1" stop-color="#D06852"/>
+                                                </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            Account information
+                                        </a>
+                                        <a href="#" class="accountTabs__menu-item" data-tab="esims">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="13" cy="13" r="13" fill="url(#paint0_linear_1635_5000)"/>
+                                                <path d="M14.7813 7.30005H9.55625C9.1525 7.30005 8.84375 7.6088 8.84375 8.01255V17.9875C8.84375 18.3913 9.1525 18.7 9.55625 18.7H16.4438C16.8475 18.7 17.1562 18.3913 17.1562 17.9875V9.67505C16.23 8.7488 15.7075 8.2263 14.7813 7.30005ZM10.3637 12.2163C10.3637 11.955 10.5775 11.7413 10.8387 11.7413H11.7412V13.9313H10.3637V12.2163ZM13.5462 17.75H10.8387C10.5775 17.75 10.3637 17.5363 10.3637 17.275V16.1813H13.5225V17.75H13.5462ZM13.5462 15.7063H10.3637V14.3825H11.9788C12.1213 14.3825 12.2162 14.2875 12.2162 14.145V11.7175H13.5463C13.5463 11.7175 13.5463 15.7063 13.5462 15.7063ZM15.6363 17.275C15.6363 17.5363 15.4225 17.75 15.1613 17.75H14.0212V15.2213H15.6363V17.275ZM15.6363 14.7463H14.0212V13.5188H15.6363V14.7463ZM15.6363 13.0438H14.0212V11.7175H15.1613C15.4225 11.7175 15.6363 11.9313 15.6363 12.1925V13.0438Z" fill="white"/>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_1635_5000" x1="9.15417" y1="-7.71875" x2="16.4969" y2="24.3301" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#832FBD"/>
+                                                <stop offset="1" stop-color="#D06852"/>
+                                                </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            My eSims
+                                        </a>
+                                        <a href="#" class="accountTabs__menu-item" data-tab="history">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="13" cy="13" r="13" fill="url(#paint0_linear_1_9)"/>
+                                                <g clip-path="url(#clip0_1_9)">
+                                                <path d="M13 7.5C11.9122 7.5 10.8488 7.82257 9.94437 8.42692C9.0399 9.03126 8.33495 9.89025 7.91867 10.8952C7.50238 11.9002 7.39346 13.0061 7.60568 14.073C7.8179 15.1399 8.34173 16.1199 9.11092 16.8891C9.8801 17.6583 10.8601 18.1821 11.927 18.3943C12.9939 18.6065 14.0998 18.4976 15.1048 18.0813C16.1098 17.6651 16.9687 16.9601 17.5731 16.0556C18.1774 15.1512 18.5 14.0878 18.5 13C18.5 11.5413 17.9205 10.1424 16.8891 9.11091C15.8576 8.07946 14.4587 7.5 13 7.5ZM14.8535 14.8535C14.7597 14.9472 14.6326 14.9999 14.5 14.9999C14.3674 14.9999 14.2403 14.9472 14.1465 14.8535L12.6465 13.3535C12.5527 13.2598 12.5 13.1326 12.5 13V10C12.5 9.86739 12.5527 9.74021 12.6464 9.64645C12.7402 9.55268 12.8674 9.5 13 9.5C13.1326 9.5 13.2598 9.55268 13.3536 9.64645C13.4473 9.74021 13.5 9.86739 13.5 10V12.793L14.8535 14.1465C14.9472 14.2403 14.9999 14.3674 14.9999 14.5C14.9999 14.6326 14.9472 14.7597 14.8535 14.8535Z" fill="#FAFAFA"/>
+                                                </g>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_1_9" x1="9.15417" y1="-7.71875" x2="16.4969" y2="24.3301" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#832FBD"/>
+                                                <stop offset="1" stop-color="#D06852"/>
+                                                </linearGradient>
+                                                <clipPath id="clip0_1_9">
+                                                <rect width="12" height="12" fill="white" transform="translate(7 7)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                            Order history
+                                        </a>
+                                        <a href="#" class="accountTabs__menu-item" data-tab="miles">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="13" cy="13" r="13" fill="url(#paint0_linear_1_15)"/>
+                                                <g clip-path="url(#clip0_1_15)">
+                                                <path d="M18.2174 9.33733H17.3439C17.4591 9.15498 17.5352 8.9503 17.5568 8.73384C17.6261 8.04203 17.2618 7.42187 16.6415 7.14693C16.0713 6.8942 15.4306 6.99752 14.9693 7.41597L13.8663 8.41558C13.6515 8.18064 13.3427 8.03298 13 8.03298C12.6567 8.03298 12.3474 8.18111 12.1326 8.41677L11.0282 7.41585C10.5661 6.9974 9.92561 6.89448 9.35573 7.14707C8.73562 7.42204 8.37121 8.04241 8.44068 8.73419C8.46241 8.95049 8.53839 9.15508 8.65359 9.33733H7.7826C7.35037 9.33733 7 9.68772 7 10.1199V11.2938C7 11.5099 7.1752 11.6852 7.39131 11.6852H18.6087C18.8248 11.6852 19 11.51 19 11.2938V10.1199C19 9.68772 18.6496 9.33733 18.2174 9.33733ZM11.8261 9.2069V9.33733H9.98523C9.49886 9.33733 9.11608 8.88391 9.23755 8.37752C9.29106 8.15451 9.45203 7.96441 9.66023 7.86817C9.94612 7.73603 10.2628 7.77845 10.5029 7.99579L11.8264 9.19537C11.8263 9.19923 11.8261 9.20303 11.8261 9.2069ZM16.7803 8.62994C16.7512 9.03665 16.3838 9.33737 15.976 9.33737H14.1739V9.20695C14.1739 9.20233 14.1736 9.19776 14.1736 9.19314C14.4734 8.92136 15.1238 8.33186 15.4766 8.0121C15.6771 7.83039 15.9576 7.74557 16.2169 7.82291C16.589 7.93391 16.8075 8.25037 16.7803 8.62994Z" fill="#FAFAFA"/>
+                                                <path d="M7.7826 12.4678V18.2069C7.7826 18.6391 8.13297 18.9895 8.5652 18.9895H12.2174V12.4678H7.7826Z" fill="#FAFAFA"/>
+                                                <path d="M13.7826 12.4678V18.9895H17.4348C17.867 18.9895 18.2174 18.6391 18.2174 18.2069V12.4678H13.7826Z" fill="#FAFAFA"/>
+                                                </g>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_1_15" x1="9.15417" y1="-7.71875" x2="16.4969" y2="24.3301" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#832FBD"/>
+                                                <stop offset="1" stop-color="#D06852"/>
+                                                </linearGradient>
+                                                <clipPath id="clip0_1_15">
+                                                <rect width="12" height="12" fill="white" transform="translate(7 7)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                            Nova miles
+                                        </a>
+                                        <a href="#" class="accountTabs__menu-item" data-tab="referral">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="13" cy="13" r="13" fill="url(#paint0_linear_1_20)"/>
+                                                <g clip-path="url(#clip0_1_20)">
+                                                <path d="M11.5 9C11.5 7.8955 13.179 7 15.25 7C17.321 7 19 7.8955 19 9C19 10.1045 17.321 11 15.25 11C13.179 11 11.5 10.1045 11.5 9ZM15.25 13C17.321 13 19 12.1045 19 11V10C19 11.1045 17.321 12 15.25 12C13.179 12 11.5 11.1045 11.5 10V11C11.5 12.1045 13.179 13 15.25 13ZM10 13C8.343 13 7 14.343 7 16C7 17.657 8.343 19 10 19C11.657 19 13 17.657 13 16C13 14.343 11.657 13 10 13ZM10.5 16V17.5H9.5V16H8.273L9.6165 14.6565C9.825 14.448 10.163 14.448 10.3715 14.6565L11.7155 16H10.5ZM15.25 18.0255C14.649 18.0255 14.081 17.95 13.5775 17.816C13.4285 18.1125 13.2445 18.3885 13.0295 18.6375C13.651 18.8815 14.419 19.026 15.25 19.026C17.321 19.026 19 18.1305 19 17.026V16.026C19 17.1305 17.321 18.0255 15.25 18.0255ZM15.25 14.0255C14.524 14.0255 13.8465 13.9155 13.2725 13.725C13.5175 14.0725 13.708 14.4605 13.8325 14.8775C14.27 14.973 14.7485 15.0255 15.25 15.0255C17.321 15.0255 19 14.13 19 13.0255V12.0255C19 13.13 17.321 14.0255 15.25 14.0255ZM15.25 16.0255C14.811 16.0255 14.39 15.985 13.9985 15.911C13.9995 15.949 14 15.987 14 16.0255C14 16.3235 13.967 16.6135 13.9055 16.893C14.323 16.9785 14.776 17.0255 15.25 17.0255C17.321 17.0255 19 16.13 19 15.0255V14.0255C19 15.13 17.321 16.0255 15.25 16.0255Z" fill="white"/>
+                                                </g>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_1_20" x1="9.15417" y1="-7.71875" x2="16.4969" y2="24.3301" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#832FBD"/>
+                                                <stop offset="1" stop-color="#D06852"/>
+                                                </linearGradient>
+                                                <clipPath id="clip0_1_20">
+                                                <rect width="12" height="12" fill="white" transform="translate(7 7)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                            Referral
+                                        </a>
+                                    </div>
+                                    <a href="#" class="logout">Logout</a>
+                                </div>
+                            </div>                </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="accountInformation d-flex flex-column justify-content-between h-100" data-tab-target="info">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>First name</label>
+                                            <input type="text" class="form-input bg-f1 border-0" name="" placeholder="Jane">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group mt-max-lg-30">
+                                            <label>Last name</label>
+                                            <input type="text" class="form-input bg-f1 border-0" name="" placeholder="Doe">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group mt-max-lg-30">
+                                            <label>Email address</label>
+                                            <input type="text" class="form-input bg-f1 email border-0" name="email" placeholder="example@email.com">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group mt-40 mt-max-lg-30">
+                                            <label>Date of birth</label>
+                                            <input type="text" class="form-input bg-f1 border-0" name="" placeholder="01/08/1997 ">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group mt-40 mt-max-lg-30">
+                                            <label>Change password</label>
+                                            <div class="password">
+                                                <input type="password" class="form-input bg-f1 border-0" placeholder="at least 8 characters">
+                                                <svg class="" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8.95245 3.2436C9.29113 3.19353 9.64051 3.16667 10.0003 3.16667C14.2545 3.16667 17.0461 6.9207 17.9839 8.40569C18.0974 8.58542 18.1542 8.67528 18.1859 8.81389C18.2098 8.91799 18.2098 9.08222 18.1859 9.18631C18.1541 9.32492 18.097 9.41538 17.9827 9.59631C17.7328 9.99179 17.3518 10.5476 16.8471 11.1504M5.6036 4.59586C3.80187 5.81808 2.57871 7.51615 2.01759 8.4044C1.90357 8.58489 1.84656 8.67514 1.81478 8.81373C1.79091 8.91783 1.7909 9.08203 1.81476 9.18613C1.84652 9.32473 1.90328 9.41459 2.01678 9.59432C2.95462 11.0793 5.74618 14.8333 10.0003 14.8333C11.7157 14.8333 13.1932 14.223 14.4073 13.3972M2.50035 1.5L17.5003 16.5M8.23258 7.23223C7.78017 7.68464 7.50035 8.30964 7.50035 9C7.50035 10.3807 8.61963 11.5 10.0003 11.5C10.6907 11.5 11.3157 11.2202 11.7681 10.7678" stroke="#C3C3C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                                <svg class="hide" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="#1C274C" stroke-width="1.5"></path>
+                                                <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#1C274C" stroke-width="1.5"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group mt-40 mt-max-lg-30">
+                                            <label>Confirm password</label>
+                                            <div class="password">
+                                                <input type="password" class="form-input bg-f1 border-0" placeholder="at least 8 characters">
+                                                <svg class="" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8.95245 3.2436C9.29113 3.19353 9.64051 3.16667 10.0003 3.16667C14.2545 3.16667 17.0461 6.9207 17.9839 8.40569C18.0974 8.58542 18.1542 8.67528 18.1859 8.81389C18.2098 8.91799 18.2098 9.08222 18.1859 9.18631C18.1541 9.32492 18.097 9.41538 17.9827 9.59631C17.7328 9.99179 17.3518 10.5476 16.8471 11.1504M5.6036 4.59586C3.80187 5.81808 2.57871 7.51615 2.01759 8.4044C1.90357 8.58489 1.84656 8.67514 1.81478 8.81373C1.79091 8.91783 1.7909 9.08203 1.81476 9.18613C1.84652 9.32473 1.90328 9.41459 2.01678 9.59432C2.95462 11.0793 5.74618 14.8333 10.0003 14.8333C11.7157 14.8333 13.1932 14.223 14.4073 13.3972M2.50035 1.5L17.5003 16.5M8.23258 7.23223C7.78017 7.68464 7.50035 8.30964 7.50035 9C7.50035 10.3807 8.61963 11.5 10.0003 11.5C10.6907 11.5 11.3157 11.2202 11.7681 10.7678" stroke="#C3C3C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                                <svg class="hide" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="#1C274C" stroke-width="1.5"></path>
+                                                <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#1C274C" stroke-width="1.5"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="custom-checkbox account-custom-checkbox custom-checkbox-reverse mt-30 mt-max-md-20">
+                                            <input type="checkbox" value="">
+                                            <span>I'd like to receive promotional emails</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-10 col-sm-8 col-lg-3 mt-40 mx-auto mx-lg-0 ">
+                                    <button type="submit" class="btn btn-dark h-48">Save changes</button>
+                                </div>
+                            </form>
+                            <div class="col-12 d-flex flex-column align-items-center p-30 bg-fa radius-30 mt-5 mt-xl-0">
+                                <div class="manual-title">Delete account</div>
+                                <div class="manual-text mt-20 text-center">You can delete your account permanently. *Note that this process can take a while and can't be undone after completion.</div>
+                                <button class="btn btn-red mt-20" type="button" data-bs-toggle="modal" data-bs-target="#modalAccDelete" >Delete account</button>
+                            </div>
+                        </div>                <!-- Modal -->
+                        <div class="modal fade" id="modalAccDelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-labelledby="accountDeleteModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header d-flex flex-column align-items-center">
+                                <div class="modal-steps">
+                                  <div class="modal-steps-item active">1</div>
+                                  <div class="modal-steps-item">2</div>
+                                </div>
+                                <h1 class="modal-title fs-5">Choose a reason</h1>
+                                <div class="modal-title fs-5 hide" id="">Delete your account</div>
+                              </div>
+                              <form action="#" name="" method="get" id="form_acc_delete">
+                                <div class="modal-body">
+                                  <div class="manual-text modal-desc">
+                                    You can delete your account permanently after choosing a reason and giving more details to tell us why you're deleting your account. (Optional)
+                                  </div>
+                                  <div class="manual-text modal-desc hide">
+                                    Before starting your account deletion process, please make sure that you understand:
+                                    <br>
+                                    <br>
+                                    - Your account deletion request will take 7 days to process  
+                                    <br>
+                                    <br>
+                                    - Logging back into your account will cancel the account deletion process 
+                                    <br>
+                                    <br>
+                                    - Your eSIMs, and any available remaining data on your active packages, will be disabled  
+                                    <br>
+                                    <br>
+                                    - All your personal information will be deleted except the information which must be stored according to our privacy policy  
+                                    <br>
+                                    <br>
+                                    - Once your account deletion request has been processed, your account will no longer be retrievable
+                                  </div>
+                                  <ul class="mt-30 reason-list">
+                                    <li class="reason-item">
+                                      <label class="custom-radio">
+                                        <input type="radio" name="color" value="">
+                                        <span>Incompatible device</span>
+                                      </label>
+                                    </li>
+                                    <li class="reason-item">
+                                      <label class="custom-radio">
+                                        <input type="radio" name="color" value="">
+                                        <span>Digital footprint</span>
+                                      </label>
+                                    </li>
+                                    <li class="reason-item">
+                                      <label class="custom-radio">
+                                        <input type="radio" name="color" value="">
+                                        <span>No longer in need (not traveling anytime soon)</span>
+                                      </label>
+                                    </li>
+                                    <li class="reason-item">
+                                      <label class="custom-radio">
+                                        <input type="radio" name="color" value="">
+                                        <span>Poor customer service</span>
+                                      </label>
+                                    </li>
+                                    <li class="reason-item">
+                                      <label class="custom-radio">
+                                        <input type="radio" name="color" value="">
+                                        <span>Bad user experience</span>
+                                      </label>
+                                    </li>
+                                    <li class="reason-item">
+                                      <label class="custom-radio">
+                                        <input type="radio" name="color" value="">
+                                        <span>Other</span>
+                                      </label>
+                                    </li>
+                                  </ul>
+                                  <div class="form-group mt-30 modal-textarea">
+                                      <label>Your message</label>
+                                      <textarea name="" id="" rows="10" minlength="25"></textarea>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-red" data-bs-dismiss="modal" id="noDel">Cancel</button>
+                                  <button type="button" class="btn btn-dark h-48" id="acc_delete">Continue</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>                <div class="hidden" data-tab-target="esims">
+                            <div class="accountCards pb-60 pb-max-lg-40">
+                                <div class="card">
+                                    <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                            <defs>
+                                            <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                            </pattern>
+                                            <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 12.9219C8.27083 12.9219 8.53646 12.9271 8.79688 12.9375C9.05729 12.9479 9.32292 12.9583 9.59375 12.9688C9.375 13.9375 9.11979 14.6849 8.82812 15.2109C8.53646 15.737 8.26042 16 8 16C7.73958 16 7.46354 15.737 7.17188 15.2109C6.88021 14.6849 6.625 13.9375 6.40625 12.9688C6.67708 12.9583 6.94271 12.9479 7.20312 12.9375C7.46354 12.9271 7.72917 12.9219 8 12.9219ZM10.4219 13.0469C10.9948 13.1094 11.5547 13.1927 12.1016 13.2969C12.6484 13.401 13.1667 13.526 13.6562 13.6719C13.4688 13.8594 13.2734 14.0339 13.0703 14.1953C12.8672 14.3568 12.6562 14.5104 12.4375 14.6562C12.4271 14.6667 12.4167 14.6745 12.4062 14.6797C12.3958 14.6849 12.3906 14.6875 12.3906 14.6875C12.2865 14.7604 12.1823 14.8255 12.0781 14.8828C11.974 14.9401 11.8698 15 11.7656 15.0625C11.7552 15.0625 11.7448 15.0651 11.7344 15.0703C11.724 15.0755 11.7135 15.0833 11.7031 15.0938C11.599 15.1458 11.4948 15.1979 11.3906 15.25C11.2865 15.3021 11.1771 15.349 11.0625 15.3906C11.0521 15.401 11.0391 15.4062 11.0234 15.4062C11.0078 15.4062 10.9948 15.4115 10.9844 15.4219C10.8802 15.4635 10.7734 15.5052 10.6641 15.5469C10.5547 15.5885 10.4427 15.625 10.3281 15.6562L10.2031 15.6875C10.099 15.7188 9.99479 15.7474 9.89062 15.7734C9.78646 15.7995 9.68229 15.8229 9.57812 15.8438C9.54688 15.8542 9.51562 15.8594 9.48438 15.8594C9.45312 15.8594 9.42188 15.8646 9.39062 15.875C9.60938 15.5417 9.80469 15.1328 9.97656 14.6484C10.1484 14.1641 10.2969 13.6302 10.4219 13.0469ZM5.57812 13.0469C5.70312 13.6302 5.85156 14.1641 6.02344 14.6484C6.19531 15.1328 6.39062 15.5417 6.60938 15.875C6.57812 15.8646 6.54688 15.8594 6.51562 15.8594C6.48438 15.8594 6.45312 15.8542 6.42188 15.8438C6.31771 15.8229 6.21354 15.7995 6.10938 15.7734C6.00521 15.7474 5.90104 15.7188 5.79688 15.6875C5.77604 15.6771 5.75521 15.6693 5.73438 15.6641C5.71354 15.6589 5.69271 15.6562 5.67188 15.6562C5.55729 15.625 5.44531 15.5885 5.33594 15.5469C5.22656 15.5052 5.11979 15.4635 5.01562 15.4219C5.00521 15.4115 4.99219 15.4062 4.97656 15.4062C4.96094 15.4062 4.94792 15.401 4.9375 15.3906C4.82292 15.349 4.71354 15.3021 4.60938 15.25C4.50521 15.1979 4.40104 15.1458 4.29688 15.0938C4.28646 15.0833 4.27604 15.0755 4.26562 15.0703C4.25521 15.0651 4.24479 15.0625 4.23438 15.0625C4.13021 15 4.02604 14.9375 3.92188 14.875C3.81771 14.8125 3.71354 14.75 3.60938 14.6875C3.60938 14.6875 3.60417 14.6849 3.59375 14.6797C3.58333 14.6745 3.57292 14.6667 3.5625 14.6562C3.34375 14.5104 3.13281 14.3568 2.92969 14.1953C2.72656 14.0339 2.53125 13.8594 2.34375 13.6719C2.83333 13.526 3.35156 13.401 3.89844 13.2969C4.44531 13.1927 5.00521 13.1094 5.57812 13.0469ZM5.10938 8.40625C5.10938 9.07292 5.13802 9.72917 5.19531 10.375C5.2526 11.0208 5.32812 11.6406 5.42188 12.2344C4.75521 12.3073 4.11198 12.4089 3.49219 12.5391C2.8724 12.6693 2.29167 12.8229 1.75 13C1.48958 12.6771 1.25521 12.3385 1.04688 11.9844C0.848958 11.6302 0.674479 11.2604 0.523438 10.875C0.372396 10.4896 0.255208 10.0938 0.171875 9.6875C0.078125 9.27083 0.0208333 8.84375 0 8.40625H5.10938ZM16 8.40625C15.9792 8.84375 15.9219 9.27083 15.8281 9.6875C15.7448 10.0938 15.6276 10.4896 15.4766 10.875C15.3255 11.2604 15.151 11.6302 14.9531 11.9844C14.7448 12.3385 14.5104 12.6771 14.25 13C13.7083 12.8229 13.1276 12.6693 12.5078 12.5391C11.888 12.4089 11.2448 12.3073 10.5781 12.2344C10.6719 11.6406 10.7474 11.0208 10.8047 10.375C10.862 9.72917 10.8906 9.07292 10.8906 8.40625H16ZM10.0625 8.40625C10.0521 9.125 10.0208 9.79688 9.96875 10.4219C9.91667 11.0469 9.84375 11.625 9.75 12.1562C9.45833 12.1354 9.16667 12.1198 8.875 12.1094C8.58333 12.099 8.29167 12.0938 8 12.0938C7.70833 12.0938 7.41667 12.099 7.125 12.1094C6.83333 12.1198 6.54167 12.1354 6.25 12.1562C6.15625 11.625 6.08333 11.0469 6.03125 10.4219C5.97917 9.79688 5.94792 9.125 5.9375 8.40625H10.0625ZM1.75 3C2.29167 3.17708 2.8724 3.33073 3.49219 3.46094C4.11198 3.59115 4.75521 3.69271 5.42188 3.76562C5.32812 4.35938 5.2526 4.97917 5.19531 5.625C5.13802 6.27083 5.10938 6.92708 5.10938 7.59375H0C0.0208333 7.15625 0.078125 6.72917 0.171875 6.3125C0.255208 5.90625 0.372396 5.51042 0.523438 5.125C0.674479 4.73958 0.848958 4.36979 1.04688 4.01562C1.25521 3.66146 1.48958 3.32292 1.75 3ZM9.75 3.84375C9.84375 4.375 9.91667 4.95312 9.96875 5.57812C10.0208 6.20312 10.0521 6.875 10.0625 7.59375H5.9375C5.94792 6.875 5.97917 6.20312 6.03125 5.57812C6.08333 4.95312 6.15625 4.375 6.25 3.84375C6.54167 3.86458 6.83333 3.88021 7.125 3.89062C7.41667 3.90104 7.70833 3.90625 8 3.90625C8.29167 3.90625 8.58333 3.90104 8.875 3.89062C9.16667 3.88021 9.45833 3.86458 9.75 3.84375ZM14.25 3C14.5104 3.32292 14.7448 3.66146 14.9531 4.01562C15.151 4.36979 15.3255 4.73958 15.4766 5.125C15.6276 5.51042 15.7448 5.90625 15.8281 6.3125C15.9219 6.72917 15.9792 7.15625 16 7.59375H10.8906C10.8906 6.92708 10.862 6.27083 10.8047 5.625C10.7474 4.97917 10.6719 4.35938 10.5781 3.76562C11.2448 3.69271 11.888 3.59115 12.5078 3.46094C13.1276 3.33073 13.7083 3.17708 14.25 3ZM8 0C8.26042 0 8.53646 0.263021 8.82812 0.789062C9.11979 1.3151 9.375 2.0625 9.59375 3.03125C9.32292 3.04167 9.05729 3.05208 8.79688 3.0625C8.53646 3.07292 8.27083 3.07812 8 3.07812C7.72917 3.07812 7.46354 3.07292 7.20312 3.0625C6.94271 3.05208 6.67708 3.04167 6.40625 3.03125C6.625 2.0625 6.88021 1.3151 7.17188 0.789062C7.46354 0.263021 7.73958 0 8 0ZM9.39062 0.125C9.42188 0.135417 9.45312 0.140625 9.48438 0.140625C9.51562 0.140625 9.54688 0.145833 9.57812 0.15625C9.68229 0.177083 9.78646 0.200521 9.89062 0.226562C9.99479 0.252604 10.099 0.28125 10.2031 0.3125L10.3281 0.34375C10.4427 0.375 10.5547 0.411458 10.6641 0.453125C10.7734 0.494792 10.8802 0.536458 10.9844 0.578125C10.9948 0.588542 11.0078 0.59375 11.0234 0.59375C11.0391 0.59375 11.0521 0.598958 11.0625 0.609375C11.1771 0.651042 11.2865 0.697917 11.3906 0.75C11.4948 0.802083 11.599 0.854167 11.7031 0.90625C11.7135 0.916667 11.724 0.924479 11.7344 0.929688C11.7448 0.934896 11.7552 0.9375 11.7656 0.9375C11.8698 1 11.974 1.0599 12.0781 1.11719C12.1823 1.17448 12.2865 1.23958 12.3906 1.3125C12.3906 1.3125 12.3958 1.3151 12.4062 1.32031C12.4167 1.32552 12.4271 1.33333 12.4375 1.34375C12.6562 1.48958 12.8672 1.64323 13.0703 1.80469C13.2734 1.96615 13.4688 2.14062 13.6562 2.32812C13.1667 2.47396 12.6484 2.59896 12.1016 2.70312C11.5547 2.80729 10.9948 2.89062 10.4219 2.95312C10.2969 2.36979 10.1484 1.83594 9.97656 1.35156C9.80469 0.867188 9.60938 0.458333 9.39062 0.125ZM6.60938 0.125C6.39062 0.458333 6.19531 0.867188 6.02344 1.35156C5.85156 1.83594 5.70312 2.36979 5.57812 2.95312C5.00521 2.89062 4.44531 2.80729 3.89844 2.70312C3.35156 2.59896 2.83333 2.47396 2.34375 2.32812C2.53125 2.14062 2.72656 1.96615 2.92969 1.80469C3.13281 1.64323 3.34375 1.48958 3.5625 1.34375C3.57292 1.33333 3.58333 1.32552 3.59375 1.32031C3.60417 1.3151 3.60938 1.3125 3.60938 1.3125C3.71354 1.25 3.81771 1.1875 3.92188 1.125C4.02604 1.0625 4.13021 1 4.23438 0.9375C4.24479 0.9375 4.25521 0.934896 4.26562 0.929688C4.27604 0.924479 4.28646 0.916667 4.29688 0.90625C4.40104 0.854167 4.50521 0.802083 4.60938 0.75C4.71354 0.697917 4.82292 0.651042 4.9375 0.609375C4.94792 0.598958 4.96094 0.59375 4.97656 0.59375C4.99219 0.59375 5.00521 0.588542 5.01562 0.578125C5.11979 0.536458 5.22656 0.494792 5.33594 0.453125C5.44531 0.411458 5.55729 0.375 5.67188 0.34375C5.69271 0.34375 5.71354 0.341146 5.73438 0.335938C5.75521 0.330729 5.77604 0.322917 5.79688 0.3125C5.90104 0.28125 6.00521 0.252604 6.10938 0.226562C6.21354 0.200521 6.31771 0.177083 6.42188 0.15625C6.45312 0.145833 6.48438 0.140625 6.51562 0.140625C6.54688 0.140625 6.57812 0.135417 6.60938 0.125Z" fill="url(#paint0_linear_1105_3746)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3746" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Coverage
+                                            </div>
+                                            <div class="card__text">124 countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.29688 0.203125C4.31771 0.223958 4.33854 0.242188 4.35938 0.257812C4.38021 0.273438 4.39583 0.291667 4.40625 0.3125L7.85938 4.90625C7.95312 5.02083 7.98958 5.15104 7.96875 5.29688C7.94792 5.44271 7.875 5.55729 7.75 5.64062C7.70833 5.67188 7.66146 5.69792 7.60938 5.71875C7.55729 5.73958 7.5 5.75 7.4375 5.75H4.98438V15C4.98438 15.2708 4.88802 15.5052 4.69531 15.7031C4.5026 15.901 4.26562 16 3.98438 16C3.70312 16 3.46615 15.901 3.27344 15.7031C3.08073 15.5052 2.98438 15.2708 2.98438 15V5.75H0.53125C0.385417 5.75 0.260417 5.69792 0.15625 5.59375C0.0520833 5.48958 0 5.36458 0 5.21875C0 5.16667 0.0104167 5.11198 0.03125 5.05469C0.0520833 4.9974 0.078125 4.94792 0.109375 4.90625L3.5625 0.3125C3.64583 0.197917 3.76042 0.130208 3.90625 0.109375C4.05208 0.088542 4.1875 0.119792 4.3125 0.203125H4.29688ZM12.0156 0C12.2969 0 12.5339 0.098958 12.7266 0.296875C12.9193 0.494792 13.0156 0.729167 13.0156 1V10.25H15.4688C15.6146 10.25 15.7396 10.3021 15.8438 10.4062C15.9479 10.5104 16 10.6354 16 10.7812C16 10.8333 15.9896 10.888 15.9688 10.9453C15.9479 11.0026 15.9219 11.0521 15.8906 11.0938L12.4375 15.6875C12.3542 15.8021 12.2396 15.8698 12.0938 15.8906C11.9479 15.9115 11.8125 15.8802 11.6875 15.7969C11.6771 15.776 11.6615 15.7578 11.6406 15.7422C11.6198 15.7266 11.6042 15.7083 11.5938 15.6875L8.14062 11.0938C8.04688 10.9792 8.01042 10.849 8.03125 10.7031C8.05208 10.5573 8.125 10.4427 8.25 10.3594C8.29167 10.3281 8.33854 10.3021 8.39062 10.2812C8.44271 10.2604 8.5 10.25 8.5625 10.25H11.0156V1C11.0156 0.729167 11.112 0.494792 11.3047 0.296875C11.4974 0.098958 11.7344 0 12.0156 0Z" fill="url(#paint0_linear_1105_3750)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3750" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Data
+                                            </div>
+                                            <div class="card__text">2 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.7031 0C11.8073 0 11.8984 0.0390625 11.9766 0.117188C12.0547 0.195312 12.0938 0.286458 12.0938 0.390625V3.70312C12.0938 3.81771 12.0547 3.91146 11.9766 3.98438C11.8984 4.05729 11.8073 4.09375 11.7031 4.09375C11.599 4.09375 11.5078 4.05729 11.4297 3.98438C11.3516 3.91146 11.3125 3.81771 11.3125 3.70312V0.390625C11.3125 0.286458 11.3516 0.195312 11.4297 0.117188C11.5078 0.0390625 11.599 0 11.7031 0ZM4.28125 0C4.39583 0 4.48958 0.0390625 4.5625 0.117188C4.63542 0.195312 4.67188 0.286458 4.67188 0.390625V3.70312C4.67188 3.81771 4.63542 3.91146 4.5625 3.98438C4.48958 4.05729 4.39583 4.09375 4.28125 4.09375C4.17708 4.09375 4.08594 4.05729 4.00781 3.98438C3.92969 3.91146 3.89062 3.81771 3.89062 3.70312V0.390625C3.89062 0.286458 3.92969 0.195312 4.00781 0.117188C4.08594 0.0390625 4.17708 0 4.28125 0ZM14.4375 1.17188C14.8646 1.17188 15.2318 1.32552 15.5391 1.63281C15.8464 1.9401 16 2.30729 16 2.73438V6.25H0V2.73438C0 2.30729 0.153646 1.9401 0.460938 1.63281C0.768229 1.32552 1.13542 1.17188 1.5625 1.17188H3.5V2.82812C3.38542 2.94271 3.29167 3.07552 3.21875 3.22656C3.14583 3.3776 3.10938 3.53646 3.10938 3.70312C3.10938 4.02604 3.22396 4.30208 3.45312 4.53125C3.68229 4.76042 3.95833 4.875 4.28125 4.875C4.60417 4.875 4.88021 4.76042 5.10938 4.53125C5.33854 4.30208 5.45312 4.02604 5.45312 3.70312C5.45312 3.53646 5.41927 3.3776 5.35156 3.22656C5.28385 3.07552 5.1875 2.94271 5.0625 2.82812V1.17188H10.9219V2.82812C10.8073 2.93229 10.7135 3.0599 10.6406 3.21094C10.5677 3.36198 10.5312 3.52604 10.5312 3.70312C10.5312 4.02604 10.6458 4.30208 10.875 4.53125C11.1042 4.76042 11.3802 4.875 11.7031 4.875C12.026 4.875 12.3021 4.76042 12.5312 4.53125C12.7604 4.30208 12.875 4.02604 12.875 3.70312C12.875 3.53646 12.8411 3.3776 12.7734 3.22656C12.7057 3.07552 12.6094 2.94792 12.4844 2.84375V1.17188H14.4375ZM16 7.03125V14.4375C16 14.8646 15.8464 15.2318 15.5391 15.5391C15.2318 15.8464 14.8646 16 14.4375 16H1.5625C1.13542 16 0.768229 15.8464 0.460938 15.5391C0.153646 15.2318 0 14.8646 0 14.4375V7.03125H16Z" fill="url(#paint0_linear_1105_3756)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3756" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Validity
+                                            </div>
+                                            <div class="card__text">15 days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1678 1.04391e-06H14.8959C15.0413 -0.000198956 15.1852 0.0283411 15.3195 0.0839811C15.4538 0.139621 15.5758 0.221261 15.6784 0.324211C15.781 0.427171 15.8623 0.549391 15.9175 0.683851C15.9726 0.818311 16.0007 0.962351 16 1.10769V5.83846C16.0001 5.98544 15.942 6.12648 15.8384 6.23077L6.38999 15.6769C6.18201 15.8838 5.90053 16 5.60711 16C5.3137 16 5.03222 15.8838 4.82423 15.6769L0.32316 11.1769C0.11619 10.969 0 10.6876 0 10.3942C0 10.1009 0.11619 9.8195 0.32316 9.6115L9.7754 0.161541C9.8797 0.0579711 10.0208 -0.000108956 10.1678 1.04391e-06ZM11.6111 4.51827C11.8372 4.66936 12.1031 4.75 12.375 4.75C12.7397 4.75 13.0894 4.60513 13.3473 4.34727C13.6051 4.08941 13.75 3.73967 13.75 3.375C13.75 3.10305 13.6694 2.83721 13.5183 2.61109C13.3672 2.38497 13.1524 2.20874 12.9012 2.10467C12.6499 2.0006 12.3735 1.97337 12.1068 2.02642C11.84 2.07948 11.595 2.21043 11.4027 2.40273C11.2104 2.59503 11.0795 2.84003 11.0264 3.10675C10.9734 3.37348 11.0006 3.64994 11.1047 3.90119C11.2087 4.15244 11.385 4.36718 11.6111 4.51827Z" fill="url(#paint0_linear_1105_3760)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3760" x1="5.63334" y1="-4.75" x2="10.1519" y2="14.9724" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Price
+                                            </div>
+                                            <div class="card__price">$17.00 USD</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-dark">Buy now</button>
+                                </div>
+                                <div class="card">
+                                    <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                            <defs>
+                                            <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                            </pattern>
+                                            <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 12.9219C8.27083 12.9219 8.53646 12.9271 8.79688 12.9375C9.05729 12.9479 9.32292 12.9583 9.59375 12.9688C9.375 13.9375 9.11979 14.6849 8.82812 15.2109C8.53646 15.737 8.26042 16 8 16C7.73958 16 7.46354 15.737 7.17188 15.2109C6.88021 14.6849 6.625 13.9375 6.40625 12.9688C6.67708 12.9583 6.94271 12.9479 7.20312 12.9375C7.46354 12.9271 7.72917 12.9219 8 12.9219ZM10.4219 13.0469C10.9948 13.1094 11.5547 13.1927 12.1016 13.2969C12.6484 13.401 13.1667 13.526 13.6562 13.6719C13.4688 13.8594 13.2734 14.0339 13.0703 14.1953C12.8672 14.3568 12.6562 14.5104 12.4375 14.6562C12.4271 14.6667 12.4167 14.6745 12.4062 14.6797C12.3958 14.6849 12.3906 14.6875 12.3906 14.6875C12.2865 14.7604 12.1823 14.8255 12.0781 14.8828C11.974 14.9401 11.8698 15 11.7656 15.0625C11.7552 15.0625 11.7448 15.0651 11.7344 15.0703C11.724 15.0755 11.7135 15.0833 11.7031 15.0938C11.599 15.1458 11.4948 15.1979 11.3906 15.25C11.2865 15.3021 11.1771 15.349 11.0625 15.3906C11.0521 15.401 11.0391 15.4062 11.0234 15.4062C11.0078 15.4062 10.9948 15.4115 10.9844 15.4219C10.8802 15.4635 10.7734 15.5052 10.6641 15.5469C10.5547 15.5885 10.4427 15.625 10.3281 15.6562L10.2031 15.6875C10.099 15.7188 9.99479 15.7474 9.89062 15.7734C9.78646 15.7995 9.68229 15.8229 9.57812 15.8438C9.54688 15.8542 9.51562 15.8594 9.48438 15.8594C9.45312 15.8594 9.42188 15.8646 9.39062 15.875C9.60938 15.5417 9.80469 15.1328 9.97656 14.6484C10.1484 14.1641 10.2969 13.6302 10.4219 13.0469ZM5.57812 13.0469C5.70312 13.6302 5.85156 14.1641 6.02344 14.6484C6.19531 15.1328 6.39062 15.5417 6.60938 15.875C6.57812 15.8646 6.54688 15.8594 6.51562 15.8594C6.48438 15.8594 6.45312 15.8542 6.42188 15.8438C6.31771 15.8229 6.21354 15.7995 6.10938 15.7734C6.00521 15.7474 5.90104 15.7188 5.79688 15.6875C5.77604 15.6771 5.75521 15.6693 5.73438 15.6641C5.71354 15.6589 5.69271 15.6562 5.67188 15.6562C5.55729 15.625 5.44531 15.5885 5.33594 15.5469C5.22656 15.5052 5.11979 15.4635 5.01562 15.4219C5.00521 15.4115 4.99219 15.4062 4.97656 15.4062C4.96094 15.4062 4.94792 15.401 4.9375 15.3906C4.82292 15.349 4.71354 15.3021 4.60938 15.25C4.50521 15.1979 4.40104 15.1458 4.29688 15.0938C4.28646 15.0833 4.27604 15.0755 4.26562 15.0703C4.25521 15.0651 4.24479 15.0625 4.23438 15.0625C4.13021 15 4.02604 14.9375 3.92188 14.875C3.81771 14.8125 3.71354 14.75 3.60938 14.6875C3.60938 14.6875 3.60417 14.6849 3.59375 14.6797C3.58333 14.6745 3.57292 14.6667 3.5625 14.6562C3.34375 14.5104 3.13281 14.3568 2.92969 14.1953C2.72656 14.0339 2.53125 13.8594 2.34375 13.6719C2.83333 13.526 3.35156 13.401 3.89844 13.2969C4.44531 13.1927 5.00521 13.1094 5.57812 13.0469ZM5.10938 8.40625C5.10938 9.07292 5.13802 9.72917 5.19531 10.375C5.2526 11.0208 5.32812 11.6406 5.42188 12.2344C4.75521 12.3073 4.11198 12.4089 3.49219 12.5391C2.8724 12.6693 2.29167 12.8229 1.75 13C1.48958 12.6771 1.25521 12.3385 1.04688 11.9844C0.848958 11.6302 0.674479 11.2604 0.523438 10.875C0.372396 10.4896 0.255208 10.0938 0.171875 9.6875C0.078125 9.27083 0.0208333 8.84375 0 8.40625H5.10938ZM16 8.40625C15.9792 8.84375 15.9219 9.27083 15.8281 9.6875C15.7448 10.0938 15.6276 10.4896 15.4766 10.875C15.3255 11.2604 15.151 11.6302 14.9531 11.9844C14.7448 12.3385 14.5104 12.6771 14.25 13C13.7083 12.8229 13.1276 12.6693 12.5078 12.5391C11.888 12.4089 11.2448 12.3073 10.5781 12.2344C10.6719 11.6406 10.7474 11.0208 10.8047 10.375C10.862 9.72917 10.8906 9.07292 10.8906 8.40625H16ZM10.0625 8.40625C10.0521 9.125 10.0208 9.79688 9.96875 10.4219C9.91667 11.0469 9.84375 11.625 9.75 12.1562C9.45833 12.1354 9.16667 12.1198 8.875 12.1094C8.58333 12.099 8.29167 12.0938 8 12.0938C7.70833 12.0938 7.41667 12.099 7.125 12.1094C6.83333 12.1198 6.54167 12.1354 6.25 12.1562C6.15625 11.625 6.08333 11.0469 6.03125 10.4219C5.97917 9.79688 5.94792 9.125 5.9375 8.40625H10.0625ZM1.75 3C2.29167 3.17708 2.8724 3.33073 3.49219 3.46094C4.11198 3.59115 4.75521 3.69271 5.42188 3.76562C5.32812 4.35938 5.2526 4.97917 5.19531 5.625C5.13802 6.27083 5.10938 6.92708 5.10938 7.59375H0C0.0208333 7.15625 0.078125 6.72917 0.171875 6.3125C0.255208 5.90625 0.372396 5.51042 0.523438 5.125C0.674479 4.73958 0.848958 4.36979 1.04688 4.01562C1.25521 3.66146 1.48958 3.32292 1.75 3ZM9.75 3.84375C9.84375 4.375 9.91667 4.95312 9.96875 5.57812C10.0208 6.20312 10.0521 6.875 10.0625 7.59375H5.9375C5.94792 6.875 5.97917 6.20312 6.03125 5.57812C6.08333 4.95312 6.15625 4.375 6.25 3.84375C6.54167 3.86458 6.83333 3.88021 7.125 3.89062C7.41667 3.90104 7.70833 3.90625 8 3.90625C8.29167 3.90625 8.58333 3.90104 8.875 3.89062C9.16667 3.88021 9.45833 3.86458 9.75 3.84375ZM14.25 3C14.5104 3.32292 14.7448 3.66146 14.9531 4.01562C15.151 4.36979 15.3255 4.73958 15.4766 5.125C15.6276 5.51042 15.7448 5.90625 15.8281 6.3125C15.9219 6.72917 15.9792 7.15625 16 7.59375H10.8906C10.8906 6.92708 10.862 6.27083 10.8047 5.625C10.7474 4.97917 10.6719 4.35938 10.5781 3.76562C11.2448 3.69271 11.888 3.59115 12.5078 3.46094C13.1276 3.33073 13.7083 3.17708 14.25 3ZM8 0C8.26042 0 8.53646 0.263021 8.82812 0.789062C9.11979 1.3151 9.375 2.0625 9.59375 3.03125C9.32292 3.04167 9.05729 3.05208 8.79688 3.0625C8.53646 3.07292 8.27083 3.07812 8 3.07812C7.72917 3.07812 7.46354 3.07292 7.20312 3.0625C6.94271 3.05208 6.67708 3.04167 6.40625 3.03125C6.625 2.0625 6.88021 1.3151 7.17188 0.789062C7.46354 0.263021 7.73958 0 8 0ZM9.39062 0.125C9.42188 0.135417 9.45312 0.140625 9.48438 0.140625C9.51562 0.140625 9.54688 0.145833 9.57812 0.15625C9.68229 0.177083 9.78646 0.200521 9.89062 0.226562C9.99479 0.252604 10.099 0.28125 10.2031 0.3125L10.3281 0.34375C10.4427 0.375 10.5547 0.411458 10.6641 0.453125C10.7734 0.494792 10.8802 0.536458 10.9844 0.578125C10.9948 0.588542 11.0078 0.59375 11.0234 0.59375C11.0391 0.59375 11.0521 0.598958 11.0625 0.609375C11.1771 0.651042 11.2865 0.697917 11.3906 0.75C11.4948 0.802083 11.599 0.854167 11.7031 0.90625C11.7135 0.916667 11.724 0.924479 11.7344 0.929688C11.7448 0.934896 11.7552 0.9375 11.7656 0.9375C11.8698 1 11.974 1.0599 12.0781 1.11719C12.1823 1.17448 12.2865 1.23958 12.3906 1.3125C12.3906 1.3125 12.3958 1.3151 12.4062 1.32031C12.4167 1.32552 12.4271 1.33333 12.4375 1.34375C12.6562 1.48958 12.8672 1.64323 13.0703 1.80469C13.2734 1.96615 13.4688 2.14062 13.6562 2.32812C13.1667 2.47396 12.6484 2.59896 12.1016 2.70312C11.5547 2.80729 10.9948 2.89062 10.4219 2.95312C10.2969 2.36979 10.1484 1.83594 9.97656 1.35156C9.80469 0.867188 9.60938 0.458333 9.39062 0.125ZM6.60938 0.125C6.39062 0.458333 6.19531 0.867188 6.02344 1.35156C5.85156 1.83594 5.70312 2.36979 5.57812 2.95312C5.00521 2.89062 4.44531 2.80729 3.89844 2.70312C3.35156 2.59896 2.83333 2.47396 2.34375 2.32812C2.53125 2.14062 2.72656 1.96615 2.92969 1.80469C3.13281 1.64323 3.34375 1.48958 3.5625 1.34375C3.57292 1.33333 3.58333 1.32552 3.59375 1.32031C3.60417 1.3151 3.60938 1.3125 3.60938 1.3125C3.71354 1.25 3.81771 1.1875 3.92188 1.125C4.02604 1.0625 4.13021 1 4.23438 0.9375C4.24479 0.9375 4.25521 0.934896 4.26562 0.929688C4.27604 0.924479 4.28646 0.916667 4.29688 0.90625C4.40104 0.854167 4.50521 0.802083 4.60938 0.75C4.71354 0.697917 4.82292 0.651042 4.9375 0.609375C4.94792 0.598958 4.96094 0.59375 4.97656 0.59375C4.99219 0.59375 5.00521 0.588542 5.01562 0.578125C5.11979 0.536458 5.22656 0.494792 5.33594 0.453125C5.44531 0.411458 5.55729 0.375 5.67188 0.34375C5.69271 0.34375 5.71354 0.341146 5.73438 0.335938C5.75521 0.330729 5.77604 0.322917 5.79688 0.3125C5.90104 0.28125 6.00521 0.252604 6.10938 0.226562C6.21354 0.200521 6.31771 0.177083 6.42188 0.15625C6.45312 0.145833 6.48438 0.140625 6.51562 0.140625C6.54688 0.140625 6.57812 0.135417 6.60938 0.125Z" fill="url(#paint0_linear_1105_3746)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3746" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Coverage
+                                            </div>
+                                            <div class="card__text">124 countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.29688 0.203125C4.31771 0.223958 4.33854 0.242188 4.35938 0.257812C4.38021 0.273438 4.39583 0.291667 4.40625 0.3125L7.85938 4.90625C7.95312 5.02083 7.98958 5.15104 7.96875 5.29688C7.94792 5.44271 7.875 5.55729 7.75 5.64062C7.70833 5.67188 7.66146 5.69792 7.60938 5.71875C7.55729 5.73958 7.5 5.75 7.4375 5.75H4.98438V15C4.98438 15.2708 4.88802 15.5052 4.69531 15.7031C4.5026 15.901 4.26562 16 3.98438 16C3.70312 16 3.46615 15.901 3.27344 15.7031C3.08073 15.5052 2.98438 15.2708 2.98438 15V5.75H0.53125C0.385417 5.75 0.260417 5.69792 0.15625 5.59375C0.0520833 5.48958 0 5.36458 0 5.21875C0 5.16667 0.0104167 5.11198 0.03125 5.05469C0.0520833 4.9974 0.078125 4.94792 0.109375 4.90625L3.5625 0.3125C3.64583 0.197917 3.76042 0.130208 3.90625 0.109375C4.05208 0.088542 4.1875 0.119792 4.3125 0.203125H4.29688ZM12.0156 0C12.2969 0 12.5339 0.098958 12.7266 0.296875C12.9193 0.494792 13.0156 0.729167 13.0156 1V10.25H15.4688C15.6146 10.25 15.7396 10.3021 15.8438 10.4062C15.9479 10.5104 16 10.6354 16 10.7812C16 10.8333 15.9896 10.888 15.9688 10.9453C15.9479 11.0026 15.9219 11.0521 15.8906 11.0938L12.4375 15.6875C12.3542 15.8021 12.2396 15.8698 12.0938 15.8906C11.9479 15.9115 11.8125 15.8802 11.6875 15.7969C11.6771 15.776 11.6615 15.7578 11.6406 15.7422C11.6198 15.7266 11.6042 15.7083 11.5938 15.6875L8.14062 11.0938C8.04688 10.9792 8.01042 10.849 8.03125 10.7031C8.05208 10.5573 8.125 10.4427 8.25 10.3594C8.29167 10.3281 8.33854 10.3021 8.39062 10.2812C8.44271 10.2604 8.5 10.25 8.5625 10.25H11.0156V1C11.0156 0.729167 11.112 0.494792 11.3047 0.296875C11.4974 0.098958 11.7344 0 12.0156 0Z" fill="url(#paint0_linear_1105_3750)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3750" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Data
+                                            </div>
+                                            <div class="card__text">2 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.7031 0C11.8073 0 11.8984 0.0390625 11.9766 0.117188C12.0547 0.195312 12.0938 0.286458 12.0938 0.390625V3.70312C12.0938 3.81771 12.0547 3.91146 11.9766 3.98438C11.8984 4.05729 11.8073 4.09375 11.7031 4.09375C11.599 4.09375 11.5078 4.05729 11.4297 3.98438C11.3516 3.91146 11.3125 3.81771 11.3125 3.70312V0.390625C11.3125 0.286458 11.3516 0.195312 11.4297 0.117188C11.5078 0.0390625 11.599 0 11.7031 0ZM4.28125 0C4.39583 0 4.48958 0.0390625 4.5625 0.117188C4.63542 0.195312 4.67188 0.286458 4.67188 0.390625V3.70312C4.67188 3.81771 4.63542 3.91146 4.5625 3.98438C4.48958 4.05729 4.39583 4.09375 4.28125 4.09375C4.17708 4.09375 4.08594 4.05729 4.00781 3.98438C3.92969 3.91146 3.89062 3.81771 3.89062 3.70312V0.390625C3.89062 0.286458 3.92969 0.195312 4.00781 0.117188C4.08594 0.0390625 4.17708 0 4.28125 0ZM14.4375 1.17188C14.8646 1.17188 15.2318 1.32552 15.5391 1.63281C15.8464 1.9401 16 2.30729 16 2.73438V6.25H0V2.73438C0 2.30729 0.153646 1.9401 0.460938 1.63281C0.768229 1.32552 1.13542 1.17188 1.5625 1.17188H3.5V2.82812C3.38542 2.94271 3.29167 3.07552 3.21875 3.22656C3.14583 3.3776 3.10938 3.53646 3.10938 3.70312C3.10938 4.02604 3.22396 4.30208 3.45312 4.53125C3.68229 4.76042 3.95833 4.875 4.28125 4.875C4.60417 4.875 4.88021 4.76042 5.10938 4.53125C5.33854 4.30208 5.45312 4.02604 5.45312 3.70312C5.45312 3.53646 5.41927 3.3776 5.35156 3.22656C5.28385 3.07552 5.1875 2.94271 5.0625 2.82812V1.17188H10.9219V2.82812C10.8073 2.93229 10.7135 3.0599 10.6406 3.21094C10.5677 3.36198 10.5312 3.52604 10.5312 3.70312C10.5312 4.02604 10.6458 4.30208 10.875 4.53125C11.1042 4.76042 11.3802 4.875 11.7031 4.875C12.026 4.875 12.3021 4.76042 12.5312 4.53125C12.7604 4.30208 12.875 4.02604 12.875 3.70312C12.875 3.53646 12.8411 3.3776 12.7734 3.22656C12.7057 3.07552 12.6094 2.94792 12.4844 2.84375V1.17188H14.4375ZM16 7.03125V14.4375C16 14.8646 15.8464 15.2318 15.5391 15.5391C15.2318 15.8464 14.8646 16 14.4375 16H1.5625C1.13542 16 0.768229 15.8464 0.460938 15.5391C0.153646 15.2318 0 14.8646 0 14.4375V7.03125H16Z" fill="url(#paint0_linear_1105_3756)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3756" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Validity
+                                            </div>
+                                            <div class="card__text">15 days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1678 1.04391e-06H14.8959C15.0413 -0.000198956 15.1852 0.0283411 15.3195 0.0839811C15.4538 0.139621 15.5758 0.221261 15.6784 0.324211C15.781 0.427171 15.8623 0.549391 15.9175 0.683851C15.9726 0.818311 16.0007 0.962351 16 1.10769V5.83846C16.0001 5.98544 15.942 6.12648 15.8384 6.23077L6.38999 15.6769C6.18201 15.8838 5.90053 16 5.60711 16C5.3137 16 5.03222 15.8838 4.82423 15.6769L0.32316 11.1769C0.11619 10.969 0 10.6876 0 10.3942C0 10.1009 0.11619 9.8195 0.32316 9.6115L9.7754 0.161541C9.8797 0.0579711 10.0208 -0.000108956 10.1678 1.04391e-06ZM11.6111 4.51827C11.8372 4.66936 12.1031 4.75 12.375 4.75C12.7397 4.75 13.0894 4.60513 13.3473 4.34727C13.6051 4.08941 13.75 3.73967 13.75 3.375C13.75 3.10305 13.6694 2.83721 13.5183 2.61109C13.3672 2.38497 13.1524 2.20874 12.9012 2.10467C12.6499 2.0006 12.3735 1.97337 12.1068 2.02642C11.84 2.07948 11.595 2.21043 11.4027 2.40273C11.2104 2.59503 11.0795 2.84003 11.0264 3.10675C10.9734 3.37348 11.0006 3.64994 11.1047 3.90119C11.2087 4.15244 11.385 4.36718 11.6111 4.51827Z" fill="url(#paint0_linear_1105_3760)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3760" x1="5.63334" y1="-4.75" x2="10.1519" y2="14.9724" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Price
+                                            </div>
+                                            <div class="card__price">$17.00 USD</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-dark">Buy now</button>
+                                </div>
+                                <div class="card">
+                                    <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                            <defs>
+                                            <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                            </pattern>
+                                            <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 12.9219C8.27083 12.9219 8.53646 12.9271 8.79688 12.9375C9.05729 12.9479 9.32292 12.9583 9.59375 12.9688C9.375 13.9375 9.11979 14.6849 8.82812 15.2109C8.53646 15.737 8.26042 16 8 16C7.73958 16 7.46354 15.737 7.17188 15.2109C6.88021 14.6849 6.625 13.9375 6.40625 12.9688C6.67708 12.9583 6.94271 12.9479 7.20312 12.9375C7.46354 12.9271 7.72917 12.9219 8 12.9219ZM10.4219 13.0469C10.9948 13.1094 11.5547 13.1927 12.1016 13.2969C12.6484 13.401 13.1667 13.526 13.6562 13.6719C13.4688 13.8594 13.2734 14.0339 13.0703 14.1953C12.8672 14.3568 12.6562 14.5104 12.4375 14.6562C12.4271 14.6667 12.4167 14.6745 12.4062 14.6797C12.3958 14.6849 12.3906 14.6875 12.3906 14.6875C12.2865 14.7604 12.1823 14.8255 12.0781 14.8828C11.974 14.9401 11.8698 15 11.7656 15.0625C11.7552 15.0625 11.7448 15.0651 11.7344 15.0703C11.724 15.0755 11.7135 15.0833 11.7031 15.0938C11.599 15.1458 11.4948 15.1979 11.3906 15.25C11.2865 15.3021 11.1771 15.349 11.0625 15.3906C11.0521 15.401 11.0391 15.4062 11.0234 15.4062C11.0078 15.4062 10.9948 15.4115 10.9844 15.4219C10.8802 15.4635 10.7734 15.5052 10.6641 15.5469C10.5547 15.5885 10.4427 15.625 10.3281 15.6562L10.2031 15.6875C10.099 15.7188 9.99479 15.7474 9.89062 15.7734C9.78646 15.7995 9.68229 15.8229 9.57812 15.8438C9.54688 15.8542 9.51562 15.8594 9.48438 15.8594C9.45312 15.8594 9.42188 15.8646 9.39062 15.875C9.60938 15.5417 9.80469 15.1328 9.97656 14.6484C10.1484 14.1641 10.2969 13.6302 10.4219 13.0469ZM5.57812 13.0469C5.70312 13.6302 5.85156 14.1641 6.02344 14.6484C6.19531 15.1328 6.39062 15.5417 6.60938 15.875C6.57812 15.8646 6.54688 15.8594 6.51562 15.8594C6.48438 15.8594 6.45312 15.8542 6.42188 15.8438C6.31771 15.8229 6.21354 15.7995 6.10938 15.7734C6.00521 15.7474 5.90104 15.7188 5.79688 15.6875C5.77604 15.6771 5.75521 15.6693 5.73438 15.6641C5.71354 15.6589 5.69271 15.6562 5.67188 15.6562C5.55729 15.625 5.44531 15.5885 5.33594 15.5469C5.22656 15.5052 5.11979 15.4635 5.01562 15.4219C5.00521 15.4115 4.99219 15.4062 4.97656 15.4062C4.96094 15.4062 4.94792 15.401 4.9375 15.3906C4.82292 15.349 4.71354 15.3021 4.60938 15.25C4.50521 15.1979 4.40104 15.1458 4.29688 15.0938C4.28646 15.0833 4.27604 15.0755 4.26562 15.0703C4.25521 15.0651 4.24479 15.0625 4.23438 15.0625C4.13021 15 4.02604 14.9375 3.92188 14.875C3.81771 14.8125 3.71354 14.75 3.60938 14.6875C3.60938 14.6875 3.60417 14.6849 3.59375 14.6797C3.58333 14.6745 3.57292 14.6667 3.5625 14.6562C3.34375 14.5104 3.13281 14.3568 2.92969 14.1953C2.72656 14.0339 2.53125 13.8594 2.34375 13.6719C2.83333 13.526 3.35156 13.401 3.89844 13.2969C4.44531 13.1927 5.00521 13.1094 5.57812 13.0469ZM5.10938 8.40625C5.10938 9.07292 5.13802 9.72917 5.19531 10.375C5.2526 11.0208 5.32812 11.6406 5.42188 12.2344C4.75521 12.3073 4.11198 12.4089 3.49219 12.5391C2.8724 12.6693 2.29167 12.8229 1.75 13C1.48958 12.6771 1.25521 12.3385 1.04688 11.9844C0.848958 11.6302 0.674479 11.2604 0.523438 10.875C0.372396 10.4896 0.255208 10.0938 0.171875 9.6875C0.078125 9.27083 0.0208333 8.84375 0 8.40625H5.10938ZM16 8.40625C15.9792 8.84375 15.9219 9.27083 15.8281 9.6875C15.7448 10.0938 15.6276 10.4896 15.4766 10.875C15.3255 11.2604 15.151 11.6302 14.9531 11.9844C14.7448 12.3385 14.5104 12.6771 14.25 13C13.7083 12.8229 13.1276 12.6693 12.5078 12.5391C11.888 12.4089 11.2448 12.3073 10.5781 12.2344C10.6719 11.6406 10.7474 11.0208 10.8047 10.375C10.862 9.72917 10.8906 9.07292 10.8906 8.40625H16ZM10.0625 8.40625C10.0521 9.125 10.0208 9.79688 9.96875 10.4219C9.91667 11.0469 9.84375 11.625 9.75 12.1562C9.45833 12.1354 9.16667 12.1198 8.875 12.1094C8.58333 12.099 8.29167 12.0938 8 12.0938C7.70833 12.0938 7.41667 12.099 7.125 12.1094C6.83333 12.1198 6.54167 12.1354 6.25 12.1562C6.15625 11.625 6.08333 11.0469 6.03125 10.4219C5.97917 9.79688 5.94792 9.125 5.9375 8.40625H10.0625ZM1.75 3C2.29167 3.17708 2.8724 3.33073 3.49219 3.46094C4.11198 3.59115 4.75521 3.69271 5.42188 3.76562C5.32812 4.35938 5.2526 4.97917 5.19531 5.625C5.13802 6.27083 5.10938 6.92708 5.10938 7.59375H0C0.0208333 7.15625 0.078125 6.72917 0.171875 6.3125C0.255208 5.90625 0.372396 5.51042 0.523438 5.125C0.674479 4.73958 0.848958 4.36979 1.04688 4.01562C1.25521 3.66146 1.48958 3.32292 1.75 3ZM9.75 3.84375C9.84375 4.375 9.91667 4.95312 9.96875 5.57812C10.0208 6.20312 10.0521 6.875 10.0625 7.59375H5.9375C5.94792 6.875 5.97917 6.20312 6.03125 5.57812C6.08333 4.95312 6.15625 4.375 6.25 3.84375C6.54167 3.86458 6.83333 3.88021 7.125 3.89062C7.41667 3.90104 7.70833 3.90625 8 3.90625C8.29167 3.90625 8.58333 3.90104 8.875 3.89062C9.16667 3.88021 9.45833 3.86458 9.75 3.84375ZM14.25 3C14.5104 3.32292 14.7448 3.66146 14.9531 4.01562C15.151 4.36979 15.3255 4.73958 15.4766 5.125C15.6276 5.51042 15.7448 5.90625 15.8281 6.3125C15.9219 6.72917 15.9792 7.15625 16 7.59375H10.8906C10.8906 6.92708 10.862 6.27083 10.8047 5.625C10.7474 4.97917 10.6719 4.35938 10.5781 3.76562C11.2448 3.69271 11.888 3.59115 12.5078 3.46094C13.1276 3.33073 13.7083 3.17708 14.25 3ZM8 0C8.26042 0 8.53646 0.263021 8.82812 0.789062C9.11979 1.3151 9.375 2.0625 9.59375 3.03125C9.32292 3.04167 9.05729 3.05208 8.79688 3.0625C8.53646 3.07292 8.27083 3.07812 8 3.07812C7.72917 3.07812 7.46354 3.07292 7.20312 3.0625C6.94271 3.05208 6.67708 3.04167 6.40625 3.03125C6.625 2.0625 6.88021 1.3151 7.17188 0.789062C7.46354 0.263021 7.73958 0 8 0ZM9.39062 0.125C9.42188 0.135417 9.45312 0.140625 9.48438 0.140625C9.51562 0.140625 9.54688 0.145833 9.57812 0.15625C9.68229 0.177083 9.78646 0.200521 9.89062 0.226562C9.99479 0.252604 10.099 0.28125 10.2031 0.3125L10.3281 0.34375C10.4427 0.375 10.5547 0.411458 10.6641 0.453125C10.7734 0.494792 10.8802 0.536458 10.9844 0.578125C10.9948 0.588542 11.0078 0.59375 11.0234 0.59375C11.0391 0.59375 11.0521 0.598958 11.0625 0.609375C11.1771 0.651042 11.2865 0.697917 11.3906 0.75C11.4948 0.802083 11.599 0.854167 11.7031 0.90625C11.7135 0.916667 11.724 0.924479 11.7344 0.929688C11.7448 0.934896 11.7552 0.9375 11.7656 0.9375C11.8698 1 11.974 1.0599 12.0781 1.11719C12.1823 1.17448 12.2865 1.23958 12.3906 1.3125C12.3906 1.3125 12.3958 1.3151 12.4062 1.32031C12.4167 1.32552 12.4271 1.33333 12.4375 1.34375C12.6562 1.48958 12.8672 1.64323 13.0703 1.80469C13.2734 1.96615 13.4688 2.14062 13.6562 2.32812C13.1667 2.47396 12.6484 2.59896 12.1016 2.70312C11.5547 2.80729 10.9948 2.89062 10.4219 2.95312C10.2969 2.36979 10.1484 1.83594 9.97656 1.35156C9.80469 0.867188 9.60938 0.458333 9.39062 0.125ZM6.60938 0.125C6.39062 0.458333 6.19531 0.867188 6.02344 1.35156C5.85156 1.83594 5.70312 2.36979 5.57812 2.95312C5.00521 2.89062 4.44531 2.80729 3.89844 2.70312C3.35156 2.59896 2.83333 2.47396 2.34375 2.32812C2.53125 2.14062 2.72656 1.96615 2.92969 1.80469C3.13281 1.64323 3.34375 1.48958 3.5625 1.34375C3.57292 1.33333 3.58333 1.32552 3.59375 1.32031C3.60417 1.3151 3.60938 1.3125 3.60938 1.3125C3.71354 1.25 3.81771 1.1875 3.92188 1.125C4.02604 1.0625 4.13021 1 4.23438 0.9375C4.24479 0.9375 4.25521 0.934896 4.26562 0.929688C4.27604 0.924479 4.28646 0.916667 4.29688 0.90625C4.40104 0.854167 4.50521 0.802083 4.60938 0.75C4.71354 0.697917 4.82292 0.651042 4.9375 0.609375C4.94792 0.598958 4.96094 0.59375 4.97656 0.59375C4.99219 0.59375 5.00521 0.588542 5.01562 0.578125C5.11979 0.536458 5.22656 0.494792 5.33594 0.453125C5.44531 0.411458 5.55729 0.375 5.67188 0.34375C5.69271 0.34375 5.71354 0.341146 5.73438 0.335938C5.75521 0.330729 5.77604 0.322917 5.79688 0.3125C5.90104 0.28125 6.00521 0.252604 6.10938 0.226562C6.21354 0.200521 6.31771 0.177083 6.42188 0.15625C6.45312 0.145833 6.48438 0.140625 6.51562 0.140625C6.54688 0.140625 6.57812 0.135417 6.60938 0.125Z" fill="url(#paint0_linear_1105_3746)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3746" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Coverage
+                                            </div>
+                                            <div class="card__text">124 countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.29688 0.203125C4.31771 0.223958 4.33854 0.242188 4.35938 0.257812C4.38021 0.273438 4.39583 0.291667 4.40625 0.3125L7.85938 4.90625C7.95312 5.02083 7.98958 5.15104 7.96875 5.29688C7.94792 5.44271 7.875 5.55729 7.75 5.64062C7.70833 5.67188 7.66146 5.69792 7.60938 5.71875C7.55729 5.73958 7.5 5.75 7.4375 5.75H4.98438V15C4.98438 15.2708 4.88802 15.5052 4.69531 15.7031C4.5026 15.901 4.26562 16 3.98438 16C3.70312 16 3.46615 15.901 3.27344 15.7031C3.08073 15.5052 2.98438 15.2708 2.98438 15V5.75H0.53125C0.385417 5.75 0.260417 5.69792 0.15625 5.59375C0.0520833 5.48958 0 5.36458 0 5.21875C0 5.16667 0.0104167 5.11198 0.03125 5.05469C0.0520833 4.9974 0.078125 4.94792 0.109375 4.90625L3.5625 0.3125C3.64583 0.197917 3.76042 0.130208 3.90625 0.109375C4.05208 0.088542 4.1875 0.119792 4.3125 0.203125H4.29688ZM12.0156 0C12.2969 0 12.5339 0.098958 12.7266 0.296875C12.9193 0.494792 13.0156 0.729167 13.0156 1V10.25H15.4688C15.6146 10.25 15.7396 10.3021 15.8438 10.4062C15.9479 10.5104 16 10.6354 16 10.7812C16 10.8333 15.9896 10.888 15.9688 10.9453C15.9479 11.0026 15.9219 11.0521 15.8906 11.0938L12.4375 15.6875C12.3542 15.8021 12.2396 15.8698 12.0938 15.8906C11.9479 15.9115 11.8125 15.8802 11.6875 15.7969C11.6771 15.776 11.6615 15.7578 11.6406 15.7422C11.6198 15.7266 11.6042 15.7083 11.5938 15.6875L8.14062 11.0938C8.04688 10.9792 8.01042 10.849 8.03125 10.7031C8.05208 10.5573 8.125 10.4427 8.25 10.3594C8.29167 10.3281 8.33854 10.3021 8.39062 10.2812C8.44271 10.2604 8.5 10.25 8.5625 10.25H11.0156V1C11.0156 0.729167 11.112 0.494792 11.3047 0.296875C11.4974 0.098958 11.7344 0 12.0156 0Z" fill="url(#paint0_linear_1105_3750)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3750" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Data
+                                            </div>
+                                            <div class="card__text">2 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.7031 0C11.8073 0 11.8984 0.0390625 11.9766 0.117188C12.0547 0.195312 12.0938 0.286458 12.0938 0.390625V3.70312C12.0938 3.81771 12.0547 3.91146 11.9766 3.98438C11.8984 4.05729 11.8073 4.09375 11.7031 4.09375C11.599 4.09375 11.5078 4.05729 11.4297 3.98438C11.3516 3.91146 11.3125 3.81771 11.3125 3.70312V0.390625C11.3125 0.286458 11.3516 0.195312 11.4297 0.117188C11.5078 0.0390625 11.599 0 11.7031 0ZM4.28125 0C4.39583 0 4.48958 0.0390625 4.5625 0.117188C4.63542 0.195312 4.67188 0.286458 4.67188 0.390625V3.70312C4.67188 3.81771 4.63542 3.91146 4.5625 3.98438C4.48958 4.05729 4.39583 4.09375 4.28125 4.09375C4.17708 4.09375 4.08594 4.05729 4.00781 3.98438C3.92969 3.91146 3.89062 3.81771 3.89062 3.70312V0.390625C3.89062 0.286458 3.92969 0.195312 4.00781 0.117188C4.08594 0.0390625 4.17708 0 4.28125 0ZM14.4375 1.17188C14.8646 1.17188 15.2318 1.32552 15.5391 1.63281C15.8464 1.9401 16 2.30729 16 2.73438V6.25H0V2.73438C0 2.30729 0.153646 1.9401 0.460938 1.63281C0.768229 1.32552 1.13542 1.17188 1.5625 1.17188H3.5V2.82812C3.38542 2.94271 3.29167 3.07552 3.21875 3.22656C3.14583 3.3776 3.10938 3.53646 3.10938 3.70312C3.10938 4.02604 3.22396 4.30208 3.45312 4.53125C3.68229 4.76042 3.95833 4.875 4.28125 4.875C4.60417 4.875 4.88021 4.76042 5.10938 4.53125C5.33854 4.30208 5.45312 4.02604 5.45312 3.70312C5.45312 3.53646 5.41927 3.3776 5.35156 3.22656C5.28385 3.07552 5.1875 2.94271 5.0625 2.82812V1.17188H10.9219V2.82812C10.8073 2.93229 10.7135 3.0599 10.6406 3.21094C10.5677 3.36198 10.5312 3.52604 10.5312 3.70312C10.5312 4.02604 10.6458 4.30208 10.875 4.53125C11.1042 4.76042 11.3802 4.875 11.7031 4.875C12.026 4.875 12.3021 4.76042 12.5312 4.53125C12.7604 4.30208 12.875 4.02604 12.875 3.70312C12.875 3.53646 12.8411 3.3776 12.7734 3.22656C12.7057 3.07552 12.6094 2.94792 12.4844 2.84375V1.17188H14.4375ZM16 7.03125V14.4375C16 14.8646 15.8464 15.2318 15.5391 15.5391C15.2318 15.8464 14.8646 16 14.4375 16H1.5625C1.13542 16 0.768229 15.8464 0.460938 15.5391C0.153646 15.2318 0 14.8646 0 14.4375V7.03125H16Z" fill="url(#paint0_linear_1105_3756)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3756" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Validity
+                                            </div>
+                                            <div class="card__text">15 days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1678 1.04391e-06H14.8959C15.0413 -0.000198956 15.1852 0.0283411 15.3195 0.0839811C15.4538 0.139621 15.5758 0.221261 15.6784 0.324211C15.781 0.427171 15.8623 0.549391 15.9175 0.683851C15.9726 0.818311 16.0007 0.962351 16 1.10769V5.83846C16.0001 5.98544 15.942 6.12648 15.8384 6.23077L6.38999 15.6769C6.18201 15.8838 5.90053 16 5.60711 16C5.3137 16 5.03222 15.8838 4.82423 15.6769L0.32316 11.1769C0.11619 10.969 0 10.6876 0 10.3942C0 10.1009 0.11619 9.8195 0.32316 9.6115L9.7754 0.161541C9.8797 0.0579711 10.0208 -0.000108956 10.1678 1.04391e-06ZM11.6111 4.51827C11.8372 4.66936 12.1031 4.75 12.375 4.75C12.7397 4.75 13.0894 4.60513 13.3473 4.34727C13.6051 4.08941 13.75 3.73967 13.75 3.375C13.75 3.10305 13.6694 2.83721 13.5183 2.61109C13.3672 2.38497 13.1524 2.20874 12.9012 2.10467C12.6499 2.0006 12.3735 1.97337 12.1068 2.02642C11.84 2.07948 11.595 2.21043 11.4027 2.40273C11.2104 2.59503 11.0795 2.84003 11.0264 3.10675C10.9734 3.37348 11.0006 3.64994 11.1047 3.90119C11.2087 4.15244 11.385 4.36718 11.6111 4.51827Z" fill="url(#paint0_linear_1105_3760)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3760" x1="5.63334" y1="-4.75" x2="10.1519" y2="14.9724" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Price
+                                            </div>
+                                            <div class="card__price">$17.00 USD</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-dark">Buy now</button>
+                                </div>
+                                <div class="card">
+                                    <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                            <defs>
+                                            <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                            </pattern>
+                                            <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAcVSURBVHgB7ZxvTFVlHMefe2Sz3DQtWyaIRYOCibiWGy+ciVutpMyVtSWkUS/k6hbwQhA2IkfDxBdAW4JbQTilrZFbKvWOzLVFm1MaLJdsGArGRvbHmqXL6Hyf6+9yOPc8f+4958Ll7nzfcA/n3HOe8zu/z/P8nuf8fjcwUn1gcnlVkKXcs5CJ9NPoNbZxWzP/65WGz9Szh9LuC2/35z3Lbl6+qv39Nd9/yeanLw9vZ6yv9ax9ZSUFrKn2Zf4ZbbpYXM5uDPwYcdzCdU8w4+fWY2xw/SvSxuNGccN1ZYUsmbV40QJ2vG1n2Hi/9vRy2zgZL62qlOWc/IgZ2IDx4AHjrUelF4AB2xu3T/OcZNGG/Ex27lQ12/J0Ht8eqWlkQ8UV7N8//px2HLw+2zRc6t4g3zasO0dqDrLh3bVSb3x9az7r7SpPKiMC2d6uCn5PuPcB0+vGTTLtArIw3iLzL8mwHzTRdYJdeP5NR7clJQvSQBbOQMhOfHJCiOyy0iKOrLXfhQzssIuewtiBViYTDIg+Yy56IyG7IT+LYwpkh3fVRiCLwRVet3J/peN5DOxIb6h0HIVH32vj3ihDGn0GnuKanDQ2V2RHFvcoQnbVmU+nIWsXR/jBYBE/0O6e0PVvzvILYEQSCQ05d6om4ZFGO90ia9Xv128wo+Ldbv4BB+aaRhQhjRFJB+lEHWCALNqmg2zm0WYhsiTEnI8/t58ZLe29/AP+Mc/8sgppVcCLBoYamskSRaEHO4XsoGCUXZD7KCfx3sIC6fmsNuMIh6zZwFo6QpjKkKY+Y6Lrc+EFQqhUzDrShCy1Y7xNPGkAebmCeyaB1Ir6bkbUQsbUzr/5zjcqj2ghPbz7bXbZxEAmNBx942wg7TTKjlQ3xoxs/w+j3OvIyUgRceDH3X3aSGMaqEIaozO8YMdL+Wym1FS7lROAOM8rZEVrAYbTF3AgJue6SIcid/E0EB7YcXB73JEmZMtKNvJtFbLZGqNsiUmkFVm7DCYRIQ2D4kJYAXFC+jZHJDQNtCNiFQxoX4XxSk9GgWzGB/WcLNkKFCHbaRIpUyDwcHCSKURPlm4c0z30f07Gosm27MnigSxedDdHLNxgl8tZJMR0WH5yOheQzTL7O1nbICC77/0vhF5nlcE0REjva+nh2/dv2yxFGsaQxYx4EFbjeSUgK5o56SL7YulhKbJ2zQssWfsO09TX3w2xkbFrLC87jS1d8QBbFizm+P51diDiWMxgbl25aj71x6SokHDztyX424VrW88LZMfMOPW/m7emHYdjVtSVszRz+cm4a77wfEAWA0Xf+UssGml5oFUYpa0jEvoS9ClORtJZ2fFKv/V8FfE/eBtIWRYskn43FBg3xLSiHbUBoWiR1lnZ8VpAdpVGYEzIxqrApCmWAPJqEJlpxeSBvqbkG9ClfAO6VOD86mcSog+Mpv+DEqH/gwJ9i1cnhAHnqnyEXco3oEv5BnQp34Au5RvQpXwDupRvQJfyDehSvgFdyjegSwX+GRlLiKmcKgvMLtX7jZlSSqJMyqMV2u0vqCaBfAO6VIqRsYvFKrzfbW98jWcDyBRKRqrlrzpJ8XyngTQ8p5dYPNenYY/5EuwFvu1F/UvMHrjlqbxwKoVMMBryU6zGi7fS9pY6ZiDgvTNllSGrgjJrKZcmFsVkQGQ/HT+8U5ldgJfdGF2dai3mabxsd6MlhQV8pF64bm3EPmtxEVJMcD+of4klWyIqA+o+MVni9pJNBfx9bUqcDQjhQeWc/JClVgWZUxutxUWofwFR0SY+aRuQkFVl48uQXdlQybKONc+I8awC0qLsU2txEdW/RIO00oBway+QzbWkWCCjwcvCRaiz+1vpfmRmAemlr26O2EcpKBTIE9I63ig1oD1hUSRZeRQhixsIjXpN4ZQQL4V0NFXFJh7kI4fqecatXfasMt2SNqEBd9zpE1TIyioarcie7rvIQ4bTfUMsXqKwpPMzeVIkMm5FYRRCIMov1ClpizAgIduhMSrJKhqtyCLT1et6Y5FwjZI9R5ReLkuiR6YXkKZ+XFalOs2A8ULWntk+E4IBVUhTEr1Teh5FEnak7USGDYj6Ma+RRY5xPJFVSRdpWXoekB64EzM6lbQZhCzqx2TIUuJ2NMjqpsnGU9EgjX7RKWaEs1iLi6wlbYFLV36ZVI00st8NALIZh0IIoLHI6tfxutn4zQR7srxI6APhLE7twQBEozgv9VKdTFbRmGjIqkQlbSqkVdNAetiwnTCMkVU0JjKyKqGkDUir0npV00AqLnI0oM5cdrZHWbdCYrkO9qJpIBUXRf5mQhIhq5Iu0rJpYAp9AKaIeZy8DtbH+hpOBAHZueh1TiKk+y+Msrq3NgkjEZoGzk9PnbZYG/7dmMEED4zjLWsRtUxA2hoBGLKKxmRDViV74blI1mng//sw5e1eoRhoAAAAAElFTkSuQmCC"/>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 12.9219C8.27083 12.9219 8.53646 12.9271 8.79688 12.9375C9.05729 12.9479 9.32292 12.9583 9.59375 12.9688C9.375 13.9375 9.11979 14.6849 8.82812 15.2109C8.53646 15.737 8.26042 16 8 16C7.73958 16 7.46354 15.737 7.17188 15.2109C6.88021 14.6849 6.625 13.9375 6.40625 12.9688C6.67708 12.9583 6.94271 12.9479 7.20312 12.9375C7.46354 12.9271 7.72917 12.9219 8 12.9219ZM10.4219 13.0469C10.9948 13.1094 11.5547 13.1927 12.1016 13.2969C12.6484 13.401 13.1667 13.526 13.6562 13.6719C13.4688 13.8594 13.2734 14.0339 13.0703 14.1953C12.8672 14.3568 12.6562 14.5104 12.4375 14.6562C12.4271 14.6667 12.4167 14.6745 12.4062 14.6797C12.3958 14.6849 12.3906 14.6875 12.3906 14.6875C12.2865 14.7604 12.1823 14.8255 12.0781 14.8828C11.974 14.9401 11.8698 15 11.7656 15.0625C11.7552 15.0625 11.7448 15.0651 11.7344 15.0703C11.724 15.0755 11.7135 15.0833 11.7031 15.0938C11.599 15.1458 11.4948 15.1979 11.3906 15.25C11.2865 15.3021 11.1771 15.349 11.0625 15.3906C11.0521 15.401 11.0391 15.4062 11.0234 15.4062C11.0078 15.4062 10.9948 15.4115 10.9844 15.4219C10.8802 15.4635 10.7734 15.5052 10.6641 15.5469C10.5547 15.5885 10.4427 15.625 10.3281 15.6562L10.2031 15.6875C10.099 15.7188 9.99479 15.7474 9.89062 15.7734C9.78646 15.7995 9.68229 15.8229 9.57812 15.8438C9.54688 15.8542 9.51562 15.8594 9.48438 15.8594C9.45312 15.8594 9.42188 15.8646 9.39062 15.875C9.60938 15.5417 9.80469 15.1328 9.97656 14.6484C10.1484 14.1641 10.2969 13.6302 10.4219 13.0469ZM5.57812 13.0469C5.70312 13.6302 5.85156 14.1641 6.02344 14.6484C6.19531 15.1328 6.39062 15.5417 6.60938 15.875C6.57812 15.8646 6.54688 15.8594 6.51562 15.8594C6.48438 15.8594 6.45312 15.8542 6.42188 15.8438C6.31771 15.8229 6.21354 15.7995 6.10938 15.7734C6.00521 15.7474 5.90104 15.7188 5.79688 15.6875C5.77604 15.6771 5.75521 15.6693 5.73438 15.6641C5.71354 15.6589 5.69271 15.6562 5.67188 15.6562C5.55729 15.625 5.44531 15.5885 5.33594 15.5469C5.22656 15.5052 5.11979 15.4635 5.01562 15.4219C5.00521 15.4115 4.99219 15.4062 4.97656 15.4062C4.96094 15.4062 4.94792 15.401 4.9375 15.3906C4.82292 15.349 4.71354 15.3021 4.60938 15.25C4.50521 15.1979 4.40104 15.1458 4.29688 15.0938C4.28646 15.0833 4.27604 15.0755 4.26562 15.0703C4.25521 15.0651 4.24479 15.0625 4.23438 15.0625C4.13021 15 4.02604 14.9375 3.92188 14.875C3.81771 14.8125 3.71354 14.75 3.60938 14.6875C3.60938 14.6875 3.60417 14.6849 3.59375 14.6797C3.58333 14.6745 3.57292 14.6667 3.5625 14.6562C3.34375 14.5104 3.13281 14.3568 2.92969 14.1953C2.72656 14.0339 2.53125 13.8594 2.34375 13.6719C2.83333 13.526 3.35156 13.401 3.89844 13.2969C4.44531 13.1927 5.00521 13.1094 5.57812 13.0469ZM5.10938 8.40625C5.10938 9.07292 5.13802 9.72917 5.19531 10.375C5.2526 11.0208 5.32812 11.6406 5.42188 12.2344C4.75521 12.3073 4.11198 12.4089 3.49219 12.5391C2.8724 12.6693 2.29167 12.8229 1.75 13C1.48958 12.6771 1.25521 12.3385 1.04688 11.9844C0.848958 11.6302 0.674479 11.2604 0.523438 10.875C0.372396 10.4896 0.255208 10.0938 0.171875 9.6875C0.078125 9.27083 0.0208333 8.84375 0 8.40625H5.10938ZM16 8.40625C15.9792 8.84375 15.9219 9.27083 15.8281 9.6875C15.7448 10.0938 15.6276 10.4896 15.4766 10.875C15.3255 11.2604 15.151 11.6302 14.9531 11.9844C14.7448 12.3385 14.5104 12.6771 14.25 13C13.7083 12.8229 13.1276 12.6693 12.5078 12.5391C11.888 12.4089 11.2448 12.3073 10.5781 12.2344C10.6719 11.6406 10.7474 11.0208 10.8047 10.375C10.862 9.72917 10.8906 9.07292 10.8906 8.40625H16ZM10.0625 8.40625C10.0521 9.125 10.0208 9.79688 9.96875 10.4219C9.91667 11.0469 9.84375 11.625 9.75 12.1562C9.45833 12.1354 9.16667 12.1198 8.875 12.1094C8.58333 12.099 8.29167 12.0938 8 12.0938C7.70833 12.0938 7.41667 12.099 7.125 12.1094C6.83333 12.1198 6.54167 12.1354 6.25 12.1562C6.15625 11.625 6.08333 11.0469 6.03125 10.4219C5.97917 9.79688 5.94792 9.125 5.9375 8.40625H10.0625ZM1.75 3C2.29167 3.17708 2.8724 3.33073 3.49219 3.46094C4.11198 3.59115 4.75521 3.69271 5.42188 3.76562C5.32812 4.35938 5.2526 4.97917 5.19531 5.625C5.13802 6.27083 5.10938 6.92708 5.10938 7.59375H0C0.0208333 7.15625 0.078125 6.72917 0.171875 6.3125C0.255208 5.90625 0.372396 5.51042 0.523438 5.125C0.674479 4.73958 0.848958 4.36979 1.04688 4.01562C1.25521 3.66146 1.48958 3.32292 1.75 3ZM9.75 3.84375C9.84375 4.375 9.91667 4.95312 9.96875 5.57812C10.0208 6.20312 10.0521 6.875 10.0625 7.59375H5.9375C5.94792 6.875 5.97917 6.20312 6.03125 5.57812C6.08333 4.95312 6.15625 4.375 6.25 3.84375C6.54167 3.86458 6.83333 3.88021 7.125 3.89062C7.41667 3.90104 7.70833 3.90625 8 3.90625C8.29167 3.90625 8.58333 3.90104 8.875 3.89062C9.16667 3.88021 9.45833 3.86458 9.75 3.84375ZM14.25 3C14.5104 3.32292 14.7448 3.66146 14.9531 4.01562C15.151 4.36979 15.3255 4.73958 15.4766 5.125C15.6276 5.51042 15.7448 5.90625 15.8281 6.3125C15.9219 6.72917 15.9792 7.15625 16 7.59375H10.8906C10.8906 6.92708 10.862 6.27083 10.8047 5.625C10.7474 4.97917 10.6719 4.35938 10.5781 3.76562C11.2448 3.69271 11.888 3.59115 12.5078 3.46094C13.1276 3.33073 13.7083 3.17708 14.25 3ZM8 0C8.26042 0 8.53646 0.263021 8.82812 0.789062C9.11979 1.3151 9.375 2.0625 9.59375 3.03125C9.32292 3.04167 9.05729 3.05208 8.79688 3.0625C8.53646 3.07292 8.27083 3.07812 8 3.07812C7.72917 3.07812 7.46354 3.07292 7.20312 3.0625C6.94271 3.05208 6.67708 3.04167 6.40625 3.03125C6.625 2.0625 6.88021 1.3151 7.17188 0.789062C7.46354 0.263021 7.73958 0 8 0ZM9.39062 0.125C9.42188 0.135417 9.45312 0.140625 9.48438 0.140625C9.51562 0.140625 9.54688 0.145833 9.57812 0.15625C9.68229 0.177083 9.78646 0.200521 9.89062 0.226562C9.99479 0.252604 10.099 0.28125 10.2031 0.3125L10.3281 0.34375C10.4427 0.375 10.5547 0.411458 10.6641 0.453125C10.7734 0.494792 10.8802 0.536458 10.9844 0.578125C10.9948 0.588542 11.0078 0.59375 11.0234 0.59375C11.0391 0.59375 11.0521 0.598958 11.0625 0.609375C11.1771 0.651042 11.2865 0.697917 11.3906 0.75C11.4948 0.802083 11.599 0.854167 11.7031 0.90625C11.7135 0.916667 11.724 0.924479 11.7344 0.929688C11.7448 0.934896 11.7552 0.9375 11.7656 0.9375C11.8698 1 11.974 1.0599 12.0781 1.11719C12.1823 1.17448 12.2865 1.23958 12.3906 1.3125C12.3906 1.3125 12.3958 1.3151 12.4062 1.32031C12.4167 1.32552 12.4271 1.33333 12.4375 1.34375C12.6562 1.48958 12.8672 1.64323 13.0703 1.80469C13.2734 1.96615 13.4688 2.14062 13.6562 2.32812C13.1667 2.47396 12.6484 2.59896 12.1016 2.70312C11.5547 2.80729 10.9948 2.89062 10.4219 2.95312C10.2969 2.36979 10.1484 1.83594 9.97656 1.35156C9.80469 0.867188 9.60938 0.458333 9.39062 0.125ZM6.60938 0.125C6.39062 0.458333 6.19531 0.867188 6.02344 1.35156C5.85156 1.83594 5.70312 2.36979 5.57812 2.95312C5.00521 2.89062 4.44531 2.80729 3.89844 2.70312C3.35156 2.59896 2.83333 2.47396 2.34375 2.32812C2.53125 2.14062 2.72656 1.96615 2.92969 1.80469C3.13281 1.64323 3.34375 1.48958 3.5625 1.34375C3.57292 1.33333 3.58333 1.32552 3.59375 1.32031C3.60417 1.3151 3.60938 1.3125 3.60938 1.3125C3.71354 1.25 3.81771 1.1875 3.92188 1.125C4.02604 1.0625 4.13021 1 4.23438 0.9375C4.24479 0.9375 4.25521 0.934896 4.26562 0.929688C4.27604 0.924479 4.28646 0.916667 4.29688 0.90625C4.40104 0.854167 4.50521 0.802083 4.60938 0.75C4.71354 0.697917 4.82292 0.651042 4.9375 0.609375C4.94792 0.598958 4.96094 0.59375 4.97656 0.59375C4.99219 0.59375 5.00521 0.588542 5.01562 0.578125C5.11979 0.536458 5.22656 0.494792 5.33594 0.453125C5.44531 0.411458 5.55729 0.375 5.67188 0.34375C5.69271 0.34375 5.71354 0.341146 5.73438 0.335938C5.75521 0.330729 5.77604 0.322917 5.79688 0.3125C5.90104 0.28125 6.00521 0.252604 6.10938 0.226562C6.21354 0.200521 6.31771 0.177083 6.42188 0.15625C6.45312 0.145833 6.48438 0.140625 6.51562 0.140625C6.54688 0.140625 6.57812 0.135417 6.60938 0.125Z" fill="url(#paint0_linear_1105_3746)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3746" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Coverage
+                                            </div>
+                                            <div class="card__text">124 countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.29688 0.203125C4.31771 0.223958 4.33854 0.242188 4.35938 0.257812C4.38021 0.273438 4.39583 0.291667 4.40625 0.3125L7.85938 4.90625C7.95312 5.02083 7.98958 5.15104 7.96875 5.29688C7.94792 5.44271 7.875 5.55729 7.75 5.64062C7.70833 5.67188 7.66146 5.69792 7.60938 5.71875C7.55729 5.73958 7.5 5.75 7.4375 5.75H4.98438V15C4.98438 15.2708 4.88802 15.5052 4.69531 15.7031C4.5026 15.901 4.26562 16 3.98438 16C3.70312 16 3.46615 15.901 3.27344 15.7031C3.08073 15.5052 2.98438 15.2708 2.98438 15V5.75H0.53125C0.385417 5.75 0.260417 5.69792 0.15625 5.59375C0.0520833 5.48958 0 5.36458 0 5.21875C0 5.16667 0.0104167 5.11198 0.03125 5.05469C0.0520833 4.9974 0.078125 4.94792 0.109375 4.90625L3.5625 0.3125C3.64583 0.197917 3.76042 0.130208 3.90625 0.109375C4.05208 0.088542 4.1875 0.119792 4.3125 0.203125H4.29688ZM12.0156 0C12.2969 0 12.5339 0.098958 12.7266 0.296875C12.9193 0.494792 13.0156 0.729167 13.0156 1V10.25H15.4688C15.6146 10.25 15.7396 10.3021 15.8438 10.4062C15.9479 10.5104 16 10.6354 16 10.7812C16 10.8333 15.9896 10.888 15.9688 10.9453C15.9479 11.0026 15.9219 11.0521 15.8906 11.0938L12.4375 15.6875C12.3542 15.8021 12.2396 15.8698 12.0938 15.8906C11.9479 15.9115 11.8125 15.8802 11.6875 15.7969C11.6771 15.776 11.6615 15.7578 11.6406 15.7422C11.6198 15.7266 11.6042 15.7083 11.5938 15.6875L8.14062 11.0938C8.04688 10.9792 8.01042 10.849 8.03125 10.7031C8.05208 10.5573 8.125 10.4427 8.25 10.3594C8.29167 10.3281 8.33854 10.3021 8.39062 10.2812C8.44271 10.2604 8.5 10.25 8.5625 10.25H11.0156V1C11.0156 0.729167 11.112 0.494792 11.3047 0.296875C11.4974 0.098958 11.7344 0 12.0156 0Z" fill="url(#paint0_linear_1105_3750)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3750" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Data
+                                            </div>
+                                            <div class="card__text">2 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.7031 0C11.8073 0 11.8984 0.0390625 11.9766 0.117188C12.0547 0.195312 12.0938 0.286458 12.0938 0.390625V3.70312C12.0938 3.81771 12.0547 3.91146 11.9766 3.98438C11.8984 4.05729 11.8073 4.09375 11.7031 4.09375C11.599 4.09375 11.5078 4.05729 11.4297 3.98438C11.3516 3.91146 11.3125 3.81771 11.3125 3.70312V0.390625C11.3125 0.286458 11.3516 0.195312 11.4297 0.117188C11.5078 0.0390625 11.599 0 11.7031 0ZM4.28125 0C4.39583 0 4.48958 0.0390625 4.5625 0.117188C4.63542 0.195312 4.67188 0.286458 4.67188 0.390625V3.70312C4.67188 3.81771 4.63542 3.91146 4.5625 3.98438C4.48958 4.05729 4.39583 4.09375 4.28125 4.09375C4.17708 4.09375 4.08594 4.05729 4.00781 3.98438C3.92969 3.91146 3.89062 3.81771 3.89062 3.70312V0.390625C3.89062 0.286458 3.92969 0.195312 4.00781 0.117188C4.08594 0.0390625 4.17708 0 4.28125 0ZM14.4375 1.17188C14.8646 1.17188 15.2318 1.32552 15.5391 1.63281C15.8464 1.9401 16 2.30729 16 2.73438V6.25H0V2.73438C0 2.30729 0.153646 1.9401 0.460938 1.63281C0.768229 1.32552 1.13542 1.17188 1.5625 1.17188H3.5V2.82812C3.38542 2.94271 3.29167 3.07552 3.21875 3.22656C3.14583 3.3776 3.10938 3.53646 3.10938 3.70312C3.10938 4.02604 3.22396 4.30208 3.45312 4.53125C3.68229 4.76042 3.95833 4.875 4.28125 4.875C4.60417 4.875 4.88021 4.76042 5.10938 4.53125C5.33854 4.30208 5.45312 4.02604 5.45312 3.70312C5.45312 3.53646 5.41927 3.3776 5.35156 3.22656C5.28385 3.07552 5.1875 2.94271 5.0625 2.82812V1.17188H10.9219V2.82812C10.8073 2.93229 10.7135 3.0599 10.6406 3.21094C10.5677 3.36198 10.5312 3.52604 10.5312 3.70312C10.5312 4.02604 10.6458 4.30208 10.875 4.53125C11.1042 4.76042 11.3802 4.875 11.7031 4.875C12.026 4.875 12.3021 4.76042 12.5312 4.53125C12.7604 4.30208 12.875 4.02604 12.875 3.70312C12.875 3.53646 12.8411 3.3776 12.7734 3.22656C12.7057 3.07552 12.6094 2.94792 12.4844 2.84375V1.17188H14.4375ZM16 7.03125V14.4375C16 14.8646 15.8464 15.2318 15.5391 15.5391C15.2318 15.8464 14.8646 16 14.4375 16H1.5625C1.13542 16 0.768229 15.8464 0.460938 15.5391C0.153646 15.2318 0 14.8646 0 14.4375V7.03125H16Z" fill="url(#paint0_linear_1105_3756)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3756" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Validity
+                                            </div>
+                                            <div class="card__text">15 days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1678 1.04391e-06H14.8959C15.0413 -0.000198956 15.1852 0.0283411 15.3195 0.0839811C15.4538 0.139621 15.5758 0.221261 15.6784 0.324211C15.781 0.427171 15.8623 0.549391 15.9175 0.683851C15.9726 0.818311 16.0007 0.962351 16 1.10769V5.83846C16.0001 5.98544 15.942 6.12648 15.8384 6.23077L6.38999 15.6769C6.18201 15.8838 5.90053 16 5.60711 16C5.3137 16 5.03222 15.8838 4.82423 15.6769L0.32316 11.1769C0.11619 10.969 0 10.6876 0 10.3942C0 10.1009 0.11619 9.8195 0.32316 9.6115L9.7754 0.161541C9.8797 0.0579711 10.0208 -0.000108956 10.1678 1.04391e-06ZM11.6111 4.51827C11.8372 4.66936 12.1031 4.75 12.375 4.75C12.7397 4.75 13.0894 4.60513 13.3473 4.34727C13.6051 4.08941 13.75 3.73967 13.75 3.375C13.75 3.10305 13.6694 2.83721 13.5183 2.61109C13.3672 2.38497 13.1524 2.20874 12.9012 2.10467C12.6499 2.0006 12.3735 1.97337 12.1068 2.02642C11.84 2.07948 11.595 2.21043 11.4027 2.40273C11.2104 2.59503 11.0795 2.84003 11.0264 3.10675C10.9734 3.37348 11.0006 3.64994 11.1047 3.90119C11.2087 4.15244 11.385 4.36718 11.6111 4.51827Z" fill="url(#paint0_linear_1105_3760)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3760" x1="5.63334" y1="-4.75" x2="10.1519" y2="14.9724" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Price
+                                            </div>
+                                            <div class="card__price">$17.00 USD</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-dark">Buy now</button>
+                                </div>
+                                <div class="card">
+                                    <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                            <defs>
+                                            <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                            </pattern>
+                                            <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 12.9219C8.27083 12.9219 8.53646 12.9271 8.79688 12.9375C9.05729 12.9479 9.32292 12.9583 9.59375 12.9688C9.375 13.9375 9.11979 14.6849 8.82812 15.2109C8.53646 15.737 8.26042 16 8 16C7.73958 16 7.46354 15.737 7.17188 15.2109C6.88021 14.6849 6.625 13.9375 6.40625 12.9688C6.67708 12.9583 6.94271 12.9479 7.20312 12.9375C7.46354 12.9271 7.72917 12.9219 8 12.9219ZM10.4219 13.0469C10.9948 13.1094 11.5547 13.1927 12.1016 13.2969C12.6484 13.401 13.1667 13.526 13.6562 13.6719C13.4688 13.8594 13.2734 14.0339 13.0703 14.1953C12.8672 14.3568 12.6562 14.5104 12.4375 14.6562C12.4271 14.6667 12.4167 14.6745 12.4062 14.6797C12.3958 14.6849 12.3906 14.6875 12.3906 14.6875C12.2865 14.7604 12.1823 14.8255 12.0781 14.8828C11.974 14.9401 11.8698 15 11.7656 15.0625C11.7552 15.0625 11.7448 15.0651 11.7344 15.0703C11.724 15.0755 11.7135 15.0833 11.7031 15.0938C11.599 15.1458 11.4948 15.1979 11.3906 15.25C11.2865 15.3021 11.1771 15.349 11.0625 15.3906C11.0521 15.401 11.0391 15.4062 11.0234 15.4062C11.0078 15.4062 10.9948 15.4115 10.9844 15.4219C10.8802 15.4635 10.7734 15.5052 10.6641 15.5469C10.5547 15.5885 10.4427 15.625 10.3281 15.6562L10.2031 15.6875C10.099 15.7188 9.99479 15.7474 9.89062 15.7734C9.78646 15.7995 9.68229 15.8229 9.57812 15.8438C9.54688 15.8542 9.51562 15.8594 9.48438 15.8594C9.45312 15.8594 9.42188 15.8646 9.39062 15.875C9.60938 15.5417 9.80469 15.1328 9.97656 14.6484C10.1484 14.1641 10.2969 13.6302 10.4219 13.0469ZM5.57812 13.0469C5.70312 13.6302 5.85156 14.1641 6.02344 14.6484C6.19531 15.1328 6.39062 15.5417 6.60938 15.875C6.57812 15.8646 6.54688 15.8594 6.51562 15.8594C6.48438 15.8594 6.45312 15.8542 6.42188 15.8438C6.31771 15.8229 6.21354 15.7995 6.10938 15.7734C6.00521 15.7474 5.90104 15.7188 5.79688 15.6875C5.77604 15.6771 5.75521 15.6693 5.73438 15.6641C5.71354 15.6589 5.69271 15.6562 5.67188 15.6562C5.55729 15.625 5.44531 15.5885 5.33594 15.5469C5.22656 15.5052 5.11979 15.4635 5.01562 15.4219C5.00521 15.4115 4.99219 15.4062 4.97656 15.4062C4.96094 15.4062 4.94792 15.401 4.9375 15.3906C4.82292 15.349 4.71354 15.3021 4.60938 15.25C4.50521 15.1979 4.40104 15.1458 4.29688 15.0938C4.28646 15.0833 4.27604 15.0755 4.26562 15.0703C4.25521 15.0651 4.24479 15.0625 4.23438 15.0625C4.13021 15 4.02604 14.9375 3.92188 14.875C3.81771 14.8125 3.71354 14.75 3.60938 14.6875C3.60938 14.6875 3.60417 14.6849 3.59375 14.6797C3.58333 14.6745 3.57292 14.6667 3.5625 14.6562C3.34375 14.5104 3.13281 14.3568 2.92969 14.1953C2.72656 14.0339 2.53125 13.8594 2.34375 13.6719C2.83333 13.526 3.35156 13.401 3.89844 13.2969C4.44531 13.1927 5.00521 13.1094 5.57812 13.0469ZM5.10938 8.40625C5.10938 9.07292 5.13802 9.72917 5.19531 10.375C5.2526 11.0208 5.32812 11.6406 5.42188 12.2344C4.75521 12.3073 4.11198 12.4089 3.49219 12.5391C2.8724 12.6693 2.29167 12.8229 1.75 13C1.48958 12.6771 1.25521 12.3385 1.04688 11.9844C0.848958 11.6302 0.674479 11.2604 0.523438 10.875C0.372396 10.4896 0.255208 10.0938 0.171875 9.6875C0.078125 9.27083 0.0208333 8.84375 0 8.40625H5.10938ZM16 8.40625C15.9792 8.84375 15.9219 9.27083 15.8281 9.6875C15.7448 10.0938 15.6276 10.4896 15.4766 10.875C15.3255 11.2604 15.151 11.6302 14.9531 11.9844C14.7448 12.3385 14.5104 12.6771 14.25 13C13.7083 12.8229 13.1276 12.6693 12.5078 12.5391C11.888 12.4089 11.2448 12.3073 10.5781 12.2344C10.6719 11.6406 10.7474 11.0208 10.8047 10.375C10.862 9.72917 10.8906 9.07292 10.8906 8.40625H16ZM10.0625 8.40625C10.0521 9.125 10.0208 9.79688 9.96875 10.4219C9.91667 11.0469 9.84375 11.625 9.75 12.1562C9.45833 12.1354 9.16667 12.1198 8.875 12.1094C8.58333 12.099 8.29167 12.0938 8 12.0938C7.70833 12.0938 7.41667 12.099 7.125 12.1094C6.83333 12.1198 6.54167 12.1354 6.25 12.1562C6.15625 11.625 6.08333 11.0469 6.03125 10.4219C5.97917 9.79688 5.94792 9.125 5.9375 8.40625H10.0625ZM1.75 3C2.29167 3.17708 2.8724 3.33073 3.49219 3.46094C4.11198 3.59115 4.75521 3.69271 5.42188 3.76562C5.32812 4.35938 5.2526 4.97917 5.19531 5.625C5.13802 6.27083 5.10938 6.92708 5.10938 7.59375H0C0.0208333 7.15625 0.078125 6.72917 0.171875 6.3125C0.255208 5.90625 0.372396 5.51042 0.523438 5.125C0.674479 4.73958 0.848958 4.36979 1.04688 4.01562C1.25521 3.66146 1.48958 3.32292 1.75 3ZM9.75 3.84375C9.84375 4.375 9.91667 4.95312 9.96875 5.57812C10.0208 6.20312 10.0521 6.875 10.0625 7.59375H5.9375C5.94792 6.875 5.97917 6.20312 6.03125 5.57812C6.08333 4.95312 6.15625 4.375 6.25 3.84375C6.54167 3.86458 6.83333 3.88021 7.125 3.89062C7.41667 3.90104 7.70833 3.90625 8 3.90625C8.29167 3.90625 8.58333 3.90104 8.875 3.89062C9.16667 3.88021 9.45833 3.86458 9.75 3.84375ZM14.25 3C14.5104 3.32292 14.7448 3.66146 14.9531 4.01562C15.151 4.36979 15.3255 4.73958 15.4766 5.125C15.6276 5.51042 15.7448 5.90625 15.8281 6.3125C15.9219 6.72917 15.9792 7.15625 16 7.59375H10.8906C10.8906 6.92708 10.862 6.27083 10.8047 5.625C10.7474 4.97917 10.6719 4.35938 10.5781 3.76562C11.2448 3.69271 11.888 3.59115 12.5078 3.46094C13.1276 3.33073 13.7083 3.17708 14.25 3ZM8 0C8.26042 0 8.53646 0.263021 8.82812 0.789062C9.11979 1.3151 9.375 2.0625 9.59375 3.03125C9.32292 3.04167 9.05729 3.05208 8.79688 3.0625C8.53646 3.07292 8.27083 3.07812 8 3.07812C7.72917 3.07812 7.46354 3.07292 7.20312 3.0625C6.94271 3.05208 6.67708 3.04167 6.40625 3.03125C6.625 2.0625 6.88021 1.3151 7.17188 0.789062C7.46354 0.263021 7.73958 0 8 0ZM9.39062 0.125C9.42188 0.135417 9.45312 0.140625 9.48438 0.140625C9.51562 0.140625 9.54688 0.145833 9.57812 0.15625C9.68229 0.177083 9.78646 0.200521 9.89062 0.226562C9.99479 0.252604 10.099 0.28125 10.2031 0.3125L10.3281 0.34375C10.4427 0.375 10.5547 0.411458 10.6641 0.453125C10.7734 0.494792 10.8802 0.536458 10.9844 0.578125C10.9948 0.588542 11.0078 0.59375 11.0234 0.59375C11.0391 0.59375 11.0521 0.598958 11.0625 0.609375C11.1771 0.651042 11.2865 0.697917 11.3906 0.75C11.4948 0.802083 11.599 0.854167 11.7031 0.90625C11.7135 0.916667 11.724 0.924479 11.7344 0.929688C11.7448 0.934896 11.7552 0.9375 11.7656 0.9375C11.8698 1 11.974 1.0599 12.0781 1.11719C12.1823 1.17448 12.2865 1.23958 12.3906 1.3125C12.3906 1.3125 12.3958 1.3151 12.4062 1.32031C12.4167 1.32552 12.4271 1.33333 12.4375 1.34375C12.6562 1.48958 12.8672 1.64323 13.0703 1.80469C13.2734 1.96615 13.4688 2.14062 13.6562 2.32812C13.1667 2.47396 12.6484 2.59896 12.1016 2.70312C11.5547 2.80729 10.9948 2.89062 10.4219 2.95312C10.2969 2.36979 10.1484 1.83594 9.97656 1.35156C9.80469 0.867188 9.60938 0.458333 9.39062 0.125ZM6.60938 0.125C6.39062 0.458333 6.19531 0.867188 6.02344 1.35156C5.85156 1.83594 5.70312 2.36979 5.57812 2.95312C5.00521 2.89062 4.44531 2.80729 3.89844 2.70312C3.35156 2.59896 2.83333 2.47396 2.34375 2.32812C2.53125 2.14062 2.72656 1.96615 2.92969 1.80469C3.13281 1.64323 3.34375 1.48958 3.5625 1.34375C3.57292 1.33333 3.58333 1.32552 3.59375 1.32031C3.60417 1.3151 3.60938 1.3125 3.60938 1.3125C3.71354 1.25 3.81771 1.1875 3.92188 1.125C4.02604 1.0625 4.13021 1 4.23438 0.9375C4.24479 0.9375 4.25521 0.934896 4.26562 0.929688C4.27604 0.924479 4.28646 0.916667 4.29688 0.90625C4.40104 0.854167 4.50521 0.802083 4.60938 0.75C4.71354 0.697917 4.82292 0.651042 4.9375 0.609375C4.94792 0.598958 4.96094 0.59375 4.97656 0.59375C4.99219 0.59375 5.00521 0.588542 5.01562 0.578125C5.11979 0.536458 5.22656 0.494792 5.33594 0.453125C5.44531 0.411458 5.55729 0.375 5.67188 0.34375C5.69271 0.34375 5.71354 0.341146 5.73438 0.335938C5.75521 0.330729 5.77604 0.322917 5.79688 0.3125C5.90104 0.28125 6.00521 0.252604 6.10938 0.226562C6.21354 0.200521 6.31771 0.177083 6.42188 0.15625C6.45312 0.145833 6.48438 0.140625 6.51562 0.140625C6.54688 0.140625 6.57812 0.135417 6.60938 0.125Z" fill="url(#paint0_linear_1105_3746)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3746" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Coverage
+                                            </div>
+                                            <div class="card__text">124 countries</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.29688 0.203125C4.31771 0.223958 4.33854 0.242188 4.35938 0.257812C4.38021 0.273438 4.39583 0.291667 4.40625 0.3125L7.85938 4.90625C7.95312 5.02083 7.98958 5.15104 7.96875 5.29688C7.94792 5.44271 7.875 5.55729 7.75 5.64062C7.70833 5.67188 7.66146 5.69792 7.60938 5.71875C7.55729 5.73958 7.5 5.75 7.4375 5.75H4.98438V15C4.98438 15.2708 4.88802 15.5052 4.69531 15.7031C4.5026 15.901 4.26562 16 3.98438 16C3.70312 16 3.46615 15.901 3.27344 15.7031C3.08073 15.5052 2.98438 15.2708 2.98438 15V5.75H0.53125C0.385417 5.75 0.260417 5.69792 0.15625 5.59375C0.0520833 5.48958 0 5.36458 0 5.21875C0 5.16667 0.0104167 5.11198 0.03125 5.05469C0.0520833 4.9974 0.078125 4.94792 0.109375 4.90625L3.5625 0.3125C3.64583 0.197917 3.76042 0.130208 3.90625 0.109375C4.05208 0.088542 4.1875 0.119792 4.3125 0.203125H4.29688ZM12.0156 0C12.2969 0 12.5339 0.098958 12.7266 0.296875C12.9193 0.494792 13.0156 0.729167 13.0156 1V10.25H15.4688C15.6146 10.25 15.7396 10.3021 15.8438 10.4062C15.9479 10.5104 16 10.6354 16 10.7812C16 10.8333 15.9896 10.888 15.9688 10.9453C15.9479 11.0026 15.9219 11.0521 15.8906 11.0938L12.4375 15.6875C12.3542 15.8021 12.2396 15.8698 12.0938 15.8906C11.9479 15.9115 11.8125 15.8802 11.6875 15.7969C11.6771 15.776 11.6615 15.7578 11.6406 15.7422C11.6198 15.7266 11.6042 15.7083 11.5938 15.6875L8.14062 11.0938C8.04688 10.9792 8.01042 10.849 8.03125 10.7031C8.05208 10.5573 8.125 10.4427 8.25 10.3594C8.29167 10.3281 8.33854 10.3021 8.39062 10.2812C8.44271 10.2604 8.5 10.25 8.5625 10.25H11.0156V1C11.0156 0.729167 11.112 0.494792 11.3047 0.296875C11.4974 0.098958 11.7344 0 12.0156 0Z" fill="url(#paint0_linear_1105_3750)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3750" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Data
+                                            </div>
+                                            <div class="card__text">2 GB</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.7031 0C11.8073 0 11.8984 0.0390625 11.9766 0.117188C12.0547 0.195312 12.0938 0.286458 12.0938 0.390625V3.70312C12.0938 3.81771 12.0547 3.91146 11.9766 3.98438C11.8984 4.05729 11.8073 4.09375 11.7031 4.09375C11.599 4.09375 11.5078 4.05729 11.4297 3.98438C11.3516 3.91146 11.3125 3.81771 11.3125 3.70312V0.390625C11.3125 0.286458 11.3516 0.195312 11.4297 0.117188C11.5078 0.0390625 11.599 0 11.7031 0ZM4.28125 0C4.39583 0 4.48958 0.0390625 4.5625 0.117188C4.63542 0.195312 4.67188 0.286458 4.67188 0.390625V3.70312C4.67188 3.81771 4.63542 3.91146 4.5625 3.98438C4.48958 4.05729 4.39583 4.09375 4.28125 4.09375C4.17708 4.09375 4.08594 4.05729 4.00781 3.98438C3.92969 3.91146 3.89062 3.81771 3.89062 3.70312V0.390625C3.89062 0.286458 3.92969 0.195312 4.00781 0.117188C4.08594 0.0390625 4.17708 0 4.28125 0ZM14.4375 1.17188C14.8646 1.17188 15.2318 1.32552 15.5391 1.63281C15.8464 1.9401 16 2.30729 16 2.73438V6.25H0V2.73438C0 2.30729 0.153646 1.9401 0.460938 1.63281C0.768229 1.32552 1.13542 1.17188 1.5625 1.17188H3.5V2.82812C3.38542 2.94271 3.29167 3.07552 3.21875 3.22656C3.14583 3.3776 3.10938 3.53646 3.10938 3.70312C3.10938 4.02604 3.22396 4.30208 3.45312 4.53125C3.68229 4.76042 3.95833 4.875 4.28125 4.875C4.60417 4.875 4.88021 4.76042 5.10938 4.53125C5.33854 4.30208 5.45312 4.02604 5.45312 3.70312C5.45312 3.53646 5.41927 3.3776 5.35156 3.22656C5.28385 3.07552 5.1875 2.94271 5.0625 2.82812V1.17188H10.9219V2.82812C10.8073 2.93229 10.7135 3.0599 10.6406 3.21094C10.5677 3.36198 10.5312 3.52604 10.5312 3.70312C10.5312 4.02604 10.6458 4.30208 10.875 4.53125C11.1042 4.76042 11.3802 4.875 11.7031 4.875C12.026 4.875 12.3021 4.76042 12.5312 4.53125C12.7604 4.30208 12.875 4.02604 12.875 3.70312C12.875 3.53646 12.8411 3.3776 12.7734 3.22656C12.7057 3.07552 12.6094 2.94792 12.4844 2.84375V1.17188H14.4375ZM16 7.03125V14.4375C16 14.8646 15.8464 15.2318 15.5391 15.5391C15.2318 15.8464 14.8646 16 14.4375 16H1.5625C1.13542 16 0.768229 15.8464 0.460938 15.5391C0.153646 15.2318 0 14.8646 0 14.4375V7.03125H16Z" fill="url(#paint0_linear_1105_3756)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3756" x1="5.63334" y1="20.75" x2="10.1519" y2="1.02762" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Validity
+                                            </div>
+                                            <div class="card__text">15 days</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-10 align-items-center card__text card__text_colored">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1678 1.04391e-06H14.8959C15.0413 -0.000198956 15.1852 0.0283411 15.3195 0.0839811C15.4538 0.139621 15.5758 0.221261 15.6784 0.324211C15.781 0.427171 15.8623 0.549391 15.9175 0.683851C15.9726 0.818311 16.0007 0.962351 16 1.10769V5.83846C16.0001 5.98544 15.942 6.12648 15.8384 6.23077L6.38999 15.6769C6.18201 15.8838 5.90053 16 5.60711 16C5.3137 16 5.03222 15.8838 4.82423 15.6769L0.32316 11.1769C0.11619 10.969 0 10.6876 0 10.3942C0 10.1009 0.11619 9.8195 0.32316 9.6115L9.7754 0.161541C9.8797 0.0579711 10.0208 -0.000108956 10.1678 1.04391e-06ZM11.6111 4.51827C11.8372 4.66936 12.1031 4.75 12.375 4.75C12.7397 4.75 13.0894 4.60513 13.3473 4.34727C13.6051 4.08941 13.75 3.73967 13.75 3.375C13.75 3.10305 13.6694 2.83721 13.5183 2.61109C13.3672 2.38497 13.1524 2.20874 12.9012 2.10467C12.6499 2.0006 12.3735 1.97337 12.1068 2.02642C11.84 2.07948 11.595 2.21043 11.4027 2.40273C11.2104 2.59503 11.0795 2.84003 11.0264 3.10675C10.9734 3.37348 11.0006 3.64994 11.1047 3.90119C11.2087 4.15244 11.385 4.36718 11.6111 4.51827Z" fill="url(#paint0_linear_1105_3760)"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_1105_3760" x1="5.63334" y1="-4.75" x2="10.1519" y2="14.9724" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#832FBD"/>
+                                                    <stop offset="1" stop-color="#D06852"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Price
+                                            </div>
+                                            <div class="card__price">$17.00 USD</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-dark">Buy now</button>
+                                </div>
+                            </div>
+                        </div>            </div>
+                </div>
+            </div>
+        </div>        <footer class="footer">
+            <div class="container">
+                <div class="footer__content d-flex flex-column flex-lg-row justify-content-between gap-20">
+                    <div class="col-xl-4">
+                        <div class="d-flex flex-column">
+                            <a href="#" class="logo footer__logo">
+                                <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                                <img src="images/logo_business.svg" alt="logo" class="logo__business">  
+                            </a>
+                            <div class="footer__text mt-4">Need help? <br> Call us: +44 00 0000 0000</div>
+                            <ul class="social">
+                                <li class="social__item">
+                                    <a href="#" class="social__link">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 8.70968H17V5.95161C17 4.93548 17.7143 4.64516 18.1429 4.64516H21V0H17C12.5714 0 11.5714 3.48387 11.5714 5.66129V8.70968H9V13.5H11.5714V27H17V13.5H20.5714L21 8.70968Z" fill="#3B3B3B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" class="social__link">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M28.5 5.84202C27.695 7.07106 26.7289 8.11299 25.6018 8.96779C25.6018 9.05164 25.6117 9.182 25.6315 9.3589C25.6512 9.53579 25.6611 9.66616 25.6611 9.75C25.6611 11.3747 25.4295 13 24.9662 14.6258C24.5029 16.2515 23.7986 17.8037 22.8533 19.2822C21.908 20.7607 20.7859 22.0731 19.487 23.2193C18.188 24.3655 16.6283 25.2822 14.8078 25.9693C12.9874 26.6564 11.0301 27 8.93598 27C5.67531 27 2.69665 26.0936 0 24.2807C0.564024 24.3226 1.0268 24.3436 1.38833 24.3436C4.10572 24.3436 6.53122 23.4893 8.66483 21.7807C7.39652 21.7602 6.26452 21.3594 5.26883 20.5782C4.27315 19.797 3.5738 18.7919 3.17078 17.5629C3.51256 17.6467 3.88495 17.6886 4.28796 17.6886C4.83124 17.6886 5.3444 17.6053 5.82742 17.4386C4.4791 17.1472 3.36192 16.4494 2.47588 15.3451C1.58984 14.2408 1.14682 12.9698 1.14682 11.5322V11.4693C1.91136 11.8865 2.78703 12.1155 3.77382 12.1564C2.98854 11.6145 2.36475 10.9008 1.90247 10.0153C1.44019 9.12986 1.20855 8.17689 1.20756 7.15644C1.20756 6.11452 1.45895 5.09356 1.96174 4.09356C3.43057 5.98926 5.2066 7.48415 7.28984 8.57822C9.37307 9.67229 11.6321 10.2817 14.067 10.4064C13.9258 9.88599 13.8551 9.4274 13.8551 9.03067C13.8551 7.36401 14.4285 5.94223 15.5754 4.76534C16.7222 3.58845 18.1209 3 19.7715 3C20.5765 3 21.3514 3.16667 22.0962 3.5C22.841 3.83333 23.4751 4.30215 23.9987 4.90644C25.3272 4.63548 26.5649 4.14571 27.7117 3.43712C27.289 4.85429 26.4336 5.96881 25.1455 6.78067C26.3733 6.61401 27.4905 6.30164 28.497 5.84356L28.5 5.84202Z" fill="#3B3B3B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" class="social__link">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_503_6280)">
+                                            <path d="M14.994 2.70292C19 2.70292 19.4702 2.72078 21.0536 2.79222C22.5179 2.85771 23.3095 3.10181 23.8393 3.31018C24.5417 3.58404 25.0417 3.90554 25.5655 4.42945C26.0893 4.95336 26.4167 5.45346 26.6845 6.15598C26.8869 6.68585 27.1369 7.47767 27.2024 8.94225C27.2738 10.5259 27.2917 10.9962 27.2917 15.003C27.2917 19.0097 27.2738 19.4801 27.2024 21.0637C27.1369 22.5283 26.8929 23.3201 26.6845 23.85C26.4107 24.5525 26.0893 25.0526 25.5655 25.5765C25.0417 26.1004 24.5417 26.4279 23.8393 26.6958C23.3095 26.8982 22.5179 27.1482 21.0536 27.2137C19.4702 27.2852 19 27.303 14.994 27.303C10.9881 27.303 10.5179 27.2852 8.93452 27.2137C7.47024 27.1482 6.67857 26.9041 6.14881 26.6958C5.44643 26.4219 4.94643 26.1004 4.42262 25.5765C3.89881 25.0526 3.57143 24.5525 3.30357 23.85C3.10119 23.3201 2.85119 22.5283 2.78571 21.0637C2.71429 19.4801 2.69643 19.0097 2.69643 15.003C2.69643 10.9962 2.71429 10.5259 2.78571 8.94225C2.85119 7.47767 3.09524 6.68585 3.30357 6.15598C3.57738 5.45346 3.89881 4.95336 4.42262 4.42945C4.94643 3.90554 5.44643 3.57809 6.14881 3.31018C6.67857 3.10776 7.47024 2.85771 8.93452 2.79222C10.5179 2.71482 10.9881 2.70292 14.994 2.70292ZM14.994 0C10.9226 0 10.4107 0.0178607 8.80952 0.0893034C7.21429 0.160746 6.125 0.416749 5.17262 0.78587C4.18452 1.1669 3.35119 1.68486 2.51786 2.51836C1.68452 3.35186 1.17262 4.19131 0.785714 5.17365C0.416667 6.12622 0.160714 7.21572 0.0892857 8.81723C0.0178571 10.4128 0 10.9248 0 14.997C0 19.0693 0.0178571 19.5813 0.0892857 21.1828C0.160714 22.7783 0.416667 23.8678 0.785714 24.8264C1.16667 25.8146 1.68452 26.6481 2.51786 27.4816C3.35119 28.3151 4.19048 28.8271 5.17262 29.2141C6.125 29.5833 7.21429 29.8393 8.81548 29.9107C10.4167 29.9821 10.9226 30 15 30C19.0774 30 19.5833 29.9821 21.1845 29.9107C22.7798 29.8393 23.869 29.5833 24.8274 29.2141C25.8155 28.8331 26.6488 28.3151 27.4821 27.4816C28.3155 26.6481 28.8274 25.8087 29.2143 24.8264C29.5833 23.8738 29.8393 22.7843 29.9107 21.1828C29.9821 19.5813 30 19.0752 30 14.997C30 10.9188 29.9821 10.4128 29.9107 8.81127C29.8393 7.21572 29.5833 6.12622 29.2143 5.16769C28.8333 4.1794 28.3155 3.3459 27.4821 2.5124C26.6488 1.6789 25.8095 1.1669 24.8274 0.779917C23.875 0.410796 22.7857 0.154793 21.1845 0.0833499C19.5774 0.0178607 19.0655 0 14.994 0Z" fill="#3B3B3B"/>
+                                            <path d="M15 7.5C10.8617 7.5 7.5 10.8559 7.5 15C7.5 19.1441 10.8617 22.5 15 22.5C19.1383 22.5 22.5 19.1383 22.5 15C22.5 10.8617 19.1383 7.5 15 7.5ZM15 19.8686C12.3107 19.8686 10.1314 17.6893 10.1314 15C10.1314 12.3107 12.3107 10.1314 15 10.1314C17.6893 10.1314 19.8686 12.3107 19.8686 15C19.8686 17.6893 17.6893 19.8686 15 19.8686Z" fill="#3B3B3B"/>
+                                            <path d="M22.5 9C23.3284 9 24 8.32843 24 7.5C24 6.67157 23.3284 6 22.5 6C21.6716 6 21 6.67157 21 7.5C21 8.32843 21.6716 9 22.5 9Z" fill="#3B3B3B"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_503_6280">
+                                            <rect width="30" height="30" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" class="social__link">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.77823e-06 22.7812C1.77823e-06 23.9527 0.395636 24.9489 1.1869 25.7699C1.97817 26.5909 2.94144 27.001 4.07669 27H25.9233C27.0586 27 28.0218 26.59 28.8131 25.7699C29.6044 24.9499 30 23.9536 30 22.7812V5.78881C30 4.61732 29.6005 3.60964 28.8014 2.76579C28.0023 1.92193 27.043 1.5 25.9233 1.5H4.07669C2.958 1.5 1.99864 1.92193 1.1986 2.76579C0.39856 3.60964 -0.000972691 4.61732 1.77823e-06 5.78881V22.7812ZM10.9116 19.711V8.85898C10.9116 8.74945 10.9438 8.66373 11.0081 8.60183C11.0558 8.58659 11.0958 8.57897 11.1279 8.57897L11.2478 8.60183L21.7034 14.0393C21.7677 14.1021 21.7998 14.1802 21.7998 14.2736C21.7998 14.3364 21.7677 14.3988 21.7034 14.4607L11.2478 19.8982C11.2157 19.9296 11.1835 19.9453 11.1513 19.9453C11.087 19.9453 11.0393 19.9296 11.0081 19.8982C10.9438 19.8353 10.9116 19.7729 10.9116 19.711Z" fill="#3B3B3B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 d-flex flex-column flex-lg-row justify-content-between">
+                        <div class="footer__column">
+                            <div class="footer__title">Popular countries</div>
+                            <ul class="footer__menu footer__menu-column-2">
+                                <li class="footer__menu-item"><a href="#" class="manual-text">United States</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Spain</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">United Kingdom</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">China</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Turkey</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Japan</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">France</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Italy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__title">About us</div>
+                            <ul class="footer__menu">
+                                <li class="footer__menu-item"><a href="about.html" class="manual-text">About Novamobile</a></li>
+                                <li class="footer__menu-item"><a href="contacts.html" class="manual-text">Contact us</a></li>
+                                <li class="footer__menu-item"><a href="blogs.html" class="manual-text">Blog</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Nova for Business</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__title">More info</div>
+                            <ul class="footer__menu">
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Privacy policy</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Terms of service</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Manage cookies</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Supported devices</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Modern slavery policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <div class="col-12 footer__title">Nova careers</div>
+                            <ul class="footer__menu">
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Working at Nova</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Nova Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom d-flex flex-column-reverse flex-lg-row justify-content-between">
+                    <div class="col-12 col-sm-8 col-md-7 col-lg-3 d-flex align-items-center justify-content-between mt-3 mt-lg-0 mx-auto mx-lg-0 gap-10 gap-max-md-0">
+                        <a href="#">
+                            <img src="images/apple_pay.png" alt="apple pay">
+                        </a>
+                        <a href="#">
+                            <img src="images/visa.png" alt="visa">
+                        </a>
+                        <a href="#">
+                            <img src="images/discover.png" alt="discover">
+                        </a>
+                        <a href="#">
+                            <img src="images/master_card.png" alt="master card">
+                        </a>
+                        <a href="#">
+                            <img src="images/paypal.png" alt="paypal">
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-4 manual-text">
+                        © 2024 Novamobile. All rights reserved
+                    </div>
+                </div>
+            </div>
+        </footer>    
+	<!--<script src="js/bootstrap/bootstrap.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/mail_mask.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
