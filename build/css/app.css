@@ -3632,7 +3632,7 @@ select::-ms-expand {
         line-height: 25px; } }
 
 .accountReferal__item {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 20px;
   padding: 30px;
   display: flex;
@@ -3641,6 +3641,9 @@ select::-ms-expand {
 
 .accountReferal__share {
   max-width: 360px; }
+  @media (max-width: 1440px) {
+    .accountReferal__share {
+      max-width: 100%; } }
 
 .accountReferal__howItWorks {
   padding: 30px 20px;
@@ -3681,6 +3684,87 @@ select::-ms-expand {
     display: flex;
     justify-content: center;
     align-items: center; }
+
+.accountReferal .howDo__steps {
+  margin-top: 0;
+  overflow: hidden; }
+  @media (max-width: 992px) {
+    .accountReferal .howDo__steps {
+      gap: 60px; } }
+  .accountReferal .howDo__steps .manual-title {
+    font-size: 18px;
+    line-height: 21px; }
+
+@media (max-width: 992px) {
+  .accountReferal .howDo__steps-item {
+    flex-direction: row-reverse;
+    justify-content: space-between; } }
+
+.accountReferal .howDo__steps-item:first-child .howDo__steps-count::after {
+  content: "";
+  width: 100vw;
+  height: 1px;
+  border: 1px dashed grey;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 48px;
+  z-index: 0;
+  margin: auto; }
+  @media (max-width: 992px) {
+    .accountReferal .howDo__steps-item:first-child .howDo__steps-count::after {
+      transform: rotate(90deg);
+      left: auto;
+      width: 50vh;
+      top: 375px; } }
+
+.accountReferal .howDo__steps-item:last-child .howDo__steps-count::after {
+  content: "";
+  width: 100vw;
+  height: 2px;
+  border: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 48px;
+  z-index: 0;
+  margin: auto;
+  background-color: #fafafa; }
+  @media (max-width: 992px) {
+    .accountReferal .howDo__steps-item:last-child .howDo__steps-count::after {
+      width: 3px;
+      height: 200%;
+      top: 96px;
+      left: auto; } }
+
+.accountReferal .howDo__steps-count {
+  max-width: 48px;
+  min-width: 48px;
+  max-height: 48px;
+  min-height: 48px;
+  font-size: 23.83px;
+  font-weight: 700;
+  line-height: 31.78px;
+  letter-spacing: -0.7944499850273132px;
+  background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+  position: relative; }
+
+.accountReferal .howDo__steps-border {
+  width: 70%;
+  top: 25px;
+  left: 100px;
+  display: none; }
+  @media (max-width: 992px) {
+    .accountReferal .howDo__steps-border {
+      left: -200px;
+      min-width: 450px;
+      max-width: 450px; } }
+
+.accountReferal .howDo__steps-info {
+  margin-top: 20px; }
+  @media (max-width: 992px) {
+    .accountReferal .howDo__steps-info {
+      margin-right: 50px; } }
 
 .footer {
   padding: 60px 0; }
