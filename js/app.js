@@ -13,7 +13,7 @@
 /*!****************************************!*\
   !*** ./assets/js/components/burger.js ***!
   \****************************************/
-/***/ (() => {
+/***/ (() => { 
 
 eval("// window.onload = function() {\n//     $(\".header__burger\").click(function() {\n//         $(\".header__menu_mobile\").slideToggle();\n//         $(this).find(\"img\").toggleClass(\"hide\");\n//     });\n//     $(\".header__menu-item\").on(\"click\", function() {\n//         $(this).parent().find(\".active\").removeClass(\"active\");\n//         $(this).addClass(\"active\");\n//     });\n// };\n\n// $( window ).resize(function() {\n//     if ($(window).width() > 768) {\n\n//     }\n// });\n\n//# sourceURL=webpack://starterkit/./assets/js/components/burger.js?");
 
