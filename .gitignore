@@ -1,0 +1,16 @@
+/config.php
+admin/config.php
+/vendor/*
+
+.osp/
+
+download/
+image/cache/
+system/cache/*
+system/storage/cache/*
+system/storage/session/
+system/logs/
+
+.idea/
+
+.vscode/*
