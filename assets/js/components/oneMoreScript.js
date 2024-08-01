@@ -6,16 +6,13 @@ $(document).ready(function() {
     })
     
     $(".toggle-option").click(function() {
-        
-        
-    });
-    $(".toggle-option").click(function() {
         if($(this).hasClass("active")) {
             return
         } else {
             $(".toggle-switch").toggleClass("right");
             $(".toggle-option").removeClass("active");
             $(this).addClass("active");
+            $(this).parents("[data-tab-target='global']").find(".cards").toggleClass("hidden")
         }
         
     });
@@ -151,6 +148,40 @@ $(document).ready(function() {
                 }
             });
         }
+
+
+
+
+        
+    });
+
+    function updateProgress() {
+        var $rangeInput = $('#range');
+        var $rangeFill = $('.range-fill');
+        var value = (($rangeInput.val() - $rangeInput.attr('min')) / ($rangeInput.attr('max') - $rangeInput.attr('min'))) * 100;
+        $rangeFill.css('--value', value);
+    }
+
+    $('#range').on('input', updateProgress);
+    updateProgress(); // Инициализация при загрузке
+
+    function hideCopied() {
+        $(".succes-copy").removeClass('active');
+    }
+    $('#copy-button').click(function() {
+        var $textToCopy = $('#text-to-copy').val();
+
+        // Create a temporary textarea element to hold the text
+        var $tempTextarea = $('<textarea>').val($textToCopy).appendTo('body');
+
+        // Select the text in the textarea
+        $tempTextarea.select();
+        document.execCommand('copy');
+
+        // Remove the textarea from the document
+        $tempTextarea.remove();
+        $(".succes-copy").addClass('active');
+        setTimeout(hideCopied, 500)
     });
 
 
