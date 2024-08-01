@@ -37,5 +37,35 @@
     }
     &__row {
         margin-top: 20px;
+        @include max-xxxl{
+            flex-direction: column;
+        }
+        
+    }
+    & .map {
+        max-width: 697px;
+        @include max-xxxl{
+            max-width: 100%;
+        }
+        
+    }
+    .table-wrapper {
+        padding-top: 30px;
+        & .manual-title {
+            font-family: 'Telegraf', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 39px;
+            text-align: center;
+            color: #3b3b3b;
+            margin-bottom: 40px;
+            @include max-md{
+                margin-bottom: 30px;
+            }
+            
+        }
+        & td:last-child {
+            color: #00B907;
+        }
     }
 }

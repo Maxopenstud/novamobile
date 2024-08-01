@@ -31,7 +31,7 @@ $(document).ready(function() {
         }
         if (clickCount == 2) {
             $("#form_acc_delete").submit();
-            location.reload();
+            window.location.href = "accountDeleted.html";
         }
         
     })
@@ -101,6 +101,28 @@ $(document).ready(function() {
         $(".cloud").css("transform", "translateY(-200%)");
         
     };
+
+
+
+     //  загрузка изображения объекта
+     const $fileInput = $('#fileInput');
+     const $uploadedImage = $('#uploadedImage');
+ 
+     $fileInput.on('change', function() {
+         const file = this.files[0];
+         if (file) {
+             const reader = new FileReader();
+             reader.onload = function(e) {
+                 $uploadedImage.attr('src', e.target.result);
+                 $uploadedImage.show();
+             };
+             reader.readAsDataURL(file);
+         }
+     });
+
+
+
+
     function showHeader() {
         $(".header").css("transition", "3s");
         $(".header").css("opacity", "1");

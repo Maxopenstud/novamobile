@@ -1,0 +1,19 @@
+#modalChangeAvatar {
+    & .btn-red {
+        max-width: 100%;
+    }
+    & .modal-footer {
+        margin-top: 30px;
+        & #addAvatar {
+            position: relative;
+        }
+        & #fileInput {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+}

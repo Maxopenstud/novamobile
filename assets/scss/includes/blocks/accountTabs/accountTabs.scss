@@ -1,6 +1,7 @@
 .accountTabs {
     border-radius: 40px;
     overflow: hidden;
+    height: 100%;
     &__top {
         padding: 40px 45px;
         background: linear-gradient(94.97deg, #832fbd -23.4%, #d06852 103.02%);
@@ -14,11 +15,15 @@
     }
     &__avatar {
         width: 60px;
+        height: 60px;
         position: relative;
         & button {
             position: absolute;
             right: 0;
             bottom: -10px;
+        }
+        & img {
+            height: 100%;
         }
     }
     &__name {
@@ -36,8 +41,10 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        height: calc(100% - 144px);
         @include max-xl{
             padding: 25px;
+            height: calc(100% - 114px);
         }
         @include max-md{
             padding: 40px 45px;

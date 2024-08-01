@@ -1,0 +1,99 @@
+.accountEsims2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        padding: 20px 30px;
+        border-radius: 20px;
+        @include max-lg{
+            padding: 20px;
+        }
+        @include max-sm{
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        & img {
+            max-width: 50px;
+            min-width: 50px;
+        }
+        &-texts {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        & .manual-title {
+            font-size: 20px;
+            line-height: 22px;
+            @include max-lg{
+                font-size: 18px;
+            }
+            
+        }
+        & .manual-text {
+            font-size: 16px;
+            line-height: 22px;
+            color: #858585;
+        }
+        & .btn-red {
+            height: 40px !important;
+            margin-top: 0;
+            @include max-lg{
+                max-width: 145px;
+            }
+            
+        }
+    }
+
+    &__middle {
+        border-radius: 20px;
+        padding: 30px;
+        @include max-lg{
+            padding: 30px 20px;
+        }
+        
+        & .manual-title {
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 39px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            @include max-lg{
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            width: 100%;
+            max-width: 280px;
+        }
+        & .manual-text {
+            font-weight: 800;
+        }
+        & .range-wrapper {
+            margin-top: -10px;
+        }
+        & .text-small {
+            margin-top: -8px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.accountDeleted {
+    margin-top: 30px;
+    & .btn-dark {
+        max-width: 350px;
+        height: 60px;
+        border-radius: 15px;
+        margin-top: 10px;
+        @include max-lg{
+            font-size: 16px;
+        }
+        
+    }
+    & .manual-title {
+        text-align: center;
+        @include max-lg{
+            font-size: 32px;
+            line-height: 36px;
+        }
+        
+    }
+    & .manual-text {
+        max-width: 60%;
+        text-align: center;
+        @include max-lg{
+            max-width: 100%;
+        }
+        
+    }
+}
