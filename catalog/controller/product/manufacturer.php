@@ -387,4 +387,65 @@ class ControllerProductManufacturer extends Controller {
 			$this->response->setOutput($this->load->view('error/not_found', $data));
 		}
 	}
+
+	public function autocompleteCities() {
+		$cache = $this->cache->get('autocompleteCities.'.$this->request->post['search']) ?? false;
+		
+		if ($cache) {
+			// $this->response->addHeader('Content-Type: application/json');
+			// return $this->response->setOutput($cache);
+		}
+
+		$this->load->model('catalog/manufacturer');
+
+		// filter by countries in store
+		$manufacturers = $this->model_catalog_manufacturer->getManufacturers(['start' => 0, 'limit' => 9999]);
+		$iso_codes = array_column($manufacturers, 'iso_code_2');
+
+		$countrycodes_value = implode(',', $iso_codes);
+
+		$search = $this->request->post['search'] ?? '';
+
+		// response in user language if possible, otherwise in english
+		$language_code = explode('-', $this->config->get('config_language'));
+		$accept_language_value = $language_code[0] . '-' . strtoupper($language_code[1]);
+		if ($this->config->get('config_language') != 'en-gb') {
+			$accept_language_value .= ', en;q=0.9';
+		}
+
+		$base_url = 'https://nominatim.openstreetmap.org/';
+		$search_url = $base_url.'search?q='.$search.'&accept-language='.$accept_language_value.'&countrycodes='.$countrycodes_value.'&format=json&limit=10';
+
+		$ch = curl_init($search_url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, [
+			'Accept-Language: '.$accept_language_value,
+			'Content-Type: application/json',
+		]);
+		$response = curl_exec($ch);
+		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		curl_close($ch);
+
+		$this->log->write($response);
+		$response = json_decode($response, true);
+
+		$json = [];
+
+		$json['debug'] = $response;
+		$json['debug_query'] = $search_url;
+
+		foreach ($response as $city) {
+			$osm_id = strtoupper(substr($city['osm_type'], 0, 1)) . $city['osm_id']; // osm_ids -> https://nominatim.org/release-docs/develop/api/Lookup/
+
+			$json['cities'][] = [
+				'name' => $city['name'],
+				'value' => $osm_id
+			];
+		}
+
+		$this->cache->set('autocompleteCities.'.$this->request->post['search'], json_encode($json));
+
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
+	}
 }

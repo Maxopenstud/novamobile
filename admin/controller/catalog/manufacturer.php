@@ -314,6 +314,8 @@ class ControllerCatalogManufacturer extends Controller {
 			$data['name'] = '';
 		}
 
+		$data['iso_code_2'] = $this->request->post['iso_code_2'] ?? $manufacturer_info['iso_code_2'] ?? '';
+
 		$this->load->model('setting/store');
 
 		$data['stores'] = array();
@@ -394,6 +396,10 @@ class ControllerCatalogManufacturer extends Controller {
 
 		if ((utf8_strlen($this->request->post['name']) < 1) || (utf8_strlen($this->request->post['name']) > 64)) {
 			$this->error['name'] = $this->language->get('error_name');
+		}
+
+		if (empty($this->request->post['iso_code_2'])) {
+			$this->error['iso_code_2'] = _e("Fill the field!");
 		}
 
 		if ($this->request->post['manufacturer_seo_url']) {

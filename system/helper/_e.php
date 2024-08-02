@@ -29,8 +29,11 @@ function _e($str){
 
 	$route = $_SERVER['route'] ?? 'common/home';
 	
-	$path_controller = str_replace($theme.'/template/','',$route);
-		$path_controller = str_replace('default/template/','',$path_controller);
+	// $path_controller = str_replace($theme.'/template/','',$route);
+	// $path_controller = str_replace('default/template/','',$path_controller);
+	
+	$path_controller = '_e-local';
+
 	if(file_exists($path.'language/'.$lang.'/'.$path_controller.'.php')){
 	require($path.'language/'.$lang.'/'.$path_controller.'.php');
 	}   else{

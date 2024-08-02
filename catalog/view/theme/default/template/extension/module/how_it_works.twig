@@ -1,0 +1,27 @@
+<section class="section howItWorks">
+    <div class="container">
+        <div class="sectionTitle">{{title}}</div>
+        <div class="section__content d-flex justify-content-between">
+            <div class="col-5 desktop-lg howItWorks__img">
+                <div class="device">
+                    <img src="{{contour_image}}" alt="phone" class="device_contur">
+                    <div class="device__screens">
+                        {% for image in images %}
+                            <img src="{{image}}" alt="phone" class="device__screen">
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="steps">
+                    {% for step in steps %}
+                        <div class="steps__item steps__item{{loop.index}}">
+                            <div class="steps__title">{{step.title}}</div>
+                            <div class="steps__desc">{{step.subtitle}}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

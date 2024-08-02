@@ -1,0 +1,15 @@
+<section class="section whyChooseUs">
+    <div class="container">
+        <div class="sectionTitle">{{title}}</div>
+        <div class="manual-text text-center">{{description}}</div>
+        <div class="d-flex mt-50 mt-max-md-30 flex-wrap row-gap-30 g-md-0">
+            {% for row in rows %}
+            <div class="col-12 col-md-6 col-xxl-3 whyChooseUs__item">
+                    <img src="{{row.image}}" width="30" height="30" alt="" srcset="">
+                    <div class="manual-title text-center mt-15">{{row.title}}</div>
+                    <div class="manual-text text-center mt-10 mt-max-md-8">{{row.subtitle}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

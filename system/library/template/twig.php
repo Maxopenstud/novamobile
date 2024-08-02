@@ -28,7 +28,18 @@ final class Twig {
 		);
 
 		try {
-			$loader = new \Twig\Loader\ArrayLoader(array($filename . '.twig' => $code));
+			if (defined('DIR_CATALOG')) {
+				$dir = 'components';
+			} else {
+				$dir = 'default/template/components';
+			}
+			
+			is_dir(DIR_TEMPLATE . $dir) or mkdir(DIR_TEMPLATE . $dir, 0777);
+			$components_loader = new \Twig\Loader\FilesystemLoader(DIR_TEMPLATE . $dir);
+
+			$array_loader = new \Twig\Loader\ArrayLoader(array($filename . '.twig' => $code));
+
+			$loader = new \Twig\Loader\ChainLoader(array($components_loader, $array_loader));
 
 			$twig = new \Twig\Environment($loader, $config);
 

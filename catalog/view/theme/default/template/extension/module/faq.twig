@@ -1,0 +1,18 @@
+<section class="section faq">
+    <div class="container">
+        <div class="sectionTitle">{{title}}</div>
+        <div class="row justify-content-between">
+            <div class="col-12 col-lg-5">
+                <img src="{{image}}" alt="">
+            </div>
+            <div class="col-12 col-lg-7 d-flex flex-column gap-20 mt-max-lg-30 ps-lg-5">
+                {% for row in rows %}
+                    <div class="faq__item">
+                        <div class="manual-title">{{row.title}}</div>
+                        <div class="manual-text">{{row.desc}}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

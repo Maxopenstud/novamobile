@@ -3,42 +3,68 @@ class ControllerCommonMenu extends Controller {
 	public function index() {
 		$this->load->language('common/menu');
 
-		// Menu
-		$this->load->model('catalog/category');
+		$language_id = $this->config->get('config_language_id');
+		$this->request->get['route'] = $this->request->get['route'] ?? 'common/home';
+		
+		$data['logo'] = 'image/'. $this->config->get('config_logo');
 
-		$this->load->model('catalog/product');
+		$data['links'][] = [
+			'text' => _e("Home"),
+			'href' => $this->url->link('common/home'),
+			'is_active' => $this->request->get['route'] == 'common/home'
+		];
 
-		$data['categories'] = array();
+		$data['links'][] = [
+			'text' => _e("Store"),
+			'href' => $this->url->link('product/category'),
+			'is_active' => $this->request->get['route'] == 'product/category'
+		];
 
-		$categories = $this->model_catalog_category->getCategories(0);
+		$informations = $this->load->controller('custom/setting/getValue', array(
+			'section' => 'menu', // Unique section identifier
+			'setting' => 'menu_informations', // Unique field identifier
+			'page' => 'setting' // Form code in the admin panel
+		)) ?? [];
 
-		foreach ($categories as $category) {
-			if ($category['top']) {
-				// Level 2
-				$children_data = array();
+		$this->load->model('catalog/information');
 
-				$children = $this->model_catalog_category->getCategories($category['category_id']);
+		foreach ($informations as $information) {
+			$information_info = $this->model_catalog_information->getInformation($information['value']);
 
-				foreach ($children as $child) {
-					$filter_data = array(
-						'filter_category_id'  => $child['category_id'],
-						'filter_sub_category' => true
-					);
+			$data['links'][] = [
+				'text' => $information_info['title'],
+				'href' => $this->url->link('information/information', 'information_id=' . $information_info['information_id']),
+				'is_active' => $this->request->get['route'] == 'information/information' && $information_info['information_id'] == $this->request->get['information_id']
+			];
+		}
 
-					$children_data[] = array(
-						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
-					);
-				}
+		$custom_links = $this->load->controller('custom/setting/getValue', array(
+			'section' => 'menu', // Unique section identifier
+			'setting' => 'menu_custom_links', // Unique field identifier
+			'page' => 'setting' // Form code in the admin panel
+		)) ?? [];
 
-				// Level 1
-				$data['categories'][] = array(
-					'name'     => $category['name'],
-					'children' => $children_data,
-					'column'   => $category['column'] ? $category['column'] : 1,
-					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
-				);
-			}
+		foreach ($custom_links as $block) {
+			$title = $block['menu_text'][$language_id];
+			$link = $block['menu_link'][$language_id];
+			$is_active = $_SERVER['REQUEST_URI'] === $link; 
+
+			$data['links'][] = [
+				'text' => $title,
+				'href' => $link,
+				'is_active' => $is_active
+			];
+		}
+
+		$data['social_links'] = $this->load->controller('components/render/social_links');
+
+		$data['catalog_link'] = $this->url->link('product/category');
+		$data['home_link'] = $this->url->link('common/home');
+		
+		if ($this->customer->isLogged()) {
+			$data['account'] = $this->url->link('account/account', '', true);
+		} else {
+			$data['account'] = $this->url->link('account/login', '', true);
 		}
 
 		return $this->load->view('common/menu', $data);

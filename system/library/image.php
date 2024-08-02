@@ -34,8 +34,8 @@ class Image {
 
 			$info = getimagesize($file);
 
-			$this->width  = $info[0];
-			$this->height = $info[1];
+			$this->width  = $info[0] ?? 0;
+			$this->height = $info[1] ?? 0;
 			$this->bits = isset($info['bits']) ? $info['bits'] : '';
 			$this->mime = isset($info['mime']) ? $info['mime'] : '';
 

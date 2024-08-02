@@ -1,14 +1,280 @@
 {{ header }}
-<div id="common-home" class="container">
-  <div class="row">{{ column_left }}
-    {% if column_left and column_right %}
-    {% set class = 'col-sm-6' %}
-    {% elseif column_left or column_right %}
-    {% set class = 'col-sm-9' %}
-    {% else %}
-    {% set class = 'col-sm-12' %}
-    {% endif %}
-    <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
-    {{ column_right }}</div>
+<main class="main" style="background-image: url('{{background_image}}')">
+    <img class="cloud" src="{{animation_image}}" alt="">
+
+    {{menu}}
+    <div class="container">
+        <div class="hero">
+            <div class="d-flex flex-column gap-30 gap-max-xl-20">
+                <h1>We <span>connect</span> the world</h1>
+                <div class="col-12 col-lg-5 hero__description">
+                    With Nova's eSIM, enjoy internet connection on every adventure and forget about expensive
+                </div>
+                <div class="col-12 col-lg-5 col-xl-4 search">
+                    <input class="form-control" list="citiesDataList" id="citiesDataListAutocomplete"
+                        placeholder="Search data plans for 200+ Destinations">
+                    <datalist id="citiesDataList">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                    </datalist>
+                    <button>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.8395 15.4605L13.1641 11.7852C14.0489 10.6072 14.5266 9.17331 14.525 7.7C14.525 3.93672 11.4633 0.875 7.7 0.875C3.93672 0.875 0.875 3.93672 0.875 7.7C0.875 11.4633 3.93672 14.525 7.7 14.525C9.17331 14.5266 10.6072 14.0489 11.7852 13.1641L15.4605 16.8395C15.6466 17.0058 15.8893 17.0945 16.1387 17.0876C16.3881 17.0806 16.6255 16.9784 16.8019 16.8019C16.9784 16.6255 17.0806 16.3881 17.0876 16.1387C17.0945 15.8893 17.0058 15.6466 16.8395 15.4605ZM2.825 7.7C2.825 6.73582 3.11091 5.79328 3.64659 4.9916C4.18226 4.18991 4.94363 3.56506 5.83442 3.19609C6.72521 2.82711 7.70541 2.73057 8.65107 2.91867C9.59672 3.10677 10.4654 3.57107 11.1471 4.25285C11.8289 4.93464 12.2932 5.80328 12.4813 6.74893C12.6694 7.69459 12.5729 8.67479 12.2039 9.56558C11.8349 10.4564 11.2101 11.2177 10.4084 11.7534C9.60672 12.2891 8.66418 12.575 7.7 12.575C6.40755 12.5734 5.16847 12.0593 4.25457 11.1454C3.34066 10.2315 2.82655 8.99245 2.825 7.7Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-5 col-xl-4 apps-for-download">
+                <a href="#">
+                    <img src="images/appstore.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="images/googleplay.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+{{column_left}}
+{{column_right}}
+<div class="content">
+    {{content_top}}
+
+    <section class="tabs">
+        <div class="container">
+            <div class="tabs__buttons">
+                <div class="col-12 col-xl-7 mx-auto d-flex justify-content-between tabs__border left">
+                    <div class="text active" data-tab="local">Local <span class="desktop">eSIMs</span></div>
+                    <div class="text" data-tab="regional">Regional <span class="desktop">eSIMs</span></div>
+                    <div class="text" data-tab="global">Global <span class="desktop">eSIMs</span></div>
+                    <div class="tabs__active-border"></div>
+                </div>
+            </div>
+            <div class="hidden" data-tab-target="global">
+                <div class="toggle-button">
+                    <div class="toggle-switch">
+                        {% for category in sub_categories %}
+                            <div class="toggle-option {% if loop.index0 == 0 %}active{% endif %}" data-option="{{category.name|lower|replace({' ': '-'}) }}">{{category.name}}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% for category in sub_categories  %}
+                    <div class="cards {% if loop.index0 != 0 %}hidden{% endif %}">
+                        {% for esim in category.products %}
+                            {% include "esim_card.twig" with {'esim': esim} %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="cards hidden" data-tab-target="regional">
+                {% for region in categories %}
+                    <a href="{{region.href}}" class="card card-label">
+                        <div class="d-flex align-items-center justify-content-between gap-20">
+                            <div class="d-flex align-items-center gap-20">
+                                <img style="width: 40px;" src="{{region.image}}" alt="" srcset="">
+                                <span class="tab-label-text">{{region.name}}</span>
+                            </div>
+                            <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.521552 14.8086C0.304146 14.4981 0.224532 14.1779 0.282708 13.848C0.340884 13.518 0.525216 13.2444 0.835704 13.027L13.5269 4.14049L5.52696 2.62783C5.05342 2.61237 4.7254 2.35041 4.5429 1.84196C4.3604 1.33352 4.42244 0.885197 4.72902 0.497008C5.03561 0.108818 5.45285 -0.0387367 5.98074 0.054346L17.0665 2.00907C17.4624 2.07888 17.7691 2.26903 17.9865 2.57952C18.2039 2.89 18.2777 3.24321 18.2079 3.63913L16.2532 14.7249C16.1833 15.1208 15.9932 15.4275 15.6827 15.6449C15.3722 15.8623 15.0384 15.9225 14.6813 15.8255C14.3242 15.7285 14.0369 15.5248 13.8195 15.2143C13.6021 14.9038 13.5555 14.5894 13.6797 14.2711L14.9944 6.23628L2.30319 15.1227C1.99271 15.3401 1.67249 15.4198 1.34256 15.3616C1.01263 15.3034 0.738958 15.1191 0.521552 14.8086Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="cards" data-tab-target="local">
+                {% for country in manufacturers %}
+                    <a href="{{country.href}}" class="card card-label">
+                        <div class="d-flex align-items-center justify-content-between gap-20">
+                            <div class="d-flex align-items-center gap-20">
+                                <img src="{{country.image}}" alt="" srcset="">
+                                <span class="tab-label-text">{{country.name}}</span>
+                            </div>
+                            <svg width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.521552 14.8086C0.304146 14.4981 0.224532 14.1779 0.282708 13.848C0.340884 13.518 0.525216 13.2444 0.835704 13.027L13.5269 4.14049L5.52696 2.62783C5.05342 2.61237 4.7254 2.35041 4.5429 1.84196C4.3604 1.33352 4.42244 0.885197 4.72902 0.497008C5.03561 0.108818 5.45285 -0.0387367 5.98074 0.054346L17.0665 2.00907C17.4624 2.07888 17.7691 2.26903 17.9865 2.57952C18.2039 2.89 18.2777 3.24321 18.2079 3.63913L16.2532 14.7249C16.1833 15.1208 15.9932 15.4275 15.6827 15.6449C15.3722 15.8623 15.0384 15.9225 14.6813 15.8255C14.3242 15.7285 14.0369 15.5248 13.8195 15.2143C13.6021 14.9038 13.5555 14.5894 13.6797 14.2711L14.9944 6.23628L2.30319 15.1227C1.99271 15.3401 1.67249 15.4198 1.34256 15.3616C1.01263 15.3034 0.738958 15.1191 0.521552 14.8086Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {{content_bottom}}
+    <section class="section blog-slider">
+        <div class="container">
+            <div class="sectionTitle">Blog</div>
+            <div class="cascade-slider_container" id="cascade-slider">
+                <div class="cascade-slider_slides">
+                    <div class="cascade-slider_item">
+                        <a href="article.html" class="cascade-slider_link"></a>
+                        <div class="swiper-slide blogSlider__item"
+                            style="background: url(images/slider_bg_1.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                            <div class="slide__non-active">
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                            </div>
+                            <div class="slide-active">
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                                <div class="slider__desc manual-text">Planning a trip to Fiji? Getting a Fiji
+                                    eSIM is one of the easiest and most affordable ways to stay connected during
+                                    your trip. 
+                                    With an eSIM from Airalo, you can download a data plan, install the eSIM on your
+                                    device, and connect to a mobile network upon arrival. The best part? You can do
+                                    it all from your smartphone!</div>
+                                <button class="btn btn-white">Read more
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z"
+                                            fill="black" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cascade-slider_item">
+                        <a href="article.html" class="cascade-slider_link"></a>
+                        <div class="swiper-slide  blogSlider__item"
+                            style="background: url(images/slider_bg_1.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                            <div class="slide__non-active">
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                            </div>
+                            <div class="slide-active">
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                                <div class="slider__desc manual-text">Our design team revolutionizes UX/Ul by
+                                    integrating the most innovative approaches to HCI, utility, egronomics, system
+                                    performance through discovering human factors of your target segment.</div>
+                                <button class="btn btn-white">Read more
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z"
+                                            fill="black" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cascade-slider_item">
+                        <a href="article.html" class="cascade-slider_link"></a>
+                        <div class="swiper-slide  blogSlider__item"
+                            style="background: url(images/slider_bg_1.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                            <div class="slide__non-active">
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel </h3>
+                            </div>
+                            <div class="slide-active">
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                                <div class="slider__desc manual-text">
+                                    We deploy leading tools to prototype and implement hybrid (iOS and Android)
+                                    mobile applications bringing top-notch user experience through mobile
+                                    technologies.</div>
+                                <button class="btn btn-white">Read more
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z"
+                                            fill="black" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cascade-slider_item">
+                        <a href="article.html" class="cascade-slider_link"></a>
+                        <div class="swiper-slide  blogSlider__item"
+                            style="background: url(images/slider_bg_1.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                            <div class="slide__non-active">
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                            </div>
+                            <div class="slide-active">
+                                <h3 class="slider__title blogSlider__title">Best Fiji eSIM For Travel</h3>
+                                <div class="slider__desc manual-text">
+                                    A compelling vision drives our commitment to the game industry. Our team,
+                                    experienced in Unity and Unreal Engine, blends commercial success, technical
+                                    expertise, and cutting-edge game engine technologies to deliver a uniquely
+                                    efficient product, ensuring your business stands out in the competitive market.
+                                </div>
+                                <button class="btn btn-white">Read more
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z"
+                                            fill="black" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ol class="cascade-slider_nav ">
+                    <li class="cascade-slider_dot  cur"></li>
+                    <li class="cascade-slider_dot"></li>
+                    <li class="cascade-slider_dot"></li>
+                    <li class="cascade-slider_dot"></li>
+                </ol>
+
+                <button class="cascade-slider_arrow cascade-slider_arrow-left" data-action="prev">
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.12155 7.49999H19.0002V10.5H6.12155L11.0609 15.4393L8.93957 17.5606L0.378906 8.99999L8.93957 0.439331L11.0609 2.56065L6.12155 7.49999Z"
+                            fill="#121212" />
+                    </svg>
+                </button>
+                <button class="cascade-slider_arrow cascade-slider_arrow-right" data-action="next">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.4775 10.557H0.923828V7.443H13.4775L8.66282 2.31595L10.7306 0.114014L19.0752 9L10.7306 17.886L8.66282 15.6841L13.4775 10.557Z"
+                            fill="#121212" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
 </div>
+
+<script>
+function updateCities() {
+    let searchQuery = $('#citiesDataListAutocomplete').val();
+
+    $.ajax({
+        type: "post",
+        url: "index.php?route=product/manufacturer/autocompleteCities",
+        data: {
+            search: searchQuery
+        },
+        dataType: "json",
+        success: function (response) {
+            if (response.cities) {
+                $('#citiesDataList').html('');
+                response.cities.map(function (city) {
+                    $('#citiesDataList').append(`<option data-id="${city.value}" value="${city.name}"></option>`)
+                })
+            }
+        }
+    });
+}
+
+// $(document).ready(function () {
+//     $('#citiesDataListAutocomplete').keyup(function(e) {
+//         updateCities();
+//     })
+// });
+</script>
 {{ footer }}

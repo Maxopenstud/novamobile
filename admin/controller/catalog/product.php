@@ -783,6 +783,9 @@ class ControllerCatalogProduct extends Controller {
 			$data['status'] = true;
 		}
 
+		$data['data'] = $this->request->post['data'] ?? $product_info['data'] ?? 0;
+		$data['validity'] = $this->request->post['validity'] ?? $product_info['validity'] ?? 0;
+
 		if (isset($this->request->post['weight'])) {
 			$data['weight'] = $this->request->post['weight'];
 		} elseif (!empty($product_info)) {
@@ -1188,6 +1191,10 @@ class ControllerCatalogProduct extends Controller {
 
 		if ((utf8_strlen($this->request->post['model']) < 1) || (utf8_strlen($this->request->post['model']) > 64)) {
 			$this->error['model'] = $this->language->get('error_model');
+		}
+
+		if (!is_numeric($this->request->post['validity']) || ($this->request->post['validity'] <= 0)) {
+			$this->error['validity'] = _e("Invalid validity");
 		}
 
 		if ($this->request->post['product_seo_url']) {
