@@ -16,6 +16,20 @@ $(document).ready(function() {
         }
         
     });
+    var toggler_switch_width = 100 / $(".toggler-tab").length + "%";
+    $(".toggler-switch").css("width", toggler_switch_width);
+
+    $(".toggler-tab").click(function() {
+        
+        $(".toggler-tab").removeClass("active");
+        $(this).addClass("active");
+        let index = $(this).index();
+        var $toggler_switch = $('.toggler-switch');
+        var translate_value = index * 100 + '%';
+        $toggler_switch.css('--transform-translateX', translate_value);
+        
+    });
+
     var clickCount = 0
     $("#acc_delete").click(function(e) {
         
@@ -55,6 +69,11 @@ $(document).ready(function() {
         $("[data-tab-target='" + data_tab + "']").removeClass("hidden")
         $(this).parent().find("[data-tab]").removeClass("active")
         $(this).addClass("active")
+    });
+    $("[data-tab2]").click(function() {
+        let data_tab2 = $(this).attr("data-tab2");
+        $("[data-tab-target2]").addClass("hidden")
+        $("[data-tab-target2='" + data_tab2 + "']").removeClass("hidden")
     });
 
     $(".accountTabs__menu-item").click(function(e) {

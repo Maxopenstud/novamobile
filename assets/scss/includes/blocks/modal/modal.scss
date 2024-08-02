@@ -44,7 +44,6 @@
 
             &:not(:first-child) {
                 margin-left: 33px;
-                
             }
             &::before {
                 content: "";
@@ -75,11 +74,38 @@
     }
     &-title {
         margin: 25px 0;
-        font-family: 'Telegraf', sans-serif;
+        font-family: "Telegraf", sans-serif;
         font-size: 22px;
         font-weight: 800;
-        line-height: 15px;
+        line-height: 30px;
         text-align: center;
+    }
+    &__slider {
+        position: relative;
+    }
+    & .search {
+        border-radius: 15px;
+        overflow: hidden;
+        & input {
+            border-radius: 15px;
+            background: #f4f4f4;
+            border: none;
+            &::placeholder {
+                font-family: 'Telegraf', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16.96px;
+                text-align: left;
+                color: #ababab;
+            }
+        }
+        & button {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 22px;
+            margin: auto;
+        }
     }
 }
 #modalAccDelete .reason-item:not(:first-child) {

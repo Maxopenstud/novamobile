@@ -35,6 +35,45 @@ $(document).ready(function() {
 //       }
 //   }
 // })
+function loaderRemove() {
+  $(".loader").addClass("hidden");
+}
+    $(document).on('click', '#chooseTariff', function(e) {
+      $(".modal__slider").removeClass("hidden");
+      if ($('.accountCards').hasClass('slick-initialized')) {
+        $('.accountCards').slick('unslick');
+
+        $('.accountCards').slick({
+          slidesToShow: 2,
+          dots: true,
+          adaptiveHeight: true,
+          responsive: [
+            {
+              breakpoint: 1301,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 993,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      }
+      $('.accountCards').slick('slickNext');
+
+      $(".slick-arrow").text("");
+      setTimeout(loaderRemove, 750)
+    })
     $(document).on('click', '.accountTabs__menu-item', function(e) {
       if ($(e.target).attr('data-tab') === 'esims') {
         $('.accountCards').slick({

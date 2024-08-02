@@ -5,17 +5,17 @@
     &__top {
         display: flex;
         justify-content: space-between;
-        align-items: center;  
+        align-items: center;
         padding: 20px 30px;
         border-radius: 20px;
-        @include max-lg{
+        @include max-lg {
             padding: 20px;
         }
-        @include max-sm{
+        @include max-sm {
             flex-direction: column;
             gap: 30px;
         }
-        
+
         &-left {
             display: flex;
             align-items: center;
@@ -33,10 +33,9 @@
         & .manual-title {
             font-size: 20px;
             line-height: 22px;
-            @include max-lg{
+            @include max-lg {
                 font-size: 18px;
             }
-            
         }
         & .manual-text {
             font-size: 16px;
@@ -46,20 +45,19 @@
         & .btn-red {
             height: 40px !important;
             margin-top: 0;
-            @include max-lg{
+            @include max-lg {
                 max-width: 145px;
             }
-            
         }
     }
 
     &__middle {
         border-radius: 20px;
         padding: 30px;
-        @include max-lg{
+        @include max-lg {
             padding: 30px 20px;
         }
-        
+
         & .manual-title {
             font-size: 22px;
             font-weight: 800;
@@ -72,11 +70,10 @@
             justify-content: space-between;
             align-items: center;
             gap: 20px;
-            @include max-lg{
+            @include max-lg {
                 flex-direction: column;
                 gap: 30px;
             }
-            
         }
         &-item {
             display: flex;
@@ -95,5 +92,91 @@
         & .text-small {
             margin-top: -8px;
         }
+    }
+    &__balance {
+        max-width: 240px;
+        width: 100%;
+        padding: 30px;
+        @media (max-width: 1400px) {
+            max-width: 100%;
+        }
+        @include max-xl{
+            padding: 30px 20px;
+        }
+        
+        & .btn {
+            width: max-content;
+            padding: 0 40px;
+            margin: auto;
+        }
+    }
+    &__bottom {
+        & .manual-title {
+            font-family: "Telegraf", sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 39px;
+            text-align: center;
+            color: #3b3b3b;
+        }
+        & .manual-text {
+            font-family: "Telegraf", sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 22px;
+            color: #000;
+            text-align: center;
+            margin: 25px 0;
+        }
+    }
+    &__promo {
+        padding: 30px;
+        @include max-lg{
+            padding: 30px 20px;
+        }
+        
+    }
+}
+.promo {
+    &-items {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        gap: 30px;
+        @include max-xl{
+            gap: 20px;
+        }
+        @include max-lg{
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+    }
+    &-item {
+        max-width: 250px;
+        width: 100%;
+        border-radius: 15px;
+        background: linear-gradient(98.41deg, #832FBD -16.52%, #D06852 113.01%);
+        padding: 15px 10px;
+        @include max-lg{
+            max-width: 100%;
+        }
+        
+    }
+    &-title {
+        font-family: "Telegraf", sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    & .btn {
+        font-weight: 500;
+        line-height: 18px;
+        color: #000;
+        max-width: 180px;
+        margin: auto;
     }
 }

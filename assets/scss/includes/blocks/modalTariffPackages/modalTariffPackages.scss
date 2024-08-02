@@ -1,0 +1,120 @@
+#modalTariffPackages {
+    & .modal-dialog {
+        max-width: 1315px;
+    }
+    & .modal-content {
+        padding: 0;
+        overflow: hidden;
+    }
+    & .modal-left {
+        // width: 100%;
+        width: calc(100% - 450px);
+        padding: 50px 60px;
+        @include max-xl{
+            padding: 40px 30px;
+            width: calc(100% - 310px);
+        }
+        @include max-lg{
+            width: 100%;
+        }
+        
+    }
+    & .accountCards {
+        margin-top: 40px;
+        width: 100%;
+        & .card {
+            background-color: #fafafa;
+        }
+        & .slick-dots li.slick-active {
+            background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+        }
+        & .card__info {
+            margin-bottom: 0;
+            &::before {
+                top: -35px;
+            }
+        }
+    }
+    & .modal-right {
+        padding: 35px 50px;
+        background: linear-gradient(71.9deg, #832fbd -46.11%, #d06852 101.06%);
+        @include max-xl{
+            padding: 40px 30px;
+        }
+        @include max-md{
+            padding: 35px 20px;
+        }
+        
+        &-title {
+            font-family: "Telegraf", sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 22px;
+            text-align: left;
+            color: #fff;
+            margin-bottom: 20px;
+            
+        }
+        &-img {
+            max-width: 350px;
+            @include max-xl{
+                max-width: 250px;
+            }
+            
+        }
+        & .card__info {
+            margin: 40px 0;
+            &::before {
+                display: none;
+            }
+            & .card__text,
+            .card__price {
+                color: #fff;
+            }
+            & svg path {
+                fill: #fff;
+            }
+        }
+        & .btn-white {
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+}
+[data-tab-target2="supported-contries"] {
+    & .cards {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-height: 300px;
+        overflow: auto;
+        gap: 25px;
+        padding: 10px;
+    }
+    & .card {
+        padding: 14px 20px;
+        border-radius: 15px;
+        background-color: #fafafa;
+    }
+}
+
+[data-tab-target2="additional-information"] {
+    & .manual-title {
+        font-family: "Telegraf", sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 14px;
+        text-align: left;
+        color: #3b3b3b;
+    }
+    & .manual-text {
+        font-family: "Telegraf", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        color: #4a4a4a;
+    }
+}

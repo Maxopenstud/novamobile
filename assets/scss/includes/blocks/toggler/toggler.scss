@@ -1,0 +1,64 @@
+.toggler {
+    height: 60px;
+    border: 1px solid transparent;
+    border-image-slice: 1;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+    @include max-xl{
+        padding: 0 30px;
+    }
+    @include max-sm{
+        flex-direction: column;
+    }
+    
+    &-switch {
+        background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+        border-radius: 25px;
+        position: absolute;
+        height: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        transform: translateX(var(--transform-translateX, 0px));
+        z-index: 6;
+        transition: 0.5s;
+    }
+    &::after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        display: block;
+        z-index: 5;
+    }
+    &-tab {
+        background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 7;
+        font-family: 'Gilroy';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.83px;
+        text-align: center;
+        cursor: pointer;
+        @include max-lg{
+            font-size: 16px;
+            line-height: 20px;
+        }
+        
+        &.active {
+            -webkit-text-fill-color: #fff !important;
+        }
+    }
+}

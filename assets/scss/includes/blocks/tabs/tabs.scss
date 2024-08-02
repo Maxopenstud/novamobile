@@ -138,7 +138,7 @@
 
 .toggle-option.active {
     // -webkit-background-clip: text;
-    -webkit-text-fill-color: #fff;
+    -webkit-text-fill-color: #fff !important;
 }
 .toggle-option[data-option="explore"].active {
     // background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);

@@ -138,6 +138,9 @@ img {
 .fw-600 {
 	font-weight: 600 !important;
 }
+.fw-700 {
+	font-weight: 700 !important;
+}
 h1 {
 	font-family: "Telegraf", sans-serif;
 	font-size: 56px;
@@ -245,14 +248,7 @@ button {
 		-webkit-text-fill-color: transparent;
 	}
 }
-.text-small {
-	font-family: "Telegraf", sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 12px;
-	text-align: center;
-	color: #858585;
-}
+
 .input-range {
 	border-radius: 30px;
 	height: 6px;
@@ -391,6 +387,9 @@ input[type="range"]::-ms-track {
 }
 .h-48 {
 	height: 48px;
+}
+.h-60 {
+	height: 60px;
 }
 .owl-stage-outer {
 	overflow: hidden;
@@ -610,6 +609,9 @@ input[type="range"]::-ms-track {
 	.mt-max-lg-0 {
 		margin-top: 0px;
 	}
+	.mt-max-lg-10 {
+		margin-top: 10px;
+	}
 	.mt-max-lg-20 {
 		margin-top: 20px;
 	}
@@ -721,6 +723,14 @@ input[type="range"]::-ms-track {
 		padding: 30px 0;
 	}
 }
+.text-small {
+	font-family: "Telegraf", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 12px;
+	text-align: center;
+	color: #858585;
+}
 .text {
 	font-size: 16px;
 	font-family: "Telegraf", sans-serif;
@@ -752,6 +762,19 @@ input[type="range"]::-ms-track {
 	.manual-title {
 		font-size: 18px;
 		line-height: 24px;
+	}
+}
+.text-white {
+	color: #fff;
+}
+.back {
+	display: flex;
+	gap: 12px;
+	width: max-content;
+	&:hover {
+		background: linear-gradient(90.81deg, #832fbd 9.1%, #d06852 55.89%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }
 .radius-20 {
@@ -989,6 +1012,7 @@ select::-ms-expand {
 	pointer-events: none !important;
 	margin: 0 !important;
 	padding: 0 !important;
+	position: absolute;
 }
 [data-tab-target] {
 	opacity: 1 !important;
@@ -996,6 +1020,7 @@ select::-ms-expand {
 	pointer-events: all !important;
 	transition: 0.5s;
 }
+[data-tab-target2].hidden,
 [data-tab-target].hidden {
 	opacity: 0 !important;
 	visibility: hidden !important;
@@ -1070,5 +1095,20 @@ select::-ms-expand {
 		height: 24px;
 		background-size: contain;
 		background-repeat: no-repeat;
+	}
+}
+.loader {
+	position: absolute;
+    top: 0;
+    left: -25px;
+    width: 108%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	& svg {
+		width: 150px;
+    	height: 150px;
 	}
 }
