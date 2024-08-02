@@ -142,6 +142,9 @@ img {
 .fw-600 {
   font-weight: 600 !important; }
 
+.fw-700 {
+  font-weight: 700 !important; }
+
 h1 {
   font-family: "Telegraf", sans-serif;
   font-size: 56px;
@@ -236,14 +239,10 @@ button {
   line-height: 26px;
   text-align: center;
   color: #000; }
-
-.text-small {
-  font-family: 'Telegraf', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 12px;
-  text-align: center;
-  color: #858585; }
+  .text-bold span {
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 .input-range {
   border-radius: 30px;
@@ -256,7 +255,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #4CAF50;
+  background: #4caf50;
   cursor: pointer;
   border-radius: 50%;
   display: none; }
@@ -264,7 +263,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #4CAF50;
+  background: #4caf50;
   cursor: pointer;
   border-radius: 50%;
   display: none; }
@@ -272,7 +271,7 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]::-ms-thumb {
   width: 20px;
   height: 20px;
-  background: #4CAF50;
+  background: #4caf50;
   cursor: pointer;
   border-radius: 50%;
   display: none; }
@@ -280,13 +279,13 @@ input[type="range"]::-ms-thumb {
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 8px;
-  background: #EAEAEA;
+  background: #eaeaea;
   border-radius: 5px; }
 
 input[type="range"]::-moz-range-track {
   width: 100%;
   height: 6px;
-  background: #EAEAEA;
+  background: #eaeaea;
   border-radius: 5px; }
 
 .range-wrapper {
@@ -300,7 +299,7 @@ input[type="range"]::-moz-range-track {
   bottom: 0;
   margin: auto;
   height: 7px;
-  background: linear-gradient(90.06deg, #832FBD -5.31%, #D06852 105.31%);
+  background: linear-gradient(90.06deg, #832fbd -5.31%, #d06852 105.31%);
   border-radius: 5px;
   z-index: 6;
   width: calc(var(--value) * 1%);
@@ -368,8 +367,14 @@ input[type="range"]::-ms-track {
     .container {
       padding: 0 20px !important; } }
 
+.h-40 {
+  height: 40px; }
+
 .h-48 {
   height: 48px; }
+
+.h-60 {
+  height: 60px; }
 
 .owl-stage-outer {
   overflow: hidden; }
@@ -469,6 +474,12 @@ input[type="range"]::-ms-track {
   bottom: 0;
   margin: auto; }
 
+.gap-8 {
+  gap: 8px; }
+
+.gap-16 {
+  gap: 16px; }
+
 .gap-10 {
   gap: 10px; }
 
@@ -564,6 +575,8 @@ input[type="range"]::-ms-track {
 @media (max-width: 992px) {
   .mt-max-lg-0 {
     margin-top: 0px; }
+  .mt-max-lg-10 {
+    margin-top: 10px; }
   .mt-max-lg-20 {
     margin-top: 20px; }
   .mt-max-lg-30 {
@@ -574,6 +587,46 @@ input[type="range"]::-ms-track {
     padding-right: 0; }
   .pb-max-lg-40 {
     padding-bottom: 40px; } }
+
+.table-wrapper {
+  background-color: #fafafa;
+  border-radius: 40px;
+  padding: 60px 40px;
+  height: 100%;
+  max-height: 580px;
+  overflow: auto; }
+  @media (max-width: 1200px) {
+    .table-wrapper {
+      padding: 30px 30px 10px;
+      max-height: 538px; } }
+  @media (max-width: 768px) {
+    .table-wrapper {
+      overflow: auto; } }
+  @media (max-width: 768px) {
+    .table-wrapper table {
+      width: 600px; } }
+  .table-wrapper th,
+  .table-wrapper td {
+    font-family: "Telegraf", sans-serif;
+    font-size: 18px;
+    line-height: 23.4px;
+    text-align: center;
+    color: #3b3b3b; }
+    @media (max-width: 992px) {
+      .table-wrapper th,
+      .table-wrapper td {
+        font-size: 16px;
+        line-height: 20px; } }
+  .table-wrapper th {
+    font-weight: 800;
+    padding-bottom: 10px; }
+  .table-wrapper td {
+    font-weight: 400;
+    padding: 25px 10px;
+    border-top: 1px solid #e8e8e8; }
+    @media (max-width: 992px) {
+      .table-wrapper td {
+        padding: 20px 10px; } }
 
 .btn {
   border-radius: 10px;
@@ -594,15 +647,42 @@ input[type="range"]::-ms-track {
     background: linear-gradient(89.27deg, #832fbd -12.02%, #d06852 107.4%);
     transition: 0.5s; }
 
+.btn-border-dark {
+  border: 1px solid #000000;
+  background: transparent;
+  color: #000; }
+  .btn-border-dark:hover {
+    background: #000;
+    color: #fff; }
+
 .btn-white {
   background: #fff;
   color: #000; }
+
+.btns-group {
+  width: 100%; }
+
+.btns-group button {
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.2px;
+  text-align: center;
+  width: 100%; }
 
 .section {
   padding: 60px 0; }
   @media (max-width: 768px) {
     .section {
       padding: 30px 0; } }
+
+.text-small {
+  font-family: "Telegraf", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #858585; }
 
 .text {
   font-size: 16px;
@@ -633,6 +713,18 @@ input[type="range"]::-ms-track {
   .manual-title {
     font-size: 18px;
     line-height: 24px; } }
+
+.text-white {
+  color: #fff; }
+
+.back {
+  display: flex;
+  gap: 12px;
+  width: max-content; }
+  .back:hover {
+    background: linear-gradient(90.81deg, #832fbd 9.1%, #d06852 55.89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 .radius-20 {
   border-radius: 20px; }
@@ -854,7 +946,8 @@ select::-ms-expand {
   visibility: hidden !important;
   pointer-events: none !important;
   margin: 0 !important;
-  padding: 0 !important; }
+  padding: 0 !important;
+  position: absolute; }
 
 [data-tab-target] {
   opacity: 1 !important;
@@ -862,6 +955,7 @@ select::-ms-expand {
   pointer-events: all !important;
   transition: 0.5s; }
 
+[data-tab-target2].hidden,
 [data-tab-target].hidden {
   opacity: 0 !important;
   visibility: hidden !important;
@@ -934,6 +1028,20 @@ select::-ms-expand {
     height: 24px;
     background-size: contain;
     background-repeat: no-repeat; }
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 108%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .loader svg {
+    width: 150px;
+    height: 150px; }
 
 .header {
   padding: 29px 40px;
@@ -1254,7 +1362,7 @@ select::-ms-expand {
   z-index: 6; }
 
 .toggle-option.active {
-  -webkit-text-fill-color: #fff; }
+  -webkit-text-fill-color: #fff !important; }
 
 .tab-label-text {
   font-family: "Telegraf", sans-serif;
@@ -3411,7 +3519,8 @@ select::-ms-expand {
 
 .accountTabs {
   border-radius: 40px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%; }
   .accountTabs__top {
     padding: 40px 45px;
     background: linear-gradient(94.97deg, #832fbd -23.4%, #d06852 103.02%); }
@@ -3423,11 +3532,14 @@ select::-ms-expand {
         padding: 40px 45px; } }
   .accountTabs__avatar {
     width: 60px;
+    height: 60px;
     position: relative; }
     .accountTabs__avatar button {
       position: absolute;
       right: 0;
       bottom: -10px; }
+    .accountTabs__avatar img {
+      height: 100%; }
   .accountTabs__name {
     margin-bottom: 12px;
     color: #fff;
@@ -3441,10 +3553,12 @@ select::-ms-expand {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    height: calc(100% - 144px); }
     @media (max-width: 1200px) {
       .accountTabs__bottom {
-        padding: 25px; } }
+        padding: 25px;
+        height: calc(100% - 114px); } }
     @media (max-width: 768px) {
       .accountTabs__bottom {
         padding: 40px 45px;
@@ -3540,11 +3654,35 @@ select::-ms-expand {
 
 .modal-title {
   margin: 25px 0;
-  font-family: 'Telegraf', sans-serif;
+  font-family: "Telegraf", sans-serif;
   font-size: 22px;
   font-weight: 800;
-  line-height: 15px;
+  line-height: 30px;
   text-align: center; }
+
+.modal__slider {
+  position: relative; }
+
+.modal .search {
+  border-radius: 15px;
+  overflow: hidden; }
+  .modal .search input {
+    border-radius: 15px;
+    background: #f4f4f4;
+    border: none; }
+    .modal .search input::placeholder {
+      font-family: 'Telegraf', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16.96px;
+      text-align: left;
+      color: #ababab; }
+  .modal .search button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 22px;
+    margin: auto; }
 
 #modalAccDelete .reason-item:not(:first-child) {
   margin-top: 18px; }
@@ -3672,43 +3810,6 @@ select::-ms-expand {
 
 .accountOrderHistory {
   height: 100%; }
-  .accountOrderHistory .table-wrapper {
-    background-color: #fafafa;
-    border-radius: 40px;
-    padding: 60px 40px;
-    height: 100%;
-    max-height: 580px;
-    overflow: auto; }
-    @media (max-width: 1200px) {
-      .accountOrderHistory .table-wrapper {
-        padding: 30px 30px 10px;
-        max-height: 538px; } }
-    @media (max-width: 768px) {
-      .accountOrderHistory .table-wrapper {
-        overflow: auto; } }
-    @media (max-width: 768px) {
-      .accountOrderHistory .table-wrapper table {
-        width: 600px; } }
-    .accountOrderHistory .table-wrapper th, .accountOrderHistory .table-wrapper td {
-      font-family: 'Telegraf', sans-serif;
-      font-size: 18px;
-      line-height: 23.4px;
-      text-align: center;
-      color: #3b3b3b; }
-      @media (max-width: 992px) {
-        .accountOrderHistory .table-wrapper th, .accountOrderHistory .table-wrapper td {
-          font-size: 16px;
-          line-height: 20px; } }
-    .accountOrderHistory .table-wrapper th {
-      font-weight: 800;
-      padding-bottom: 10px; }
-    .accountOrderHistory .table-wrapper td {
-      font-weight: 400;
-      padding: 25px 10px;
-      border-top: 1px solid #E8E8E8; }
-      @media (max-width: 992px) {
-        .accountOrderHistory .table-wrapper td {
-          padding: 20px 10px; } }
 
 .accountReferal__banner {
   background-color: #fcf2ff;
@@ -3948,6 +4049,374 @@ select::-ms-expand {
 
 .accountNovaMiles__row {
   margin-top: 20px; }
+  @media (max-width: 1570px) {
+    .accountNovaMiles__row {
+      flex-direction: column; } }
+
+.accountNovaMiles .map {
+  max-width: 697px; }
+  @media (max-width: 1570px) {
+    .accountNovaMiles .map {
+      max-width: 100%; } }
+
+.accountNovaMiles .table-wrapper {
+  padding-top: 30px; }
+  .accountNovaMiles .table-wrapper .manual-title {
+    font-family: 'Telegraf', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 39px;
+    text-align: center;
+    color: #3b3b3b;
+    margin-bottom: 40px; }
+    @media (max-width: 768px) {
+      .accountNovaMiles .table-wrapper .manual-title {
+        margin-bottom: 30px; } }
+  .accountNovaMiles .table-wrapper td:last-child {
+    color: #00B907; }
+
+#modalChangeAvatar .btn-red {
+  max-width: 100%; }
+
+#modalChangeAvatar .modal-footer {
+  margin-top: 30px; }
+  #modalChangeAvatar .modal-footer #addAvatar {
+    position: relative; }
+  #modalChangeAvatar .modal-footer #fileInput {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
+.accountDeleted {
+  margin-top: 30px; }
+  .accountDeleted .btn-dark {
+    max-width: 350px;
+    height: 60px;
+    border-radius: 15px;
+    margin-top: 10px; }
+    @media (max-width: 992px) {
+      .accountDeleted .btn-dark {
+        font-size: 16px; } }
+  .accountDeleted .manual-title {
+    text-align: center; }
+    @media (max-width: 992px) {
+      .accountDeleted .manual-title {
+        font-size: 32px;
+        line-height: 36px; } }
+  .accountDeleted .manual-text {
+    max-width: 60%;
+    text-align: center; }
+    @media (max-width: 992px) {
+      .accountDeleted .manual-text {
+        max-width: 100%; } }
+
+.accountEsims2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; }
+  .accountEsims2__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 20px; }
+    @media (max-width: 992px) {
+      .accountEsims2__top {
+        padding: 20px; } }
+    @media (max-width: 576px) {
+      .accountEsims2__top {
+        flex-direction: column;
+        gap: 30px; } }
+    .accountEsims2__top-left {
+      display: flex;
+      align-items: center;
+      gap: 16px; }
+    .accountEsims2__top img {
+      max-width: 50px;
+      min-width: 50px; }
+    .accountEsims2__top-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 8px; }
+    .accountEsims2__top .manual-title {
+      font-size: 20px;
+      line-height: 22px; }
+      @media (max-width: 992px) {
+        .accountEsims2__top .manual-title {
+          font-size: 18px; } }
+    .accountEsims2__top .manual-text {
+      font-size: 16px;
+      line-height: 22px;
+      color: #858585; }
+    .accountEsims2__top .btn-red {
+      height: 40px !important;
+      margin-top: 0; }
+      @media (max-width: 992px) {
+        .accountEsims2__top .btn-red {
+          max-width: 145px; } }
+  .accountEsims2__middle {
+    border-radius: 20px;
+    padding: 30px; }
+    @media (max-width: 992px) {
+      .accountEsims2__middle {
+        padding: 30px 20px; } }
+    .accountEsims2__middle .manual-title {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 39px;
+      text-align: center;
+      margin-bottom: 20px; }
+    .accountEsims2__middle-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px; }
+      @media (max-width: 992px) {
+        .accountEsims2__middle-items {
+          flex-direction: column;
+          gap: 30px; } }
+    .accountEsims2__middle-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      width: 100%;
+      max-width: 280px; }
+    .accountEsims2__middle .manual-text {
+      font-weight: 800; }
+    .accountEsims2__middle .range-wrapper {
+      margin-top: -10px; }
+    .accountEsims2__middle .text-small {
+      margin-top: -8px; }
+  .accountEsims2__balance {
+    max-width: 240px;
+    width: 100%;
+    padding: 30px; }
+    @media (max-width: 1400px) {
+      .accountEsims2__balance {
+        max-width: 100%; } }
+    @media (max-width: 1200px) {
+      .accountEsims2__balance {
+        padding: 30px 20px; } }
+    .accountEsims2__balance .btn {
+      width: max-content;
+      padding: 0 40px;
+      margin: auto; }
+  .accountEsims2__bottom .manual-title {
+    font-family: "Telegraf", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 39px;
+    text-align: center;
+    color: #3b3b3b; }
+  .accountEsims2__bottom .manual-text {
+    font-family: "Telegraf", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 22px;
+    color: #000;
+    text-align: center;
+    margin: 25px 0; }
+  .accountEsims2__promo {
+    padding: 30px; }
+    @media (max-width: 992px) {
+      .accountEsims2__promo {
+        padding: 30px 20px; } }
+
+.promo-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 30px; }
+  @media (max-width: 1200px) {
+    .promo-items {
+      gap: 20px; } }
+  @media (max-width: 992px) {
+    .promo-items {
+      flex-direction: column;
+      gap: 30px; } }
+
+.promo-item {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(98.41deg, #832FBD -16.52%, #D06852 113.01%);
+  padding: 15px 10px; }
+  @media (max-width: 992px) {
+    .promo-item {
+      max-width: 100%; } }
+
+.promo-title {
+  font-family: "Telegraf", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 15px; }
+
+.promo .btn {
+  font-weight: 500;
+  line-height: 18px;
+  color: #000;
+  max-width: 180px;
+  margin: auto; }
+
+#modalTariffPackages .modal-dialog {
+  max-width: 1315px; }
+
+#modalTariffPackages .modal-content {
+  padding: 0;
+  overflow: hidden; }
+
+#modalTariffPackages .modal-left {
+  width: calc(100% - 450px);
+  padding: 50px 60px; }
+  @media (max-width: 1200px) {
+    #modalTariffPackages .modal-left {
+      padding: 40px 30px;
+      width: calc(100% - 310px); } }
+  @media (max-width: 992px) {
+    #modalTariffPackages .modal-left {
+      width: 100%; } }
+
+#modalTariffPackages .accountCards {
+  margin-top: 40px;
+  width: 100%; }
+  #modalTariffPackages .accountCards .card {
+    background-color: #fafafa; }
+  #modalTariffPackages .accountCards .slick-dots li.slick-active {
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%); }
+  #modalTariffPackages .accountCards .card__info {
+    margin-bottom: 0; }
+    #modalTariffPackages .accountCards .card__info::before {
+      top: -35px; }
+
+#modalTariffPackages .modal-right {
+  padding: 35px 50px;
+  background: linear-gradient(71.9deg, #832fbd -46.11%, #d06852 101.06%); }
+  @media (max-width: 1200px) {
+    #modalTariffPackages .modal-right {
+      padding: 40px 30px; } }
+  @media (max-width: 768px) {
+    #modalTariffPackages .modal-right {
+      padding: 35px 20px; } }
+  #modalTariffPackages .modal-right-title {
+    font-family: "Telegraf", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 22px;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 20px; }
+  #modalTariffPackages .modal-right-img {
+    max-width: 350px; }
+    @media (max-width: 1200px) {
+      #modalTariffPackages .modal-right-img {
+        max-width: 250px; } }
+  #modalTariffPackages .modal-right .card__info {
+    margin: 40px 0; }
+    #modalTariffPackages .modal-right .card__info::before {
+      display: none; }
+    #modalTariffPackages .modal-right .card__info .card__text,
+    #modalTariffPackages .modal-right .card__info .card__price {
+      color: #fff; }
+    #modalTariffPackages .modal-right .card__info svg path {
+      fill: #fff; }
+  #modalTariffPackages .modal-right .btn-white:hover {
+    background-color: #000;
+    color: #fff; }
+
+[data-tab-target2="supported-contries"] .cards {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-height: 300px;
+  overflow: auto;
+  gap: 25px;
+  padding: 10px; }
+
+[data-tab-target2="supported-contries"] .card {
+  padding: 14px 20px;
+  border-radius: 15px;
+  background-color: #fafafa; }
+
+[data-tab-target2="additional-information"] .manual-title {
+  font-family: "Telegraf", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 14px;
+  text-align: left;
+  color: #3b3b3b; }
+
+[data-tab-target2="additional-information"] .manual-text {
+  font-family: "Telegraf", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #4a4a4a; }
+
+.toggler {
+  height: 60px;
+  border: 1px solid transparent;
+  border-image-slice: 1;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%); }
+  @media (max-width: 1200px) {
+    .toggler {
+      padding: 0 30px; } }
+  @media (max-width: 576px) {
+    .toggler {
+      flex-direction: column; } }
+  .toggler-switch {
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+    border-radius: 25px;
+    position: absolute;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: translateX(var(--transform-translateX, 0px));
+    z-index: 6;
+    transition: 0.5s; }
+  .toggler::after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: block;
+    z-index: 5; }
+  .toggler-tab {
+    background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 7;
+    font-family: 'Gilroy';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.83px;
+    text-align: center;
+    cursor: pointer; }
+    @media (max-width: 992px) {
+      .toggler-tab {
+        font-size: 16px;
+        line-height: 20px; } }
+    .toggler-tab.active {
+      -webkit-text-fill-color: #fff !important; }
 
 .footer {
   padding: 60px 0; }
