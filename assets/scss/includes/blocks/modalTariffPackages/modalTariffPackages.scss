@@ -22,6 +22,10 @@
     & .accountCards {
         margin-top: 40px;
         width: 100%;
+        @include max-sm{
+            margin-top: 10px;
+        }
+        
         & .card {
             background-color: #fafafa;
         }
@@ -92,11 +96,37 @@
         overflow: auto;
         gap: 25px;
         padding: 10px;
+        @include max-md{
+            grid-template-columns: 1fr 1fr;
+        }
+        @include max-sm{
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+        
     }
     & .card {
         padding: 14px 20px;
         border-radius: 15px;
         background-color: #fafafa;
+        & svg {
+            @include max-sm{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        & > .justify-content-between > svg {
+            width: auto;
+            height: auto;
+        }
+    }
+    & .tab-label-text {
+        font-size: 16px;
+        line-height: 20px;
+        @include max-sm{
+            margin-left: -6px;
+        }
+        
     }
 }
 
@@ -117,4 +147,25 @@
         text-align: left;
         color: #4a4a4a;
     }
+    & svg {
+        @include max-md{
+            min-width: 30px;
+            min-height: 30px;
+        }
+    }
+    & > div {
+        @include max-md{
+            margin-top: 48px;
+            & > div {
+                gap: 14px;
+            }
+        }
+        
+    }
+}
+#chooseTariff {
+    @include max-md{
+        font-size: 16px;
+    }
+    
 }

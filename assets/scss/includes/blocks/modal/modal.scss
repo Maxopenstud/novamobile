@@ -82,10 +82,15 @@
     }
     &__slider {
         position: relative;
+        
     }
     & .search {
         border-radius: 15px;
         overflow: hidden;
+        @include max-sm{
+            margin-top: 30px;
+        }
+        
         & input {
             border-radius: 15px;
             background: #f4f4f4;

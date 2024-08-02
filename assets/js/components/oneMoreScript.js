@@ -16,8 +16,14 @@ $(document).ready(function() {
         }
         
     });
-    var toggler_switch_width = 100 / $(".toggler-tab").length + "%";
-    $(".toggler-switch").css("width", toggler_switch_width);
+    if($(window).width() > 576 ) {
+        var toggler_switch_width = 100 / $(".toggler-tab").length + "%";
+        $(".toggler-switch").css("width", toggler_switch_width);
+    }
+    
+    $("#esims_return").click(function() {
+        $('[data-tab="esims"]').click();
+    })
 
     $(".toggler-tab").click(function() {
         
@@ -26,8 +32,11 @@ $(document).ready(function() {
         let index = $(this).index();
         var $toggler_switch = $('.toggler-switch');
         var translate_value = index * 100 + '%';
-        $toggler_switch.css('--transform-translateX', translate_value);
-        
+        if($(window).width() > 576 ) {
+            $toggler_switch.css('--transform-translateX', translate_value);
+        } else {
+            $toggler_switch.css('--transform-translateY', translate_value);
+        }
     });
 
     var clickCount = 0
