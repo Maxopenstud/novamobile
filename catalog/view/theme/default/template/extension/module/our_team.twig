@@ -1,0 +1,24 @@
+<div class="section team">
+    <div class="container">
+        <div class="sectionTitle">{{title}}</div>
+        <div class="manual-text text-center">{{description}}</div>
+        <div class="d-flex justify-content-between gap-60 gap-max-lg-30 gap-max-xl-40 flex-wrap flex-lg-nowrap mt-40 mt-max-lg-30">
+            {% for item in team %}
+            <div class="w-100">
+                <div class="team__item">
+                    <div class="team__item-info">
+                        <div class="d-flex align-items-center gap-30 gap-max-lg-14">
+                            <img class="avatar" src="{{item.image}}" alt="">
+                            <div class="d-flex flex-column gap-10">
+                                <div class="team__title">{{item.title}}</div>
+                                <div class="team__name">{{item.subtitle}}</div>
+                            </div>
+                        </div>
+                        <div class="manual-text mt-20">{{item.description|replace({'\n': '<br>'})}}</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

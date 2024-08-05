@@ -1,0 +1,15 @@
+
+<div class="section ">
+    <div class="container">
+        <div class="information information__about">
+            {% for card in cards %}
+                <div class="information__item">
+                    <img src="{{card.image}}" style="width: {{width}}px; height: {{height}}px" alt="" srcset="">
+                    <div class="information__title">{{card.title}}</div>
+                    <div class="information__text mt-20">{{card.description|replace({'\n': '<br>'})}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
