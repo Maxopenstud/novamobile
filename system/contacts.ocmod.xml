@@ -11,7 +11,7 @@
             <search><![CDATA[$layout_id = $this->model_design_layout->getLayout($route);]]></search>
             <add position="before" offset="2">
                 <![CDATA[
-                    if ($this->config->get('module_contacts_status')) {
+                    if ($this->config->get('module_contacts_status') && $this->request->get['route'] == 'extension/module/contacts') {
                         $layout_id = $this->load->controller('custom/setting/getValue', array(
                             'section' => 'contacts', // Unique section identifier
                             'setting' => 'contacts_layout_id', // Unique field identifier

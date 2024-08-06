@@ -24,3 +24,6 @@ $_["send"]="Send";
 $_["*please_enter_your_full_name"]="*Please enter your full name";
 $_["*please_enter_your_email_address"]="*Please enter your email address";
 $_["*please_select_country_and_enter_phone_number"]="*Please select country and enter phone number";
+$_["related_articles"]="Related Articles";
+$_["blog"]="Blog";
+$_["read_more"]="Read more";

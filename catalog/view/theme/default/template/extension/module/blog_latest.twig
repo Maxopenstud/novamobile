@@ -1,0 +1,54 @@
+<section class="section blog-slider">
+  <div class="container">
+      <div class="sectionTitle">{{ _e("Blog") }}</div>
+      <div class="cascade-slider_container" id="cascade-slider">
+          <div class="cascade-slider_slides">
+              {% for article in articles %}
+                <div class="cascade-slider_item">
+                    <a href="{{article.href}}" class="cascade-slider_link"></a>
+                    <div class="swiper-slide blogSlider__item"
+                        style="background: url({{article.thumb}}); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                        <div class="slide__non-active">
+                            <h3 class="slider__title blogSlider__title">{{ article.name }}</h3>
+                            <h3 class="slider__title blogSlider__title">{{ article.name }}</h3>
+                        </div>
+                        <div class="slide-active">
+                            <h3 class="slider__title blogSlider__title">{{ article.name }}</h3>
+                            <div class="slider__desc manual-text">{{ article.description }}</div>
+                            <button class="btn btn-white">{{ _e("Read more") }}
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+          </div>
+
+          <ol class="cascade-slider_nav ">
+            {% for article in articles %}
+              <li class="cascade-slider_dot {% if loop.index0 == 0 %}cur{% endif %}"></li>
+            {% endfor %}
+          </ol>
+
+          <button class="cascade-slider_arrow cascade-slider_arrow-left" data-action="prev">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.12155 7.49999H19.0002V10.5H6.12155L11.0609 15.4393L8.93957 17.5606L0.378906 8.99999L8.93957 0.439331L11.0609 2.56065L6.12155 7.49999Z"
+                      fill="#121212" />
+              </svg>
+          </button>
+          <button class="cascade-slider_arrow cascade-slider_arrow-right" data-action="next">
+              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M13.4775 10.557H0.923828V7.443H13.4775L8.66282 2.31595L10.7306 0.114014L19.0752 9L10.7306 17.886L8.66282 15.6841L13.4775 10.557Z"
+                      fill="#121212" />
+              </svg>
+          </button>
+      </div>
+  </div>
+</section>
