@@ -141,8 +141,11 @@ img {
 .fw-700 {
 	font-weight: 700 !important;
 }
+.fw-800 {
+	font-weight: 800 !important;
+}
 h1 {
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-UltraBold", sans-serif;
 	font-size: 56px;
 	font-weight: 800;
 	line-height: 59.36px;
@@ -161,7 +164,7 @@ textarea {
 	resize: none;
 	padding: 15px;
 	width: 100%;
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-Regular", sans-serif;
 }
 a {
 	text-decoration: none;
@@ -172,7 +175,7 @@ a {
 	}
 }
 input {
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-Regular", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 16px;
@@ -236,7 +239,7 @@ button {
 	}
 }
 .text-bold {
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-UltraBold", sans-serif;
 	font-size: 22px;
 	font-weight: 800;
 	line-height: 26px;
@@ -464,7 +467,7 @@ input[type="range"]::-ms-track {
 	background: rgba(255, 255, 255, 0);
 }
 .sectionTitle {
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-UltraBold", sans-serif;
 	font-size: 40px;
 	font-weight: 800;
 	line-height: 42.4px;
@@ -538,6 +541,9 @@ input[type="range"]::-ms-track {
 	.gap-max-lg-14 {
 		gap: 14px;
 	}
+	.gap-max-lg-16 {
+		gap: 16px;
+	}
 	.gap-max-lg-0 {
 		gap: 0;
 	}
@@ -578,6 +584,9 @@ input[type="range"]::-ms-track {
 .mr-10 {
 	margin-right: 10px;
 }
+.mb-20 {
+	margin-bottom: 20px !important;
+}
 // paddings
 .p-20 {
 	padding: 20px;
@@ -587,6 +596,12 @@ input[type="range"]::-ms-track {
 }
 .pr-60 {
 	padding-right: 60px;
+}
+.pr-30 {
+	padding-right: 30px;
+}
+.pl-30 {
+	padding-left: 30px;
 }
 .pb-60 {
 	padding-bottom: 60px;
@@ -649,7 +664,7 @@ input[type="range"]::-ms-track {
 	}
 	& th,
 	td {
-		font-family: "Telegraf", sans-serif;
+		font-family: "Telegraf-Regular", sans-serif;
 		font-size: 18px;
 		line-height: 23.4px;
 		text-align: center;
@@ -671,7 +686,6 @@ input[type="range"]::-ms-track {
 			padding: 20px 10px;
 		}
 	}
-	
 }
 .btn {
 	border-radius: 10px;
@@ -724,7 +738,7 @@ input[type="range"]::-ms-track {
 	}
 }
 .text-small {
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-Regular", sans-serif;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 12px;
@@ -733,26 +747,32 @@ input[type="range"]::-ms-track {
 }
 .text {
 	font-size: 16px;
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-Regular", sans-serif;
 	line-height: 21px;
 	color: #ffffff80;
 }
-.manual-text {
-	font-family: "Telegraf", sans-serif;
+.manual-text, p {
+	font-family: "Telegraf-Regular", sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 27px;
 	color: #3b3b3b;
 }
 @include max-md {
-	.manual-text {
+	.manual-text, p {
 		font-size: 16px;
 		line-height: 24px;
 	}
 }
-
+.search-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 20px;
+}
 .manual-title {
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-UltraBold", sans-serif;
 	font-size: 26px;
 	font-weight: 800;
 	line-height: 33.8px;
@@ -777,11 +797,17 @@ input[type="range"]::-ms-track {
 		-webkit-text-fill-color: transparent;
 	}
 }
+.radius-15 {
+	border-radius: 15px;
+}
 .radius-20 {
 	border-radius: 20px;
 }
 .radius-30 {
 	border-radius: 30px;
+}
+.radius-50 {
+	border-radius: 50px;
 }
 .bg-f1 {
 	background-color: #f1f1f1 !important;
@@ -794,6 +820,9 @@ input[type="range"]::-ms-track {
 }
 .bg-violet {
 	background-color: #fcf2ff;
+}
+.bg-white {
+	background-color: #fff;
 }
 .fs-20 {
 	font-size: 20px;
@@ -834,7 +863,7 @@ select {
 	border: none;
 	outline: none;
 	background: #f8f8f8;
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-Regular", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 16px;
@@ -853,8 +882,9 @@ select::-ms-expand {
 	flex-direction: column;
 	row-gap: 8px;
 	width: 100%;
+	position: relative;
 	& label {
-		font-family: "Telegraf", sans-serif;
+		font-family: "Telegraf-Regular", sans-serif;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 16px;
@@ -901,7 +931,7 @@ select::-ms-expand {
 	display: block;
 	align-items: center;
 	user-select: none;
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-Regular", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 22.4px;
@@ -1035,8 +1065,31 @@ select::-ms-expand {
 .form-input {
 	border: 1px solid #ccc;
 }
-.form-input.error {
-	border-color: red;
+
+.form-input.error, select.error {
+	background-color: #ffecec;
+}
+.form-input.error + .error-label,
+select.error + .error-label {
+	display: block;
+}
+.select-wrapper .error-label{
+	top: -25px;
+}
+.error-label {
+	font-family: "Telegraf-Regular", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	color: #FF0000;
+	z-index: 6;
+	display: none;
+	text-wrap: nowrap;
 }
 #column-left {
 	height: 100%;
@@ -1054,7 +1107,7 @@ select::-ms-expand {
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-UltraBold", sans-serif;
 	font-size: 46px;
 	font-weight: 800;
 	line-height: 48.76px;
@@ -1083,7 +1136,7 @@ select::-ms-expand {
 	align-items: center;
 	gap: 10px;
 	color: #3b3b3b;
-	font-family: "Telegraf", sans-serif;
+	font-family: "Telegraf-Regular", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 23px;
@@ -1099,16 +1152,21 @@ select::-ms-expand {
 }
 .loader {
 	position: absolute;
-    top: 0;
-    left: -25px;
-    width: 108%;
-    height: 100%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	top: 0;
+	left: -25px;
+	width: 108%;
+	height: 100%;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	& svg {
 		width: 150px;
-    	height: 150px;
+		height: 150px;
 	}
+}
+.text-colored {
+	background: linear-gradient(167.1deg, #832FBD -17.59%, #D06852 87.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

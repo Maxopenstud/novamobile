@@ -1,0 +1,84 @@
+.recruitment {
+    & .howDo__steps {
+        overflow: hidden;
+        @include max-lg {
+            gap: 60px;
+        }
+    }
+    & .howDo__steps-item {
+        @include max-lg {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+    & .howDo__steps-item:first-child .howDo__steps-count {
+        &::after {
+            content: "";
+            width: 100vw;
+            height: 1px;
+            border: 1px dashed grey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 48px;
+            z-index: 0;
+            margin: auto;
+            @include max-lg {
+                transform: rotate(90deg);
+                left: auto;
+                width: 50vh;
+                top: 375px;
+            }
+        }
+    }
+    & .howDo__steps-item:last-child .howDo__steps-count {
+        &::after {
+            content: "";
+            width: 100vw;
+            height: 5px;
+            border: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 80px;
+            z-index: 0;
+            margin: auto;
+            background-color: #fff;
+            @include max-lg {
+                width: 3px;
+                height: 200%;
+                top: 96px;
+                left: auto;
+            }
+        }
+    }
+    & .howDo__steps-count {
+        max-width: 80px;
+        min-width: 80px;
+        max-height: 80px;
+        min-height: 80px;
+        font-size: 23.83px;
+        font-weight: 700;
+        line-height: 31.78px;
+        letter-spacing: -0.7944499850273132px;
+        background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+        position: relative;
+    }
+    & .howDo__steps-border {
+        width: 100%;
+        top: 40px;
+        left: 150px;
+        // display: none;
+        @include max-lg {
+            left: -200px;
+            min-width: 450px;
+            max-width: 450px;
+        }
+    }
+    & .howDo__steps-info {
+        margin-top: 20px;
+        @include max-lg {
+            margin-right: 50px;
+        }
+    }
+}

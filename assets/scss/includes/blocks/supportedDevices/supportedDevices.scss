@@ -1,0 +1,91 @@
+.supportedDevices {
+    &__item {
+        background-color: #fafafa;
+        border-radius: 20px;
+        position: relative;
+        padding: 38px 40px;
+        box-shadow: 0px 4px 15px 0px #0000001a;
+        height: max-content;
+        @include max-lg {
+            padding: 30px 20px;
+        }
+        &::before {
+            content: "";
+            width: 4px;
+            border-radius: 20px;
+            height: 70%;
+            background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+        }
+    }
+    & .manual-title {
+        position: relative;
+        cursor: pointer;
+        &::after {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='16' viewBox='0 0 24 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.83 0.419922L12 9.58992L21.17 0.419922L24 3.24992L12 15.2499L0 3.24992L2.83 0.419922Z' fill='%233B3B3B'/%3E%3C/svg%3E%0A");
+            width: 24px;
+            height: 15px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            transform: rotateX(0);
+            transition: 0.5s;
+        }
+        &.open::after {
+            transform: rotateX(180deg);
+            transition: 0.5s;
+        }
+    }
+    & .manual-text {
+        margin-top: 30px;
+        display: none;
+        @include max-lg {
+        }
+    }
+    & .devices[style*="display: block"] {
+        display: flex !important;
+      }
+    & .devices {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        width: 100%;
+        margin-top: 20px;
+        display: none;
+        &__item {
+            font-family: 'Telegraf-Regular', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            text-align: left;
+            color: #3b3b3b;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            width: 14%;
+            @include max-xxl{
+                width: 20%;
+            }
+            @include max-xl{
+                width: 25%;
+            }
+            @include max-iph{
+                width: 30%;
+            }
+            
+            & img {
+                width: 22px;
+                height: 13px;
+            }
+        }
+    }
+}

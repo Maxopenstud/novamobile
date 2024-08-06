@@ -18,6 +18,9 @@
         font-weight: 500;
         line-height: 21.83px;
         text-wrap: nowrap;
+        overflow-wrap: normal;
+        word-wrap: normal;
+        white-space: nowrap;
         &.active {
             color: #000;
         }

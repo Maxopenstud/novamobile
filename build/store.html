@@ -226,13 +226,13 @@
         <div class="container">
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
-                    <a href="#" class="breadcrumbs__link">Home</a>
+                    <a href="index.html" class="breadcrumbs__link">Home</a>
                 </li>
                 <li class="breadcrumbs__item">
                     <a href="#" class="breadcrumbs__link active">Current page</a>
                 </li>
             </ul>
-        </div>        <div class="section pt-0">
+        </div>        <div class="section pt-0 storeCatalog">
             <div class="container">
                 <div class="d-flex flex-column-reverse flex-md-row gap-40 gap-max-xl-30">
                     <div class="">
@@ -245,7 +245,17 @@
                     <div class="w-100">
                         <div class="catalog">
                             <div class="card">
-                                <div class="card__title">Discover</div>
+                                <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                        <defs>
+                                        <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                        </pattern>
+                                        <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                        </defs>
+                                    </svg>
+                                </div>
                                 <div class="card__info">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -311,7 +321,17 @@
                                 <button type="button" class="btn btn-dark">Buy now</button>
                             </div>
                             <div class="card">
-                                <div class="card__title">Discover</div>
+                                <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                        <defs>
+                                        <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                        </pattern>
+                                        <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                        </defs>
+                                    </svg>
+                                </div>
                                 <div class="card__info">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -377,7 +397,17 @@
                                 <button type="button" class="btn btn-dark">Buy now</button>
                             </div>
                             <div class="card">
-                                <div class="card__title">Discover</div>
+                                <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                        <defs>
+                                        <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                        </pattern>
+                                        <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                        </defs>
+                                    </svg>
+                                </div>
                                 <div class="card__info">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -443,7 +473,17 @@
                                 <button type="button" class="btn btn-dark">Buy now</button>
                             </div>
                             <div class="card">
-                                <div class="card__title">Discover</div>
+                                <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                        <defs>
+                                        <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                        </pattern>
+                                        <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                        </defs>
+                                    </svg>
+                                </div>
                                 <div class="card__info">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -509,7 +549,17 @@
                                 <button type="button" class="btn btn-dark">Buy now</button>
                             </div>
                             <div class="card">
-                                <div class="card__title">Discover</div>
+                                <div class="card__title d-flex align-items-center justify-content-between">Discover 
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <circle cx="22" cy="22" r="21" fill="url(#pattern0_751_5229)" stroke="#E0E0E0" stroke-width="2"/>
+                                        <defs>
+                                        <pattern id="pattern0_751_5229" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_751_5229" transform="translate(-0.166667) scale(0.0166667)"/>
+                                        </pattern>
+                                        <image id="image0_751_5229" width="80" height="60" xlink:href="data:image/png;base64,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"/>
+                                        </defs>
+                                    </svg>
+                                </div>
                                 <div class="card__info">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-flex gap-10 align-items-center card__text card__text_colored">
@@ -574,6 +624,7 @@
                                 </div>
                                 <button type="button" class="btn btn-dark">Buy now</button>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -679,14 +730,14 @@
                         <div class="footer__column">
                             <div class="footer__title">Popular countries</div>
                             <ul class="footer__menu footer__menu-column-2">
-                                <li class="footer__menu-item"><a href="#" class="manual-text">United States</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Spain</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">United Kingdom</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">China</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Turkey</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Japan</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">France</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Italy</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">United States</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">Spain</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">United Kingdom</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">China</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">Turkey</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">Japan</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">France</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">Italy</a></li>
                             </ul>
                         </div>
                         <div class="footer__column">
@@ -695,7 +746,7 @@
                                 <li class="footer__menu-item"><a href="about.html" class="manual-text">About Novamobile</a></li>
                                 <li class="footer__menu-item"><a href="contacts.html" class="manual-text">Contact us</a></li>
                                 <li class="footer__menu-item"><a href="blogs.html" class="manual-text">Blog</a></li>
-                                <li class="footer__menu-item"><a href="#" class="manual-text">Nova for Business</a></li>
+                                <li class="footer__menu-item"><a href="business.html" class="manual-text">Nova for Business</a></li>
                             </ul>
                         </div>
                         <div class="footer__column">

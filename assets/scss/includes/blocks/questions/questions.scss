@@ -18,6 +18,7 @@
     & input {
         max-width: 350px;
         width: 100%;
+        border: none;
         @include max-xxl{
             max-width: 100%;
         }

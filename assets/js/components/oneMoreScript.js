@@ -120,8 +120,8 @@ $(document).ready(function() {
     });
     
 
-    $(".faq .manual-title").click(function() {
-        $(this).parent().find(".manual-text").slideToggle();
+    $(".faq .manual-title, .supportedDevices__item .manual-title").click(function() {
+        $(this).parent().find(".devices").slideToggle();
         $(this).toggleClass("open");
     });
     function removeCloud() {
@@ -346,6 +346,14 @@ $(document).ready(function() {
         $(".email").inputmask("email");
     }
 
+
+
+    $(".checkout__item-method-row").click(function() {
+        $(this).parent().find(".payment-card-info").slideToggle();
+        $(".checkout-billing-address").slideToggle();
+        $(this).toggleClass("open")
+    })
+
     $("button[type='submit']").click(function(e) {
         e.preventDefault();
         var isValid = true;
@@ -355,12 +363,16 @@ $(document).ready(function() {
             var $this = $(this);
             if (!$this.val()) {
                 $this.addClass('error');
+                // $(".select-wrapper").addClass('error');
                 isValid = false;
             } else {
                 $this.removeClass('error');
+                // $(".select-wrapper").removeClass('error');
             }
         });
-
+        $("select").on('change', function() {
+            $(this).removeClass("error")
+        })
         // Проверяем поле выбора
         $('select').each(function() {
             var $this = $(this);

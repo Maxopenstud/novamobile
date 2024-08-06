@@ -96,8 +96,6 @@
     &::before {
         content: "";
         background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
         width: 50%;
         border-radius: 25px;
         position: absolute;
@@ -131,28 +129,14 @@
     align-items: center;
     justify-content: center;
     z-index: 6;
-    // background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
 }
 
 .toggle-option.active {
     // -webkit-background-clip: text;
     -webkit-text-fill-color: #fff !important;
 }
-.toggle-option[data-option="explore"].active {
-    // background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
-    // border-radius: 25px;
-    // transition: left 0.3s;
-}
-
-.toggle-option[data-option="explore-plus"].active {
-    // background: linear-gradient(167.1deg, #832fbd -17.59%, #d06852 87.96%);
-    // border-radius: 25px;
-    // transition: left 0.3s;
-}
 .tab-label-text {
-    font-family: "Telegraf", sans-serif;
+    font-family: "Telegraf-Regular", sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 20px;
