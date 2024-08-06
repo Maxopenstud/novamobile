@@ -1,0 +1,212 @@
+{{header}}
+{{menu}}
+<div class="container">
+    <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link active">Current page</a>
+        </li>
+    </ul>
+</div>
+
+{{content_top}}
+
+<div class="questions">
+    <div class="container">
+        <div class="sectionTitle">{{title}}</div>
+        <div class="manual-text">{{description|replace({'\n': '<br>'})}}</div>
+        <form class="questions__content" id="contact_form">
+            <input type="hidden" id="country_select_code">
+            <input type="hidden" name="phone">
+            <div class="d-flex flex-column height-max-content gap-30 gap-max-xl-20 pr-60 pr-max-lg-0">
+                <div class=" d-flex flex-column flex-xxl-row justify-content-between  gap-40 gap-max-xl-20">
+                    <div class="form-group">
+                        <label>{{ _e("Topic") }}</label>
+                        <div class="select-wrapper w-100">
+                            <select name="topic_id" id="" class="w-100">
+                                {% for topic in topics %}
+                                <option value="{{topic.id}}">{{topic.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ _e("Full name") }}</label>
+                        <input type="text" name="full_name" class="form-input" placeholder="Jane Snow">
+                        <div class="error-label">{{ _e("*Please enter your full name") }}</div>
+                    </div>
+                </div>
+
+                <div class=" d-flex flex-column flex-xxl-row justify-content-between gap-40 gap-max-xl-20">
+                    <div class="form-group">
+                        <label>{{ _e("Email address") }}</label>
+                        <input type="text" name="email" class="form-input email" placeholder="example@email.com">
+                        <div class="error-label">{{ _e("*Please enter your email address") }}</div>
+                    </div>
+                    <div class="d-flex align-items-end w-100">
+                        <div class="form-group me-3">
+                            <label>{{ _e("Phone number") }}</label>
+                            <div class="select-wrapper" id="country_select">
+                                <div id="dial_code" style="width: 100%;margin-left: 3rem;"></div>
+                                <div class="error-label">{{ _e("*Please select country and enter phone number") }}</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label></label>
+                            <input type="text" id="phone" class="form-input" placeholder="000 00 00">
+                            {# <div class="error-label"></div> #}
+                        </div>
+                    </div>
+                </div>
+                <div class=" d-flex flex-column flex-xxl-row justify-content-between gap-40 gap-max-xl-20">
+                    <div class="form-group">
+                        <label>{{ _e("Device model") }}</label>
+                        <input type="text" name="device" class="form-input" placeholder="{{ _e("Device model") }}">
+                    </div>
+                    <div class="form-group">
+                        <label>{{ _e("eSim ICCID") }}</label>
+                        <input type="text" name="esim_iccid" class="form-input" placeholder="{{ _e("eSim ICCID") }}">
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-20">
+                    <div class="form-group">
+                        <label>{{ _e("Your message") }}</label>
+                        <textarea name="message" id="" rows="10" minlength="25"></textarea>
+                    </div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="agree" value="1">
+                        <span id="agree_text">
+                            {{ _e("I consent to the processing of personal data and agree to the") }}
+                            <a href="{{article.href}}" class="ms-1">{{article.name}}</a>
+                        </span>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-dark w-auto p-20">{{ _e("Send") }}</button>
+            </div>
+            <div class="">
+                <img src="{{image}}" alt="">
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="catalog/view/javascript/inputmask.js"></script>
+<script src="catalog/view/javascript/mail_mask.js"></script>
+<link rel="stylesheet" href="catalog/view/theme/default/stylesheet/countrySelect.min.css">
+<script src="catalog/view/javascript/jquery/countrySelect.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.0/build/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.4.2/libphonenumber-js.min.js"></script>
+<style>
+    .country-select {width: 100%;}
+    .flag-dropdown, .selected-flag {
+        width: 100% !important;
+    }
+
+    .flag-dropdown .arrow {
+        display: none;
+    }
+
+    .select-wrapper.error {
+        background-color: #ffecec
+    }
+
+    .select-wrapper.error .error-label {
+        display: block;
+    }
+    
+    .country-list {
+        z-index: 10;
+    }
+
+    .error-agree {
+        color: #FF0000;
+    }
+</style>
+
+<script>
+    $("#country_select").countrySelect();
+
+    const countryData = intlTelInput.getCountryData();
+
+    var code = '';
+    var dial_code = ''
+
+    $(document).on('change', '#country_select_code', function() {
+        code = $('#country_select_code').val();
+    
+        let country = countryData.find(country => {return country.iso2 == code});
+    
+        dial_code = '+' + country.dialCode;
+
+        $('#dial_code').text(dial_code);
+    })
+
+    $('#phone').keyup(function() {
+        let val_old = $(this).val();
+        let newString = new libphonenumber.AsYouType(code).input(dial_code + val_old);
+        $(this).focus().val('').val(newString.replace(dial_code, '').trim());
+
+        $('[name="phone"]').val(newString);
+    })
+</script>
+
+<script>
+function validateForm() {
+    if ($('[name="full_name"]').val().trim().length < 1) {
+        $('[name="full_name"]').addClass('error');
+    } else {
+        $('[name="full_name"]').removeClass('error');
+    }
+
+    if ($('[name="email"]').val().trim().length < 1) {
+        $('[name="email"]').addClass('error');
+    } else {
+        $('[name="email"]').removeClass('error');
+    }
+
+    if ($('#country_select_code').length == '0' || $('#phone').val().trim().length < 1) {
+        $('.select-wrapper').addClass('error');
+    } else {
+        $('.select-wrapper').removeClass('error');
+    }
+
+    if ($('[name="agree"]').val() != 1) {
+        $('#agree_text').addClass('error');
+        $('#agree_text').addClass('error-agree');
+    } else {
+        $('#agree_text').removeClass('error');
+        $('#agree_text').removeClass('error-agree');
+    }
+
+    return $('#contact_form .error').length == 0
+}   
+
+function sendForm() {
+    if (!validateForm()) {
+        return;
+    }
+
+    $.ajax({
+        type: "post",
+        url: "index.php?route=extension/module/contacts/addRequest",
+        data: $('#contact_form').serializeArray(),
+        dataType: "json",
+        success: function (response) {
+            if (response.error.hasOwnProperty('warning')) {
+                alert(response.error.warning);
+            }
+
+            if (response.success) {
+                alert('Success')
+            }
+        },
+        error: function(xhr){
+            alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.statusText + ' ' + xhr.responseText);
+        }
+    });
+}
+</script>
+{{content_bottom}}
+{{footer}}

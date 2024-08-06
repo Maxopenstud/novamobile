@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Contacts</name>
+    <code>contacts_maxopen.com.ua</code>
+    <version>1.0</version>
+    <author>Maxopen</author>
+    <link>maxopen.com.ua</link>
+
+    <file path="catalog/controller/common/{content_top,content_bottom,column_left_column_right}.php">
+        <operation>
+            <search><![CDATA[$layout_id = $this->model_design_layout->getLayout($route);]]></search>
+            <add position="before" offset="2">
+                <![CDATA[
+                    if ($this->config->get('module_contacts_status')) {
+                        $layout_id = $this->load->controller('custom/setting/getValue', array(
+                            'section' => 'contacts', // Unique section identifier
+                            'setting' => 'contacts_layout_id', // Unique field identifier
+                            'page' => 'module_contacts' // Form code in the admin panel
+                        ))['value'] ?? false;
+                    }
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+    <file path="admin/controller/common/column_left.php">
+        <operation>
+            <search><![CDATA[$customer = array();]]></search>
+            <add position="before">
+                <![CDATA[
+                    if ($this->config->get('module_contacts_status')) {
+                        $data['menus'][] = array(
+                            'id' => 'menu-contacts',
+                            'icon' => 'fa-phone',
+                            'name' => _e('Contacts'),
+                            'href' => '',
+                            'children' => [
+                                [
+                                    'name' => _e('Requests'),
+                                    'href' => $this->url->link('extension/module/contacts/requests', 'user_token=' . $this->session->data['user_token'], true)
+                                ],
+                                [
+                                    'name' => _e('Topics'),
+                                    'href' => $this->url->link('extension/module/contacts/topics', 'user_token=' . $this->session->data['user_token'], true)
+                                ]
+                            ]
+                        );
+                    }
+                ]]>
+            </add>
+        </operation>
+    </file>
+</modification>

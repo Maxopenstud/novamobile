@@ -1,0 +1,148 @@
+{{ header }}{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+		<button type="button" form="form-message" formaction="{{ delete }}" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger" onclick="confirm('{{ text_confirm }}') ? $('#form-message').submit() : false;"><i class="fa fa-trash-o"></i></button>
+      </div>
+      <h1>{{ heading_title }}</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    {% if error_warning %}
+    <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}
+    {% if success %}
+    <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}
+    <div class="row">
+      <div id="filter-history" class="col-md-3 col-md-push-9 col-sm-12 hidden-sm hidden-xs">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-filter"></i> {{ text_filter }}</h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+                <label for="" class="control-label">{{ _e("Topic") }}</label>
+                <select name="filter_topic_id" id="" class="form-control">
+                    <option value=""></option>
+                    {% for topic in topics %}
+                        <option value="{{topic.id}}" {% if topic.id == filter_topic_id %}selected="true"{% endif %}>{{topic.name}}</option>
+                    {% endfor %}
+                </select>
+			</div>  
+            <div class="form-group">
+                <label for="" class="control-label">{{ _e("Email") }}</label>
+                <div class="input-group">
+                    <input type="text" name="filter_email" id="" value="{{filter_email}}" class="form-control">
+                </div>
+			</div>  
+            <div class="form-group">
+                <label for="" class="control-label">{{ _e("Date added") }}</label>
+                <div class="input-group">
+                    <input type="date" name="filter_date_added" id="" value="{{filter_date_added}}" class="form-control">
+                </div>
+			</div>  
+            <div class="form-group text-right">
+              <button type="button" id="button-filter" class="btn btn-default"><i class="fa fa-filter"></i> {{ button_filter }}</button>
+			  <button type="button" id="button-clear-filter" class="btn btn-default"><i class="fa fa-times"></i><span class="hidden-sm"> {{ button_clear }}</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 col-md-pull-3 col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-list"></i> {{ text_list }}</h3>
+          </div>
+          <div class="panel-body">
+            <form action="{{ delete }}" method="post" enctype="multipart/form-data" id="form-message">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                        <td style="width: 1px;" class="text-center"><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" /></td>
+                        <td class="text-left">{{ _e("Topic") }}</td>
+                        <td class="text-left">{{ _e("Email") }}</td>
+                        <td class="text-left">{{ _e("Full name") }}</td>
+                        <td class="text-left">{{ _e("Date added") }}</td>
+					    <td class="text-right">{{ column_action }}</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                  {% if requests %}
+                  {% for r in requests %}
+                  <tr>
+                    <td class="text-center">
+                        {% if r.id in selected %}
+                        <input type="checkbox" name="selected[]" value="{{ r.id }}" checked="checked" />
+                        {% else %}
+                        <input type="checkbox" name="selected[]" value="{{ r.id }}" />
+                        {% endif %}
+                    </td>
+                    <td class="text-left">{{ r.topic_name }}</td>
+                    <td class="text-left">{{ r.email }}</td>
+                    <td class="text-left">{{ r.full_name }}</td>
+                    <td class="text-left">{{ r.date_added }}</td>
+                    <td class="text-right">
+                      <a href="{{ r.view }}" data-toggle="tooltip" title="{{ button_view }}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                  {% else %}
+                  <tr>
+                    <td class="text-center" colspan="9">{{ text_no_results }}</td>
+                  </tr>
+                  {% endif %}
+                    </tbody>
+                  
+                </table>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-sm-6 text-left">{{ pagination }}</div>
+              <div class="col-sm-6 text-right">{{ results }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript"><!--
+
+function checkFilter(name) {
+    let val = $('[name="'+name+'"]').val().trim();
+    if (val.length > 0) {
+        return '&' + name + '=' + encodeURIComponent(val)
+    } else {
+        return ''
+    }
+}
+
+$('#button-filter').on('click', function() {
+	var url = '';
+
+	url += checkFilter('filter_topic_id');
+	url += checkFilter('filter_email');
+	url += checkFilter('filter_date_added');
+	
+	location = 'index.php?route=extension/module/contacts/requests&user_token={{ user_token }}' + url;
+});
+//--></script> 
+  <script type="text/javascript"><!--
+// IE and Edge fix!
+$('button[form=\'form-message\']').on('click', function(e) {
+	$('#form-message').attr('action', $(this).attr('formaction'));
+});
+//--></script></div>
+{{ footer }} 

@@ -20,6 +20,16 @@
                         {% endfor %}
                     </ul>
                 </div>
+                {% for links_block in custom_links_block %}
+                <div class="footer__column">
+                    <div class="col-12 footer__title">{{links_block.name}}</div>
+                    <ul class="footer__menu">
+                        {% for link in links_block.links %}
+                        <li class="footer__menu-item"><a href="{{link.link}}" class="manual-text">{{link.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
                 {% for article_block in articles_block %}
                 <div class="footer__column">
                     <div class="footer__title">{{article_block.title}}</div>
@@ -31,16 +41,6 @@
                     </ul>
                 </div>
                 {% endfor %} 
-                {% for links_block in custom_links_block %}
-                <div class="footer__column">
-                    <div class="col-12 footer__title">{{links_block.name}}</div>
-                    <ul class="footer__menu">
-                        {% for link in links_block.links %}
-                        <li class="footer__menu-item"><a href="{{link.link}}" class="manual-text">{{link.title}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endfor %}
             </div>
         </div>
         <div class="footer__bottom d-flex flex-column-reverse flex-lg-row justify-content-between">
