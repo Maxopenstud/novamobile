@@ -275,14 +275,14 @@ class ControllerBlogLatest extends Controller {
 			$url .= '&limit=' . $this->request->get['limit'];
 		}
 
-		$pagination = new Pagination();
-		$pagination->total = $article_total;
-		$pagination->page = $page;
-		$pagination->limit = $limit;
-		$pagination->text = $this->language->get('text_pagination');
-		$pagination->url = $this->url->link('blog/latest', $url . '&page={page}');
+		// $pagination = new Pagination();
+		// $pagination->total = $article_total;
+		// $pagination->page = $page;
+		// $pagination->limit = $limit;
+		// $pagination->text = $this->language->get('text_pagination');
+		// $pagination->url = $this->url->link('blog/latest', $url . '&page={page}');
 
-		$data['pagination'] = $pagination->render();
+		// $data['pagination'] = $pagination->render();
 		
 		$data['article_total'] = $article_total;
 		
