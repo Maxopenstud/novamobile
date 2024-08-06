@@ -1,15 +1,7 @@
 {{header}}
+<body class="header_bg">
 {{menu}}
-<div class="container">
-    <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Home</a>
-        </li>
-        <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link active">Current page</a>
-        </li>
-    </ul>
-</div>
+{% include 'breadcrumbs.twig' with {'breadcrumbs': breadcrumbs} %
 
 {{content_top}}
 

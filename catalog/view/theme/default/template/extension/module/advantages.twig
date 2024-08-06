@@ -1,10 +1,24 @@
+{% set html_tags_replace = {
+  '<ul>': '<ul class="manual-list">',
+  '<h1>': '<div class="manual-title">',
+  '</h1>': '</div>',
+  '<h2>': '<div class="manual-title">',
+  '</h2>': '</div>',
+  '<h3>': '<div class="manual-title">',
+  '</h3>': '</div>',
+  '<h4>': '<div class="manual-title">',
+  '</h4>': '</div>',
+  '<p>': '<div class="manual-text mt-20">',
+  '</p>': '</div>'
+} %}
+
 <section class="section advantages">
     <div class="container">
         <div class="d-flex justify-content-between gap-60 gap-max-lg-30 gap-max-xl-40 flex-wrap flex-lg-nowrap">
             <div class="w-100">
                 <div class="advantages__title">{{title}}</div>
                 <div class="manual-text mt-20">
-                    {{text}}
+                    {{text|replace(html_tags_replace)}}
                 </div>
                 <a href="{{link.href}}" class="btn btn-dark d-flex align-items-center gap-10">
                     {{link.name}}

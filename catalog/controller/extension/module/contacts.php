@@ -15,6 +15,19 @@ class ControllerExtensionModuleContacts extends Controller {
         if ($this->config->get($this->prefix . 'status')) {
             $data = $this->load->language('extension/module/contacts');
 
+            $data['breadcrumbs'] = array();
+
+            $data['breadcrumbs'][] = array(
+                'text'      => $this->language->get('text_home'),
+                'href'      => $this->url->link('common/home'),
+                'separator' => false
+            );
+
+            $data['breadcrumbs'][] = array(
+                'text'      => _e("Contact us"),
+                'href'      => $this->url->link('extension/module/contacts'),
+            );
+
             $width = $this->config->get($this->prefix.'width');
             $height = $this->config->get($this->prefix.'height');
 

@@ -27,3 +27,5 @@ $_["*please_select_country_and_enter_phone_number"]="*Please select country and 
 $_["related_articles"]="Related Articles";
 $_["blog"]="Blog";
 $_["read_more"]="Read more";
+$_["about_us"]="About us";
+$_["contact_us"]="Contact us";

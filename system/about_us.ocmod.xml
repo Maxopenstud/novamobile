@@ -17,7 +17,7 @@
                         'setting' => 'au_information_redirect', // Unique field identifier
                         'page' => 'module_about_us' // Form code in the admin panel
                     ));
-                    if ($this->config->get('module_about_us_status') && $this->request->get['information_id'] == $about_us_redirect_id['value']) {
+                    if ($this->config->get('module_about_us_status') && ($this->request->get['information_id'] == $about_us_redirect_id['value'])) {
                         return $this->load->controller('extension/module/about_us');
                     }
                 ]]>
@@ -35,7 +35,7 @@
                         'setting' => 'au_information_redirect', // Unique field identifier
                         'page' => 'module_about_us' // Form code in the admin panel
                     ));
-                    if ($this->config->get('module_about_us_status') && isset($this->request->get['information_id']) && $this->request->get['information_id'] == $about_us_redirect_id['value']) {
+                    if ($this->config->get('module_about_us_status') && ($this->request->get['route'] == 'extension/module/about_us' || isset($this->request->get['information_id']) && $this->request->get['information_id'] == $about_us_redirect_id['value'])) {
                         $layout_id = $this->load->controller('custom/setting/getValue', array(
                             'section' => 'about_us', // Unique section identifier
                             'setting' => 'au_layout', // Unique field identifier
