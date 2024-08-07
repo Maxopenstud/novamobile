@@ -2218,9 +2218,9 @@ select.error + .error-label {
 
 @media (min-width: 576px) {
   .cascade-slider_arrow.mac {
-    bottom: 0; }
+    bottom: -50px; }
   .cascade-slider_nav.mac {
-    bottom: 0; } }
+    bottom: -65px; } }
 
 .cascade-slider_dot {
   display: inline-block;
