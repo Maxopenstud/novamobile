@@ -37,11 +37,9 @@ final class Twig {
 			is_dir(DIR_TEMPLATE . $dir) or mkdir(DIR_TEMPLATE . $dir, 0777);
 			$components_loader = new \Twig\Loader\FilesystemLoader(DIR_TEMPLATE . $dir);
 
-			$loader_filesystem = new \Twig\Loader\FilesystemLoader(DIR_TEMPLATE);
-
 			$array_loader = new \Twig\Loader\ArrayLoader(array($filename . '.twig' => $code));
 
-			$loader = new \Twig\Loader\ChainLoader(array($components_loader, $loader_filesystem, $array_loader));
+			$loader = new \Twig\Loader\ChainLoader(array($components_loader, $array_loader));
 
 			$twig = new \Twig\Environment($loader, $config);
 
