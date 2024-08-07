@@ -2218,7 +2218,7 @@ select.error + .error-label {
 
 @media (min-width: 576px) {
   .cascade-slider_arrow.mac {
-    bottom: -50px; }
+    bottom: -75px; }
   .cascade-slider_nav.mac {
     bottom: -65px; } }
 
