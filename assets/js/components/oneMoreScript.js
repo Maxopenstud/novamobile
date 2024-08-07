@@ -124,6 +124,24 @@ $(document).ready(function() {
         $(this).parent().find(".devices").slideToggle();
         $(this).toggleClass("open");
     });
+    $(".accordion__heading").click(function() {
+        $(this).parent().find(".accordion__body").slideToggle();
+        $(this).toggleClass("open");
+    });
+    function addOverlay() {
+        $("body").append('<div class="overlay"></div>')
+    }
+    function removeOverlay() {
+        $(".overlay").remove()
+    }
+    $(".cookies-link").click(function() {
+        $(".manageCookies").addClass("open");
+        addOverlay()
+    });
+    $(".cookies-confirm").click(function() {
+        $(".manageCookies").removeClass("open");
+        removeOverlay()
+    });
     function removeCloud() {
         $(".cloud").css("transition", "5s");
         $(".cloud").css("transform", "translateY(-200%)");

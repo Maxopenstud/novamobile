@@ -30,10 +30,10 @@
         }
     }
     & .hero {
-        margin-top: 150px;
+        margin-top: 9vw;
         transform: translateX(-200%);
         @include max-md {
-            margin-top: 164px;
+            margin-top: 43vw;
         }
     }
     & .hero__description {

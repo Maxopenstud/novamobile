@@ -939,7 +939,7 @@ select::-ms-expand {
   width: 48px;
   height: 24px;
   border-radius: 16px;
-  background-color: #f4f4f4;
+  background-color: #95959B;
   border: none;
   cursor: pointer; }
 
@@ -1101,6 +1101,16 @@ select.error + .error-label {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .6;
+  z-index: 9; }
+
 .header {
   padding: 29px 40px;
   background-color: #fff;
@@ -1248,11 +1258,11 @@ select.error + .error-label {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
   .main .hero {
-    margin-top: 150px;
+    margin-top: 9vw;
     transform: translateX(-200%); }
     @media (max-width: 768px) {
       .main .hero {
-        margin-top: 164px; } }
+        margin-top: 43vw; } }
   .main .hero__description {
     font-family: "Telegraf-Regular", sans-serif;
     font-size: 18px;
@@ -5040,6 +5050,111 @@ select.error + .error-label {
     .supportedDevices .devices__item img {
       width: 22px;
       height: 13px; }
+
+.manageCookies {
+  background-color: #fff;
+  width: 50%;
+  padding: 100px 90px 100px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow: auto;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: .5s; }
+  @media (max-width: 992px) {
+    .manageCookies {
+      width: 100%;
+      padding: 100px 20px; } }
+  .manageCookies.open {
+    transform: translateX(0);
+    transition: .5s; }
+  .manageCookies > .manual-title {
+    font-size: 22px;
+    line-height: 23px; }
+    @media (max-width: 992px) {
+      .manageCookies > .manual-title {
+        font-size: 18px;
+        line-height: 19px; } }
+  .manageCookies > .manual-text {
+    margin: 20px 0 40px; }
+    @media (max-width: 992px) {
+      .manageCookies > .manual-text {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 16px 0 20px; } }
+  .manageCookies .btn {
+    max-width: 238px;
+    margin-top: 40px; }
+    @media (max-width: 992px) {
+      .manageCookies .btn {
+        margin-top: 20px;
+        border-radius: 15px;
+        max-width: 148px;
+        font-size: 12px;
+        height: 40px !important; } }
+
+.accordions {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; }
+  @media (max-width: 992px) {
+    .accordions {
+      margin-top: 16px; } }
+
+.accordion {
+  border: 1px solid #D1D1D1;
+  border-radius: 20px;
+  padding: 30px 20px; }
+  @media (max-width: 992px) {
+    .accordion {
+      padding: 20px 15px; } }
+  .accordion__heading {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 50px;
+    cursor: pointer; }
+    .accordion__heading::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg width=%2720%27 height=%2713%27 viewBox=%270 0 20 13%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M2.35833 0.5L10 7.92009L17.6417 0.5L20 2.78995L10 12.5L0 2.78995L2.35833 0.5Z%27 fill=%27%23BABABA%27/%3E%3C/svg%3E%0A");
+      width: 20px;
+      height: 12px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      transition: .5s; }
+    .accordion__heading.open::after {
+      transform: rotateX(180deg);
+      transition: .5s; }
+  .accordion .manual-title {
+    font-size: 18px;
+    line-height: 30px; }
+    @media (max-width: 992px) {
+      .accordion .manual-title {
+        font-size: 14px; } }
+  @media (max-width: 992px) {
+    .accordion .manual-text {
+      font-size: 14px; } }
+  .accordion__body {
+    margin-top: 30px;
+    display: none; }
+    @media (max-width: 992px) {
+      .accordion__body {
+        margin-top: 14px; } }
+  .accordion .custom-checkbox-reverse {
+    position: relative; }
+    .accordion .custom-checkbox-reverse input {
+      width: 48px !important;
+      right: 10px; }
+  .accordion .account-custom-checkbox > span::after {
+    top: 3px; }
 
 .footer {
   padding: 60px 0; }
