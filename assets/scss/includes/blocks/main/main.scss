@@ -32,7 +32,11 @@
     & .hero {
         margin-top: 9vw;
         transform: translateX(-200%);
-        @include max-md {
+        @include max-xxxl{
+            margin-top: 10vw;
+        }
+        
+        @include max-sm {
             margin-top: 43vw;
         }
     }

@@ -1260,7 +1260,10 @@ select.error + .error-label {
   .main .hero {
     margin-top: 9vw;
     transform: translateX(-200%); }
-    @media (max-width: 768px) {
+    @media (max-width: 1570px) {
+      .main .hero {
+        margin-top: 10vw; } }
+    @media (max-width: 576px) {
       .main .hero {
         margin-top: 43vw; } }
   .main .hero__description {
