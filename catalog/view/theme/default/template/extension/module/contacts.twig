@@ -75,7 +75,7 @@
                         </span>
                     </label>
                 </div>
-                <button type="submit" class="btn btn-dark w-auto p-20">{{ _e("Send") }}</button>
+                <button type="button" id="sendForm" class="btn btn-dark w-auto p-20">{{ _e("Send") }}</button>
             </div>
             <div class="">
                 <img src="{{image}}" alt="">
@@ -113,7 +113,7 @@
     }
 
     .error-agree {
-        color: #FF0000;
+        color: #FF0000 !important;
     }
 </style>
 
@@ -199,6 +199,10 @@ function sendForm() {
         }
     });
 }
+
+$(document).ready(function () {
+    $('#sendForm').click(sendForm);
+});
 </script>
 {{content_bottom}}
 {{footer}}
