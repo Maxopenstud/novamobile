@@ -2712,11 +2712,11 @@ select.error + .error-label {
     /* transform: translate(0, 100%); */
   }
 }
-/* @media (min-width: 576px) and (max-width: 1450px) {
+@media (min-width: 576px) and (max-width: 1450px) {
   .cascade-slider_nav.mac {
-    bottom: -100px;
+    bottom: -75px;
   }
-} */
+}
 
 .cascade-slider_dot {
   display: inline-block;
