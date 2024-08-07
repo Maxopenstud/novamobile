@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Novamobile</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/nova.png">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="stylesheet" href="css/swiper/swiper.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Подключение jQuery Inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/jquery.inputmask.min.js"></script>
+    <!--font-family: "Poppins", sans-serif; -->
+    <link rel="stylesheet" href="fonts/gilroy/stylesheet.css">
+    <link rel="stylesheet" href="fonts/telegraf/stylesheet.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="header_bg">
+        
+        <div class="container">
+            <div class="header">
+            <div class="d-flex align-items-center gap-20 w-100">
+                <button class="burger">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M1 8H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M1 15H19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+                <div class="header__mobile">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-20 w-100">
+                            <button class="burger">
+                                <svg class="" width="20" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.42773 1L15.287 15" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M14.8594 1L1.00008 15" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                            <a href="#" class="logo header__logo">
+                                <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                                <img src="images/logo_business.svg" alt="logo" class="logo__business"> 
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center gap-20 gap-max-xl-10">
+                            <a href="login.html" class="icon_login">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1040_563)">
+                                    <path d="M15 5C12.2375 5 10 7.2375 10 10C10 12.7562 12.2375 15 15 15C17.7625 15 20 12.7562 20 10C20 7.2375 17.7625 5 15 5ZM15 17.5C11.6687 17.5 5 19.1687 5 22.5V25H25V22.5C25 19.1687 18.3313 17.5 15 17.5Z" fill="black"></path>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1040_563">
+                                    <rect width="30" height="30" fill="white"></rect>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    EN ($)
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">УКР (UAH)</a></li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn btn-dark">Try now</button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center gap-40">
+                        <ul class="menu burger__menu">
+                            <li class="menu__item">
+                                <a href="index.html" class="menu__link active">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="store.html" class="menu__link">Store</a> 
+                            </li>
+                            <li class="menu__item">
+                                <a href="aboutUs.html" class="menu__link">About us</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="contacts.html" class="menu__link">Contact us</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="business.html" class="menu__link">Nova for Business</a>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-dark mobile-lg">Try now</button>
+                    </div>
+                    <div class="d-flex flex-column align-items-center gap-20">
+                        <a href="#" class="logo header__logo">
+                            <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                            <img src="images/logo_business.svg" alt="logo" class="logo__business">  
+                        </a>
+                        <ul class="social">
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21 8.70968H17V5.95161C17 4.93548 17.7143 4.64516 18.1429 4.64516H21V0H17C12.5714 0 11.5714 3.48387 11.5714 5.66129V8.70968H9V13.5H11.5714V27H17V13.5H20.5714L21 8.70968Z" fill="#3B3B3B"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.5 5.84202C27.695 7.07106 26.7289 8.11299 25.6018 8.96779C25.6018 9.05164 25.6117 9.182 25.6315 9.3589C25.6512 9.53579 25.6611 9.66616 25.6611 9.75C25.6611 11.3747 25.4295 13 24.9662 14.6258C24.5029 16.2515 23.7986 17.8037 22.8533 19.2822C21.908 20.7607 20.7859 22.0731 19.487 23.2193C18.188 24.3655 16.6283 25.2822 14.8078 25.9693C12.9874 26.6564 11.0301 27 8.93598 27C5.67531 27 2.69665 26.0936 0 24.2807C0.564024 24.3226 1.0268 24.3436 1.38833 24.3436C4.10572 24.3436 6.53122 23.4893 8.66483 21.7807C7.39652 21.7602 6.26452 21.3594 5.26883 20.5782C4.27315 19.797 3.5738 18.7919 3.17078 17.5629C3.51256 17.6467 3.88495 17.6886 4.28796 17.6886C4.83124 17.6886 5.3444 17.6053 5.82742 17.4386C4.4791 17.1472 3.36192 16.4494 2.47588 15.3451C1.58984 14.2408 1.14682 12.9698 1.14682 11.5322V11.4693C1.91136 11.8865 2.78703 12.1155 3.77382 12.1564C2.98854 11.6145 2.36475 10.9008 1.90247 10.0153C1.44019 9.12986 1.20855 8.17689 1.20756 7.15644C1.20756 6.11452 1.45895 5.09356 1.96174 4.09356C3.43057 5.98926 5.2066 7.48415 7.28984 8.57822C9.37307 9.67229 11.6321 10.2817 14.067 10.4064C13.9258 9.88599 13.8551 9.4274 13.8551 9.03067C13.8551 7.36401 14.4285 5.94223 15.5754 4.76534C16.7222 3.58845 18.1209 3 19.7715 3C20.5765 3 21.3514 3.16667 22.0962 3.5C22.841 3.83333 23.4751 4.30215 23.9987 4.90644C25.3272 4.63548 26.5649 4.14571 27.7117 3.43712C27.289 4.85429 26.4336 5.96881 25.1455 6.78067C26.3733 6.61401 27.4905 6.30164 28.497 5.84356L28.5 5.84202Z" fill="#3B3B3B"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_503_6280)">
+                                        <path d="M14.994 2.70292C19 2.70292 19.4702 2.72078 21.0536 2.79222C22.5179 2.85771 23.3095 3.10181 23.8393 3.31018C24.5417 3.58404 25.0417 3.90554 25.5655 4.42945C26.0893 4.95336 26.4167 5.45346 26.6845 6.15598C26.8869 6.68585 27.1369 7.47767 27.2024 8.94225C27.2738 10.5259 27.2917 10.9962 27.2917 15.003C27.2917 19.0097 27.2738 19.4801 27.2024 21.0637C27.1369 22.5283 26.8929 23.3201 26.6845 23.85C26.4107 24.5525 26.0893 25.0526 25.5655 25.5765C25.0417 26.1004 24.5417 26.4279 23.8393 26.6958C23.3095 26.8982 22.5179 27.1482 21.0536 27.2137C19.4702 27.2852 19 27.303 14.994 27.303C10.9881 27.303 10.5179 27.2852 8.93452 27.2137C7.47024 27.1482 6.67857 26.9041 6.14881 26.6958C5.44643 26.4219 4.94643 26.1004 4.42262 25.5765C3.89881 25.0526 3.57143 24.5525 3.30357 23.85C3.10119 23.3201 2.85119 22.5283 2.78571 21.0637C2.71429 19.4801 2.69643 19.0097 2.69643 15.003C2.69643 10.9962 2.71429 10.5259 2.78571 8.94225C2.85119 7.47767 3.09524 6.68585 3.30357 6.15598C3.57738 5.45346 3.89881 4.95336 4.42262 4.42945C4.94643 3.90554 5.44643 3.57809 6.14881 3.31018C6.67857 3.10776 7.47024 2.85771 8.93452 2.79222C10.5179 2.71482 10.9881 2.70292 14.994 2.70292ZM14.994 0C10.9226 0 10.4107 0.0178607 8.80952 0.0893034C7.21429 0.160746 6.125 0.416749 5.17262 0.78587C4.18452 1.1669 3.35119 1.68486 2.51786 2.51836C1.68452 3.35186 1.17262 4.19131 0.785714 5.17365C0.416667 6.12622 0.160714 7.21572 0.0892857 8.81723C0.0178571 10.4128 0 10.9248 0 14.997C0 19.0693 0.0178571 19.5813 0.0892857 21.1828C0.160714 22.7783 0.416667 23.8678 0.785714 24.8264C1.16667 25.8146 1.68452 26.6481 2.51786 27.4816C3.35119 28.3151 4.19048 28.8271 5.17262 29.2141C6.125 29.5833 7.21429 29.8393 8.81548 29.9107C10.4167 29.9821 10.9226 30 15 30C19.0774 30 19.5833 29.9821 21.1845 29.9107C22.7798 29.8393 23.869 29.5833 24.8274 29.2141C25.8155 28.8331 26.6488 28.3151 27.4821 27.4816C28.3155 26.6481 28.8274 25.8087 29.2143 24.8264C29.5833 23.8738 29.8393 22.7843 29.9107 21.1828C29.9821 19.5813 30 19.0752 30 14.997C30 10.9188 29.9821 10.4128 29.9107 8.81127C29.8393 7.21572 29.5833 6.12622 29.2143 5.16769C28.8333 4.1794 28.3155 3.3459 27.4821 2.5124C26.6488 1.6789 25.8095 1.1669 24.8274 0.779917C23.875 0.410796 22.7857 0.154793 21.1845 0.0833499C19.5774 0.0178607 19.0655 0 14.994 0Z" fill="#3B3B3B"></path>
+                                        <path d="M15 7.5C10.8617 7.5 7.5 10.8559 7.5 15C7.5 19.1441 10.8617 22.5 15 22.5C19.1383 22.5 22.5 19.1383 22.5 15C22.5 10.8617 19.1383 7.5 15 7.5ZM15 19.8686C12.3107 19.8686 10.1314 17.6893 10.1314 15C10.1314 12.3107 12.3107 10.1314 15 10.1314C17.6893 10.1314 19.8686 12.3107 19.8686 15C19.8686 17.6893 17.6893 19.8686 15 19.8686Z" fill="#3B3B3B"></path>
+                                        <path d="M22.5 9C23.3284 9 24 8.32843 24 7.5C24 6.67157 23.3284 6 22.5 6C21.6716 6 21 6.67157 21 7.5C21 8.32843 21.6716 9 22.5 9Z" fill="#3B3B3B"></path>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_503_6280">
+                                        <rect width="30" height="30" fill="white"></rect>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.77823e-06 22.7812C1.77823e-06 23.9527 0.395636 24.9489 1.1869 25.7699C1.97817 26.5909 2.94144 27.001 4.07669 27H25.9233C27.0586 27 28.0218 26.59 28.8131 25.7699C29.6044 24.9499 30 23.9536 30 22.7812V5.78881C30 4.61732 29.6005 3.60964 28.8014 2.76579C28.0023 1.92193 27.043 1.5 25.9233 1.5H4.07669C2.958 1.5 1.99864 1.92193 1.1986 2.76579C0.39856 3.60964 -0.000972691 4.61732 1.77823e-06 5.78881V22.7812ZM10.9116 19.711V8.85898C10.9116 8.74945 10.9438 8.66373 11.0081 8.60183C11.0558 8.58659 11.0958 8.57897 11.1279 8.57897L11.2478 8.60183L21.7034 14.0393C21.7677 14.1021 21.7998 14.1802 21.7998 14.2736C21.7998 14.3364 21.7677 14.3988 21.7034 14.4607L11.2478 19.8982C11.2157 19.9296 11.1835 19.9453 11.1513 19.9453C11.087 19.9453 11.0393 19.9296 11.0081 19.8982C10.9438 19.8353 10.9116 19.7729 10.9116 19.711Z" fill="#3B3B3B"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="logo header__logo">
+                    <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                    <img src="images/logo_business.svg" alt="logo" class="logo__business">  
+                </a>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <ul class="menu header__menu">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link active">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="store.html" class="menu__link">Store</a> 
+                    </li>
+                    <li class="menu__item">
+                        <a href="about.html" class="menu__link">About us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="contacts.html" class="menu__link">Contact us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="business.html" class="menu__link">Nova for Business</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-20 gap-max-xl-10 w-100">
+                    <a href="login.html" class="icon_login">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1040_563)">
+                            <path d="M15 5C12.2375 5 10 7.2375 10 10C10 12.7562 12.2375 15 15 15C17.7625 15 20 12.7562 20 10C20 7.2375 17.7625 5 15 5ZM15 17.5C11.6687 17.5 5 19.1687 5 22.5V25H25V22.5C25 19.1687 18.3313 17.5 15 17.5Z" fill="black"></path>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_1040_563">
+                            <rect width="30" height="30" fill="white"></rect>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle btn-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            EN ($)
+                        </button>
+                        <ul class="dropdown-menu" style="">
+                            <li><a class="dropdown-item" href="#">УКР (UAH)</a></li>
+                        </ul>
+                    </div>
+                    <a href="businessLogin.html" class="btn btn-transparent">Sign in</a>
+                    <button type="button" class="btn btn-dark">Try now</button>
+                </div>
+            </div>
+        
+            </div>
+        </div>        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Home</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link active">Current page</a>
+                </li>
+            </ul>
+        </div>        <div class="container overflow-hidden">
+            <div class="sectionTitle mb-0">Blog</div>
+          <div class="mainContent ">
+            <!-- Start of 3D Slider -->
+            <section class="sliders">
+              <!-- 3d Slider -->
+              <div class="cascade-slider_container" id="cascade-slider">
+                <div class="cascade-slider_slides">
+                  <div class="cascade-slider_item ">
+                    <a href="javvascript:void(0)">
+                      <img src="images/slider_img_1.png">
+                      <div class="cascade-slider_item-info">
+                        <div class="cascade-slider_item-title">Best Fiji eSIM For Travel</div>
+                        <div class="cascade-slider_item-desc">Planning a trip to Fiji? Getting a Fiji eSIM is one of the easiest and most affordable ways to stay connected during your trip. 
+                        With an eSIM from Airalo, you can download a data plan, install the eSIM on your device, and connect to a mobile network upon arrival. The best part? You can do it all from your smartphone!</div>
+                        <a href="#" class="btn btn-white h-60">
+                            Read more
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z" fill="black"/>
+                            </svg>
+                        </a>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cascade-slider_item ">
+                    <a href="javvascript:void(0)">
+                      <img src="images/slider_img_2.png">
+                      <div class="cascade-slider_item-info">
+                        <div class="cascade-slider_item-title">Best Fiji eSIM For Travel</div>
+                        <div class="cascade-slider_item-desc">Planning a trip to Fiji? Getting a Fiji eSIM is one of the easiest and most affordable ways to stay connected during your trip. 
+                        With an eSIM from Airalo, you can download a data plan, install the eSIM on your device, and connect to a mobile network upon arrival. The best part? You can do it all from your smartphone!</div>
+                        <a href="#" class="btn btn-white h-60">
+                            Read more
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z" fill="black"/>
+                            </svg>
+                        </a>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cascade-slider_item ">
+                    <a href="javvascript:void(0)">
+                      <img src="images/slider_img_3.png">
+                      <div class="cascade-slider_item-info">
+                        <div class="cascade-slider_item-title">Best Fiji eSIM For Travel</div>
+                        <div class="cascade-slider_item-desc">Planning a trip to Fiji? Getting a Fiji eSIM is one of the easiest and most affordable ways to stay connected during your trip. 
+                        With an eSIM from Airalo, you can download a data plan, install the eSIM on your device, and connect to a mobile network upon arrival. The best part? You can do it all from your smartphone!</div>
+                        <a href="#" class="btn btn-white h-60">
+                            Read more
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z" fill="black"/>
+                            </svg>
+                        </a>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cascade-slider_item ">
+                    <a href="javvascript:void(0)">
+                      <img src="images/slider_img_4.png">
+                      <div class="cascade-slider_item-info">
+                        <div class="cascade-slider_item-title">Best Fiji eSIM For Travel</div>
+                        <div class="cascade-slider_item-desc">Planning a trip to Fiji? Getting a Fiji eSIM is one of the easiest and most affordable ways to stay connected during your trip. 
+                        With an eSIM from Airalo, you can download a data plan, install the eSIM on your device, and connect to a mobile network upon arrival. The best part? You can do it all from your smartphone!</div>
+                        <a href="#" class="btn btn-white h-60">
+                            Read more
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z" fill="black"/>
+                            </svg>
+                        </a>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cascade-slider_item">
+                    <a href="javvascript:void(0)">
+                      <img src="images/slider_img_5.png">
+                      <div class="cascade-slider_item-info">
+                        <div class="cascade-slider_item-title">Best Fiji eSIM For Travel</div>
+                        <div class="cascade-slider_item-desc">Planning a trip to Fiji? Getting a Fiji eSIM is one of the easiest and most affordable ways to stay connected during your trip. 
+                        With an eSIM from Airalo, you can download a data plan, install the eSIM on your device, and connect to a mobile network upon arrival. The best part? You can do it all from your smartphone!</div>
+                        <a href="#" class="btn btn-white h-60">
+                            Read more
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.583484 13.3654C0.357216 13.1391 0.244083 12.8845 0.244083 12.6017C0.244083 12.3188 0.357216 12.0642 0.583483 11.838L9.83215 2.58871L2.95929 2.50386C2.56332 2.56043 2.2522 2.39072 2.02594 1.99473C1.79967 1.59873 1.78553 1.21689 1.98351 0.849178C2.1815 0.481471 2.50676 0.297617 2.95929 0.297617L12.4625 0.297617C12.8019 0.297617 13.0847 0.410757 13.311 0.637039C13.5373 0.86332 13.6504 1.14617 13.6504 1.48559L13.6504 10.9894C13.6504 11.3288 13.5373 11.6117 13.311 11.838C13.0847 12.0642 12.816 12.1632 12.5049 12.135C12.1938 12.1067 11.9251 11.9794 11.6989 11.7531C11.4726 11.5268 11.3877 11.2723 11.4443 10.9894L11.3595 4.11611L2.11079 13.3654C1.88452 13.5916 1.62997 13.7048 1.34713 13.7048C1.0643 13.7048 0.80975 13.5916 0.583484 13.3654Z" fill="black"/>
+                            </svg>
+                        </a>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <span class="cascade-slider_arrow cascade-slider_arrow-left" data-action="prev">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </span>
+                <span class="cascade-slider_arrow cascade-slider_arrow-right" data-action="next">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </span>
+                <div class="cascade-slider-nav">
+                    <div class='cascade-slider-nav-item'></div>
+                    <div class='cascade-slider-nav-item'></div>
+                    <div class='cascade-slider-nav-item '></div>
+                    <div class='cascade-slider-nav-item '></div>
+                    <div class='cascade-slider-nav-item'></div>
+                </div>
+              </div>
+            </section>
+            <!-- End of 3D Slider and TNC -->
+          </div>
+        </div>        <footer class="footer">
+            <div class="container">
+                <div class="footer__content d-flex flex-column flex-lg-row justify-content-between gap-20">
+                    <div class="col-xl-4">
+                        <div class="d-flex flex-column">
+                            <a href="#" class="logo footer__logo">
+                                <img src="images/logo.svg" alt="logo" class="logo__default"> 
+                                <img src="images/logo_business.svg" alt="logo" class="logo__business">  
+                            </a>
+                            <div class="footer__text mt-4">Need help? <br> Call us: +44 00 0000 0000</div>
+                            <ul class="social">
+                                <li class="social__item">
+                                    <a href="#" class="social__link">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 8.70968H17V5.95161C17 4.93548 17.7143 4.64516 18.1429 4.64516H21V0H17C12.5714 0 11.5714 3.48387 11.5714 5.66129V8.70968H9V13.5H11.5714V27H17V13.5H20.5714L21 8.70968Z" fill="#3B3B3B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" class="social__link">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M28.5 5.84202C27.695 7.07106 26.7289 8.11299 25.6018 8.96779C25.6018 9.05164 25.6117 9.182 25.6315 9.3589C25.6512 9.53579 25.6611 9.66616 25.6611 9.75C25.6611 11.3747 25.4295 13 24.9662 14.6258C24.5029 16.2515 23.7986 17.8037 22.8533 19.2822C21.908 20.7607 20.7859 22.0731 19.487 23.2193C18.188 24.3655 16.6283 25.2822 14.8078 25.9693C12.9874 26.6564 11.0301 27 8.93598 27C5.67531 27 2.69665 26.0936 0 24.2807C0.564024 24.3226 1.0268 24.3436 1.38833 24.3436C4.10572 24.3436 6.53122 23.4893 8.66483 21.7807C7.39652 21.7602 6.26452 21.3594 5.26883 20.5782C4.27315 19.797 3.5738 18.7919 3.17078 17.5629C3.51256 17.6467 3.88495 17.6886 4.28796 17.6886C4.83124 17.6886 5.3444 17.6053 5.82742 17.4386C4.4791 17.1472 3.36192 16.4494 2.47588 15.3451C1.58984 14.2408 1.14682 12.9698 1.14682 11.5322V11.4693C1.91136 11.8865 2.78703 12.1155 3.77382 12.1564C2.98854 11.6145 2.36475 10.9008 1.90247 10.0153C1.44019 9.12986 1.20855 8.17689 1.20756 7.15644C1.20756 6.11452 1.45895 5.09356 1.96174 4.09356C3.43057 5.98926 5.2066 7.48415 7.28984 8.57822C9.37307 9.67229 11.6321 10.2817 14.067 10.4064C13.9258 9.88599 13.8551 9.4274 13.8551 9.03067C13.8551 7.36401 14.4285 5.94223 15.5754 4.76534C16.7222 3.58845 18.1209 3 19.7715 3C20.5765 3 21.3514 3.16667 22.0962 3.5C22.841 3.83333 23.4751 4.30215 23.9987 4.90644C25.3272 4.63548 26.5649 4.14571 27.7117 3.43712C27.289 4.85429 26.4336 5.96881 25.1455 6.78067C26.3733 6.61401 27.4905 6.30164 28.497 5.84356L28.5 5.84202Z" fill="#3B3B3B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" class="social__link">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_503_6280)">
+                                            <path d="M14.994 2.70292C19 2.70292 19.4702 2.72078 21.0536 2.79222C22.5179 2.85771 23.3095 3.10181 23.8393 3.31018C24.5417 3.58404 25.0417 3.90554 25.5655 4.42945C26.0893 4.95336 26.4167 5.45346 26.6845 6.15598C26.8869 6.68585 27.1369 7.47767 27.2024 8.94225C27.2738 10.5259 27.2917 10.9962 27.2917 15.003C27.2917 19.0097 27.2738 19.4801 27.2024 21.0637C27.1369 22.5283 26.8929 23.3201 26.6845 23.85C26.4107 24.5525 26.0893 25.0526 25.5655 25.5765C25.0417 26.1004 24.5417 26.4279 23.8393 26.6958C23.3095 26.8982 22.5179 27.1482 21.0536 27.2137C19.4702 27.2852 19 27.303 14.994 27.303C10.9881 27.303 10.5179 27.2852 8.93452 27.2137C7.47024 27.1482 6.67857 26.9041 6.14881 26.6958C5.44643 26.4219 4.94643 26.1004 4.42262 25.5765C3.89881 25.0526 3.57143 24.5525 3.30357 23.85C3.10119 23.3201 2.85119 22.5283 2.78571 21.0637C2.71429 19.4801 2.69643 19.0097 2.69643 15.003C2.69643 10.9962 2.71429 10.5259 2.78571 8.94225C2.85119 7.47767 3.09524 6.68585 3.30357 6.15598C3.57738 5.45346 3.89881 4.95336 4.42262 4.42945C4.94643 3.90554 5.44643 3.57809 6.14881 3.31018C6.67857 3.10776 7.47024 2.85771 8.93452 2.79222C10.5179 2.71482 10.9881 2.70292 14.994 2.70292ZM14.994 0C10.9226 0 10.4107 0.0178607 8.80952 0.0893034C7.21429 0.160746 6.125 0.416749 5.17262 0.78587C4.18452 1.1669 3.35119 1.68486 2.51786 2.51836C1.68452 3.35186 1.17262 4.19131 0.785714 5.17365C0.416667 6.12622 0.160714 7.21572 0.0892857 8.81723C0.0178571 10.4128 0 10.9248 0 14.997C0 19.0693 0.0178571 19.5813 0.0892857 21.1828C0.160714 22.7783 0.416667 23.8678 0.785714 24.8264C1.16667 25.8146 1.68452 26.6481 2.51786 27.4816C3.35119 28.3151 4.19048 28.8271 5.17262 29.2141C6.125 29.5833 7.21429 29.8393 8.81548 29.9107C10.4167 29.9821 10.9226 30 15 30C19.0774 30 19.5833 29.9821 21.1845 29.9107C22.7798 29.8393 23.869 29.5833 24.8274 29.2141C25.8155 28.8331 26.6488 28.3151 27.4821 27.4816C28.3155 26.6481 28.8274 25.8087 29.2143 24.8264C29.5833 23.8738 29.8393 22.7843 29.9107 21.1828C29.9821 19.5813 30 19.0752 30 14.997C30 10.9188 29.9821 10.4128 29.9107 8.81127C29.8393 7.21572 29.5833 6.12622 29.2143 5.16769C28.8333 4.1794 28.3155 3.3459 27.4821 2.5124C26.6488 1.6789 25.8095 1.1669 24.8274 0.779917C23.875 0.410796 22.7857 0.154793 21.1845 0.0833499C19.5774 0.0178607 19.0655 0 14.994 0Z" fill="#3B3B3B"/>
+                                            <path d="M15 7.5C10.8617 7.5 7.5 10.8559 7.5 15C7.5 19.1441 10.8617 22.5 15 22.5C19.1383 22.5 22.5 19.1383 22.5 15C22.5 10.8617 19.1383 7.5 15 7.5ZM15 19.8686C12.3107 19.8686 10.1314 17.6893 10.1314 15C10.1314 12.3107 12.3107 10.1314 15 10.1314C17.6893 10.1314 19.8686 12.3107 19.8686 15C19.8686 17.6893 17.6893 19.8686 15 19.8686Z" fill="#3B3B3B"/>
+                                            <path d="M22.5 9C23.3284 9 24 8.32843 24 7.5C24 6.67157 23.3284 6 22.5 6C21.6716 6 21 6.67157 21 7.5C21 8.32843 21.6716 9 22.5 9Z" fill="#3B3B3B"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_503_6280">
+                                            <rect width="30" height="30" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" class="social__link">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.77823e-06 22.7812C1.77823e-06 23.9527 0.395636 24.9489 1.1869 25.7699C1.97817 26.5909 2.94144 27.001 4.07669 27H25.9233C27.0586 27 28.0218 26.59 28.8131 25.7699C29.6044 24.9499 30 23.9536 30 22.7812V5.78881C30 4.61732 29.6005 3.60964 28.8014 2.76579C28.0023 1.92193 27.043 1.5 25.9233 1.5H4.07669C2.958 1.5 1.99864 1.92193 1.1986 2.76579C0.39856 3.60964 -0.000972691 4.61732 1.77823e-06 5.78881V22.7812ZM10.9116 19.711V8.85898C10.9116 8.74945 10.9438 8.66373 11.0081 8.60183C11.0558 8.58659 11.0958 8.57897 11.1279 8.57897L11.2478 8.60183L21.7034 14.0393C21.7677 14.1021 21.7998 14.1802 21.7998 14.2736C21.7998 14.3364 21.7677 14.3988 21.7034 14.4607L11.2478 19.8982C11.2157 19.9296 11.1835 19.9453 11.1513 19.9453C11.087 19.9453 11.0393 19.9296 11.0081 19.8982C10.9438 19.8353 10.9116 19.7729 10.9116 19.711Z" fill="#3B3B3B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 d-flex flex-column flex-lg-row justify-content-between">
+                        <div class="footer__column">
+                            <div class="footer__title">Popular countries</div>
+                            <ul class="footer__menu footer__menu-column-2">
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">United States</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">Spain</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">United Kingdom</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">China</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">Turkey</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">Japan</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">France</a></li>
+                                <li class="footer__menu-item"><a href="pageOfCountry.html" class="manual-text">Italy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__title">About us</div>
+                            <ul class="footer__menu">
+                                <li class="footer__menu-item"><a href="about.html" class="manual-text">About Novamobile</a></li>
+                                <li class="footer__menu-item"><a href="contacts.html" class="manual-text">Contact us</a></li>
+                                <li class="footer__menu-item"><a href="blogs.html" class="manual-text">Blog</a></li>
+                                <li class="footer__menu-item"><a href="business.html" class="manual-text">Nova for Business</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__title">More info</div>
+                            <ul class="footer__menu">
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Privacy policy</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Terms of service</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text cookies-link">Manage cookies</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Supported devices</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Modern slavery policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <div class="col-12 footer__title">Nova careers</div>
+                            <ul class="footer__menu">
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Working at Nova</a></li>
+                                <li class="footer__menu-item"><a href="#" class="manual-text">Nova Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom d-flex flex-column-reverse flex-lg-row justify-content-between">
+                    <div class="col-12 col-sm-8 col-md-7 col-lg-3 d-flex align-items-center justify-content-between mt-3 mt-lg-0 mx-auto mx-lg-0 gap-10 gap-max-md-0">
+                        <a href="#">
+                            <img src="images/apple_pay.png" alt="apple pay">
+                        </a>
+                        <a href="#">
+                            <img src="images/visa.png" alt="visa">
+                        </a>
+                        <a href="#">
+                            <img src="images/discover.png" alt="discover">
+                        </a>
+                        <a href="#">
+                            <img src="images/master_card.png" alt="master card">
+                        </a>
+                        <a href="#">
+                            <img src="images/paypal.png" alt="paypal">
+                        </a>
+                    </div>
+                    <div class="col-12 col-lg-4 manual-text">
+                        © 2024 Novamobile. All rights reserved
+                    </div>
+                </div>
+            </div>
+            <div class="manageCookies">
+                <div class="manual-title">Privacy Preference Center</div>
+                <div class="manual-text">Websites often store or retrieve information on your browser. This information might be about you, your preferences, or your device. . You can choose not to allow some types of tracking technologies. Click on the different category headings to find out more and change our default settings.</div>
+                <div class="manual-title">Manage Consent Preferences</div>
+                <div class="accordions">
+                    <div class="accordion">
+                        <div class="accordion__heading">
+                            <div class="manual-title">Strictly Neccessary Cookies</div>
+                            <div class="manual-title text-colored">Always Active</div>
+                        </div>
+                        <div class="accordion__body">
+                            <div class="manual-text">These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__heading">
+                            <div class="manual-title">Performance and Analytics</div>
+                            <div class="custom-checkbox account-custom-checkbox custom-checkbox-reverse">
+                                <input type="checkbox" value="">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="accordion__body">
+                            <div class="manual-text">These cookies enable the website to provide enhanced functionality, personalisation, and measure the performance of our site. They may be set by us or by third-party providers whose services we have added to our pages. These cookies allow us to count visits and traffic sources, helping us to understand which pages are the most and least popular and see how visitors navigate the site. All information collected by these cookies is aggregated and therefore anonymous. If you do not allow these cookies, some or all of our services may not function properly, and we will not be able to monitor the site's performance or know when you have visited our site.</div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__heading">
+                            <div class="manual-title">Targeted Advertising and Social Media</div>
+                            <div class="custom-checkbox account-custom-checkbox custom-checkbox-reverse">
+                                <input type="checkbox" value="">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="accordion__body">
+                            <div class="manual-text">These cookies may be set through our site either by us, our advertising partners, or social media services we've added. They are designed to build a profile of your interests, either to show you relevant adverts on other sites or to allow you to share our content on social media platforms. While they don't store personal information directly, they work by uniquely identifying your browser and internet device. As a result, they can track your browser across different sites, shaping the content and messages you encounter elsewhere. Declining these cookies may result in less targeted advertising and could prevent the use or visibility of certain sharing tools on our site.</div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-dark h-60 mx-auto cookies-confirm">Confirm my choices</button>
+            </div>
+        </footer>    
+	<!--<script src="js/bootstrap/bootstrap.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/mail_mask.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

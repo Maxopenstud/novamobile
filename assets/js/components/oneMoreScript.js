@@ -355,7 +355,8 @@ $(document).ready(function() {
 
     const isMacBook = navigator.userAgent.includes('Macintosh');
     if (isMacBook) {
-
+        console.log("macos");
+        
         $(".cascade-slider_arrow, .cascade-slider_nav, .blog-slider .sectionTitle").addClass('mac');
     } 
     
