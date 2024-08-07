@@ -2714,7 +2714,7 @@ select.error + .error-label {
 }
 @media (min-width: 576px) and (max-width: 1450px) {
   .cascade-slider_nav.mac {
-    bottom: -75px;
+    /* bottom: -75px; */
   }
 }
 
