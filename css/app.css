@@ -1396,8 +1396,8 @@ select.error + .error-label {
   font-size: 16px !important;
   line-height: 20px !important;
   white-space: nowrap;
-  /* overflow-wrap: normal;
-  word-wrap: normal; */
+  overflow-wrap: normal;
+  word-wrap: normal;
 }
 .header__logo {
   display: block;
@@ -2708,8 +2708,8 @@ select.error + .error-label {
     transform: translate(0, 100%);
   }
   .cascade-slider_nav.mac {
-    /* bottom: -50px; */
-    transform: translate(0, 100%);
+    bottom: -50px;
+    /* transform: translate(0, 100%); */
   }
 }
 /* @media (min-width: 576px) and (max-width: 1450px) {
