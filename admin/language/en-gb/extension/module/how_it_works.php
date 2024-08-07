@@ -1,7 +1,7 @@
 <?php
 
 // Heading
-$_['heading_title'] = '<a href="maxopen.com.ua" target="_blank">Maxopen</a> | How it works';
+$_['heading_title'] = '  How it works';
 
 // Tab
 $_['tab_main'] = 'Main';
@@ -11,7 +11,7 @@ $_['text_disabled'] = 'Disabled';
 $_['text_edit'] = 'Edit How it works';
 $_['text_enabled'] = 'Enabled';
 $_['text_extension'] = 'Extensions';
-$_['text_info'] = 'How it works %s | <a href="maxopen.com.ua" target="_blank">Maxopen</a> |  <a href="mailto:maxopenstudio@gmail.com">maxopenstudio@gmail.com</a>';
+$_['text_info'] = 'How it works %s |     ';
 $_['text_none'] = '------';
 $_['text_success'] = 'Success: You have modified How it works module!';
 
@@ -32,4 +32,3 @@ $_['help_store'] = 'Page will be reloaded';
 $_['error_name'] = 'Name is required!';
 $_['error_permission'] = 'Warning: You do not have permission to modify How it works!';
 $_['error_warning'] = 'Warning: Please check the form carefully for errors!';
-

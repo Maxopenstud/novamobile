@@ -1,7 +1,7 @@
 <?php
 
 // Heading
-$_['heading_title'] = '<a href="maxopen.com.ua" target="_blank">Maxopen</a> | Why choose us';
+$_['heading_title'] = '  Why choose us';
 
 // Tab
 $_['tab_main'] = 'Main';
@@ -11,7 +11,7 @@ $_['text_disabled'] = 'Disabled';
 $_['text_edit'] = 'Edit Why choose us';
 $_['text_enabled'] = 'Enabled';
 $_['text_extension'] = 'Extensions';
-$_['text_info'] = 'Why choose us %s | <a href="maxopen.com.ua" target="_blank">Maxopen</a> |  <a href="mailto:maxopenstudio@gmail.com">maxopenstudio@gmail.com</a>';
+$_['text_info'] = 'Why choose us %s |     ';
 $_['text_none'] = '------';
 $_['text_success'] = 'Success: You have modified Why choose us module!';
 
@@ -37,4 +37,3 @@ $_['error_name'] = 'Name is required!';
 $_['error_permission'] = 'Warning: You do not have permission to modify Why choose us!';
 $_['error_title'] = 'Field is required!';
 $_['error_warning'] = 'Warning: Please check the form carefully for errors!';
-

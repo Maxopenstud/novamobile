@@ -1,5 +1,4 @@
 <?php
 
 // Heading
-$_['heading_title'] = '<a href="maxopen.com.ua" target="_blank">Maxopen</a> | Why choose us';
-
+$_['heading_title'] = '  Why choose us';
