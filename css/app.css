@@ -2200,9 +2200,7 @@ select.error + .error-label {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto; }
-  .cascade-slider_bottom.mac {
-    bottom: -50px !important; } }
+    margin: auto; } }
 
 .information {
   display: grid;
