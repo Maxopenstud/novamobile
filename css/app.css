@@ -1909,7 +1909,6 @@ select.error + .error-label {
 
 .cascade-slider_arrow {
   display: inline-block;
-  position: absolute;
   cursor: pointer;
   z-index: 5;
   color: #fff;
@@ -1922,16 +1921,13 @@ select.error + .error-label {
   bottom: 0; }
 
 .cascade-slider_arrow-left {
-  left: 0;
-  margin: auto; }
+  left: 0; }
 
 .cascade-slider_arrow-right {
   right: 0;
-  margin: auto;
   transform: rotate(180deg); }
 
 .cascade-slider_nav {
-  position: absolute;
   bottom: -120px;
   width: 100%;
   text-align: center;
@@ -2029,11 +2025,9 @@ select.error + .error-label {
   display: flex;
   align-items: center;
   gap: 10px;
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
   width: max-content; }
 
 .cascade-slider-nav-item {
@@ -2188,14 +2182,19 @@ select.error + .error-label {
     fill: #fff; }
 
 @media (min-width: 768px) {
-  .cascade-slider_arrow, .cascade-slider-nav {
-    bottom: -30px !important; }
-  .cascade-slider_arrow.mac, .cascade-slider-nav.mac {
-    bottom: -100px !important; }
-  .blog__slider .sectionTitle.mac {
-    padding: 50px 0 !important; }
   .sliders.mac {
     padding: 50px 0; } }
+
+.cascade-slider_bottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
 
 .information {
   display: grid;
