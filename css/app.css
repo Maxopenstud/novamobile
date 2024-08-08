@@ -2188,8 +2188,6 @@ select.error + .error-label {
     fill: #fff; }
 
 @media (min-width: 768px) {
-  .cascade-slider_arrow.mac, .cascade-slider_nav.mac {
-    transform: translateY(100px); }
   .blog__slider .sectionTitle.mac {
     padding: 50px 0 !important; }
   .sliders {
