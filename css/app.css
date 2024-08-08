@@ -2190,7 +2190,9 @@ select.error + .error-label {
 @media (min-width: 768px) {
   .cascade-slider_arrow, .cascade-slider-nav {
     bottom: -30px !important; }
-  .cascade-slider_arrow.mac, .cascade-slider-nav.mac {
+  .cascade-slider_arrow.mac {
+    bottom: -50px !important; }
+  .cascade-slider-nav.mac {
     bottom: -100px !important; }
   .blog__slider .sectionTitle.mac {
     padding: 50px 0 !important; }
