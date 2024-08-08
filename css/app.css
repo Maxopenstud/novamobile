@@ -995,7 +995,8 @@ select::-ms-expand {
   padding: 0 !important;
   height: 0 !important;
   position: absolute;
-  top: 0; }
+  top: 0;
+  z-index: -1; }
 
 .form-input {
   border: 1px solid #ccc; }
@@ -2416,6 +2417,8 @@ select.error + .error-label {
       width: 1000%;
       height: 1px;
       background-color: #D1D1D1; }
+  .login [data-tab-target].hidden {
+    position: relative; }
   .login .btn-dark {
     margin: 40px auto 0;
     padding: 20px;
