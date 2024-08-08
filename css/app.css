@@ -2196,6 +2196,9 @@ select.error + .error-label {
   bottom: 0;
   margin: auto; }
 
+.cascade-slider_bottom.mac {
+  bottom: -50px !important; }
+
 .information {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
