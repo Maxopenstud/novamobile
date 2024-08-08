@@ -1837,11 +1837,13 @@ select.error + .error-label {
 @media screen and (min-width: 768px) {
   .cascade-slider_container {
     height: 40vh;
+    height: 500px;
     margin: 0 auto; } }
 
 @media screen and (min-width: 1600px) {
   .cascade-slider_container {
-    height: 45vh; } }
+    height: 45vh;
+    height: 600px; } }
 
 .cascade-slider_item {
   position: absolute;
