@@ -1171,7 +1171,10 @@ select.error + .error-label {
     line-height: 18.2px;
     padding: 11px;
     text-wrap: nowrap;
-    font-family: "Gilroy"; }
+    font-family: "Gilroy";
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-wrap: normal; }
     @media (max-width: 1200px) {
       .header .btn, .header .dropdown-menu {
         padding: 8px;
@@ -1837,11 +1840,13 @@ select.error + .error-label {
 @media screen and (min-width: 768px) {
   .cascade-slider_container {
     height: 40vh;
+    height: 500px;
     margin: 0 auto; } }
 
 @media screen and (min-width: 1600px) {
   .cascade-slider_container {
-    height: 45vh; } }
+    height: 45vh;
+    height: 600px; } }
 
 .cascade-slider_item {
   position: absolute;
@@ -1856,6 +1861,7 @@ select.error + .error-label {
   left: 50%;
   transform: translateY(-40%) translateX(-50%) scale(0.6);
   opacity: 1;
+  filter: contrast(0.7);
   z-index: 1 !important; }
 
 @media screen and (min-width: 768px) {
@@ -1866,6 +1872,7 @@ select.error + .error-label {
   left: 50%;
   transform: translateY(-55%) translateX(-50%) scale(0.7);
   opacity: 1;
+  filter: contrast(0.7);
   z-index: 2 !important; }
 
 @media screen and (min-width: 768px) {
@@ -1876,6 +1883,7 @@ select.error + .error-label {
   left: 50%;
   transform: translateY(-70%) translateX(-50%) scale(0.8);
   opacity: 1;
+  filter: contrast(0.7);
   z-index: 3 !important; }
 
 @media screen and (min-width: 768px) {
@@ -1886,6 +1894,7 @@ select.error + .error-label {
   left: 50%;
   transform: translateY(-85%) translateX(-50%) scale(0.9);
   opacity: 1;
+  filter: contrast(0.7);
   z-index: 4 !important; }
 
 @media screen and (min-width: 768px) {
@@ -1905,7 +1914,6 @@ select.error + .error-label {
 
 .cascade-slider_arrow {
   display: inline-block;
-  position: absolute;
   cursor: pointer;
   z-index: 5;
   color: #fff;
@@ -1918,16 +1926,13 @@ select.error + .error-label {
   bottom: 0; }
 
 .cascade-slider_arrow-left {
-  left: 0;
-  margin: auto; }
+  left: 0; }
 
 .cascade-slider_arrow-right {
   right: 0;
-  margin: auto;
   transform: rotate(180deg); }
 
 .cascade-slider_nav {
-  position: absolute;
   bottom: -120px;
   width: 100%;
   text-align: center;
@@ -2025,11 +2030,9 @@ select.error + .error-label {
   display: flex;
   align-items: center;
   gap: 10px;
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
   width: max-content; }
 
 .cascade-slider-nav-item {
@@ -2182,6 +2185,24 @@ select.error + .error-label {
     color: #fff; }
   .cascade-slider_item .btn:hover svg path {
     fill: #fff; }
+
+@media (min-width: 768px) {
+  .sliders.mac {
+    padding: 0 0 50px; } }
+
+.cascade-slider_bottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+.cascade-slider_bottom.mac {
+  bottom: -50px !important; }
 
 .information {
   display: grid;

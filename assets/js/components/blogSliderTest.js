@@ -198,58 +198,58 @@ $(document).ready(function() {
     var rightPosition = $(window).width() - (leftPosition + firstNavItem.outerWidth());
 
     // Смещаем элемент .cascade-slider_arrow-left на 20 пикселей левее
-    if($(window).width() < 768) {
-        $(".cascade-slider_arrow-left").css({
-            "left": (leftPosition - 60) + "px"
-        });
-        $(".cascade-slider_arrow-right").css({
-            "right": (rightPosition - 60) + "px"
-        });
-    } else if($(window).width() > 767 && $(window).width() < 1100){
-        $(".cascade-slider_arrow-left").css({
-            "left": (leftPosition - 100) + "px"
-        });
-        $(".cascade-slider_arrow-right").css({
-            "right": (rightPosition - 100) + "px"
-        });
-    } else if($(window).width() > 1099 && $(window).width() < 1400) {
-        $(".cascade-slider_arrow-left").css({
-            "left": (leftPosition - 200) + "px"
-        });
-        $(".cascade-slider_arrow-right").css({
-            "right": (rightPosition - 200) + "px"
-        });
-    } else if($(window).width() > 1399 && $(window).width() < 1500) {
-        $(".cascade-slider_arrow-left").css({
-            "left": (leftPosition - 300) + "px"
-        });
-        $(".cascade-slider_arrow-right").css({
-            "right": (rightPosition - 300) + "px"
-        });
-    } else if($(window).width() > 1499 && $(window).width() < 1700) {
-        $(".cascade-slider_arrow-left").css({
-            "left": (leftPosition - 370) + "px"
-        });
-        $(".cascade-slider_arrow-right").css({
-            "right": (rightPosition - 370) + "px"
-        });
-    } else if($(window).width() > 1699 && $(window).width() < 1920) {
-        $(".cascade-slider_arrow-left").css({
-            "left": (leftPosition - 450) + "px"
-        });
-        $(".cascade-slider_arrow-right").css({
-            "right": (rightPosition - 450) + "px"
-        });
-    } else if($(window).width() > 1919){
-        $(".cascade-slider_arrow-left").css({
-            "left": (-200) + "px",
-            "right": (0) + "px",
-        });
-        $(".cascade-slider_arrow-right").css({
-            "right": (-200) + "px",
-            "left": (0) + "px"
-        });
-    }
+    // if($(window).width() < 768) {
+    //     $(".cascade-slider_arrow-left").css({
+    //         "left": (leftPosition - 60) + "px"
+    //     });
+    //     $(".cascade-slider_arrow-right").css({
+    //         "right": (rightPosition - 60) + "px"
+    //     });
+    // } else if($(window).width() > 767 && $(window).width() < 1100){
+    //     $(".cascade-slider_arrow-left").css({
+    //         "left": (leftPosition - 100) + "px"
+    //     });
+    //     $(".cascade-slider_arrow-right").css({
+    //         "right": (rightPosition - 100) + "px"
+    //     });
+    // } else if($(window).width() > 1099 && $(window).width() < 1400) {
+    //     $(".cascade-slider_arrow-left").css({
+    //         "left": (leftPosition - 200) + "px"
+    //     });
+    //     $(".cascade-slider_arrow-right").css({
+    //         "right": (rightPosition - 200) + "px"
+    //     });
+    // } else if($(window).width() > 1399 && $(window).width() < 1500) {
+    //     $(".cascade-slider_arrow-left").css({
+    //         "left": (leftPosition - 300) + "px"
+    //     });
+    //     $(".cascade-slider_arrow-right").css({
+    //         "right": (rightPosition - 300) + "px"
+    //     });
+    // } else if($(window).width() > 1499 && $(window).width() < 1700) {
+    //     $(".cascade-slider_arrow-left").css({
+    //         "left": (leftPosition - 370) + "px"
+    //     });
+    //     $(".cascade-slider_arrow-right").css({
+    //         "right": (rightPosition - 370) + "px"
+    //     });
+    // } else if($(window).width() > 1699 && $(window).width() < 1920) {
+    //     $(".cascade-slider_arrow-left").css({
+    //         "left": (leftPosition - 450) + "px"
+    //     });
+    //     $(".cascade-slider_arrow-right").css({
+    //         "right": (rightPosition - 450) + "px"
+    //     });
+    // } else if($(window).width() > 1919){
+    //     $(".cascade-slider_arrow-left").css({
+    //         "left": (-200) + "px",
+    //         "right": (0) + "px",
+    //     });
+    //     $(".cascade-slider_arrow-right").css({
+    //         "right": (-200) + "px",
+    //         "left": (0) + "px"
+    //     });
+    // }
 
 
 
