@@ -44,8 +44,8 @@
                     }
                 }
                 var slideCount = $('.cascade-slider_item.now').attr('data-slide-number');
-                $('.cascade-slider_dot').removeClass('cur');
-                $('.cascade-slider_dot').eq(slideCount).addClass('cur');
+                $('.cascade-slider-nav-item').removeClass('cur');
+                $('.cascade-slider-nav-item').eq(slideCount).addClass('cur');
             }, autoplayDelay * 1000);
         }
         // END of Additional option for autoplay
@@ -72,91 +72,72 @@
                 }
             }
             var slideCount = $('.cascade-slider_item.now').attr('data-slide-number');
-            $('.cascade-slider_dot').removeClass('cur');
-            $('.cascade-slider_dot').eq(slideCount).addClass('cur');
+            $('.cascade-slider-nav-item').removeClass('cur');
+            $('.cascade-slider-nav-item').eq(slideCount).addClass('cur');
 
         });
 
-        // add data attributes
-        for (var i = 0; i < itemCount; i++) {
-            $('.cascade-slider_item').each(function(i) {
-                $(this).attr('data-slide-number', [i]);
-            });
-        }
+       // Количество слайдов
+    var itemCount = $('.cascade-slider_item').length;
 
-        // dots
-        $('.cascade-slider_dot').bind('click', function() {
-            // add class to current dot on click
-            $('.cascade-slider_dot').removeClass('cur');
-            $(this).addClass('cur');
+    // Установка data-slide-number для каждого элемента
+    $('.cascade-slider_item').each(function(i) {
+        $(this).attr('data-slide-number', i);
+    });
 
-            var index = $(this).index();
+    // Навигация по точкам
+    $('.cascade-slider-nav-item').bind('click', function() {
+        // Добавление класса активной точке
+        $('.cascade-slider-nav-item').removeClass('cur');
+        $(this).addClass('cur');
 
-            $('.cascade-slider_item').removeClass('now prev next');
-            var slide = $('.cascade-slider_slides').find('[data-slide-number=' + index + ']');
-            slide.prev().addClass('prev');
-            slide.addClass('now');
-            slide.next().addClass('next');
+        var index = $(this).index();
 
-            if (slide.next().length == 0) {
-                $('.cascade-slider_item:first-child').addClass('next');
-            }
+        // Смена классов у слайдов
+        $('.cascade-slider_item').removeClass('now prev next prev2 next2');
+        var slide = $('.cascade-slider_slides').find('[data-slide-number=' + index + ']');
+        slide.addClass('now');
 
-            if (slide.prev().length == 0) {
-                $('.cascade-slider_item:last-child').addClass('prev');
-            }
-        });
+        // Проставляем классы для соседних слайдов
+        var prevSlide = slide.prev().length ? slide.prev() : $('.cascade-slider_item').last();
+        var nextSlide = slide.next().length ? slide.next() : $('.cascade-slider_item').first();
 
-        function changeIndex(nowIndex) {
-            // clern all class
-            $this.find('.now').removeClass('now');
-            $this.find('.next').removeClass('next');
-            $this.find('.prev').removeClass('prev');
-            $this.find('.next2').removeClass('next2');
-            $this.find('.prev2').removeClass('prev2');
+        prevSlide.addClass('prev');
+        nextSlide.addClass('next');
 
-            if (nowIndex == itemCount - 1) {
-                $item.eq(0).addClass('next');
-            }
-            if (nowIndex == 0) {
-                $item.eq(itemCount - 1).addClass('prev');
-            }
+        var prev2Slide = prevSlide.prev().length ? prevSlide.prev() : $('.cascade-slider_item').last();
+        var next2Slide = nextSlide.next().length ? nextSlide.next() : $('.cascade-slider_item').first();
 
-            $item.each(function(index) {
-                if (index == nowIndex) {
-                    $item.eq(index).addClass('now');
-                }
-                if (index == nowIndex + 1) {
-                    $item.eq(index).addClass('next');
-                }
-                if (index == nowIndex - 1) {
-                    $item.eq(index).addClass('prev');
-                }
-            });
+        prev2Slide.addClass('prev2');
+        next2Slide.addClass('next2');
+    });
 
-            if (items == 5) {
-                otherIndex();
-            }
+    function changeIndex(nowIndex) {
+        var $this = $('#cascade-slider');
+        var $item = $this.find('.cascade-slider_item');
 
-        }
+        // Очистка всех классов
+        $item.removeClass('now next prev next2 prev2');
 
-        function otherIndex() {
-            var slideItemsCount = $this.find('.cascade-slider_item').length - 1;
-            var nextSlide = $this.find('.next').index()
-            var prevSlide = $this.find('.prev').index()
+        // Установка классов для текущего и соседних элементов
+        var nowSlide = $item.eq(nowIndex);
+        nowSlide.addClass('now');
 
-            if (nextSlide + 1 <= slideItemsCount) {
-                $this.find('.cascade-slider_item').eq(nextSlide + 1).addClass('next2');
-            } else if (nextSlide + 1 > slideItemsCount) {
-                $this.find('.cascade-slider_item').eq(0).addClass('next2');
-            }
-            if (prevSlide - 1 <= slideItemsCount) {
-                $this.find('.cascade-slider_item').eq(prevSlide - 1).addClass('prev2');
-            } else if (prevSlide - 1 > slideItemsCount) {
-                $this.find('.cascade-slider_item').eq(slideItemsCount).addClass('prev2');
-            }
+        var prevSlide = nowSlide.prev().length ? nowSlide.prev() : $item.last();
+        var nextSlide = nowSlide.next().length ? nowSlide.next() : $item.first();
 
-        }
+        prevSlide.addClass('prev');
+        nextSlide.addClass('next');
+
+        var prev2Slide = prevSlide.prev().length ? prevSlide.prev() : $item.last();
+        var next2Slide = nextSlide.next().length ? nextSlide.next() : $item.first();
+
+        prev2Slide.addClass('prev2');
+        next2Slide.addClass('next2');
+    }
+
+    // Начальная инициализация
+    changeIndex(0);
 
     };
 })(jQuery);
@@ -196,62 +177,6 @@ $(document).ready(function() {
 
     // Определяем позицию правого края элемента
     var rightPosition = $(window).width() - (leftPosition + firstNavItem.outerWidth());
-
-    // Смещаем элемент .cascade-slider_arrow-left на 20 пикселей левее
-    // if($(window).width() < 768) {
-    //     $(".cascade-slider_arrow-left").css({
-    //         "left": (leftPosition - 60) + "px"
-    //     });
-    //     $(".cascade-slider_arrow-right").css({
-    //         "right": (rightPosition - 60) + "px"
-    //     });
-    // } else if($(window).width() > 767 && $(window).width() < 1100){
-    //     $(".cascade-slider_arrow-left").css({
-    //         "left": (leftPosition - 100) + "px"
-    //     });
-    //     $(".cascade-slider_arrow-right").css({
-    //         "right": (rightPosition - 100) + "px"
-    //     });
-    // } else if($(window).width() > 1099 && $(window).width() < 1400) {
-    //     $(".cascade-slider_arrow-left").css({
-    //         "left": (leftPosition - 200) + "px"
-    //     });
-    //     $(".cascade-slider_arrow-right").css({
-    //         "right": (rightPosition - 200) + "px"
-    //     });
-    // } else if($(window).width() > 1399 && $(window).width() < 1500) {
-    //     $(".cascade-slider_arrow-left").css({
-    //         "left": (leftPosition - 300) + "px"
-    //     });
-    //     $(".cascade-slider_arrow-right").css({
-    //         "right": (rightPosition - 300) + "px"
-    //     });
-    // } else if($(window).width() > 1499 && $(window).width() < 1700) {
-    //     $(".cascade-slider_arrow-left").css({
-    //         "left": (leftPosition - 370) + "px"
-    //     });
-    //     $(".cascade-slider_arrow-right").css({
-    //         "right": (rightPosition - 370) + "px"
-    //     });
-    // } else if($(window).width() > 1699 && $(window).width() < 1920) {
-    //     $(".cascade-slider_arrow-left").css({
-    //         "left": (leftPosition - 450) + "px"
-    //     });
-    //     $(".cascade-slider_arrow-right").css({
-    //         "right": (rightPosition - 450) + "px"
-    //     });
-    // } else if($(window).width() > 1919){
-    //     $(".cascade-slider_arrow-left").css({
-    //         "left": (-200) + "px",
-    //         "right": (0) + "px",
-    //     });
-    //     $(".cascade-slider_arrow-right").css({
-    //         "right": (-200) + "px",
-    //         "left": (0) + "px"
-    //     });
-    // }
-
-
 
     $(".cascade-slider_arrow").click(function() {
         let index = $(".cascade-slider_item.now").index();

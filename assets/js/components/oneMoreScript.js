@@ -356,7 +356,7 @@ $(document).ready(function() {
     const isMacBook = navigator.userAgent.includes('Macintosh');
     if (isMacBook) {
         // console.log("macos");
-        $(".cascade-slider_bottom .blog-slider .sectionTitle, .sliders").addClass('mac');
+        // $(".cascade-slider_bottom, .blog-slider .sectionTitle, .sliders").addClass('mac');
     } 
     
       
