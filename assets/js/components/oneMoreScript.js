@@ -142,6 +142,10 @@ $(document).ready(function() {
         $(".manageCookies").removeClass("open");
         removeOverlay()
     });
+    $(document).on("click", ".overlay", function() {
+        $(".open").removeClass("open")
+        removeOverlay()
+    })
     function removeCloud() {
         $(".cloud").css("transition", "5s");
         $(".cloud").css("transform", "translateY(-200%)");
