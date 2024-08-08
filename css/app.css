@@ -4725,6 +4725,25 @@ select.error + .error-label {
   .accordion .account-custom-checkbox > span::after {
     top: 3px; }
 
+#modalLangCur .modal-title {
+  margin: 0 0 40px; }
+  @media (max-width: 992px) {
+    #modalLangCur .modal-title {
+      margin: 0 0 30px; } }
+
+#modalLangCur .modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px; }
+  @media (max-width: 992px) {
+    #modalLangCur .modal-body {
+      gap: 20px;
+      margin-bottom: 40px; } }
+
+#modalLangCur .modal-footer {
+  display: flex; }
+
 .footer {
   padding: 60px 0; }
   @media (max-width: 992px) {
