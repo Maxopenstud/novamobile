@@ -2186,7 +2186,6 @@ select.error + .error-label {
   .cascade-slider_item .btn:hover svg path {
     fill: #fff; }
 
-@media (min-width: 768px) {
   .cascade-slider_bottom {
     position: relative;
     display: flex;
@@ -2196,7 +2195,7 @@ select.error + .error-label {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto; } }
+    margin: auto; }
 
 .information {
   display: grid;
