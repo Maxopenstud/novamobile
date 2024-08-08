@@ -2188,21 +2188,21 @@ select.error + .error-label {
 
 @media (min-width: 768px) {
   .sliders.mac {
-    padding: 0 0 50px; } }
-
-.cascade-slider_bottom {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; }
-
-.cascade-slider_bottom.mac {
-  bottom: -50px !important; }
+    padding: 0 0 50px; }
+  .blog-slider .sectionTitle.mac {
+    padding-top: 50px; }
+  .cascade-slider_bottom {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .cascade-slider_bottom.mac {
+    bottom: -50px !important; } }
 
 .information {
   display: grid;
