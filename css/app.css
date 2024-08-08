@@ -2189,10 +2189,9 @@ select.error + .error-label {
 
 @media (min-width: 768px) {
   .cascade-slider_arrow.mac, .cascade-slider_nav.mac {
-    bottom: -100px !important; }
+    transform: translateY(100px); }
   .blog-slider .sectionTitle.mac {
-    margin-bottom: 50px !important;
-    margin-top: -50px; } }
+    transform: translateY(-50px); } }
 
 .information {
   display: grid;
