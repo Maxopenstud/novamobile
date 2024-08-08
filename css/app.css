@@ -2187,10 +2187,6 @@ select.error + .error-label {
     fill: #fff; }
 
 @media (min-width: 768px) {
-  .sliders.mac {
-    padding: 0 0 50px; }
-  .blog-slider .sectionTitle.mac {
-    padding-top: 50px; }
   .cascade-slider_bottom {
     position: relative;
     display: flex;
