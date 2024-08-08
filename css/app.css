@@ -1171,7 +1171,10 @@ select.error + .error-label {
     line-height: 18.2px;
     padding: 11px;
     text-wrap: nowrap;
-    font-family: "Gilroy"; }
+    font-family: "Gilroy";
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-wrap: normal; }
     @media (max-width: 1200px) {
       .header .btn, .header .dropdown-menu {
         padding: 8px;
